@@ -18,7 +18,7 @@
     "component"
   ],
   "files": [
-    "index.tsx",
+    "index.ts",
     "type.ts"
   ],
   "main": "index.js",
@@ -123,9 +123,6 @@
           "node"
         ]
       }
-    },
-    "injection": {
-      "entry": "./index.tsx"
     },
     "module": {
       "cascadingStyleSheet": {
