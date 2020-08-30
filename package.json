@@ -18,8 +18,7 @@
     "component"
   ],
   "files": [
-    "index.ts",
-    "type.ts"
+    "index.ts"
   ],
   "main": "index.js",
   "repository": {
@@ -88,10 +87,12 @@
     "react": "*",
     "react-ace": "*",
     "react-dom": "*",
+    "react-input-material": "*",
     "style-loader": "*",
     "stylelint": "*",
     "stylelint-config-standard": "*",
     "tinymce": "^5.0.0",
+    "web-component-wrapper": "*",
     "weboptimizer": "*",
     "webpack": "*",
     "webpack-cli": "*",
@@ -128,14 +129,12 @@
       "cascadingStyleSheet": {
         "exclude": "false"
       },
-
       "optimizer": {
         "babelMinify": {
           "#": "To provide a logging output we need to exclude this feature.",
           "__evaluate__": "self.debug ? {bundle: null, module: null} : {bundle: {transform: {removeConsole: false}}, module: {removeConsole: false}}"
         }
       },
-
       "preprocessor": {
         "javaScript": {
           "options": {

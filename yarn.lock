@@ -3976,9 +3976,9 @@ cli-table3@^0.5.0:
     colors "^1.1.2"
 
 clientnode@*:
-  version "3.0.503"
-  resolved "https://registry.yarnpkg.com/clientnode/-/clientnode-3.0.503.tgz#a257416da2058fc7f4ca1a7d597768a9e489e307"
-  integrity sha512-lOO5AdRF1Jt76c1vT2avd/kws80zK6NpW7M+p5Qk5sv53eU5lxc7BSUUY6kQsHvUYgB4ovr9kf5jJemgBp+wZQ==
+  version "3.0.504"
+  resolved "https://registry.yarnpkg.com/clientnode/-/clientnode-3.0.504.tgz#c835c7fdd3fdd821aa782a9d00a42f7af2628e30"
+  integrity sha512-miP7cinlq/euhTxzlxrHc1EgWU9Ln5u9ge268wpjM+AvaQTQg3Clv+9QjFdHW3uJj7lQZrjHj9ce8T2L1XfGVg==
 
 cliui@^4.0.0:
   version "4.1.0"
@@ -6416,9 +6416,9 @@ html-tags@^3.1.0:
   integrity sha512-1qYz89hW3lFDEazhjW0yVAV87lw8lVkrJocr72XmBkMKsoSVJCQx3W8BXsC7hO2qAt8BoVjYjtAcZ9perqGnNg==
 
 html-webpack-plugin@*:
-  version "4.4.0"
-  resolved "https://registry.yarnpkg.com/html-webpack-plugin/-/html-webpack-plugin-4.4.0.tgz#ed6ab2b5e4e476ffa3c5ce52505aa31a42075029"
-  integrity sha512-FHeg2JN9ar1kaR0SLgbF07w46o/n1nGszyByYlPxqEymSpl82vA8EX0leE67kZr3GJnOBh8BbBzmCLO6O1YTIQ==
+  version "4.4.1"
+  resolved "https://registry.yarnpkg.com/html-webpack-plugin/-/html-webpack-plugin-4.4.1.tgz#61ab85aa1a84ba181443345ebaead51abbb84149"
+  integrity sha512-nEtdEIsIGXdXGG7MjTTZlmhqhpHU9pJFc1OYxcP36c5/ZKP6b0BJMww2QTvJGQYA9aMxUnjDujpZdYcVOXiBCQ==
   dependencies:
     "@types/html-minifier-terser" "^5.0.0"
     "@types/tapable" "^1.0.5"
@@ -10487,6 +10487,11 @@ react-dom@*:
     prop-types "^15.6.2"
     scheduler "^0.19.1"
 
+react-input-material@*:
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/react-input-material/-/react-input-material-0.0.7.tgz#2a5af77a65a1eebedb287d823bdcdf0de895eede"
+  integrity sha512-/cGu/7KaHS6M5k+EQ48ypRr+EBVttB822sz7FVgOFT89kNQhK1xRnOPaKR3dvbPMWorYB+UH9KbnzTP8ibc6Lw==
+
 react-is@^16.12.0, react-is@^16.8.1:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
@@ -12747,6 +12752,11 @@ wbuf@^1.1.0, wbuf@^1.7.3:
   integrity sha512-O84QOnr0icsbFGLS0O3bI5FswxzRr8/gHwWkDlQFskhSPryQXvrTMxjxGP4+iWYoauLoBvfDpkrOauZ+0iZpDA==
   dependencies:
     minimalistic-assert "^1.0.0"
+
+web-component-wrapper@*:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/web-component-wrapper/-/web-component-wrapper-0.0.3.tgz#7155192cf5d124c26c56f2821971b5b19d50093d"
+  integrity sha512-cRHkrZaVi1sPXJ8iF6LOSV4t9RU/Zt3v/6NRKiqiX1kFJhyTxahPP9IupYkuZttBU0VnPLIbbSq4bkMY9S48xA==
 
 webidl-conversions@^5.0.0:
   version "5.0.0"

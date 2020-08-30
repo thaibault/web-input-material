@@ -18,10 +18,10 @@
 */
 // region imports
 import Tools from 'clientnode'
+import PropertyTypes from 'clientnode/property-types'
 import {Component} from 'react'
-
-import ReactWeb from './web/ReactWeb'
-import {PropertyTypes, WebComponentAPI} from './types'
+import ReactWeb from 'web-component-wrapper/adapter/React'
+import {WebComponentAPI} from 'web-component-wrapper/types'
 // endregion
 export const components:Mapping<WebComponentAPI> = {}
 /*
@@ -29,8 +29,9 @@ export const components:Mapping<WebComponentAPI> = {}
     class wrapper with corresponding web component register method. A derived
     default web component name is provided.
 */
-const modules:Function =
-    require.context('./components/', true, /[a-zA-Z0-9]\.tsx$/)
+const modules:Function = require.context(
+    'react-input-material/components/', true, /[a-zA-Z0-9]\.tsx$/
+)
 for (const key of modules.keys()) {
     const component:typeof Component = modules(key).default
     // Determine class / function name.
