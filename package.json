@@ -1,0 +1,167 @@
+{
+  "name": "web-input-material",
+  "version": "0.0.1",
+  "license": "CC-BY-3.0",
+  "description": "Reusable material design based input field with support for (richt-)text, code, selections, numbers, dates and so on.",
+  "homepage": "https://torben.website/web-input-material",
+  "documentationWebsite": {
+    "tagline": "Do not refactor input fields anymore.<!--deDE:Nie wieder Eingabefelder anpassen.-->",
+    "trackingCode": "TODO"
+  },
+  "keywords": [
+    "form-field",
+    "input",
+    "number-input",
+    "rich-text",
+    "text",
+    "webcomponent",
+    "component"
+  ],
+  "files": [
+    "index.tsx",
+    "type.ts"
+  ],
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thaibault/web-input-material"
+  },
+  "scripts": {
+    "build": "weboptimizer build",
+    "build:export": "weboptimizer build '{__reference__: \"target:export\"}'",
+    "check": "yarn check:types; yarn lint",
+    "check:types": "weboptimizer check:types",
+    "clear": "weboptimizer clear",
+    "document": "weboptimizer document",
+    "lint": "weboptimizer lint",
+    "prepare": "yarn build",
+    "report:coverage": "nyc report --reporter=text-lcov | coveralls",
+    "serve": "weboptimizer serve",
+    "start": "yarn serve",
+    "test": "weboptimizer test",
+    "test:browser": "weboptimizer test:browser",
+    "update": "yarn version --patch && yarn publish",
+    "update:documentation": "documentationWebsite --log-level info",
+    "watch": "weboptimizer build --watch"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-proto-to-assign": "*",
+    "@babel/preset-react": "*",
+    "@rmwc/card": "*",
+    "@rmwc/formfield": "*",
+    "@rmwc/icon": "*",
+    "@rmwc/icon-button": "*",
+    "@rmwc/select": "*",
+    "@rmwc/textfield": "*",
+    "@rmwc/theme": "*",
+    "@rmwc/tooltip": "*",
+    "@tinymce/tinymce-react": "*",
+    "@types/ejs": "*",
+    "@types/html-minifier": "*",
+    "@types/jest": "*",
+    "@types/jquery": "*",
+    "@types/jsdom": "*",
+    "@types/loader-utils": "*",
+    "@types/node": "*",
+    "@types/tinymce": "*",
+    "@typescript-eslint/eslint-plugin": "*",
+    "@typescript-eslint/parser": "*",
+    "babel-eslint": "*",
+    "clientnode": "*",
+    "css-loader": "*",
+    "cssnano": "*",
+    "documentation-website": "*",
+    "eslint": "*",
+    "eslint-config-google": "*",
+    "eslint-plugin-jsdoc": "*",
+    "jest": "*",
+    "jsdoc": "*",
+    "material-design-icons": "*",
+    "mini-css-extract-plugin": "*",
+    "postcss-fontpath": "*",
+    "postcss-import": "*",
+    "postcss-loader": "*",
+    "postcss-preset-env": "*",
+    "postcss-sprites": "*",
+    "postcss-url": "*",
+    "prop-types": "*",
+    "react": "*",
+    "react-ace": "*",
+    "react-dom": "*",
+    "style-loader": "*",
+    "stylelint": "*",
+    "stylelint-config-standard": "*",
+    "tinymce": "^5.0.0",
+    "weboptimizer": "*",
+    "webpack": "*",
+    "webpack-cli": "*",
+    "webpack-dev-server": "*"
+  },
+  "peerDependencies": {
+    "@babel/runtime": "*",
+    "@rmwc/card": "*",
+    "@rmwc/formfield": "*",
+    "@rmwc/icon-button": "*",
+    "@rmwc/select": "*",
+    "@rmwc/textfield": "*",
+    "@rmwc/tooltip": "*",
+    "@tinymce/tinymce-react": "*",
+    "ace-builds": "*",
+    "clientnode": "*",
+    "material-design-icons": "*",
+    "react": "*",
+    "react-ace": "*",
+    "react-dom": "*",
+    "tinymce": "^5.0.0"
+  },
+  "sideEffects": true,
+  "webOptimizer": {
+    "commandLine": {
+      "test": {
+        "environments": [
+          "jsdom",
+          "node"
+        ]
+      }
+    },
+    "injection": {
+      "entry": "./index.tsx"
+    },
+    "module": {
+      "cascadingStyleSheet": {
+        "exclude": "false"
+      },
+
+      "optimizer": {
+        "babelMinify": {
+          "#": "To provide a logging output we need to exclude this feature.",
+          "__evaluate__": "self.debug ? {bundle: null, module: null} : {bundle: {transform: {removeConsole: false}}, module: {removeConsole: false}}"
+        }
+      },
+
+      "preprocessor": {
+        "javaScript": {
+          "options": {
+            "presets": {
+              "#": "NOTE: We have to disable module export/import transformation to allow tree shaking by the final (minimizer).",
+              "__evaluate__": "['@babel/preset-react', ['@babel/preset-env', {loose: true, modules: false, targets: self.targetTechnology === 'node' ? {node: 'current'} : {browsers: self.generic.supportedBrowsers, node: 'current'}}], '@babel/typescript'].concat((self.debug || !self.module.optimizer.babelMinify.module || 2 < self.givenCommandLineArguments.length && self.givenCommandLineArguments[2] === 'document') ? [] : [['minify', self.module.optimizer.babelMinify.module]])"
+            }
+          }
+        }
+      }
+    },
+    "target:export": {
+      "module": {
+        "preprocessor": {
+          "javaScript": {
+            "options": {
+              "plugins": {
+                "__remove__": "@babel/plugin-transform-runtime"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

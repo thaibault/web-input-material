@@ -1,0 +1,268 @@
+<!doctype html>
+<%_ /*
+    region header
+    Copyright Torben Sickert (info["~at~"]torben.website) 16.12.2012
+
+    License
+    -------
+
+    This library written by Torben Sickert stand under a creative commons
+    naming 3.0 unported license.
+    See https://creativecommons.org/licenses/by/3.0/deed.de
+    endregion
+*/ _%>
+<html class="no-javascript" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <!--Prevent browser caching-->
+        <meta http-equiv="cache-control" content="no-cache">
+        <meta http-equiv="expires" content="0">
+        <meta http-equiv="pragma" content="no-cache">
+        <title>playground</title>
+        <script>
+            window.document.documentElement.className =
+                window.document.documentElement.className.replace(
+                    /(^|\s)no-javascript(\s|$)/, '$1javascript$2'
+                );
+        </script>
+    </head>
+    <style>
+        .inputs {
+            float: left;
+            width: 500px;
+        }
+        generic-input {
+            display: block;
+            margin-bottom: 20px;
+        }
+        .outputs {
+            height: -webkit-fill-available;
+            overflow: auto;
+            position: fixed;
+            right: 0;
+            top: 0;
+        }
+    </style>
+    <script>
+        window.onload = () => {
+            Object.values(reactInputMaterial.index.default)
+                .map((component) => component.register())
+
+            for (const domNode of document.querySelectorAll('[name]'))
+                domNode.addEventListener('onChange', ({detail}) =>
+                    document.querySelector('pre').innerHTML =
+                        `${detail.parameter[0].name}: ` +
+                        JSON.stringify(
+                            /*
+                                NOTE: We want to call the corresponding getter
+                                on the dom node for each property.
+                            */
+                            detail.target,
+                            Object.keys(detail.parameter[0]).sort(),
+                            4
+                        )
+                )
+        }
+    </script>
+    <body class="no-javascript">
+        <script>
+            window.document.body.className =
+                window.document.body.className.replace(
+                    /(^|\s)no-javascript(\s|$)/, '$1javascript$2'
+                );
+        </script>
+
+        <div class="inputs">
+<!--
+            <generic-input></generic-input>
+
+            <hr/>
+
+            <generic-input name="input1"></generic-input>
+            <generic-input model="{name: 'input1Model'}"></generic-input>
+
+            <hr/>
+
+            <generic-input name="input2" value="'value2'"></generic-input>
+            <generic-input model="{name: 'input2Model', value: 'value2Model'}">
+            </generic-input>
+
+            <hr/>
+
+            <generic-input
+                declaration="Disabled"
+                disabled
+                name="input3"
+                value="'value3'"
+            ></generic-input>
+            <generic-input
+                model="{declaration: 'Disabled', mutable: false, name: 'input3Model', value: 'value3Model'}"
+            ></generic-input>
+
+            <hr/>
+
+            <generic-input
+                declaration="placeholder"
+                name="input4"
+                placeholder="input4"
+                required
+                trailing-icon="'clear_preset'"
+            ></generic-input>
+            <generic-input
+                icon="'backup'"
+                model="{declaration: 'placeholder', name: 'input4Model', nullable: false, value: 'value4Model'}"
+                placholder="input4Model"
+                trailing-icon="'clear_preset'"
+            ></generic-input>
+
+            <hr/>
+
+            <generic-input
+                declaration="pattern"
+                description="input5Description"
+                icon="'search'"
+                name="input5"
+                pattern="a+"
+                placeholder="input5Placeholder"
+                value="'only a`s allowed'"
+            ></generic-input>
+            <generic-input
+                model="{declaration: 'pattern', description: 'input5ModelDescription', regularExpressionPattern: 'a+', value: 'only a`s allowed'}"
+                name="input5Model"
+                placeholder="input5ModelPlaceholder"
+                trailing-icon="'search'"
+            ></generic-input>
+
+            <hr/>
+
+            <generic-input
+                declaration="password"
+                description="input6Description"
+                icon="'search'"
+                name="passwordInput6"
+                pattern="a+"
+                placeholder="input6Placeholder"
+                tooltip="'Please type in your password.'"
+                trailing-icon="'password_preset'"
+                value="'hans'"
+            ></generic-input>
+            <generic-input
+                model="{declaration: 'password', description: 'input6ModelDescription', regularExpressionPattern: 'a+', value: 'hans'}"
+                name="passwordInput6Model"
+                placeholder="input6ModelPlaceholder"
+                trailing-icon="'password_preset'"
+            ></generic-input>
+
+            <hr/>
+
+            <generic-input
+                declaration="selection"
+                description="input7Description"
+                name="input7"
+                placeholder="input7Placeholder"
+                selection="['A', 'B', 'C']"
+                required
+                value="'A'"
+            ></generic-input>
+            <generic-input
+                model="{declaration: 'selection', description: 'input7ModelDescription', name: 'input7Model', nullable: false, selection: ['A', 'B', 'C'], value: 'A'}"
+                placeholder="input7ModelPlaceholder"
+            ></generic-input>
+
+            <generic-input
+                declaration="selection"
+                description="input8Description"
+                name="input8"
+                selection="{a: 'A', b: 'B', c: 'C'}"
+                required
+                value="'a'"
+            ></generic-input>
+            <generic-input
+                model="{declaration: 'selection', description: 'input8ModelDescription', name: 'input8Model', nullable: false, selection: {a: 'A', b: 'B', c: 'C'}, value: 'a'}"
+            ></generic-input>
+
+            <generic-input
+                declaration="text"
+                description="input9Description"
+                editor="text"
+                name="input9"
+                required
+                rows="3"
+                value="'a'"
+            ></generic-input>
+-->
+            <generic-input
+                model="{declaration: 'text', description: 'input9ModelDescription', editor: 'text', name: 'input9Model', nullable: false, value: 'a'}"
+                rows="2"
+            ></generic-input>
+
+            <generic-input
+                declaration="code"
+                description="input10Description"
+                disabled
+                editor="code"
+                name="input10"
+                rows="2"
+                selectable-editor
+                value="'const value = 2'"
+            ></generic-input>
+            <generic-input
+                model="{declaration: 'code', description: 'input10ModelDescription', editor: 'code', name: 'input10Model', nullable: false, value: 'const value = 2'}"
+                rows="6"
+                selectable-editor
+            ></generic-input>
+
+            <generic-input
+                declaration="code"
+                description="input11Description"
+                editor="code"
+                maximum-length="10"
+                name="input11"
+                required
+                rows="2"
+                selectable-editor
+            ></generic-input>
+            <generic-input
+                model="{declaration: 'code', description: 'input11ModelDescription', editor: 'code', name: 'input11Model', nullable: false}"
+                rows="6"
+                selectable-editor
+            ></generic-input>
+
+            <generic-input
+                declaration="richtext(raw)"
+                description="input12Description"
+                editor="richtext(raw)"
+                name="input12"
+                required
+                rows="2"
+                selectable-editor
+                value="'Hello Mr. Smith,<br><br>how are you?'"
+            ></generic-input>
+            <generic-input
+                model="{declaration: 'richtext(simple)', description: 'input12ModelDescription', editor: 'richtext(simple)', mutable: false, name: 'input12Model', nullable: false, value: 'Hello Mr. Smith,<br><br>how are you?'}"
+                rows="6"
+                selectable-editor
+            ></generic-input>
+
+        </div>
+
+        <pre class="outputs"></pre>
+
+        <style>
+            <%-
+                require('material-design-icons/iconfont/material-icons.css')
+                    .replace(
+                        /(url\()(MaterialIcons-Regular\.[^.]+\))/g,
+                        '$1./node_modules/material-design-icons/iconfont/$2'
+                    )
+             %>
+        </style>
+
+    </body>
+<html>
+<%_ /*
+    region vim modline
+    vim: set tabstop=4 shiftwidth=4 expandtab:
+    vim: foldmethod=marker foldmarker=region,endregion:
+    endregion
+*/ _%>
