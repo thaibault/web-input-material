@@ -19,8 +19,10 @@
 // region imports
 import Tools from 'clientnode'
 import PropertyTypes from 'clientnode/property-types'
+import {Mapping, ValueOf} from 'clientnode/type'
 import {Component} from 'react'
-import ReactWeb from 'web-component-wrapper/adapter/React'
+import 'react-input-material/styles'
+import ReactWeb from 'web-component-wrapper/React'
 import {WebComponentAPI} from 'web-component-wrapper/types'
 // endregion
 export const components:Mapping<WebComponentAPI> = {}
@@ -29,11 +31,9 @@ export const components:Mapping<WebComponentAPI> = {}
     class wrapper with corresponding web component register method. A derived
     default web component name is provided.
 */
-const modules:Function = require.context(
-    'react-input-material/components/', true, /[a-zA-Z0-9]\.tsx$/
-)
-for (const key of modules.keys()) {
-    const component:typeof Component = modules(key).default
+const reactComponents:Function = require('react-input-material')
+for (const key in reactComponents) {
+    const component:typeof Component = reactComponents[key]
     // Determine class / function name.
     const name:string =
         component._name ||
@@ -44,7 +44,8 @@ for (const key of modules.keys()) {
         */
         component.___types?.name?.name ||
         key.replace(/^(.*\/+)?([^\/]+)\.tsx$/, '$2')
-    const propertyTypes:PropertyTypes = component.propTypes || {}
+    const propertyTypes:Mapping<ValueOf<PropertyTypes>> =
+        component.propTypes || {}
     const allPropertyNames:Array<string> = Object.keys(propertyTypes)
     components[name] = {
         component: class extends ReactWeb {
@@ -59,7 +60,7 @@ for (const key of modules.keys()) {
             _content:typeof Component = component
             _propertiesToReflectAsAttributes:Mapping<boolean> =
                 component.propertiesToReflectAsAttributes || {}
-            _propertyTypes:PropertyTypes = propertyTypes
+            _propertyTypes:Mapping<ValueOf<PropertyTypes>> = propertyTypes
         },
         register: (
             tagName:string = Tools.stringCamelCaseToDelimited(name)

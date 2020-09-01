@@ -3996,9 +3996,9 @@ cli-table3@^0.5.0:
     colors "^1.1.2"
 
 clientnode@*:
-  version "3.0.509"
-  resolved "https://registry.yarnpkg.com/clientnode/-/clientnode-3.0.509.tgz#a18ca588f00bbe49736b884e5cd1a350b5cb849a"
-  integrity sha512-qJInUA+vc+yjGcMq/Q42/eQNuv1f9/cNwuJHCLti7Kvf4CYaVKjjoce2n/481pCpi0IqKgX2rek7k0/sNSbJng==
+  version "3.0.511"
+  resolved "https://registry.yarnpkg.com/clientnode/-/clientnode-3.0.511.tgz#c36de9bb4b77c941c13293af0f5b6f19a8ec2c42"
+  integrity sha512-ybl1Cxo6m4yuIhqxNG0PkSLsW9ybhBNv6ZQhC7aJbsLP3zujDwFaKRjGRPi9lDg7PiZ7JFBeJEY2g3Mo3rvRzw==
 
 cliui@^4.0.0:
   version "4.1.0"
@@ -5103,9 +5103,9 @@ ejs@*:
     jake "^10.6.1"
 
 electron-to-chromium@^1.3.47, electron-to-chromium@^1.3.523:
-  version "1.3.556"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.556.tgz#d2a8fed6b93051c5c27d182c43c7bc4d88b77afb"
-  integrity sha512-g5cGpg6rOCXxyfaLCQIWz9Fx+raFfbZ6sc4QLfvvaiCERBzY6YD6rh5d12QN++bEF1Tm9osYnxP37lbN/92j4A==
+  version "1.3.557"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.557.tgz#00cafeed4397a6a9d1036911e434bc7404dc5e7c"
+  integrity sha512-M2p3nWulBqSEIisykYUVYnaSuRikHvxv8Wf209/Vg/sjrOew12hBQv2JvNGy+i+eDeJU9uQ3dbUbCCQ/CkudEg==
 
 elliptic@^6.5.3:
   version "6.5.3"
@@ -9442,9 +9442,9 @@ postcss-attribute-case-insensitive@^4.0.1:
     postcss-selector-parser "^6.0.2"
 
 postcss-calc@^7.0.1:
-  version "7.0.3"
-  resolved "https://registry.yarnpkg.com/postcss-calc/-/postcss-calc-7.0.3.tgz#d65cca92a3c52bf27ad37a5f732e0587b74f1623"
-  integrity sha512-IB/EAEmZhIMEIhG7Ov4x+l47UaXOS1n2f4FBUk/aKllQhtSCxWhTzn0nJgkqN7fo/jcWySvWTSB6Syk9L+31bA==
+  version "7.0.4"
+  resolved "https://registry.yarnpkg.com/postcss-calc/-/postcss-calc-7.0.4.tgz#5e177ddb417341e6d4a193c5d9fd8ada79094f8b"
+  integrity sha512-0I79VRAd1UTkaHzY9w83P39YGO/M3bG7/tNLrHGEunBolfoGM0hSjrGvjoeaj0JE/zIw5GsI2KZ0UwDJqv5hjw==
   dependencies:
     postcss "^7.0.27"
     postcss-selector-parser "^6.0.2"
@@ -10502,9 +10502,9 @@ react-dom@*:
     scheduler "^0.19.1"
 
 react-input-material@*:
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/react-input-material/-/react-input-material-0.0.7.tgz#2a5af77a65a1eebedb287d823bdcdf0de895eede"
-  integrity sha512-/cGu/7KaHS6M5k+EQ48ypRr+EBVttB822sz7FVgOFT89kNQhK1xRnOPaKR3dvbPMWorYB+UH9KbnzTP8ibc6Lw==
+  version "0.0.9"
+  resolved "https://registry.yarnpkg.com/react-input-material/-/react-input-material-0.0.9.tgz#37d6e2945687a4bca4957f9370cfeaf4135a0df6"
+  integrity sha512-WYo1Ov5IRp3zxbV1c8LtivssUkvRdCpHh9pGhbvlBhaTzqW5cwEMFmewi7fiyBnOLp8sFgW+zsyHVj95sldGLw==
 
 react-is@^16.12.0, react-is@^16.8.1:
   version "16.13.1"
@@ -12787,9 +12787,9 @@ wbuf@^1.1.0, wbuf@^1.7.3:
     minimalistic-assert "^1.0.0"
 
 web-component-wrapper@*:
-  version "0.0.5"
-  resolved "https://registry.yarnpkg.com/web-component-wrapper/-/web-component-wrapper-0.0.5.tgz#64870e705d009e943ee9a9dcaa64d8298383971b"
-  integrity sha512-y6Lhwh/Wl15O+3eKoT7/fz4GRoCWFO8PvkEbOlGkFhsa/GNCHtZ8VlVm1SFOuVT20gshHJeP+kObTvMU36r/uw==
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/web-component-wrapper/-/web-component-wrapper-0.0.7.tgz#1f012197dc30e213b56bc9b7f668435c9d5c0cb1"
+  integrity sha512-cjmrP6+NxN6KjSIY+Or16OZBcluurzxlYFhOk3wIw4GCAQcq+D5qF48r/GHENcyXGbj5MsMnxvyBSZJ2cT7ZAw==
 
 webidl-conversions@^5.0.0:
   version "5.0.0"
@@ -12802,9 +12802,9 @@ webidl-conversions@^6.1.0:
   integrity sha512-qBIvFLGiBpLjfwmYAaHPXsn+ho5xZnGvyGvsarywGNc8VyQJUMHJ8OBKGGrPER0okBeMDaan4mNBlgBROxuI8w==
 
 weboptimizer@*:
-  version "2.0.712"
-  resolved "https://registry.yarnpkg.com/weboptimizer/-/weboptimizer-2.0.712.tgz#69b8d85a682b43fd7dec4a7e1bc32d75b66cb1ce"
-  integrity sha512-pYE7YU7HQKXrefdvul5kDGQj22Gzs+GdRl7z/B3d7ZuGzGxr4vEWHhfq5UGFQIAvo+fsilMz7AM+XpK6niiZbw==
+  version "2.0.714"
+  resolved "https://registry.yarnpkg.com/weboptimizer/-/weboptimizer-2.0.714.tgz#b822ee0e9f1006874c692b4924b313a75739253a"
+  integrity sha512-d3u6Zp/OJkQmQS+fHAQMIBu2AF871sbQTZAez1b75GTGSF7hJUGPM4arG8ubA2ZYdcAUgI6KNSwKndFUVfnzjQ==
   dependencies:
     "@babel/core" "*"
     "@babel/plugin-proposal-class-properties" "*"
