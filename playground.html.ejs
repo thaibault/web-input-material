@@ -45,7 +45,7 @@
     </style>
     <script>
         window.onload = () => {
-            Object.values(reactInputMaterial.index.default)
+            Object.values(webInputMaterial.index.default)
                 .map((component) => component.register())
 
             for (const domNode of document.querySelectorAll('[name]'))
@@ -73,7 +73,7 @@
         </script>
 
         <div class="inputs">
-<!--
+
             <generic-input></generic-input>
 
             <hr/>
@@ -165,7 +165,7 @@
                 value="'A'"
             ></generic-input>
             <generic-input
-                model="{declaration: 'selection', description: 'input7ModelDescription', name: 'input7Model', nullable: false, selection: ['A', 'B', 'C'], value: 'A'}"
+                model="{declaration: 'selection', description: 'input7ModelDescription', mutable: false, name: 'input7Model', nullable: false, selection: ['A', 'B', 'C'], value: 'A'}"
                 placeholder="input7ModelPlaceholder"
             ></generic-input>
 
@@ -188,9 +188,10 @@
                 name="input9"
                 required
                 rows="3"
+                theme="{primary: 'yellow', secondary: 'blue'}"
                 value="'a'"
             ></generic-input>
--->
+
             <generic-input
                 model="{declaration: 'text', description: 'input9ModelDescription', editor: 'text', name: 'input9Model', nullable: false, value: 'a'}"
                 rows="2"
