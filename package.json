@@ -108,6 +108,11 @@
         ]
       }
     },
+    "injection": {
+      "entry": {
+        "__evaluate__": "2 < self.givenCommandLineArguments.length && self.givenCommandLineArguments[2] === 'serve' ? {clientnode: 'clientnode', index: './index'} : {index: './index'}"
+      }
+    },
     "module": {
       "cascadingStyleSheet": {
         "exclude": "false"

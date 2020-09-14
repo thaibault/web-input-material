@@ -48,21 +48,27 @@
             Object.values(webInputMaterial.index.default)
                 .map((component) => component.register())
 
-            console.log('TODO', webInputMaterial.index)
-
             for (const domNode of document.querySelectorAll('[name]'))
                 domNode.addEventListener('onChange', ({detail}) =>
                     document.querySelector('pre').innerHTML =
                         `${detail.parameter[0].name}: ` +
-                        // TODO use Tools.represent for recursive structures.
-                        JSON.stringify(
+                        webInputMaterial.clientnode.Tools.represent(
                             /*
                                 NOTE: We want to call the corresponding getter
                                 on the dom node for each property.
+
+                            // TODO
+                            Object.keys(detail.target)
+                                .filter(key => !/^on[A-Z]/.test(key))
+                                .reduce(
+                                    (result, key) => (
+                                        result[key] = detail.target[key],
+                                        result
+                                    ),
+                                    {}
+                                )
                             */
-                            detail.target,
-                            Object.keys(detail.parameter[0]).sort(),
-                            4
+                            detail.target
                         )
                 )
         }
@@ -253,7 +259,6 @@
 
         <pre class="outputs"></pre>
 
-        <!--<script href="./node_modules/clientnode/index.js"></script>-->
         <style>
             <%-
                 require('material-design-icons/iconfont/material-icons.css')
