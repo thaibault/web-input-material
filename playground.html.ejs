@@ -48,6 +48,8 @@
             Object.values(webInputMaterial.index.default)
                 .map((component) => component.register())
 
+            console.log('TODO', webInputMaterial.index)
+
             for (const domNode of document.querySelectorAll('[name]'))
                 domNode.addEventListener('onChange', ({detail}) =>
                     document.querySelector('pre').innerHTML =
@@ -251,6 +253,7 @@
 
         <pre class="outputs"></pre>
 
+        <!--<script href="./node_modules/clientnode/index.js"></script>-->
         <style>
             <%-
                 require('material-design-icons/iconfont/material-icons.css')
