@@ -84,7 +84,8 @@
 
             <hr/>
 
-            <generic-input name="input2" value="'value2'"></generic-input>
+            <generic-input name="input2" intial-value="'value2'">
+            </generic-input>
             <generic-input model="{name: 'input2Model', value: 'value2Model'}">
             </generic-input>
 
@@ -93,8 +94,8 @@
             <generic-input
                 declaration="Disabled"
                 disabled
+                initial-value="'value3'"
                 name="input3"
-                value="'value3'"
             ></generic-input>
             <generic-input
                 model="{declaration: 'Disabled', mutable: false, name: 'input3Model', value: 'value3Model'}"
@@ -122,10 +123,10 @@
                 declaration="pattern"
                 description="input5Description"
                 icon="'search'"
+                initial-value="'only a`s allowed'"
                 name="input5"
                 pattern="a+"
                 placeholder="input5Placeholder"
-                value="'only a`s allowed'"
             ></generic-input>
             <generic-input
                 model="{declaration: 'pattern', description: 'input5ModelDescription', regularExpressionPattern: 'a+', value: 'only a`s allowed'}"
@@ -140,12 +141,12 @@
                 declaration="password"
                 description="input6Description"
                 icon="'search'"
+                initial-value="'hans'"
                 name="passwordInput6"
                 pattern="a+"
                 placeholder="input6Placeholder"
                 tooltip="'Please type in your password.'"
                 trailing-icon="'password_preset'"
-                value="'hans'"
             ></generic-input>
             <generic-input
                 model="{declaration: 'password', description: 'input6ModelDescription', regularExpressionPattern: 'a+', value: 'hans'}"
@@ -159,11 +160,11 @@
             <generic-input
                 declaration="selection"
                 description="input7Description"
+                initial-value="'A'"
                 name="input7"
                 placeholder="input7Placeholder"
                 selection="['A', 'B', 'C']"
                 required
-                value="'A'"
             ></generic-input>
             <generic-input
                 model="{declaration: 'selection', description: 'input7ModelDescription', mutable: false, name: 'input7Model', nullable: false, selection: ['A', 'B', 'C'], value: 'A'}"
@@ -173,10 +174,10 @@
             <generic-input
                 declaration="selection"
                 description="input8Description"
+                initial-value="'a'"
                 name="input8"
                 selection="{a: 'A', b: 'B', c: 'C'}"
                 required
-                value="'a'"
             ></generic-input>
             <generic-input
                 model="{declaration: 'selection', description: 'input8ModelDescription', name: 'input8Model', nullable: false, selection: {a: 'A', b: 'B', c: 'C'}, value: 'a'}"
@@ -186,11 +187,11 @@
                 declaration="text"
                 description="input9Description"
                 editor="text"
+                initial-value="'a'"
                 name="input9"
                 required
                 rows="3"
                 theme="{primary: 'yellow', secondary: 'blue'}"
-                value="'a'"
             ></generic-input>
 
             <generic-input
@@ -203,10 +204,10 @@
                 description="input10Description"
                 disabled
                 editor="code"
+                initial-value="'const value = 2'"
                 name="input10"
                 rows="2"
                 selectable-editor
-                value="'const value = 2'"
             ></generic-input>
             <generic-input
                 model="{declaration: 'code', description: 'input10ModelDescription', editor: 'code', name: 'input10Model', nullable: false, value: 'const value = 2'}"
@@ -234,11 +235,11 @@
                 declaration="richtext(raw)"
                 description="input12Description"
                 editor="richtext(raw)"
+                initial-value="'Hello Mr. Smith,<br><br>how are you?'"
                 name="input12"
                 required
                 rows="2"
                 selectable-editor
-                value="'Hello Mr. Smith,<br><br>how are you?'"
             ></generic-input>
             <generic-input
                 model="{declaration: 'richtext(simple)', description: 'input12ModelDescription', editor: 'richtext(simple)', mutable: false, name: 'input12Model', nullable: false, value: 'Hello Mr. Smith,<br><br>how are you?'}"
