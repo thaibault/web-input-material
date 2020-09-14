@@ -122,6 +122,12 @@
         "javaScript": {
           "exclude": "!filePath.includes('clientnode/property-types') && isFilePathInDependencies(filePath)"
         }
+      },
+      "replacements": {
+        "#": "Pre-process environment specific module.",
+        "normal": {
+          "clientnode/property-types$": "clientnode/property-types.ts"
+        }
       }
     },
     "target:export": {
