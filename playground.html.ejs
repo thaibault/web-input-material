@@ -49,29 +49,26 @@
                 .map((component) => component.register())
 
             for (const domNode of document.querySelectorAll('[name]'))
-                domNode.addEventListener('onChange', ({detail}) => {
-                    console.log(detail.target)
+                domNode.addEventListener('onChange', ({detail}) =>
                     document.querySelector('pre').innerHTML =
                         `${detail.parameter[0].name}: ` +
                         webInputMaterial.clientnode.Tools.represent(
-                            /*
-                                NOTE: We want to call the corresponding getter
-                                on the dom node for each property.
-
-                            // TODO
-                            Object.keys(detail.target)
+                            Object.keys(detail.parameter[0])
                                 .filter(key => !/^on[A-Z]/.test(key))
                                 .reduce(
                                     (result, key) => (
+                                        /*
+                                            NOTE: We want to call the
+                                            corresponding getter on the dom
+                                            node for each property.
+                                        */
                                         result[key] = detail.target[key],
                                         result
                                     ),
                                     {}
                                 )
-                            */
-                            detail.target
                         )
-                })
+                )
         }
     </script>
     <body class="no-javascript">
