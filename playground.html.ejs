@@ -49,7 +49,8 @@
                 .map((component) => component.register())
 
             for (const domNode of document.querySelectorAll('[name]'))
-                domNode.addEventListener('onChange', ({detail}) =>
+                domNode.addEventListener('onChange', ({detail}) => {
+                    console.log(detail.target)
                     document.querySelector('pre').innerHTML =
                         `${detail.parameter[0].name}: ` +
                         webInputMaterial.clientnode.Tools.represent(
@@ -70,7 +71,7 @@
                             */
                             detail.target
                         )
-                )
+                })
         }
     </script>
     <body class="no-javascript">
