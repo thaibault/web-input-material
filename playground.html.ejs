@@ -256,6 +256,8 @@
             <GenericInput
                 declaration="Number"
                 description="input13Description"
+                maximum="200000"
+                minimum="10"
                 name="input13"
                 placeholder="100.000,00"
                 required
@@ -263,7 +265,7 @@
             />
             <GenericInput
                 initial-value="100.000,00"
-                model="{declaration: 'Number', description: 'input13ModelDescription', mutable: false, name: 'input13Model', nullable: false}"
+                model="{declaration: 'Number', description: 'input13ModelDescription', maximum: 200000, minimum: 10, mutable: false, name: 'input13Model', nullable: false}"
             />
 
         </div>
