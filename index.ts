@@ -50,6 +50,7 @@ for (const key in reactComponents) {
     const allPropertyNames:Array<string> = Object.keys(propertyTypes)
     components[name] = {
         component: class extends ReactWeb {
+            static readonly content:typeof Component = component
             static readonly observedAttributes:Array<string> =
                 allPropertyNames.map((name:string):string =>
                     Tools.stringCamelCaseToDelimited(name)
@@ -58,7 +59,6 @@ for (const key in reactComponents) {
             readonly output:Output = component.output || {}
             readonly self:typeof ReactWeb = components[name].component
 
-            _content:typeof Component = component
             _propertiesToReflectAsAttributes:Mapping<boolean> =
                 component.propertiesToReflectAsAttributes || {}
             _propertyTypes:Mapping<ValueOf<PropertyTypes>> = propertyTypes

@@ -45,6 +45,9 @@
     </style>
     <script>
         window.onload = () => {
+            webInputMaterial.index.default.GenericInput.component.content.local = 'de-DE'
+            webInputMaterial.index.default.GenericInput.component.content.transformer.currency.format.final.options = {currency: 'EUR'}
+
             Object.values(webInputMaterial.index.default)
                 .map((component) => component.register())
 
@@ -131,7 +134,7 @@
                 icon="'search'"
                 initial-value="'only a`s allowed'"
                 name="input5"
-                pattern="a+"
+                pattern="/a+/"
                 placeholder="input5Placeholder"
             ></generic-input>
             <generic-input
@@ -149,7 +152,7 @@
                 icon="'search'"
                 initial-value="'hans'"
                 name="passwordInput6"
-                pattern="a+"
+                pattern="/a+/"
                 placeholder="input6Placeholder"
                 tooltip="'Please type in your password.'"
                 trailing-icon="'password_preset'"
@@ -177,6 +180,8 @@
                 placeholder="input7ModelPlaceholder"
             ></generic-input>
 
+            <hr/>
+
             <generic-input
                 declaration="selection"
                 description="input8Description"
@@ -189,6 +194,8 @@
                 model="{declaration: 'selection', description: 'input8ModelDescription', name: 'input8Model', nullable: false, selection: {a: 'A', b: 'B', c: 'C'}, value: 'a'}"
             ></generic-input>
 
+            <hr/>
+
             <generic-input
                 declaration="text"
                 description="input9Description"
@@ -199,11 +206,12 @@
                 rows="3"
                 theme="{primary: 'yellow', secondary: 'blue'}"
             ></generic-input>
-
             <generic-input
                 model="{declaration: 'text', description: 'input9ModelDescription', editor: 'text', name: 'input9Model', nullable: false, value: 'a'}"
                 rows="2"
             ></generic-input>
+
+            <hr/>
 
             <generic-input
                 declaration="code"
@@ -221,6 +229,8 @@
                 selectable-editor
             ></generic-input>
 
+            <hr/>
+
             <generic-input
                 declaration="code"
                 description="input11Description"
@@ -236,6 +246,8 @@
                 rows="6"
                 selectable-editor
             ></generic-input>
+
+            <hr/>
 
             <generic-input
                 declaration="richtext(raw)"
@@ -253,20 +265,56 @@
                 selectable-editor
             ></generic-input>
 
-            <GenericInput
+            <hr/>
+
+            <generic-input
                 declaration="Number"
                 description="input13Description"
                 maximum="200000"
                 minimum="10"
                 name="input13"
-                placeholder="100.000,00"
+                placeholder="100000"
                 required
                 type="number"
-            />
+            ></generic-input>
             <GenericInput
-                initial-value="100.000,00"
+                initial-value="100000"
                 model="{declaration: 'Number', description: 'input13ModelDescription', maximum: 200000, minimum: 10, mutable: false, name: 'input13Model', nullable: false}"
-            />
+            ></generic-input>
+
+            <hr/>
+
+            <generic-input
+                declaration="Number"
+                description="input14Description"
+                maximum="200000"
+                minimum="10"
+                name="input14"
+                placeholder="100.000"
+                required
+                type="integer"
+            ></generic-input>
+            <generic-input
+                initial-value="100000.01"
+                model="{declaration: 'Number', description: 'input14ModelDescription', maximum: 200000, minimum: 10, name: 'input14Model', nullable: false, type: 'float'}"
+            ></generic-input>
+
+            <hr/>
+
+            <generic-input
+                declaration="Number"
+                description="input15Description"
+                maximum="200000"
+                minimum="10"
+                name="input15"
+                placeholder="100.000"
+                required
+                type="currency"
+            ></generic-input>
+            <generic-input
+                initial-value="100000.01"
+                model="{declaration: 'Number', description: 'input15ModelDescription', maximum: 200000, minimum: 10, name: 'input15Model', nullable: false, type: 'currency'}"
+            ></generic-input>
 
         </div>
 
