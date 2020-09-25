@@ -24,7 +24,7 @@ import {ComponentType} from 'react'
 import 'react-input-material/GenericAnimate.styles'
 import 'react-input-material/GenericInput.styles'
 import ReactWeb from 'web-component-wrapper/React'
-import {WebComponentAPI} from 'web-component-wrapper/types'
+import {Output, WebComponentAPI} from 'web-component-wrapper/type'
 // endregion
 export const components:Mapping<WebComponentAPI> = {}
 /*
@@ -32,9 +32,12 @@ export const components:Mapping<WebComponentAPI> = {}
     class wrapper with corresponding web component register method. A derived
     default web component name is provided.
 */
-const reactComponents:Function = require('react-input-material')
+const reactComponents:Mapping<'TODO'> = require('react-input-material')
 for (const key in reactComponents) {
-    const component:ComponentType = reactComponents[key]
+    const component:ComponentType & {
+        _name?:string;
+        __types?:{name?:{name?:string}};
+    } = reactComponents[key]
     // Determine class / function name.
     const name:string =
         component._name ||
@@ -61,7 +64,8 @@ for (const key in reactComponents) {
 
             _propertiesToReflectAsAttributes:Mapping<boolean> =
                 component.propertiesToReflectAsAttributes || {}
-            _propertyTypes:Mapping<ValueOf<PropertyTypes>> = propertyTypes
+            _propertyTypes:Mapping<ValueOf<typeof PropertyTypes>> =
+                propertyTypes
         },
         register: (
             tagName:string = Tools.stringCamelCaseToDelimited(name)
