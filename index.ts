@@ -20,7 +20,7 @@
 import Tools from 'clientnode'
 import PropertyTypes from 'clientnode/property-types'
 import {Mapping, ValueOf} from 'clientnode/type'
-import {Component} from 'react'
+import {ComponentType} from 'react'
 import 'react-input-material/GenericAnimate.styles'
 import 'react-input-material/GenericInput.styles'
 import ReactWeb from 'web-component-wrapper/React'
@@ -34,7 +34,7 @@ export const components:Mapping<WebComponentAPI> = {}
 */
 const reactComponents:Function = require('react-input-material')
 for (const key in reactComponents) {
-    const component:typeof Component = reactComponents[key]
+    const component:ComponentType = reactComponents[key]
     // Determine class / function name.
     const name:string =
         component._name ||
@@ -50,7 +50,7 @@ for (const key in reactComponents) {
     const allPropertyNames:Array<string> = Object.keys(propertyTypes)
     components[name] = {
         component: class extends ReactWeb {
-            static readonly content:typeof Component = component
+            static readonly content:ComponentType = component
             static readonly observedAttributes:Array<string> =
                 allPropertyNames.map((name:string):string =>
                     Tools.stringCamelCaseToDelimited(name)
