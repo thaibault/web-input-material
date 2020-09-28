@@ -20,11 +20,12 @@
 import Tools from 'clientnode'
 import PropertyTypes from 'clientnode/property-types'
 import {Mapping, ValueOf} from 'clientnode/type'
-import {ComponentType} from 'react'
 import 'react-input-material/GenericAnimate.styles'
 import 'react-input-material/GenericInput.styles'
 import ReactWeb from 'web-component-wrapper/React'
 import {Output, WebComponentAPI} from 'web-component-wrapper/type'
+
+import {ComponentType} from './type'
 // endregion
 export const components:Mapping<WebComponentAPI> = {}
 /*
@@ -32,12 +33,9 @@ export const components:Mapping<WebComponentAPI> = {}
     class wrapper with corresponding web component register method. A derived
     default web component name is provided.
 */
-const reactComponents:Mapping<'TODO'> = require('react-input-material')
+const reactComponents:Mapping<ComponentType> = require('react-input-material')
 for (const key in reactComponents) {
-    const component:ComponentType & {
-        _name?:string;
-        __types?:{name?:{name?:string}};
-    } = reactComponents[key]
+    const component:ComponentType = reactComponents[key]
     // Determine class / function name.
     const name:string =
         component._name ||
@@ -48,7 +46,7 @@ for (const key in reactComponents) {
         */
         component.___types?.name?.name ||
         key.replace(/^(.*\/+)?([^\/]+)\.tsx$/, '$2')
-    const propertyTypes:Mapping<ValueOf<PropertyTypes>> =
+    const propertyTypes:Mapping<ValueOf<typeof PropertyTypes>> =
         component.propTypes || {}
     const allPropertyNames:Array<string> = Object.keys(propertyTypes)
     components[name] = {

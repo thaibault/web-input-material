@@ -18,7 +18,8 @@
     "component"
   ],
   "files": [
-    "index.ts"
+    "index.ts",
+    "type.ts"
   ],
   "main": "index.js",
   "repository": {
