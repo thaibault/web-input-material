@@ -64,7 +64,6 @@
     "@types/loader-utils": "*",
     "@types/node": "*",
     "@types/react": "*",
-    "@types/tinymce": "*",
     "@typescript-eslint/eslint-plugin": "*",
     "@typescript-eslint/parser": "*",
     "babel-eslint": "*",
