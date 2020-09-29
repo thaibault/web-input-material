@@ -34,6 +34,7 @@ export const components:Mapping<WebComponentAPI> = {}
     default web component name is provided.
 */
 const reactComponents:Mapping<ComponentType> = require('react-input-material')
+// TODO add checkbox here!
 for (const key in reactComponents) {
     const component:ComponentType = reactComponents[key]
     // Determine class / function name.
