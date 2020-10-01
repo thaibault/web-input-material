@@ -27,16 +27,7 @@ import {Output, WebComponentAPI} from 'web-component-wrapper/type'
 
 import {ComponentType} from './type'
 // endregion
-export const components:Mapping<WebComponentAPI> = {}
-/*
-    Import all react components and extract a dynamically created web-component
-    class wrapper with corresponding web component register method. A derived
-    default web component name is provided.
-*/
-const reactComponents:Mapping<ComponentType> = require('react-input-material')
-// TODO add checkbox here!
-for (const key in reactComponents) {
-    const component:ComponentType = reactComponents[key]
+export const wrapAsWebComponent(component:ComponentType):WebComponentAPI => {
     // Determine class / function name.
     const name:string =
         component._name ||
@@ -50,7 +41,7 @@ for (const key in reactComponents) {
     const propertyTypes:Mapping<ValueOf<typeof PropertyTypes>> =
         component.propTypes || {}
     const allPropertyNames:Array<string> = Object.keys(propertyTypes)
-    components[name] = {
+    const webComponentAPI:WebComponentAPI = {
         component: class extends ReactWeb {
             static readonly content:ComponentType = component
             static readonly observedAttributes:Array<string> =
@@ -59,7 +50,7 @@ for (const key in reactComponents) {
                 )
 
             readonly output:Output = component.output || {}
-            readonly self:typeof ReactWeb = components[name].component
+            readonly self:typeof ReactWeb = webComponentAPI.component
 
             _propertiesToReflectAsAttributes:Mapping<boolean> =
                 component.propertiesToReflectAsAttributes || {}
@@ -68,11 +59,11 @@ for (const key in reactComponents) {
         },
         register: (
             tagName:string = Tools.stringCamelCaseToDelimited(name)
-        ):void => customElements.define(tagName, components[name].component)
+        ):void => customElements.define(tagName, webComponentAPI.component)
     }
     for (const propertyName of allPropertyNames)
         Object.defineProperty(
-            components[name].component.prototype,
+            webComponentAPI.component.prototype,
             propertyName,
             {
                 get: function():any {
@@ -83,7 +74,17 @@ for (const key in reactComponents) {
                 }
             }
         )
+    return webComponentAPI
 }
+export const components:Mapping<WebComponentAPI> = {}
+/*
+    Import all react components and extract a dynamically created web-component
+    class wrapper with corresponding web component register method. A derived
+    default web component name is provided.
+*/
+const reactComponents:Mapping<ComponentType> = require('react-input-material')
+for (const key in reactComponents)
+    components[name] = wrapAsWebComponent(reactComponents[key])
 export default components
 // region vim modline
 // vim: set tabstop=4 shiftwidth=4 expandtab:
