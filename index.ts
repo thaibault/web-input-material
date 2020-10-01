@@ -20,21 +20,14 @@
 import Tools from 'clientnode'
 import PropertyTypes from 'clientnode/property-types'
 import {Mapping, ValueOf} from 'clientnode/type'
-import {Component} from 'react'
-import 'react-input-material/GenericAnimate.styles'
-import 'react-input-material/GenericInput.styles'
 import ReactWeb from 'web-component-wrapper/React'
-import {WebComponentAPI} from 'web-component-wrapper/types'
+import {Output, WebComponentAPI} from 'web-component-wrapper/type'
+
+import {ComponentType} from './type'
 // endregion
-export const components:Mapping<WebComponentAPI> = {}
-/*
-    Import all react components and extract a dynamically created web-component
-    class wrapper with corresponding web component register method. A derived
-    default web component name is provided.
-*/
-const reactComponents:Function = require('react-input-material')
-for (const key in reactComponents) {
-    const component:typeof Component = reactComponents[key]
+export const wrapAsWebComponent = (
+    component:ComponentType
+):WebComponentAPI => {
     // Determine class / function name.
     const name:string =
         component._name ||
@@ -45,31 +38,32 @@ for (const key in reactComponents) {
         */
         component.___types?.name?.name ||
         key.replace(/^(.*\/+)?([^\/]+)\.tsx$/, '$2')
-    const propertyTypes:Mapping<ValueOf<PropertyTypes>> =
+    const propertyTypes:Mapping<ValueOf<typeof PropertyTypes>> =
         component.propTypes || {}
     const allPropertyNames:Array<string> = Object.keys(propertyTypes)
-    components[name] = {
+    const webComponentAPI:WebComponentAPI = {
         component: class extends ReactWeb {
-            static readonly content:typeof Component = component
+            static readonly content:ComponentType = component
             static readonly observedAttributes:Array<string> =
                 allPropertyNames.map((name:string):string =>
                     Tools.stringCamelCaseToDelimited(name)
                 )
 
             readonly output:Output = component.output || {}
-            readonly self:typeof ReactWeb = components[name].component
+            readonly self:typeof ReactWeb = webComponentAPI.component
 
             _propertiesToReflectAsAttributes:Mapping<boolean> =
                 component.propertiesToReflectAsAttributes || {}
-            _propertyTypes:Mapping<ValueOf<PropertyTypes>> = propertyTypes
+            _propertyTypes:Mapping<ValueOf<typeof PropertyTypes>> =
+                propertyTypes
         },
         register: (
             tagName:string = Tools.stringCamelCaseToDelimited(name)
-        ):void => customElements.define(tagName, components[name].component)
+        ):void => customElements.define(tagName, webComponentAPI.component)
     }
     for (const propertyName of allPropertyNames)
         Object.defineProperty(
-            components[name].component.prototype,
+            webComponentAPI.component.prototype,
             propertyName,
             {
                 get: function():any {
@@ -80,8 +74,23 @@ for (const key in reactComponents) {
                 }
             }
         )
+    return webComponentAPI
 }
-export default components
+export const components:Mapping<WebComponentAPI> = {}
+/*
+    Import all react components and extract a dynamically created web-component
+    class wrapper with corresponding web component register method. A derived
+    default web component name is provided.
+*/
+const reactComponentRetriever:Mapping<(name:string) => Mapping<ComponentType>> =
+    require.context('./components', true, /^.+\.ts$/)
+const reactComponents:Mapping<ComponentType> =
+    reactComponentRetriever.keys().map((name:string):Mapping<ComponenType> =>
+        reactComponentRetriever(name)
+    )
+for (const key in reactComponents)
+    components[name] = wrapAsWebComponent(reactComponents[key])
+export default wrapAsWebComponent
 // region vim modline
 // vim: set tabstop=4 shiftwidth=4 expandtab:
 // vim: foldmethod=marker foldmarker=region,endregion:
