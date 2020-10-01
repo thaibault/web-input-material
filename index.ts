@@ -53,8 +53,9 @@ export const wrapAsWebComponent = (
             readonly output:Output = component.output || {}
             readonly self:typeof ReactWeb = webComponentAPI.component
 
-            _propertiesToReflectAsAttributes:Mapping<boolean> =
-                component.propertiesToReflectAsAttributes || {}
+            _propertiesToReflectAsAttributes:Map<string, boolean> =
+                component.propertiesToReflectAsAttributes ||
+                new Map<string, boolean>()
             _propertyTypes:Mapping<ValueOf<typeof PropertyTypes>> =
                 propertyTypes
         },
