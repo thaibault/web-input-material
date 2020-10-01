@@ -45,10 +45,10 @@
     </style>
     <script>
         window.onload = () => {
-            webInputMaterial.index.default.GenericInput.component.content.local = 'de-DE'
-            webInputMaterial.index.default.GenericInput.component.content.transformer.currency.format.final.options = {currency: 'EUR'}
+            webInputMaterial.index.components.GenericInput.component.content.local = 'de-DE'
+            webInputMaterial.index.components.GenericInput.component.content.transformer.currency.format.final.options = {currency: 'EUR'}
 
-            Object.values(webInputMaterial.index.default)
+            Object.values(webInputMaterial.index.components)
                 .map((component) => component.register())
 
             for (const domNode of document.querySelectorAll('[name]'))
