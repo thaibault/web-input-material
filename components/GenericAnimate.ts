@@ -20,11 +20,11 @@
 import ReactGenericAnimate from 'react-input-material/components/GenericAnimate'
 import 'react-input-material/components/GenericAnimate.styles'
 
-import wrapAsWebComponent from '../index'
+import {wrapAsWebComponent} from '../index'
 import {WebComponentAPI} from '../type'
 // endregion
 export const GenericAnimate:WebComponentAPI =
-    wrapAsWebComponent(ReactGenericAnimate)
+    wrapAsWebComponent(ReactGenericAnimate, 'GenericAnimate')
 export default GenericAnimate
 // region vim modline
 // vim: set tabstop=4 shiftwidth=4 expandtab:

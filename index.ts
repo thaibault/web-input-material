@@ -26,7 +26,7 @@ import {Output, WebComponentAPI} from 'web-component-wrapper/type'
 import {ComponentType} from './type'
 // endregion
 export const wrapAsWebComponent = (
-    component:ComponentType
+    component:ComponentType, nameHint:string = 'NoName'
 ):WebComponentAPI => {
     // Determine class / function name.
     const name:string =
@@ -37,7 +37,7 @@ export const wrapAsWebComponent = (
             member variables under this property. Try to respect these.
         */
         component.___types?.name?.name ||
-        key.replace(/^(.*\/+)?([^\/]+)\.tsx$/, '$2')
+        nameHint.replace(/^(.*\/+)?([^\/]+)\.tsx$/, '$2')
     const propertyTypes:Mapping<ValueOf<typeof PropertyTypes>> =
         component.propTypes || {}
     const allPropertyNames:Array<string> = Object.keys(propertyTypes)
@@ -57,6 +57,7 @@ export const wrapAsWebComponent = (
             _propertyTypes:Mapping<ValueOf<typeof PropertyTypes>> =
                 propertyTypes
         },
+        name,
         register: (
             tagName:string = Tools.stringCamelCaseToDelimited(name)
         ):void => customElements.define(tagName, webComponentAPI.component)
@@ -82,15 +83,13 @@ export const components:Mapping<WebComponentAPI> = {}
     class wrapper with corresponding web component register method. A derived
     default web component name is provided.
 */
-const reactComponentRetriever:Mapping<(name:string) => Mapping<ComponentType>> =
+const componentRetriever:Mapping<(name:string) => Mapping<ComponentType>> =
     require.context('./components', true, /^.+\.ts$/)
-const reactComponents:Mapping<ComponentType> =
-    reactComponentRetriever.keys().map((name:string):Mapping<ComponenType> =>
-        reactComponentRetriever(name)
-    )
-for (const key in reactComponents)
-    components[name] = wrapAsWebComponent(reactComponents[key])
-export default wrapAsWebComponent
+componentRetriever.keys().map((name:string):void => {
+    const component:WebComponentAPI = componentRetriever(name).default
+    components[component.name] = component
+})
+export default components
 // region vim modline
 // vim: set tabstop=4 shiftwidth=4 expandtab:
 // vim: foldmethod=marker foldmarker=region,endregion:

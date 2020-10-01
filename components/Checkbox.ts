@@ -17,13 +17,15 @@
     endregion
 */
 // region imports
-import ReactCheckbox from '@rmwc/checkbox'
+import {Checkbox as ReactCheckbox} from '@rmwc/checkbox'
 import '@rmwc/checkbox/styles'
 
-import wrapAsWebComponent from '../index'
+import {wrapAsWebComponent} from '../index'
 import {WebComponentAPI} from '../type'
 // endregion
-export const Checkbox:WebComponentAPI = wrapAsWebComponent(ReactCheckbox)
+export const Checkbox:WebComponentAPI = wrapAsWebComponent(
+    ReactCheckbox, 'Checkbox'
+)
 export default Checkbox
 // region vim modline
 // vim: set tabstop=4 shiftwidth=4 expandtab:
