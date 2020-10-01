@@ -17,14 +17,14 @@
     endregion
 */
 // region imports
-import GenericAnimate from 'react-input-component/components/GenericAnimate'
+import ReactGenericAnimate from 'react-input-component/components/GenericAnimate'
 import 'react-input-component/components/GenericAnimate.styles'
 
 import wrapAsWebComponent from '../index'
 import {WebComponentAPI} from '../type'
 // endregion
 export const GenericAnimate:WebComponentAPI =
-    wrapAsWebComponent(GenericAnimate)
+    wrapAsWebComponent(ReactGenericAnimate)
 export default GenericAnimate
 // region vim modline
 // vim: set tabstop=4 shiftwidth=4 expandtab:

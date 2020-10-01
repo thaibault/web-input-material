@@ -25,7 +25,9 @@ import {Output, WebComponentAPI} from 'web-component-wrapper/type'
 
 import {ComponentType} from './type'
 // endregion
-export const wrapAsWebComponent(component:ComponentType):WebComponentAPI => {
+export const wrapAsWebComponent = (
+    component:ComponentType
+):WebComponentAPI => {
     // Determine class / function name.
     const name:string =
         component._name ||

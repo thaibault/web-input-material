@@ -17,13 +17,14 @@
     endregion
 */
 // region imports
-import GenericInput from 'react-input-component/components/GenericInput'
+import ReactGenericInput from 'react-input-component/components/GenericInput'
 import 'react-input-component/components/GenericInput.styles'
 
 import wrapAsWebComponent from '../index'
 import {WebComponentAPI} from '../type'
 // endregion
-export const GenericInput:WebComponentAPI = wrapAsWebComponent(GenericInput)
+export const GenericInput:WebComponentAPI =
+    wrapAsWebComponent(ReactGenericInput)
 export default GenericInput
 // region vim modline
 // vim: set tabstop=4 shiftwidth=4 expandtab:
