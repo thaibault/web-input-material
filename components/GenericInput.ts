@@ -17,8 +17,8 @@
     endregion
 */
 // region imports
-import ReactGenericInput from 'react-input-component/components/GenericInput'
-import 'react-input-component/components/GenericInput.styles'
+import ReactGenericInput from 'react-input-material/components/GenericInput'
+import 'react-input-material/components/GenericInput.styles'
 
 import wrapAsWebComponent from '../index'
 import {WebComponentAPI} from '../type'

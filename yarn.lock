@@ -1252,6 +1252,21 @@
     "@material/shape" "^5.1.0"
     "@material/theme" "^5.1.0"
 
+"@material/checkbox@^5.1.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@material/checkbox/-/checkbox-5.1.0.tgz#2f689f6a409f0ed906a0d73bcd0078a768eaf9d1"
+  integrity sha512-NwpWxFdWrZNlSjcSEEcGz8UN7ZQ5k8VthExclJnawpYGPUnCPLTXWogREnA2Tyl22PJ6jOy8Ejb8tnpu2rSiaw==
+  dependencies:
+    "@material/animation" "^5.1.0"
+    "@material/base" "^5.1.0"
+    "@material/density" "^5.1.0"
+    "@material/dom" "^5.1.0"
+    "@material/feature-targeting" "^5.1.0"
+    "@material/ripple" "^5.1.0"
+    "@material/theme" "^5.1.0"
+    "@material/touch-target" "^5.1.0"
+    tslib "^1.9.3"
+
 "@material/density@^5.1.0":
   version "5.1.0"
   resolved "https://registry.yarnpkg.com/@material/density/-/density-5.1.0.tgz#d36512d413a00595122f98303766dae6b9e9fabe"
@@ -1546,6 +1561,19 @@
     "@rmwc/ripple" "^6.1.4"
     "@rmwc/types" "^6.0.5"
 
+"@rmwc/checkbox@*":
+  version "6.1.4"
+  resolved "https://registry.yarnpkg.com/@rmwc/checkbox/-/checkbox-6.1.4.tgz#d52cbed07f4ad3a40f392682721e227e3765c5b7"
+  integrity sha512-AhVfA+fir7W5L7qoC0EWYxj75XWfS7upahNqdqmmClk0bLnmu6hqdScqFITVZLVdBr0xBfce4byH3MqrOtQzwA==
+  dependencies:
+    "@material/checkbox" "^5.1.0"
+    "@material/form-field" "^5.1.0"
+    "@rmwc/base" "^6.1.4"
+    "@rmwc/formfield" "^6.1.4"
+    "@rmwc/ripple" "^6.1.4"
+    "@rmwc/toggleable" "^6.1.4"
+    "@rmwc/types" "^6.0.5"
+
 "@rmwc/floating-label@^6.1.4":
   version "6.1.4"
   resolved "https://registry.yarnpkg.com/@rmwc/floating-label/-/floating-label-6.1.4.tgz#02976c4685f8425e72c8a1725a5343ca2cde934a"
@@ -1555,7 +1583,7 @@
     "@rmwc/base" "^6.1.4"
     "@rmwc/types" "^6.0.5"
 
-"@rmwc/formfield@*":
+"@rmwc/formfield@*", "@rmwc/formfield@^6.1.4":
   version "6.1.4"
   resolved "https://registry.yarnpkg.com/@rmwc/formfield/-/formfield-6.1.4.tgz#d4b8f1f5571da2485b87bf1b48db8e2358e2d810"
   integrity sha512-8EZwV9VH7CX71kH8iaByMqH5dCFn73B63pSY/5UTimrh0mxHGDRCeAK/O1nXAz9NuVa3pJvevDK5mms4unl5OA==
@@ -1680,6 +1708,15 @@
   dependencies:
     "@material/theme" "^5.1.0"
     "@rmwc/base" "^6.1.4"
+    "@rmwc/types" "^6.0.5"
+
+"@rmwc/toggleable@^6.1.4":
+  version "6.1.4"
+  resolved "https://registry.yarnpkg.com/@rmwc/toggleable/-/toggleable-6.1.4.tgz#6b5a00a5f3db9b436260f2b7edabeda713f502d9"
+  integrity sha512-2aiZNDMSS9VmFfqpCKm3jl4uBmrtplr9i6aOQhxT3qJOJHZbKrmcNTUvvZl6F0XmZ8YeHM/je78h7OQsyY1OSA==
+  dependencies:
+    "@rmwc/base" "^6.1.4"
+    "@rmwc/formfield" "^6.1.4"
     "@rmwc/types" "^6.0.5"
 
 "@rmwc/tooltip@*":

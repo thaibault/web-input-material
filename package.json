@@ -49,6 +49,7 @@
     "@babel/plugin-transform-proto-to-assign": "*",
     "@babel/preset-react": "*",
     "@rmwc/card": "*",
+    "@rmwc/checkbox": "*",
     "@rmwc/formfield": "*",
     "@rmwc/icon": "*",
     "@rmwc/icon-button": "*",
