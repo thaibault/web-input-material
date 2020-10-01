@@ -24,7 +24,7 @@ import {wrapAsWebComponent} from '../index'
 import {WebComponentAPI} from '../type'
 // endregion
 export const Checkbox:WebComponentAPI = wrapAsWebComponent(
-    ReactCheckbox, 'Checkbox'
+    ReactCheckbox, 'MaterialCheckbox'
 )
 export default Checkbox
 // region vim modline
