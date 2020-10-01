@@ -20,8 +20,6 @@
 import Tools from 'clientnode'
 import PropertyTypes from 'clientnode/property-types'
 import {Mapping, ValueOf} from 'clientnode/type'
-import 'react-input-material/GenericAnimate.styles'
-import 'react-input-material/GenericInput.styles'
 import ReactWeb from 'web-component-wrapper/React'
 import {Output, WebComponentAPI} from 'web-component-wrapper/type'
 
