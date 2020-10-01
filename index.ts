@@ -82,10 +82,15 @@ export const components:Mapping<WebComponentAPI> = {}
     class wrapper with corresponding web component register method. A derived
     default web component name is provided.
 */
-const reactComponents:Mapping<ComponentType> = require('react-input-material')
+const reactComponentRetriever:Mapping<(name:string) => Mapping<ComponentType>> =
+    require.context('./components', true, /^.+\.ts$/)
+const reactComponents:Mapping<ComponentType> =
+    reactComponentRetriever.keys().map((name:string):Mapping<ComponenType> =>
+        reactComponentRetriever(name)
+    )
 for (const key in reactComponents)
     components[name] = wrapAsWebComponent(reactComponents[key])
-export default components
+export default wrapAsWebComponent
 // region vim modline
 // vim: set tabstop=4 shiftwidth=4 expandtab:
 // vim: foldmethod=marker foldmarker=region,endregion:
