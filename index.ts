@@ -25,9 +25,15 @@ import {Output, WebComponentAPI} from 'web-component-wrapper/type'
 
 import {ComponentType} from './type'
 // endregion
+// TODO
 export const wrapAsWebComponent = (
-    component:ComponentType, nameHint:string = 'NoName'
+    component:ComponentType, configuration = {}
 ):WebComponentAPI => {
+    configuration = {
+        nameHint: 'NoName',
+        output: {},
+        ...configuration
+    }
     // Determine class / function name.
     const name:string =
         component._name ||
@@ -37,7 +43,7 @@ export const wrapAsWebComponent = (
             member variables under this property. Try to respect these.
         */
         component.___types?.name?.name ||
-        nameHint.replace(/^(.*\/+)?([^\/]+)\.tsx$/, '$2')
+        configuration.nameHint.replace(/^(.*\/+)?([^\/]+)\.tsx$/, '$2')
     const propertyTypes:Mapping<ValueOf<typeof PropertyTypes>> =
         component.propTypes || {}
     const allPropertyNames:Array<string> = Object.keys(propertyTypes)
@@ -50,7 +56,10 @@ export const wrapAsWebComponent = (
                     Tools.stringCamelCaseToDelimited(name)
                 )
 
-            readonly output:Output = component.output || {}
+            readonly output:Output =
+                configuration.output ||
+                component.output ||
+                {}
             readonly self:typeof ReactWeb = webComponentAPI.component
 
             _propertiesToReflectAsAttributes:Map<string, boolean> =
