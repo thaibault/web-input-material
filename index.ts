@@ -43,7 +43,8 @@ export const wrapAsWebComponent = (
     const allPropertyNames:Array<string> = Object.keys(propertyTypes)
     const webComponentAPI:WebComponentAPI = {
         component: class extends ReactWeb {
-            static readonly content:ComponentType = component
+            static content:ComponentType = component
+            static _name:string = name
             static readonly observedAttributes:Array<string> =
                 allPropertyNames.map((name:string):string =>
                     Tools.stringCamelCaseToDelimited(name)
@@ -57,7 +58,6 @@ export const wrapAsWebComponent = (
             _propertyTypes:Mapping<ValueOf<typeof PropertyTypes>> =
                 propertyTypes
         },
-        name,
         register: (
             tagName:string = Tools.stringCamelCaseToDelimited(name)
         ):void => customElements.define(tagName, webComponentAPI.component)
@@ -86,8 +86,8 @@ export const components:Mapping<WebComponentAPI> = {}
 const componentRetriever:Mapping<(name:string) => Mapping<ComponentType>> =
     require.context('./components', true, /^.+\.ts$/)
 componentRetriever.keys().map((name:string):void => {
-    const component:WebComponentAPI = componentRetriever(name).default
-    components[component.name] = component
+    const componentAPI:WebComponentAPI = componentRetriever(name).default
+    components[componentAPI.component._name] = componentAPI
 })
 export default components
 // region vim modline
