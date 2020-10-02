@@ -17,14 +17,29 @@
     endregion
 */
 // region imports
+import {boolean, func, string} from 'clientnode/property-types'
 import {Checkbox as ReactCheckbox} from '@rmwc/checkbox'
 import '@rmwc/checkbox/styles'
-
-import {wrapAsWebComponent} from '../index'
-import {WebComponentAPI} from '../type'
+import wrapAsWebComponent from 'web-component-wrapper'
+import {WebComponentAPI} from 'web-component-wrapper/type'
 // endregion
 export const Checkbox:WebComponentAPI = wrapAsWebComponent(
-    ReactCheckbox, 'MaterialCheckbox'
+    ReactCheckbox,
+    'MaterialCheckbox',
+    {
+        aliases: {
+            checked: 'value'
+        },
+        propTypes: {
+            checked: boolean,
+            disabled: boolean,
+            id: string,
+            indeterminate: boolean,
+            label: string,
+            name: string,
+            onChange: func
+        }
+    }
 )
 export default Checkbox
 // region vim modline

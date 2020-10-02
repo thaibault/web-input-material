@@ -74,6 +74,16 @@
                                 )
                         )
                 )
+
+            const animationDomNodes =
+                document.querySelectorAll('generic-animate')
+            setInterval(
+                () => {
+                    for (const domNode of animationDomNodes)
+                        domNode.in = !domNode.in
+                },
+                1 * 1000
+            )
         }
     </script>
     <body class="no-javascript">
@@ -320,8 +330,18 @@
 
             <hr/>
 
+
+            <div style="height: 50px">
+                <generic-animate in="true">Fade it!</generic-animate>
+                <br/>
+                <generic-animate in="false">Fade it!</generic-animate>
+            </div>
+
+            <hr/>
 -->
-            <generic-animate in="true">Fade it!</generic-animate>
+
+            <material-checkbox label="check1Label" name="check1" value>
+            </material-checkbox>
 
         </div>
 

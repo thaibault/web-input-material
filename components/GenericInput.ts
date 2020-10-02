@@ -19,9 +19,8 @@
 // region imports
 import ReactGenericInput from 'react-input-material/components/GenericInput'
 import 'react-input-material/components/GenericInput.styles'
-
-import {wrapAsWebComponent} from '../index'
-import {WebComponentAPI} from '../type'
+import wrapAsWebComponent from 'web-component-wrapper'
+import {WebComponentAPI} from 'web-component-wrapper/type'
 // endregion
 export const GenericInput:WebComponentAPI =
     wrapAsWebComponent(ReactGenericInput, 'GenericInput')
