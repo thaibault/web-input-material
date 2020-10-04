@@ -54,12 +54,21 @@
                 .map((component) => component.register())
 
             for (const domNode of document.querySelectorAll('[name]'))
-                domNode.addEventListener('onChange', ({detail}) =>
+                domNode.addEventListener('onChange', ({detail}) => webInputMaterial.clientnode.Tools.timeout(() =>
                     document.querySelector('pre').innerHTML =
-                        `${detail.parameter[0].name}: ` +
+                        `${detail.target.name}: ` +
                         webInputMaterial.clientnode.Tools.represent(
-                            Object.keys(detail.parameter[0])
-                                .filter(key => !/^on[A-Z]/.test(key))
+                            Object.keys(
+                                detail.target.name ===
+                                    detail.parameter[0].name ?
+                                        detail.parameter[0] :
+                                        detail.target.properties
+                            )
+                                .filter(key =>
+                                    key !== 'children' &&
+                                    key !== 'ref' &&
+                                    !/^on[A-Z]/.test(key)
+                                )
                                 .reduce(
                                     (result, key) => (
                                         /*
@@ -73,7 +82,7 @@
                                     {}
                                 )
                         )
-                )
+                ))
 
             const animationDomNodes =
                 document.querySelectorAll('generic-animate')
@@ -340,7 +349,7 @@
             <hr/>
 -->
 
-            <material-checkbox label="check1Label" name="check1" value>
+            <material-checkbox label="check1Label" name="check1">
             </material-checkbox>
 
         </div>
