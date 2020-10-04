@@ -18,18 +18,14 @@
 */
 // region imports
 import {boolean, func, string} from 'clientnode/property-types'
-import {Checkbox as ReactCheckbox} from '@rmwc/checkbox'
-import '@rmwc/checkbox/styles'
+import Checkbox from 'react-input-material/components/RequirableCheckbox'
 import wrapAsWebComponent from 'web-component-wrapper'
 import {WebComponentAPI} from 'web-component-wrapper/type'
 // endregion
-export const Checkbox:WebComponentAPI = wrapAsWebComponent(
-    ReactCheckbox,
-    'MaterialCheckbox',
+export const RequirableCheckbox:WebComponentAPI = wrapAsWebComponent(
+    RequirableCheckbox,
+    'RequirableCheckbox',
     {
-        aliases: {
-            checked: 'value'
-        },
         propTypes: {
             checked: boolean,
             disabled: boolean,
@@ -37,7 +33,8 @@ export const Checkbox:WebComponentAPI = wrapAsWebComponent(
             indeterminate: boolean,
             label: string,
             name: string,
-            onChange: func
+            onChange: func,
+            required: boolean
         }
     }
 )

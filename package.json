@@ -113,7 +113,7 @@
     },
     "injection": {
       "entry": {
-        "__evaluate__": "2 < self.givenCommandLineArguments.length && self.givenCommandLineArguments[2] === 'serve' ? {clientnode: 'clientnode', index: './index'} : {'./components/Checkbox': './components/Checkbox', './components/GenericAnimate': './components/GenericAnimate', './components/GenericInput': './components/GenericInput', index: './index'}"
+        "__evaluate__": "2 < self.givenCommandLineArguments.length && self.givenCommandLineArguments[2] === 'serve' ? {clientnode: 'clientnode', index: './index'} : {'./components/RequireableCheckbox': './components/RequireableCheckbox', './components/GenericAnimate': './components/GenericAnimate', './components/GenericInput': './components/GenericInput', index: './index'}"
       }
     },
     "module": {
