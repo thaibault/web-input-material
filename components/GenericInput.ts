@@ -22,8 +22,30 @@ import 'react-input-material/components/GenericInput.styles'
 import wrapAsWebComponent from 'web-component-wrapper'
 import {WebComponentAPI} from 'web-component-wrapper/type'
 // endregion
-export const GenericInput:WebComponentAPI =
-    wrapAsWebComponent(ReactGenericInput, 'GenericInput')
+export const GenericInput:WebComponentAPI = wrapAsWebComponent(
+    ReactGenericInput,
+    'GenericInput',
+    {
+        eventToPropertyMapping: {onChange: true},
+        propertiesToReflectAsAttributes: new Map([
+            ['dirty', true],
+            ['focused', true],
+            ['invalid', true],
+            ['invalidMaximum', true],
+            ['invalidMaximumLength', true],
+            ['invalidMinimum', true],
+            ['invalidMinimumLength', true],
+            ['invalidPattern', true],
+            ['invalidRequired', true],
+            ['name', true],
+            ['pristine', true],
+            ['touched', true],
+            ['untouched', true],
+            ['valid', true],
+            ['visited', true]
+        ])
+    }
+)
 export default GenericInput
 // region vim modline
 // vim: set tabstop=4 shiftwidth=4 expandtab:

@@ -17,7 +17,6 @@
     endregion
 */
 // region imports
-import {boolean, func, string} from 'clientnode/property-types'
 import Checkbox from 'react-input-material/components/RequirableCheckbox'
 import wrapAsWebComponent from 'web-component-wrapper'
 import {WebComponentAPI} from 'web-component-wrapper/type'
@@ -26,16 +25,19 @@ export const RequirableCheckbox:WebComponentAPI = wrapAsWebComponent(
     RequirableCheckbox,
     'RequirableCheckbox',
     {
-        propTypes: {
-            checked: boolean,
-            disabled: boolean,
-            id: string,
-            indeterminate: boolean,
-            label: string,
-            name: string,
-            onChange: func,
-            required: boolean
-        }
+        eventToPropertyMapping: {onChange: true},
+        propertiesToReflectAsAttributes: new Map([
+            ['dirty', true],
+            ['focused', true],
+            ['invalid', true],
+            ['invalidRequired', true],
+            ['name', true],
+            ['pristine', true],
+            ['touched', true],
+            ['untouched', true],
+            ['valid', true],
+            ['visited', true]
+        ])
     }
 )
 export default Checkbox
