@@ -56,7 +56,6 @@
             for (const domNode of document.querySelectorAll('[name]'))
                 domNode.addEventListener('onChange', ({detail}) => webInputMaterial.clientnode.Tools.timeout(() =>
                     document.querySelector('pre').innerHTML =
-                        `${detail.target.name}: ` +
                         webInputMaterial.clientnode.Tools.represent(
                             Object.keys(
                                 detail.target.name ===
