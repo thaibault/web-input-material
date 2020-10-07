@@ -1,6 +1,6 @@
 // #!/usr/bin/env babel-node
 // -*- coding: utf-8 -*-
-/** @module Checkbox */
+/** @module GenericAnimate */
 'use strict'
 /* !
     region header
@@ -17,30 +17,20 @@
     endregion
 */
 // region imports
-import Checkbox from 'react-input-material/components/RequireableCheckbox'
+import {number, oneOfType, oneOf} from 'clientnode/property-types'
+import {CircularProgress} from '@rmwc/circular-progress'
+import '@rmwc/circular-progress/styles'
 import wrapAsWebComponent from 'web-component-wrapper'
 import {WebComponentAPI} from 'web-component-wrapper/type'
 // endregion
-export const RequireableCheckbox:WebComponentAPI = wrapAsWebComponent(
-    Checkbox,
-    'RequireableCheckbox',
-    {
-        eventToPropertyMapping: {onChange: true},
-        propertiesToReflectAsAttributes: new Map([
-            ['dirty', true],
-            ['focused', true],
-            ['invalid', true],
-            ['invalidRequired', true],
-            ['name', true],
-            ['pristine', true],
-            ['touched', true],
-            ['untouched', true],
-            ['valid', true],
-            ['visited', true]
-        ])
-    }
+export const CircularSpinner:WebComponentAPI = wrapAsWebComponent(
+    CircularProgress,
+    'CircularSpinner',
+    {propTypes: {size: oneOfType([
+        oneOf(['xsmall', 'small', 'medium', 'large', 'xlarge']), number]
+    )}}
 )
-export default RequireableCheckbox
+export default CircularSpinner
 // region vim modline
 // vim: set tabstop=4 shiftwidth=4 expandtab:
 // vim: foldmethod=marker foldmarker=region,endregion:

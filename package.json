@@ -49,6 +49,7 @@
     "@babel/preset-react": "*",
     "@rmwc/card": "*",
     "@rmwc/checkbox": "*",
+    "@rmwc/circular-progress": "*",
     "@rmwc/formfield": "*",
     "@rmwc/icon": "*",
     "@rmwc/icon-button": "*",
@@ -113,7 +114,7 @@
     },
     "injection": {
       "entry": {
-        "__evaluate__": "2 < self.givenCommandLineArguments.length && self.givenCommandLineArguments[2] === 'serve' ? {clientnode: 'clientnode', index: './index'} : {'./components/RequireableCheckbox': './components/RequireableCheckbox', './components/GenericAnimate': './components/GenericAnimate', './components/GenericInput': './components/GenericInput', index: './index'}"
+        "__evaluate__": "2 < self.givenCommandLineArguments.length && self.givenCommandLineArguments[2] === 'serve' ? {clientnode: 'clientnode', index: './index'} : {'./components/CircularSpinner': './components/CircularSpinner', './components/GenericAnimate': './components/GenericAnimate', './components/GenericInput': './components/GenericInput', './components/RequireableCheckbox': './components/RequireableCheckbox', index: './index'}"
       }
     },
     "module": {
