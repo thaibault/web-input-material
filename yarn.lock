@@ -1447,6 +1447,56 @@
     "@material/feature-targeting" "^5.1.0"
     "@material/rtl" "^5.1.0"
 
+"@material/tab-bar@^5.1.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@material/tab-bar/-/tab-bar-5.1.0.tgz#e3b4e959a04f3af76282e9a71204aad98a512e78"
+  integrity sha512-zK1Fe+in5cjkNIQH3Z7NiKqz0hNWehgr5e8lO0MxAFoTRodxUw5OhM9rse18c42uW+fItTJeSpLdz7RceENpyw==
+  dependencies:
+    "@material/animation" "^5.1.0"
+    "@material/base" "^5.1.0"
+    "@material/density" "^5.1.0"
+    "@material/feature-targeting" "^5.1.0"
+    "@material/tab" "^5.1.0"
+    "@material/tab-scroller" "^5.1.0"
+    tslib "^1.9.3"
+
+"@material/tab-indicator@^5.1.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@material/tab-indicator/-/tab-indicator-5.1.0.tgz#1af7ce885bf2b64af4057acb3a736ae2b993b925"
+  integrity sha512-vy/oBsvRQaQ2EscsgFp9xu7tZM6UBECmNxcC1k2eQGhNjy7olkoL9bX/ymiN4xAjQYqvP6BnC3LN3IywvKMTxQ==
+  dependencies:
+    "@material/animation" "^5.1.0"
+    "@material/base" "^5.1.0"
+    "@material/feature-targeting" "^5.1.0"
+    "@material/theme" "^5.1.0"
+    tslib "^1.9.3"
+
+"@material/tab-scroller@^5.1.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@material/tab-scroller/-/tab-scroller-5.1.0.tgz#7698b873526bc4a4a2baba415cbcf46db76fe996"
+  integrity sha512-7b1Ea5tLc0A0iQEWYHXj8jfdJgYFMaaWjs9BOJyPBw7m2PyDnVwPGngPC5RqmxjDdyEeXbtDHsnMLZmjdT5g6A==
+  dependencies:
+    "@material/animation" "^5.1.0"
+    "@material/base" "^5.1.0"
+    "@material/dom" "^5.1.0"
+    "@material/feature-targeting" "^5.1.0"
+    "@material/tab" "^5.1.0"
+    tslib "^1.9.3"
+
+"@material/tab@^5.1.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@material/tab/-/tab-5.1.0.tgz#1b91ce22218422a4c1a7c67d26e44c0971f0e1be"
+  integrity sha512-awur1Yv2QjJ8ghNyZ/oF6MThxczGDdGqimrzcgS0wI04sg2eTiU5Ed6KV3VILVsD9fA8kKR/e5XEh0CXjqhUYQ==
+  dependencies:
+    "@material/base" "^5.1.0"
+    "@material/feature-targeting" "^5.1.0"
+    "@material/ripple" "^5.1.0"
+    "@material/rtl" "^5.1.0"
+    "@material/tab-indicator" "^5.1.0"
+    "@material/theme" "^5.1.0"
+    "@material/typography" "^5.1.0"
+    tslib "^1.9.3"
+
 "@material/textfield@^5.1.0":
   version "5.1.0"
   resolved "https://registry.yarnpkg.com/@material/textfield/-/textfield-5.1.0.tgz#75f68c62dc916116330a4c958ba3866c87bd6002"
@@ -1692,6 +1742,20 @@
     "@rmwc/list" "^6.1.4"
     "@rmwc/menu" "^6.1.4"
     "@rmwc/notched-outline" "^6.1.4"
+    "@rmwc/ripple" "^6.1.4"
+    "@rmwc/types" "^6.0.5"
+
+"@rmwc/tabs@*":
+  version "6.1.4"
+  resolved "https://registry.yarnpkg.com/@rmwc/tabs/-/tabs-6.1.4.tgz#fb7583a4398e2742fb4bcdf324c75504586afab4"
+  integrity sha512-X81TDmdJ+I8Koigun6NXgANQhxIDg5dFRtFD2LVPMwK4IbHDrFcOYzapXg9oKczvNQ3UanNzU8r0REu1IcA0pg==
+  dependencies:
+    "@material/tab" "^5.1.0"
+    "@material/tab-bar" "^5.1.0"
+    "@material/tab-indicator" "^5.1.0"
+    "@material/tab-scroller" "^5.1.0"
+    "@rmwc/base" "^6.1.4"
+    "@rmwc/icon" "^6.1.4"
     "@rmwc/ripple" "^6.1.4"
     "@rmwc/types" "^6.0.5"
 
@@ -10563,9 +10627,9 @@ react-dom@*:
     scheduler "^0.19.1"
 
 react-input-material@*:
-  version "0.0.32"
-  resolved "https://registry.yarnpkg.com/react-input-material/-/react-input-material-0.0.32.tgz#d4ffccb65d9f18207b30d263627c1e6af259d74e"
-  integrity sha512-M0qEtoLNKZ7/0ucptwZZTDgFxdFy7j/nXGeHsIgohBurX7CNOXW6TWfIuPsJfv2dXG6MOuzCQhfugIhFJDfKiw==
+  version "0.0.33"
+  resolved "https://registry.yarnpkg.com/react-input-material/-/react-input-material-0.0.33.tgz#ffbc8f69d3b7d4f90e1da5978b648d82691f8bec"
+  integrity sha512-ywhdU1g+hhNCl/DYlUvqxCbmmkdZNQWT/TP6wlcNuHmMLCj0GixrvsvjZXfl4WntlTEjVn0GgpLAX41xIfhFAw==
 
 react-is@^16.12.0, react-is@^16.8.1:
   version "16.13.1"
@@ -12857,9 +12921,9 @@ wbuf@^1.1.0, wbuf@^1.7.3:
     minimalistic-assert "^1.0.0"
 
 web-component-wrapper@*:
-  version "0.0.35"
-  resolved "https://registry.yarnpkg.com/web-component-wrapper/-/web-component-wrapper-0.0.35.tgz#45aee3bf8a86c0595b5efd62cfaf84b730d64198"
-  integrity sha512-JVYAfYvYaiyvD2CBQOd4Zm+/TTHRY7nqTshiDs6pPMKcih0iUJBbZcuYhQ3J0kUqRDvYx9+MDSmV3OZ5iRwq5g==
+  version "0.0.37"
+  resolved "https://registry.yarnpkg.com/web-component-wrapper/-/web-component-wrapper-0.0.37.tgz#160ae3c9a5f4327f7a1489ef29ec61c724a0e0fd"
+  integrity sha512-D2BVAJSjuhymHJw0X+y4cnhgfd4mTxlORcDz172PR07mqwa7/NV2iWj8dwkDqR6o4rKkmI11FerSIDq1wv+mYg==
 
 webidl-conversions@^5.0.0:
   version "5.0.0"
