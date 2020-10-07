@@ -14,10 +14,10 @@
     endregion
 */
 // region imports
-import Components from './index'
+import components from './index'
 // endregion
 describe('web-input-material', () => {
-    console.log(Components)
+    console.log(components)
     // region mockup
     // endregion
     // region tests
