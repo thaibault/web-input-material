@@ -1,6 +1,6 @@
 // #!/usr/bin/env babel-node
 // -*- coding: utf-8 -*-
-/** @module CircularSpinner */
+/** @module GenericTab */
 'use strict'
 /* !
     region header
@@ -17,20 +17,15 @@
     endregion
 */
 // region imports
-import {number, oneOfType, oneOf} from 'clientnode/property-types'
-import {CircularProgress} from '@rmwc/circular-progress'
-import '@rmwc/circular-progress/styles'
+import {boolean} from 'clientnode/property-types'
+import {Tab} from '@rmwc/tabs'
 import wrapAsWebComponent from 'web-component-wrapper'
 import {WebComponentAPI} from 'web-component-wrapper/type'
 // endregion
-export const CircularSpinner:WebComponentAPI = wrapAsWebComponent(
-    CircularProgress,
-    'CircularSpinner',
-    {propTypes: {size: oneOfType([
-        oneOf(['xsmall', 'small', 'medium', 'large', 'xlarge']), number]
-    )}}
+export const GenericTab:WebComponentAPI = wrapAsWebComponent(
+    Tab, 'GenericTab', {propTypes: {stacked: boolean}}
 )
-export default CircularSpinner
+export default GenericTab
 // region vim modline
 // vim: set tabstop=4 shiftwidth=4 expandtab:
 // vim: foldmethod=marker foldmarker=region,endregion:
