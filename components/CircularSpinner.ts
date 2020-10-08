@@ -1,6 +1,6 @@
 // #!/usr/bin/env babel-node
 // -*- coding: utf-8 -*-
-/** @module GenericAnimate */
+/** @module CircularSpinner */
 'use strict'
 /* !
     region header

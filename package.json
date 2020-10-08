@@ -54,9 +54,11 @@
     "@rmwc/icon": "*",
     "@rmwc/icon-button": "*",
     "@rmwc/select": "*",
+    "@rmwc/tabs": "*",
     "@rmwc/textfield": "*",
     "@rmwc/theme": "*",
     "@rmwc/tooltip": "*",
+    "@rmwc/typography": "*",
     "@tinymce/tinymce-react": "*",
     "@types/ejs": "*",
     "@types/html-minifier": "*",
@@ -92,6 +94,8 @@
     "react-ace": "*",
     "react-dom": "*",
     "react-input-material": "*",
+    "react-transition-group": "*",
+    "react-useanimations": "*",
     "style-loader": "*",
     "stylelint": "*",
     "stylelint-config-standard": "*",
@@ -114,7 +118,7 @@
     },
     "injection": {
       "entry": {
-        "__evaluate__": "2 < self.givenCommandLineArguments.length && self.givenCommandLineArguments[2] === 'serve' ? {clientnode: 'clientnode', index: './index'} : {'./components/CircularSpinner': './components/CircularSpinner', './components/GenericAnimate': './components/GenericAnimate', './components/GenericInput': './components/GenericInput', './components/RequireableCheckbox': './components/RequireableCheckbox', index: './index'}"
+        "__evaluate__": "2 < self.givenCommandLineArguments.length && self.givenCommandLineArguments[2] === 'serve' ? {clientnode: 'clientnode', index: './index'} : {'./components/CircularSpinner': './components/CircularSpinner', './components/GenericAnimate': './components/GenericAnimate', './components/GenericInput': './components/GenericInput', './components/GenericTabBar': './components/GenericTabBar', './components/GenericTab': './components/GenericTab', './components/RequireableCheckbox': './components/RequireableCheckbox', index: './index'}"
       }
     },
     "module": {
