@@ -80,6 +80,7 @@
                 .local = 'de-DE'
             webInputMaterial.index.components.GenericInput.component.content
                 .transformer.currency.format.final.options = {currency: 'EUR'}
+
             for (const domNode of document.querySelectorAll('[name]'))
                 domNode.addEventListener('onChange', ({detail}) =>
                     webInputMaterial.clientnode.Tools.timeout(() =>
