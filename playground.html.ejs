@@ -53,8 +53,14 @@
     <!--region script-->
     <script>
         window.onload = () => {
+            webInputMaterial.index.components.GenericInput.component.content
+                .local = 'de-DE'
+            webInputMaterial.index.components.GenericInput.component.content
+                .transformer.currency.format.final.options = {currency: 'EUR'}
+
             Object.values(webInputMaterial.index.components)
                 .map((component) => component.register())
+
             // region tabs
             const tabs = document.querySelectorAll('.tab')
             const showTab = (index) => {
@@ -76,42 +82,41 @@
             })
             // endregion
             // region inputs
-            webInputMaterial.index.components.GenericInput.component.content
-                .local = 'de-DE'
-            webInputMaterial.index.components.GenericInput.component.content
-                .transformer.currency.format.final.options = {currency: 'EUR'}
-
-            for (const domNode of document.querySelectorAll('[name]'))
-                domNode.addEventListener('onChange', ({detail}) =>
-                    webInputMaterial.clientnode.Tools.timeout(() =>
-                        document.querySelector('pre').innerHTML =
-                            webInputMaterial.clientnode.Tools.represent(
-                                Object.keys(
-                                    detail.target.name ===
-                                        detail.parameter[0].name ?
-                                            detail.parameter[0] :
-                                            detail.target.properties
+            // NOTE: Wait until all inputs have stabilized.
+            webInputMaterial.clientnode.Tools.timeout(() => {
+                for (const domNode of document.querySelectorAll('[name]'))
+                    domNode.addEventListener('onChange', ({detail}) =>
+                        webInputMaterial.clientnode.Tools.timeout(() =>
+                            document.querySelector('pre').innerHTML =
+                                webInputMaterial.clientnode.Tools.represent(
+                                    Object.keys(
+                                        detail.target.name ===
+                                            detail.parameter[0].name ?
+                                                detail.parameter[0] :
+                                                detail.target.properties
+                                    )
+                                        .filter(key =>
+                                            key !== 'children' &&
+                                            key !== 'ref' &&
+                                            !/^on[A-Z]/.test(key)
+                                        )
+                                        .reduce(
+                                            (result, key) => (
+                                                /*
+                                                    NOTE: We want to call the
+                                                    corresponding getter on the
+                                                    dom node for each property.
+                                                */
+                                                result[key] =
+                                                    detail.target[key],
+                                                result
+                                            ),
+                                            {}
+                                        )
                                 )
-                                    .filter(key =>
-                                        key !== 'children' &&
-                                        key !== 'ref' &&
-                                        !/^on[A-Z]/.test(key)
-                                    )
-                                    .reduce(
-                                        (result, key) => (
-                                            /*
-                                                NOTE: We want to call the
-                                                corresponding getter on the dom
-                                                node for each property.
-                                            */
-                                            result[key] = detail.target[key],
-                                            result
-                                        ),
-                                        {}
-                                    )
-                            )
+                        )
                     )
-                )
+            })
             // endregion
             // region animation
             const animationDomNodes =
@@ -132,7 +137,7 @@
             window.document.body.className =
                 window.document.body.className.replace(
                     /(^|\s)no-javascript(\s|$)/, '$1javascript$2'
-                );
+                )
         </script>
 
         <div class="inputs">
@@ -140,7 +145,9 @@
             <!--region tabs-->
 
             <generic-tab-bar>
-                <generic-tab>generic-input</generic-tab>
+                <generic-tab>
+                    generic-input (with <sup>markup</sup>)
+                </generic-tab>
                 <generic-tab>generic-animate</generic-tab>
                 <generic-tab>requireable-checkbox</generic-tab>
                 <generic-tab>circular-spinner</generic-tab>
@@ -400,7 +407,7 @@
             </div>
 
             <!--endregion-->
-            <!--region reauireable-checkboxes-->
+            <!--region requireable-checkboxes-->
 
             <div class="requireable-checkboxes tab">
 
@@ -424,11 +431,14 @@
                 <hr/>
 
                 <requireable-checkbox
-                    name="checkbox3" required show-initial-validation-state
+                    description="checkbox3Description"
+                    name="checkbox3"
+                    required
+                    show-initial-validation-state
                 >
                 </requireable-checkbox>
                 <requireable-checkbox
-                    model="{name: 'checkbox3Model', nullable: false}"
+                    model="{description: 'checkbox3Description', name: 'checkbox3Model', nullable: false}"
                     show-initial-validation-state
                     tooltip="'Check this one!'"
                 >
