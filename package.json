@@ -106,13 +106,12 @@
     "webpack-cli": "*",
     "webpack-dev-server": "*"
   },
-  "sideEffects": false,
+  "sideEffects": true,
   "webOptimizer": {
     "commandLine": {
       "test": {
         "environments": [
-          "jsdom",
-          "node"
+          "jsdom"
         ]
       }
     },
