@@ -61,20 +61,24 @@
     <!--endregion-->
     <!--region script-->
     <script>
-        window.onload = () => {
-            webInputMaterial.index.components.GenericInput.component.content
-                .local = 'de-DE'
-            webInputMaterial.index.components.GenericInput.component.content
-                .transformer.currency.format.final.options = {currency: 'EUR'}
+        window.onload = function() {
+            const components = webInputMaterial.index.components
+            const Tools = webInputMaterial.clientnode.Tools
+            const GenericInput = components.GenericInput.component.content
 
-            Object.values(webInputMaterial.index.components)
-                .map((component) => component.register())
+            GenericInput.local = 'de-DE'
+            GenericInput.transformer.currency.format.final.options =
+                {currency: 'EUR'}
+
+            Object.values(components).map(function(component) {
+                component.register()
+            })
 
             // region tabs
             const tabs = document.querySelectorAll('.tab')
-            const showTab = (index) => {
-                for (const tab of tabs)
-                    if (tab === tabs[index]) {
+            const showTab = function(currentIndex) {
+                tabs.forEach(function(tab) {
+                    if (tab === tabs[currentIndex]) {
                         if (tab.getAttribute('class').includes(' hide'))
                             tab.setAttribute(
                                 'class',
@@ -82,58 +86,71 @@
                             )
                     } else if (!tab.getAttribute('class').includes(' hide'))
                         tab.setAttribute(
-                            'class', `${tab.getAttribute('class')} hide`
+                            'class', tab.getAttribute('class') + ' hide'
                         )
+                })
             }
             const tabBar = document.querySelector('generic-tab-bar')
-            tabBar.addEventListener('onActivate', ({detail}) => {
-                showTab(detail.parameter[0].detail.index)
-            })
+            tabBar.addEventListener(
+                'onActivate',
+                function(event) {
+                    showTab(event.detail.parameter[0].detail.index)
+                }
+            )
             // endregion
             // region inputs
-            // NOTE: Wait until all inputs have stabilized.
-            webInputMaterial.clientnode.Tools.timeout(() => {
-                for (const domNode of document.querySelectorAll('[name]'))
-                    domNode.addEventListener('onChange', ({detail}) =>
-                        webInputMaterial.clientnode.Tools.timeout(() =>
-                            document.querySelector('pre').innerHTML =
-                                webInputMaterial.clientnode.Tools.represent(
-                                    Object.keys(
-                                        detail.target.name ===
-                                            detail.parameter[0].name ?
-                                                detail.parameter[0] :
-                                                detail.target.properties
-                                    )
-                                        .filter(key =>
-                                            key !== 'children' &&
-                                            key !== 'ref' &&
-                                            !/^on[A-Z]/.test(key)
-                                        )
-                                        .reduce(
-                                            (result, key) => (
-                                                /*
-                                                    NOTE: We want to call the
-                                                    corresponding getter on the
-                                                    dom node for each property.
-                                                */
-                                                result[key] =
-                                                    detail.target[key],
-                                                result
-                                            ),
-                                            {}
-                                        )
-                                )
-                        )
+            function represent(event) {
+                return Tools.represent(
+                    Object.keys(
+                        event.target.name === event.parameter[0].name ?
+                            event.parameter[0] :
+                            event.target.properties
                     )
+                        .filter(function(key) {
+                            return (
+                                key !== 'children' &&
+                                key !== 'ref' &&
+                                !/^on[A-Z]/.test(key)
+                            )
+                        })
+                        .reduce(
+                            function(result, key) {
+                                /*
+                                    NOTE: We want to call the corresponding
+                                    getter on the dom node for each property.
+                                */
+                                result[key] = event.target[key]
+                                return result
+                            },
+                            {}
+                        )
+                )
+            }
+            // NOTE: Wait until all inputs have stabilized.
+            Tools.timeout(function() {
+                Tools.arrayMake(document.querySelectorAll('[name]')).forEach(
+                    function(domNode) {
+                        domNode.addEventListener(
+                            'onChange',
+                            function(event) {
+                                Tools.timeout(function() {
+                                    document.querySelector('pre').innerHTML =
+                                        represent(event.detail)
+                                })
+                            }
+                        )
+                    }
+                )
             })
             // endregion
             // region animation
             const animationDomNodes =
-                document.querySelectorAll('generic-animate')
+                Tools.arrayMake(document.querySelectorAll('generic-animate'))
             setInterval(
-                () => {
-                    for (const domNode of animationDomNodes)
+                function() {
+                    animationDomNodes.forEach(function(domNode) {
                         domNode.in = !domNode.in
+                    })
                 },
                 1 * 1000
             )
