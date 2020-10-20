@@ -16,12 +16,10 @@
 // region imports
 import components from './index'
 // endregion
-describe('web-input-material', () => {
-    console.log(components)
-    // region mockup
-    // endregion
-    // region tests
-    // endregion
+describe('web-input-material', ():void => {
+    test('components', ():void => {
+        expect(Object.keys(components).length).toBeGreaterThan(1)
+    })
 })
 // region vim modline
 // vim: set tabstop=4 shiftwidth=4 expandtab:
