@@ -79,6 +79,7 @@
     "eslint": "*",
     "eslint-config-google": "*",
     "eslint-plugin-jsdoc": "*",
+    "identity-obj-proxy": "*",
     "jest": "*",
     "jsdoc": "*",
     "material-design-icons": "*",
