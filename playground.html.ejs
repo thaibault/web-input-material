@@ -21,16 +21,14 @@
         <meta http-equiv="pragma" content="no-cache">
         <title>playground</title>
         <script src="https://polyfill.io/v3/polyfill.js?features=Array.from%2CArray.prototype.includes%2CArray.prototype.values%2CCustomEvent%2CObject.assign%2CObject.entries%2CObject.values%2CPromise%2CString.prototype.endsWith%2CString.prototype.includes%2CString.prototype.startsWith%2CSymbol%2Cfetch"></script>
-        <!--
         <script>
             /*
-                Only provide the shadow dom polyfill and avoid to patch a lot of dom
-                apis.
+                Only provide the shadow dom polyfill and avoid to patch a lot
+                of dom apis.
             */
             window.ShadyDOM = {noPatch: true}
         </script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/2.4.4/webcomponents-bundle.js"></script>
-        -->
+        <script src="/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
         <script>
             window.document.documentElement.className =
                 window.document.documentElement.className.replace(
@@ -77,7 +75,7 @@
             })
 
             // region tabs
-            const tabs = document.querySelectorAll('.tab')
+            const tabs = Tools.arrayMake(document.querySelectorAll('.tab'))
             const showTab = function(currentIndex) {
                 tabs.forEach(function(tab) {
                     if (tab === tabs[currentIndex]) {

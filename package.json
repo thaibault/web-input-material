@@ -71,6 +71,7 @@
     "@types/webpack-env": "*",
     "@typescript-eslint/eslint-plugin": "*",
     "@typescript-eslint/parser": "*",
+    "@webcomponents/webcomponentsjs": "*",
     "babel-eslint": "*",
     "clientnode": "*",
     "css-loader": "*",
