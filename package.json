@@ -85,7 +85,7 @@
     "material-design-icons": "*",
     "mini-css-extract-plugin": "*",
     "postcss-fontpath": "*",
-    "postcss-import": "*",
+    "postcss-import": "<=12",
     "postcss-loader": "*",
     "postcss-preset-env": "*",
     "postcss-sprites": "*",
