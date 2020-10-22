@@ -71,6 +71,7 @@
     "@types/webpack-env": "*",
     "@typescript-eslint/eslint-plugin": "*",
     "@typescript-eslint/parser": "*",
+    "@webcomponents/webcomponentsjs": "*",
     "babel-eslint": "*",
     "clientnode": "*",
     "css-loader": "*",
@@ -79,12 +80,13 @@
     "eslint": "*",
     "eslint-config-google": "*",
     "eslint-plugin-jsdoc": "*",
+    "identity-obj-proxy": "*",
     "jest": "*",
     "jsdoc": "*",
     "material-design-icons": "*",
     "mini-css-extract-plugin": "*",
     "postcss-fontpath": "*",
-    "postcss-import": "*",
+    "postcss-import": "<=12",
     "postcss-loader": "*",
     "postcss-preset-env": "*",
     "postcss-sprites": "*",
@@ -106,19 +108,25 @@
     "webpack-cli": "*",
     "webpack-dev-server": "*"
   },
-  "sideEffects": false,
+  "sideEffects": true,
   "webOptimizer": {
     "commandLine": {
       "test": {
         "environments": [
-          "jsdom",
-          "node"
+          "jsdom"
         ]
       }
     },
+    "generic": {
+      "supportedBrowsers": [
+        "IE >= 11",
+        "last 2 versions",
+        "> 5%"
+      ]
+    },
     "injection": {
       "entry": {
-        "__evaluate__": "2 < self.givenCommandLineArguments.length && self.givenCommandLineArguments[2] === 'serve' ? {clientnode: 'clientnode', index: './index'} : {'./components/CircularSpinner': './components/CircularSpinner', './components/GenericAnimate': './components/GenericAnimate', './components/GenericInput': './components/GenericInput', './components/GenericTabBar': './components/GenericTabBar', './components/GenericTab': './components/GenericTab', './components/RequireableCheckbox': './components/RequireableCheckbox', index: './index'}"
+        "__evaluate__": "2 < self.givenCommandLineArguments.length && self.givenCommandLineArguments[2].startsWith('test') ? './test.ts' : 2 < self.givenCommandLineArguments.length && self.givenCommandLineArguments[2] === 'serve' ? {clientnode: 'clientnode', index: './index'} : {'./components/CircularSpinner': './components/CircularSpinner', './components/GenericAnimate': './components/GenericAnimate', './components/GenericInput': './components/GenericInput', './components/GenericTabBar': './components/GenericTabBar', './components/GenericTab': './components/GenericTab', './components/RequireableCheckbox': './components/RequireableCheckbox', index: './index'}"
       }
     },
     "module": {
@@ -133,6 +141,7 @@
       },
       "preprocessor": {
         "javaScript": {
+          "#": "Pre-process environment specific module.",
           "exclude": "!filePath.includes('clientnode/property-types') && isFilePathInDependencies(filePath)"
         }
       },
