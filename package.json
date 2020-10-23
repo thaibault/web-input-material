@@ -46,6 +46,7 @@
   },
   "dependencies": {
     "react-input-material": "*",
+    "react-useanimations": "*",
     "web-component-wrapper": "*"
   },
   "devDependencies": {
@@ -93,12 +94,9 @@
     "react": "*",
     "react-ace": "*",
     "react-dom": "*",
-    "react-input-material": "*",
     "react-transition-group": "*",
-    "react-useanimations": "*",
     "style-loader": "*",
     "tinymce": "^5.0.0",
-    "web-component-wrapper": "*",
     "weboptimizer": "*",
     "webpack": "*",
     "webpack-cli": "*",
