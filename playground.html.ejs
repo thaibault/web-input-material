@@ -11,7 +11,7 @@
     See https://creativecommons.org/licenses/by/3.0/deed.de
     endregion
 */ _%>
-<html class="no-javascript" lang="en">
+<html lang="en">
     <!--region head-->
     <head>
         <meta charset="utf-8">
@@ -29,12 +29,6 @@
             window.ShadyDOM = {noPatch: true}
         </script>
         <script src="/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
-        <script>
-            window.document.documentElement.className =
-                window.document.documentElement.className.replace(
-                    /(^|\s)no-javascript(\s|$)/, '$1javascript$2'
-                );
-        </script>
     </head>
     <!--endregion-->
     <!--region style-->
@@ -159,12 +153,6 @@
     </script>
     <!--endregion-->
     <body class="no-javascript">
-        <script>
-            window.document.body.className =
-                window.document.body.className.replace(
-                    /(^|\s)no-javascript(\s|$)/, '$1javascript$2'
-                )
-        </script>
 
         <div class="inputs">
 
