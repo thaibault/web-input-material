@@ -1,0 +1,45 @@
+/*! @rmwc/circular-progress */
+
+/*! @rmwc/circular-progress/styles */
+
+/*! clientnode/property-types */
+
+/*! dynamic exports */
+
+/*! export CircularSpinner [provided] [maybe used in ./components/CircularSpinner (runtime-defined)] [usage prevents renaming] */
+
+/*! export __esModule [maybe provided (runtime-defined)] [no usage info] [provision prevents renaming (no use info)] */
+
+/*! export default [provided] [maybe used in ./components/CircularSpinner (runtime-defined)] [usage prevents renaming] */
+
+/*! namespace exports */
+
+/*! other exports [maybe provided (runtime-defined)] [no usage info] */
+
+/*! other exports [not provided] [maybe used in ./components/CircularSpinner (runtime-defined)] */
+
+/*! runtime requirements: __webpack_require__, __webpack_require__.n, __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
+
+/*! runtime requirements: module */
+
+/*! web-component-wrapper */
+
+/*!***************************************!*\
+  !*** ./components/CircularSpinner.ts ***!
+  \***************************************/
+
+/*!****************************************!*\
+  !*** external "web-component-wrapper" ***!
+  \****************************************/
+
+/*!******************************************!*\
+  !*** external "@rmwc/circular-progress" ***!
+  \******************************************/
+
+/*!***********************************************!*\
+  !*** external "clientnode/property-types.ts" ***!
+  \***********************************************/
+
+/*!*************************************************!*\
+  !*** external "@rmwc/circular-progress/styles" ***!
+  \*************************************************/

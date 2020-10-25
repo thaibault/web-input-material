@@ -73,6 +73,8 @@
     "@types/loader-utils": "*",
     "@types/node": "*",
     "@types/react": "*",
+    "@types/react-dom": "*",
+    "@types/react-transition-group": "*",
     "@types/webpack-env": "*",
     "@typescript-eslint/eslint-plugin": "*",
     "@typescript-eslint/parser": "*",
@@ -90,6 +92,8 @@
     "jsdoc": "*",
     "material-design-icons": "*",
     "mini-css-extract-plugin": "*",
+    "postcss-loader": "*",
+    "postcss-preset-env": "*",
     "prop-types": "*",
     "react": "*",
     "react-ace": "*",
@@ -129,7 +133,8 @@
     },
     "module": {
       "cascadingStyleSheet": {
-        "exclude": "false"
+        "#": "Transitive style dependencies are defined in java script files so we have to process them.",
+        "exclude": false
       },
       "optimizer": {
         "babelMinify": {
@@ -144,8 +149,8 @@
         }
       },
       "replacements": {
-        "#": "Pre-process environment specific module.",
         "normal": {
+          "#": "Pre-process environment specific module.",
           "clientnode/property-types$": "clientnode/property-types.ts"
         }
       }
