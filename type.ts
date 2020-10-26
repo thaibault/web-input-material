@@ -15,7 +15,9 @@
     See https://creativecommons.org/licenses/by/3.0/deed.de
     endregion
 */
-export type {StaticFunctionInputComponent} from 'react-input-material/type'
+export type {
+    Model, StaticFunctionInputComponent
+} from 'react-input-material/type'
 // region vim modline
 // vim: set tabstop=4 shiftwidth=4 expandtab:
 // vim: foldmethod=marker foldmarker=region,endregion:
