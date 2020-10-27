@@ -5306,9 +5306,9 @@ file-entry-cache@^5.0.1:
     flat-cache "^2.0.1"
 
 file-loader@*:
-  version "6.1.1"
-  resolved "https://registry.yarnpkg.com/file-loader/-/file-loader-6.1.1.tgz#a6f29dfb3f5933a1c350b2dbaa20ac5be0539baa"
-  integrity sha512-Klt8C4BjWSXYQAfhpYYkG4qHNTna4toMHEbWrI5IuVoxbU6uiDKeKAP99R8mmbJi3lvewn/jQBOgU4+NS3tDQw==
+  version "6.2.0"
+  resolved "https://registry.yarnpkg.com/file-loader/-/file-loader-6.2.0.tgz#baef7cf8e1840df325e4390b4484879480eebe4d"
+  integrity sha512-qo3glqyTa61Ytg4u73GultjHGjdRyig3tG6lPtyX/jOEJvHif9uB0/OCI2Kif6ctF3caQTW2G5gym21oAsI4pw==
   dependencies:
     loader-utils "^2.0.0"
     schema-utils "^3.0.0"
@@ -8943,9 +8943,9 @@ react-dom@*:
     scheduler "^0.20.1"
 
 react-input-material@*:
-  version "0.0.52"
-  resolved "https://registry.yarnpkg.com/react-input-material/-/react-input-material-0.0.52.tgz#529f27bf80aeee9a5d6c5b10a773381c30d48bed"
-  integrity sha512-mZdJMuoa1gsJ3mQDA30fJOqlrjHBFvHMs5N00iVlgAQtnz3SkJkZc+Z6Mf4y2NclBB1HQAVI5572pFyqw+8QoA==
+  version "0.0.54"
+  resolved "https://registry.yarnpkg.com/react-input-material/-/react-input-material-0.0.54.tgz#215d35e52b8e64a1168c7f435d5e67ef99280d24"
+  integrity sha512-Fu9gpwIk1zdOMekzjQzKBNMAA/LPP9EflMhEeHhNlOGU9SCzoaSRDYhi4F2M2BjEJYhkw5cXeHegRs/0/CLR3A==
 
 react-is@^16.12.0, react-is@^16.8.1:
   version "16.13.1"
