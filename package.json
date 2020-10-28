@@ -76,6 +76,7 @@
     "@types/react": "*",
     "@types/react-dom": "*",
     "@types/react-transition-group": "*",
+    "@types/webpack-env": "*",
     "@typescript-eslint/eslint-plugin": "*",
     "@typescript-eslint/parser": "*",
     "@webcomponents/webcomponentsjs": "*",
@@ -134,7 +135,8 @@
     "module": {
       "cascadingStyleSheet": {
         "#": "Transitive style dependencies are defined in java script files so we have to process them.",
-        "exclude": false
+        "exclude": false,
+        "include": true
       },
       "optimizer": {
         "babelMinify": {
