@@ -28,23 +28,23 @@ export const GenericInput:WebComponentAPI = wrapAsWebComponent(
     'GenericInput',
     {
         eventToPropertyMapping: {onChange: true},
-        propertiesToReflectAsAttributes: new Map([
-            ['dirty', true],
-            ['focused', true],
-            ['invalid', true],
-            ['invalidMaximum', true],
-            ['invalidMaximumLength', true],
-            ['invalidMinimum', true],
-            ['invalidMinimumLength', true],
-            ['invalidPattern', true],
-            ['invalidRequired', true],
-            ['name', true],
-            ['pristine', true],
-            ['touched', true],
-            ['untouched', true],
-            ['valid', true],
-            ['visited', true]
-        ])
+        propertiesToReflectAsAttributes: [
+            'dirty',
+            'focused',
+            'invalid',
+            'invalidMaximum',
+            'invalidMaximumLength',
+            'invalidMinimum',
+            'invalidMinimumLength',
+            'invalidPattern',
+            'invalidRequired',
+            'name',
+            'pristine',
+            'touched',
+            'untouched',
+            'valid',
+            'visited',
+        ]
     }
 )
 export default GenericInput

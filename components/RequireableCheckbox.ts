@@ -26,18 +26,18 @@ export const RequireableCheckbox:WebComponentAPI = wrapAsWebComponent(
     'RequireableCheckbox',
     {
         eventToPropertyMapping: {onChange: true},
-        propertiesToReflectAsAttributes: new Map([
-            ['dirty', true],
-            ['focused', true],
-            ['invalid', true],
-            ['invalidRequired', true],
-            ['name', true],
-            ['pristine', true],
-            ['touched', true],
-            ['untouched', true],
-            ['valid', true],
-            ['visited', true]
-        ])
+        propertiesToReflectAsAttributes: [
+            'dirty',
+            'focused',
+            'invalid',
+            'invalidRequired',
+            'name',
+            'pristine',
+            'touched',
+            'untouched',
+            'valid',
+            'visited',
+        ]
     }
 )
 export default RequireableCheckbox
