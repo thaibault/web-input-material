@@ -103,8 +103,6 @@
     "style-loader": "*",
     "tinymce": "^5.0.0",
     "weboptimizer": "*",
-    "webpack": "*",
-    "webpack-cli": "*",
     "webpack-dev-server": "*"
   },
   "peerDependencies": {
@@ -113,6 +111,9 @@
   },
   "sideEffects": false,
   "webOptimizer": {
+    "#1": "TODO",
+    "showConfiguration": true,
+
     "commandLine": {
       "test": {
         "environments": [
@@ -139,15 +140,22 @@
         "include": true
       },
       "optimizer": {
+        "#1": "TODO",
+
         "babelMinify": {
           "#": "To provide a logging output we need to exclude this feature.",
-          "__evaluate__": "self.debug ? {bundle: null, module: null} : {bundle: {transform: {removeConsole: false}}, module: {removeConsole: false}}"
-        }
+          "__evaluate__": "self.debug || true ? {bundle: null, module: null} : {bundle: {transform: {removeConsole: false}}, module: {removeConsole: false}}"
+        },
+        "htmlMinifier": null,
+        "minimize": false
       },
       "preprocessor": {
         "javaScript": {
           "#": "Pre-process environment specific module.",
-          "exclude": "!filePath.includes('clientnode/property-types') && isFilePathInDependencies(filePath)"
+          "exclude": "!filePath.includes('clientnode/property-types') && isFilePathInDependencies(filePath)",
+
+          "#1": "TODO",
+          "options": {"compact": false,"minified": false}
         }
       },
       "replacements": {
