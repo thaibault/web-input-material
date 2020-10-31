@@ -19,6 +19,9 @@
   ],
   "files": [
     "components",
+    "index.compiled.css",
+    "index.bundle.js",
+    "index.minimal.bundle.js",
     "index.ts",
     "type.ts"
   ],
@@ -28,9 +31,11 @@
     "url": "https://github.com/thaibault/web-input-material"
   },
   "scripts": {
-    "build": "weboptimizer build",
-    "build:export": "weboptimizer build '{__reference__: \"target:export\"}'",
-    "build:export:stats": "weboptimizer build --json /tmp/stat.json '{__reference__: \"target:export\"}' && echo 'Results successfully written to \"/tmp/stat.json\".'",
+    "build": "yarn build:plain &&  yarn build:export:minimal && yarn build:export",
+    "build:export": "weboptimizer build '{__reference__: \"target:bundle\"}'",
+    "build:export:minimal": "weboptimizer build '{__reference__: [\"target:bundle\", \"target:minimal\"]}'",
+    "build:export:stats": "weboptimizer build --json /tmp/stat.json '{__reference__: \"target:bundle\"}' && echo 'Results successfully written to \"/tmp/stat.json\".'",
+    "build:plain": "weboptimizer build",
     "check": "yarn check:types; yarn lint",
     "check:types": "weboptimizer check:types",
     "clear": "weboptimizer clear",
@@ -150,20 +155,16 @@
           "#": "To provide a logging output we need to exclude this feature.",
           "__evaluate__": "self.debug || true ? {bundle: null, module: null} : {bundle: {transform: {removeConsole: false}}, module: {removeConsole: false}}"
         }
-      },
-      "replacements": {
-        "normal": {
-          "#": "TODO Mock unneeded optional dependencies away.",
-          "ace-builds$": "react-input-material/components/Dummy",
-          "@tinymce/tinymce-react$": "react-input-material/components/Dummy",
-          "react-ace$": "react-input-material/components/Dummy",
-          "react-useanimations$": "react-input-material/components/Dummy",
-          "react-useanimations/lib/lock$": "react-input-material/components/Dummy",
-          "react-useanimations/lib/plusToX$": "react-input-material/components/Dummy"
-        }
       }
     },
-    "target:export": {
+    "target:bundle": {
+      "files": {
+        "compose": {
+          "javaScript": {
+            "__evaluate__": "`${path.resolve(self.path.target.asset.javaScript, '[name].bundle')}.js`"
+          }
+        }
+      },
       "inPlace": {
         "externalLibrary": {
           "dynamic": true,
@@ -178,6 +179,32 @@
                 "__remove__": "@babel/plugin-transform-runtime"
               }
             }
+          }
+        }
+      }
+    },
+    "target:minimal": {
+      "files": {
+        "compose": {
+          "javaScript": {
+            "__evaluate__": "`${path.resolve(self.path.target.asset.javaScript, '[name].minimal.bundle')}.js`"
+          }
+        }
+      },
+      "injection": {
+        "./components/GenericInput": "./components/GenericInput",
+        "index": "./index"
+      },
+      "module": {
+        "replacements": {
+          "normal": {
+            "#": "Mock unneeded optional dependencies away.",
+            "ace-builds$": "react-input-material/components/Dummy",
+            "@tinymce/tinymce-react$": "react-input-material/components/Dummy",
+            "react-ace$": "react-input-material/components/Dummy",
+            "react-useanimations$": "react-input-material/components/Dummy",
+            "react-useanimations/lib/lock$": "react-input-material/components/Dummy",
+            "react-useanimations/lib/plusToX$": "react-input-material/components/Dummy"
           }
         }
       }
