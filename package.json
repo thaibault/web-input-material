@@ -192,8 +192,10 @@
         }
       },
       "injection": {
-        "./components/GenericInput": "./components/GenericInput",
-        "index": "./index"
+        "entry": {
+          "./components/GenericInput": "./components/GenericInput",
+          "index": "./index"
+        }
       },
       "module": {
         "replacements": {
