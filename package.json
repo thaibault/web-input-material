@@ -29,8 +29,8 @@
   },
   "scripts": {
     "build": "weboptimizer build",
-    "build:export": "yarn build '{__reference__: \"target:export\"}'",
-    "build:export:stats": "yarn build:export --profile --json >/tmp/stat.json && echo 'Results successfully written to \"/tmp/stat.json\".'",
+    "build:export": "weboptimizer build '{__reference__: \"target:export\"}'",
+    "build:export:stats": "weboptimizer build --json /tmp/stat.json '{__reference__: \"target:export\"}' && echo 'Results successfully written to \"/tmp/stat.json\".'",
     "check": "yarn check:types; yarn lint",
     "check:types": "weboptimizer check:types",
     "clear": "weboptimizer clear",
@@ -112,15 +112,13 @@
   },
   "sideEffects": false,
   "webOptimizer": {
-    "#": "TODO",
-    "showConfiguration": true,
     "files": {
-        "compose": {
-          "cascadingStyleSheet": {
-            "__evaluate__": "`${path.resolve(self.path.target.asset.cascadingStyleSheet, `[name]${self.path.target.asset.cascadingStyleSheet === self.path.source.asset.cascadingStyleSheet ? '.compiled' : ''}.css`)}`"
-          }
+      "compose": {
+        "cascadingStyleSheet": {
+          "__evaluate__": "`${path.resolve(self.path.target.asset.cascadingStyleSheet, `[name]${self.path.target.asset.cascadingStyleSheet === self.path.source.asset.cascadingStyleSheet ? '.compiled' : ''}.css`)}`"
         }
-      },
+      }
+    },
     "commandLine": {
       "test": {
         "environments": [
@@ -135,10 +133,11 @@
         "> 5%"
       ]
     },
-    "injection": {
+    "injection":{
       "entry": {
         "__evaluate__": "2 < self.givenCommandLineArguments.length && self.givenCommandLineArguments[2].startsWith('test') ? './test.ts' : 2 < self.givenCommandLineArguments.length && self.givenCommandLineArguments[2] === 'serve' ? {clientnode: 'clientnode', index: './index'} : {'./components/CircularSpinner': './components/CircularSpinner', './components/GenericAnimate': './components/GenericAnimate', './components/GenericInput': './components/GenericInput', './components/GenericTabBar': './components/GenericTabBar', './components/GenericTab': './components/GenericTab', './components/RequireableCheckbox': './components/RequireableCheckbox', index: './index'}"
-      }
+      },
+      "ignorePattern": {"resourceRegExp": "jquery"}
     },
     "module": {
       "cascadingStyleSheet": {
@@ -152,16 +151,15 @@
           "__evaluate__": "self.debug || true ? {bundle: null, module: null} : {bundle: {transform: {removeConsole: false}}, module: {removeConsole: false}}"
         }
       },
-      "preprocessor": {
-        "javaScript": {
-          "#": "Pre-process environment specific module.",
-          "exclude": "!filePath.includes('clientnode/property-types') && isFilePathInDependencies(filePath)"
-        }
-      },
       "replacements": {
         "normal": {
-          "#": "Pre-process environment specific module.",
-          "clientnode/property-types$": "clientnode/property-types.ts"
+          "#": "TODO Mock unneeded optional dependencies away.",
+          "ace-builds$": "react-input-material/components/Dummy",
+          "@tinymce/tinymce-react$": "react-input-material/components/Dummy",
+          "react-ace$": "react-input-material/components/Dummy",
+          "react-useanimations$": "react-input-material/components/Dummy",
+          "react-useanimations/lib/lock$": "react-input-material/components/Dummy",
+          "react-useanimations/lib/plusToX$": "react-input-material/components/Dummy"
         }
       }
     },
