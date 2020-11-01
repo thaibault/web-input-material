@@ -20,7 +20,7 @@
         <meta http-equiv="expires" content="0">
         <meta http-equiv="pragma" content="no-cache">
         <title>playground</title>
-        <script src="https://polyfill.io/v3/polyfill.js?features=Array.from%2CArray.prototype.includes%2CArray.prototype.values%2CCustomEvent%2CObject.assign%2CObject.entries%2CObject.values%2CPromise%2CString.prototype.endsWith%2CString.prototype.includes%2CString.prototype.startsWith%2CSymbol%2Cfetch"></script>
+        <script src="https://polyfill.io/v3/polyfill.js?features=Array.from%2CArray.prototype.includes%2CArray.prototype.values%2CCustomEvent%2CElement.prototype.after%2CElement.prototype.cloneNode%2CObject.assign%2CObject.entries%2CObject.values%2CPromise%2CString.prototype.endsWith%2CString.prototype.includes%2CString.prototype.startsWith%2CSymbol%2Cfetch"></script>
         <script>
             /*
                 Only provide the shadow dom polyfill and avoid to patch a lot
@@ -157,19 +157,19 @@
         <div class="inputs">
 
             <!--region tabs-->
-
             <generic-tab-bar>
+
                 <generic-tab>
                     generic-input (with <sup>markup</sup>)
                 </generic-tab>
                 <generic-tab>generic-animate</generic-tab>
                 <generic-tab>requireable-checkbox</generic-tab>
                 <generic-tab>circular-spinner</generic-tab>
+
             </generic-tab-bar>
-
             <!--endregion-->
-            <!--region generic-inputs-->
 
+            <!--region generic-inputs-->
             <div class="generic-inputs tab">
 
                 <generic-input></generic-input>
@@ -408,21 +408,17 @@
                 ></generic-input>
 
             </div>
-
             <!--endregion-->
             <!--region generic-animates-->
-
             <div class="generic-animates tab" style="height: 50px">
 
-                <generic-animate in="true">Fade it!</generic-animate>
+                <generic-animate in>Fade it!</generic-animate>
                 <br/>
                 <generic-animate in="false">Fade it!</generic-animate>
 
             </div>
-
             <!--endregion-->
             <!--region requireable-checkboxes-->
-
             <div class="requireable-checkboxes tab">
 
                 <requireable-checkbox></requireable-checkbox>
@@ -459,10 +455,8 @@
                 </requireable-checkbox>
 
             </div>
-
             <!--endregion-->
             <!--region circular-spinners-->
-
             <div class="circular-spinners tab">
 
                 <circular-spinner></circular-spinner>
@@ -470,7 +464,6 @@
                 <circular-spinner size="80"></circular-spinner>
 
             </div>
-
             <!--endregion-->
 
         </div>

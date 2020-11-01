@@ -24,7 +24,9 @@ import wrapAsWebComponent from 'web-component-wrapper'
 import {WebComponentAPI} from 'web-component-wrapper/type'
 // endregion
 export const GenericAnimate:WebComponentAPI = wrapAsWebComponent(
-    ReactGenericAnimate, 'GenericAnimate', {propTypes: {in: boolean}}
+    ReactGenericAnimate,
+    'GenericAnimate',
+    {propertiesToReflectAsAttributes: 'in', propTypes: {in: boolean}}
 )
 export default GenericAnimate
 // region vim modline
