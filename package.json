@@ -33,7 +33,7 @@
   "scripts": {
     "build": "yarn build:plain &&  yarn build:export:minimal && yarn build:export",
     "build:export": "weboptimizer build '{__reference__: \"target:bundle\"}'",
-    "build:export:minimal": "weboptimizer build '{__reference__: [\"target:bundle\", \"target:minimal\"]}'",
+    "build:export:minimal": "weboptimizer build '{__reference__: [\"target:bundle\", \"target:minimal\", \"target:minimal:extract\"]}'",
     "build:export:stats": "weboptimizer build --json /tmp/stat.json '{__reference__: \"target:bundle\"}' && echo 'Results successfully written to \"/tmp/stat.json\".'",
     "build:plain": "weboptimizer build",
     "check": "yarn check:types; yarn lint",
@@ -44,6 +44,7 @@
     "prepare": "yarn build",
     "report:coverage": "nyc report --reporter=text-lcov | coveralls",
     "serve": "weboptimizer serve",
+    "serve:minimal": "weboptimizer serve '{__reference__: \"target:minimal\"}'",
     "start": "yarn serve",
     "test": "weboptimizer test",
     "test:browser": "weboptimizer test:browser",
@@ -138,11 +139,13 @@
         "> 5%"
       ]
     },
-    "injection":{
+    "injection": {
       "entry": {
         "__evaluate__": "2 < self.givenCommandLineArguments.length && self.givenCommandLineArguments[2].startsWith('test') ? './test.ts' : 2 < self.givenCommandLineArguments.length && self.givenCommandLineArguments[2] === 'serve' ? {clientnode: 'clientnode', index: './index'} : {'./components/CircularSpinner': './components/CircularSpinner', './components/GenericAnimate': './components/GenericAnimate', './components/GenericInput': './components/GenericInput', './components/GenericTabBar': './components/GenericTabBar', './components/GenericTab': './components/GenericTab', './components/RequireableCheckbox': './components/RequireableCheckbox', index: './index'}"
       },
-      "ignorePattern": {"resourceRegExp": "jquery"}
+      "ignorePattern": {
+        "resourceRegExp": "jquery"
+      }
     },
     "module": {
       "cascadingStyleSheet": {
@@ -184,19 +187,6 @@
       }
     },
     "target:minimal": {
-      "files": {
-        "compose": {
-          "javaScript": {
-            "__evaluate__": "`${path.resolve(self.path.target.asset.javaScript, '[name].minimal.bundle')}.js`"
-          }
-        }
-      },
-      "injection": {
-        "entry": {
-          "./components/GenericInput": "./components/GenericInput",
-          "index": "./index"
-        }
-      },
       "module": {
         "replacements": {
           "normal": {
@@ -208,6 +198,21 @@
             "react-useanimations/lib/lock$": "react-input-material/components/Dummy",
             "react-useanimations/lib/plusToX$": "react-input-material/components/Dummy"
           }
+        }
+      }
+    },
+    "target:minimal:extract": {
+      "files": {
+        "compose": {
+          "javaScript": {
+            "__evaluate__": "`${path.resolve(self.path.target.asset.javaScript, '[name].minimal.bundle')}.js`"
+          }
+        }
+      },
+      "injection": {
+        "entry": {
+          "./components/GenericInput": "./components/GenericInput",
+          "index": "./index"
         }
       }
     }
