@@ -19,9 +19,10 @@
   ],
   "files": [
     "components",
-    "index.compiled.css",
     "index.bundle.js",
     "index.minimal.bundle.js",
+    "index.styles.compiled.css",
+    "index.css",
     "index.ts",
     "type.ts"
   ],
@@ -54,7 +55,6 @@
   },
   "dependencies": {
     "react-input-material": "*",
-    "react-useanimations": "*",
     "web-component-wrapper": "*"
   },
   "devDependencies": {
@@ -107,6 +107,7 @@
     "react-ace": "*",
     "react-dom": "*",
     "react-transition-group": "*",
+    "react-useanimations": "*",
     "style-loader": "*",
     "tinymce": "^5.0.0",
     "weboptimizer": "*",
@@ -114,7 +115,8 @@
   },
   "peerDependencies": {
     "@babel/runtime": "*",
-    "clientnode": "*"
+    "clientnode": "*",
+    "react-useanimations": "*"
   },
   "sideEffects": false,
   "webOptimizer": {
@@ -141,7 +143,18 @@
     },
     "injection": {
       "entry": {
-        "__evaluate__": "2 < self.givenCommandLineArguments.length && self.givenCommandLineArguments[2].startsWith('test') ? './test.ts' : 2 < self.givenCommandLineArguments.length && self.givenCommandLineArguments[2] === 'serve' ? {clientnode: 'clientnode', index: './index'} : {'./components/CircularSpinner': './components/CircularSpinner', './components/GenericAnimate': './components/GenericAnimate', './components/GenericInput': './components/GenericInput', './components/GenericTabBar': './components/GenericTabBar', './components/GenericTab': './components/GenericTab', './components/RequireableCheckbox': './components/RequireableCheckbox', index: './index'}"
+        "__evaluate__": "2 < self.givenCommandLineArguments.length && self.givenCommandLineArguments[2].startsWith('test') ? './test.ts' : 2 < self.givenCommandLineArguments.length && self.givenCommandLineArguments[2] === 'serve' ? {clientnode: 'clientnode', index: ['./index.css', './index']} : {'./components/CircularSpinner': './components/CircularSpinner', './components/GenericAnimate': './components/GenericAnimate', './components/GenericInput': './components/GenericInput', './components/GenericTabs': ['./components/GenericTab', './components/GenericTabBar'], './components/RequireableCheckbox': './components/RequireableCheckbox', index: ['./index.css', './index']}"
+      },
+      "external": {
+        "implicit": {
+          "pattern": {
+            "exclude": {
+              "__append__": {
+                "__evaluate__": "/(?:^|\\/)((react-input-material)|(web-component-wrapper))(?:$|\\/)/"
+              }
+            }
+          }
+        }
       },
       "ignorePattern": {
         "resourceRegExp": "jquery"

@@ -19,7 +19,6 @@
 // region imports
 import ReactGenericInput from 'react-input-material/components/GenericInput'
 import 'react-input-material/components/GenericInput.styles'
-import 'react-input-material/material-fixes'
 import wrapAsWebComponent from 'web-component-wrapper'
 import {WebComponentAPI} from 'web-component-wrapper/type'
 // endregion

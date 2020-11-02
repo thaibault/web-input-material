@@ -18,6 +18,7 @@
 */
 // region imports
 import Checkbox from 'react-input-material/components/RequireableCheckbox'
+import 'react-input-material/components/RequireableCheckbox.styles'
 import wrapAsWebComponent from 'web-component-wrapper'
 import {WebComponentAPI} from 'web-component-wrapper/type'
 // endregion
