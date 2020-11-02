@@ -19,7 +19,6 @@
 // region imports
 import {func, number} from 'clientnode/property-types'
 import {TabBar} from '@rmwc/tabs'
-import '@rmwc/tabs/styles'
 import wrapAsWebComponent from 'web-component-wrapper'
 import {WebComponentAPI} from 'web-component-wrapper/type'
 // endregion

@@ -19,15 +19,14 @@
 // region imports
 import {number, oneOfType, oneOf} from 'clientnode/property-types'
 import {CircularProgress} from '@rmwc/circular-progress'
-import '@rmwc/circular-progress/styles'
 import wrapAsWebComponent from 'web-component-wrapper'
 import {WebComponentAPI} from 'web-component-wrapper/type'
 // endregion
 export const CircularSpinner:WebComponentAPI = wrapAsWebComponent(
     CircularProgress,
     'CircularSpinner',
-    {propTypes: {size: oneOfType([
-        oneOf(['xsmall', 'small', 'medium', 'large', 'xlarge']), number]
+    {propTypes: {size: oneOfType(
+        [oneOf(['xsmall', 'small', 'medium', 'large', 'xlarge']), number]
     )}}
 )
 export default CircularSpinner
