@@ -21,8 +21,6 @@
     "components",
     "index.bundle.js",
     "index.minimal.bundle.js",
-    "index.styles.compiled.css",
-    "index.css",
     "index.ts",
     "type.ts"
   ],
@@ -90,8 +88,6 @@
     "babel-eslint": "*",
     "canvas": "*",
     "clientnode": "*",
-    "css-loader": "*",
-    "cssnano": "*",
     "documentation-website": "*",
     "eslint": "*",
     "eslint-config-google": "*",
@@ -100,9 +96,6 @@
     "jest": "*",
     "jsdoc": "*",
     "material-design-icons": "*",
-    "mini-css-extract-plugin": "*",
-    "postcss-loader": "*",
-    "postcss-preset-env": "*",
     "prop-types": "*",
     "react": "*",
     "react-ace": "*",
@@ -121,13 +114,6 @@
   },
   "sideEffects": false,
   "webOptimizer": {
-    "files": {
-      "compose": {
-        "cascadingStyleSheet": {
-          "__evaluate__": "`${path.resolve(self.path.target.asset.cascadingStyleSheet, `[name]${self.path.target.asset.cascadingStyleSheet === self.path.source.asset.cascadingStyleSheet ? '.compiled' : ''}.css`)}`"
-        }
-      }
-    },
     "commandLine": {
       "test": {
         "environments": [
@@ -144,7 +130,7 @@
     },
     "injection": {
       "entry": {
-        "__evaluate__": "2 < self.givenCommandLineArguments.length && self.givenCommandLineArguments[2].startsWith('test') ? './test.ts' : 2 < self.givenCommandLineArguments.length && self.givenCommandLineArguments[2] === 'serve' ? {clientnode: 'clientnode', index: ['./index.css', './index']} : {'./components/CircularSpinner': './components/CircularSpinner', './components/GenericAnimate': './components/GenericAnimate', './components/GenericInput': './components/GenericInput', './components/GenericTabs': ['./components/GenericTab', './components/GenericTabBar'], './components/RequireableCheckbox': './components/RequireableCheckbox', index: ['./index.css', './index']}"
+        "__evaluate__": "2 < self.givenCommandLineArguments.length && self.givenCommandLineArguments[2].startsWith('test') ? './test.ts' : 2 < self.givenCommandLineArguments.length && self.givenCommandLineArguments[2] === 'serve' ? {clientnode: 'clientnode', index: './index'} : {'./components/CircularSpinner': './components/CircularSpinner', './components/GenericAnimate': './components/GenericAnimate', './components/GenericInput': './components/GenericInput', './components/GenericTabs': ['./components/GenericTab', './components/GenericTabBar'], './components/RequireableCheckbox': './components/RequireableCheckbox', index: './index'}"
       },
       "external": {
         "implicit": {
