@@ -70,106 +70,110 @@
         </script>
         <script src="/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
         <!--endregion-->
-    </head>
-    <!--endregion-->
-    <!--region script-->
-    <script>
-        window.onload = function() {
-            const components = webInputMaterial.index.components
-            const Tools = webInputMaterial.clientnode.Tools
-            const GenericInput = components.GenericInput.component.content
+        <!--region script-->
+        <script>
+            window.onload = function() {
+                const components = webInputMaterial.index.components
+                const Tools = webInputMaterial.clientnode.Tools
+                const GenericInput = components.GenericInput.component.content
 
-            GenericInput.local = 'de-DE'
-            GenericInput.transformer.currency.format.final.options =
-                {currency: 'EUR'}
+                GenericInput.local = 'de-DE'
+                GenericInput.transformer.currency.format.final.options =
+                    {currency: 'EUR'}
 
-            Object.values(components).map(function(component) {
-                component.register()
-            })
-
-            // region tabs
-            const tabs = Tools.arrayMake(document.querySelectorAll('.tab'))
-            const showTab = function(currentIndex) {
-                tabs.forEach(function(tab) {
-                    if (tab === tabs[currentIndex]) {
-                        if (tab.getAttribute('class').includes(' hide'))
-                            tab.setAttribute(
-                                'class',
-                                tab.getAttribute('class').replace(' hide', '')
-                            )
-                    } else if (!tab.getAttribute('class').includes(' hide'))
-                        tab.setAttribute(
-                            'class', tab.getAttribute('class') + ' hide'
-                        )
+                Object.values(components).map(function(component) {
+                    component.register()
                 })
-            }
-            const tabBar = document.querySelector('generic-tab-bar')
-            tabBar.addEventListener(
-                'onActivate',
-                function(event) {
-                    showTab(event.detail.parameter[0].detail.index)
-                }
-            )
-            // endregion
-            // region inputs
-            function represent(event) {
-                return Tools.represent(
-                    Object.keys(
-                        event.target.name === event.parameter[0].name ?
-                            event.parameter[0] :
-                            event.target.properties
-                    )
-                        .filter(function(key) {
-                            return (
-                                key !== 'children' &&
-                                key !== 'ref' &&
-                                !/^on[A-Z]/.test(key)
+
+                // region tabs
+                const tabs = Tools.arrayMake(document.querySelectorAll('.tab'))
+                const showTab = function(currentIndex) {
+                    tabs.forEach(function(tab) {
+                        if (tab === tabs[currentIndex]) {
+                            if (tab.getAttribute('class').includes(' hide'))
+                                tab.setAttribute(
+                                    'class',
+                                    tab.getAttribute('class')
+                                        .replace(' hide', '')
+                                )
+                        } else if (
+                            !tab.getAttribute('class').includes(' hide')
+                        )
+                            tab.setAttribute(
+                                'class', tab.getAttribute('class') + ' hide'
                             )
-                        })
-                        .reduce(
-                            function(result, key) {
-                                /*
-                                    NOTE: We want to call the corresponding
-                                    getter on the dom node for each property.
-                                */
-                                result[key] = event.target[key]
-                                return result
-                            },
-                            {}
-                        )
-                )
-            }
-            // NOTE: Wait until all inputs have stabilized.
-            Tools.timeout(function() {
-                Tools.arrayMake(document.querySelectorAll('[name]')).forEach(
-                    function(domNode) {
-                        domNode.addEventListener(
-                            'onChange',
-                            function(event) {
-                                Tools.timeout(function() {
-                                    document.querySelector('pre').innerHTML =
-                                        represent(event.detail)
-                                })
-                            }
-                        )
+                    })
+                }
+                const tabBar = document.querySelector('generic-tab-bar')
+                tabBar.addEventListener(
+                    'onActivate',
+                    function(event) {
+                        showTab(event.detail.parameter[0].detail.index)
                     }
                 )
-            })
-            // endregion
-            // region animation
-            const animationDomNodes =
-                Tools.arrayMake(document.querySelectorAll('generic-animate'))
-            setInterval(
-                function() {
-                    animationDomNodes.forEach(function(domNode) {
-                        domNode.in = !domNode.in
-                    })
-                },
-                1 * 1000
-            )
-            // endregion
-        }
-    </script>
+                // endregion
+                // region inputs
+                function represent(event) {
+                    return Tools.represent(
+                        Object.keys(
+                            event.target.name === event.parameter[0].name ?
+                                event.parameter[0] :
+                                event.target.properties
+                        )
+                            .filter(function(key) {
+                                return (
+                                    key !== 'children' &&
+                                    key !== 'ref' &&
+                                    !/^on[A-Z]/.test(key)
+                                )
+                            })
+                            .reduce(
+                                function(result, key) {
+                                    /*
+                                        NOTE: We want to call the corresponding
+                                        getter on the dom node for each
+                                        property.
+                                    */
+                                    result[key] = event.target[key]
+                                    return result
+                                },
+                                {}
+                            )
+                    )
+                }
+                // NOTE: Wait until all inputs have stabilized.
+                Tools.timeout(function() {
+                    Tools.arrayMake(document.querySelectorAll('[name]'))
+                        .forEach(function(domNode) {
+                            domNode.addEventListener(
+                                'onChange',
+                                function(event) {
+                                    Tools.timeout(function() {
+                                        document.querySelector('pre').innerHTML =
+                                            represent(event.detail)
+                                    })
+                                }
+                            )
+                        })
+                })
+                // endregion
+                // region animation
+                const animationDomNodes = Tools.arrayMake(
+                    document.querySelectorAll('generic-animate')
+                )
+                setInterval(
+                    function() {
+                        animationDomNodes.forEach(function(domNode) {
+                            domNode.in = !domNode.in
+                        })
+                    },
+                    1 * 1000
+                )
+                // endregion
+            }
+        </script>
+        <!--endregion-->
+    </head>
     <!--endregion-->
     <body class="no-javascript">
 
