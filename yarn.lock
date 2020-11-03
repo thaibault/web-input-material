@@ -8043,9 +8043,9 @@ react-dom@*:
     scheduler "^0.20.1"
 
 react-input-material@*:
-  version "0.0.78"
-  resolved "https://registry.yarnpkg.com/react-input-material/-/react-input-material-0.0.78.tgz#9533257cb5b5af13947067fe3fd6cadee2c892c0"
-  integrity sha512-pAiFe1RTz9n6uRuf5JdECWEcaCQmUSZzqJZhcqPmOG2n++dhA5QgysPgV5grrDRe9UySpDAigGSaRMCyOP43rA==
+  version "0.0.79"
+  resolved "https://registry.yarnpkg.com/react-input-material/-/react-input-material-0.0.79.tgz#0ef0579bf1b8afb02a32d23514079486206b9643"
+  integrity sha512-XwKq6/LhYSP5P9Zi1+F+O+o84p4vYQaK6ezLnEkawXYhLTZgLkxWB74F7XymqKT7bShi9ujlnTaRIVH05/4DIA==
 
 react-is@^16.12.0, react-is@^16.8.1:
   version "16.13.1"
