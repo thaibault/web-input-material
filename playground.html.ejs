@@ -214,7 +214,7 @@
                     name="input3"
                 ></generic-input>
                 <generic-input
-                    model="{declaration: 'Disabled', mutable: false, name: 'input3Model', value: 'value3Model'}"
+                    model="{declaration: 'Disabled', default: 'value3Model', mutable: false, name: 'input3Model'}"
                 ></generic-input>
 
                 <hr/>
@@ -227,6 +227,7 @@
                     trailing-icon="'clear_preset'"
                 ></generic-input>
                 <generic-input
+                    default="'value4Model'"
                     icon="'backup'"
                     model="{declaration: 'placeholder', name: 'input4Model', nullable: false, value: 'value4Model'}"
                     placholder="input4Model"
@@ -450,7 +451,9 @@
 
                 <hr/>
 
-                <requireable-checkbox disabled name="checkbox2" required>
+                <requireable-checkbox
+                    default="true" disabled name="checkbox2" required
+                >
                 </requireable-checkbox>
                 <requireable-checkbox
                     model="{name: 'checkbox2Model', mutable: false, nullable: false}"
@@ -467,7 +470,7 @@
                 >
                 </requireable-checkbox>
                 <requireable-checkbox
-                    model="{description: 'checkbox3Description', name: 'checkbox3Model', nullable: false}"
+                    model="{default: true, description: 'checkbox3ModelDescription', name: 'checkbox3Model', nullable: false}"
                     show-initial-validation-state
                     tooltip="'Check this one!'"
                 >
