@@ -122,9 +122,7 @@
                         )
                             .filter(function(key) {
                                 return (
-                                    key !== 'children' &&
-                                    key !== 'ref' &&
-                                    !/^on[A-Z]/.test(key)
+                                    key !== 'children' && !/^on[A-Z]/.test(key)
                                 )
                             })
                             .reduce(
