@@ -161,14 +161,30 @@
                 const animationDomNodes = Tools.arrayMake(
                     document.querySelectorAll('generic-animate')
                 )
-                setInterval(
-                    function() {
-                        animationDomNodes.forEach(function(domNode) {
-                            domNode.in = !domNode.in
-                        })
-                    },
-                    1 * 1000
+                let intervalID = null
+                tabBar.addEventListener(
+                    'onActivate',
+                    function(event) {
+                        if (intervalID !== null) {
+                            clearInterval(intervalID)
+                            intervalID = null
+                        }
+                        if (
+                            tabs[event.detail.parameter[0].detail.index]
+                                .getAttribute('class')
+                                .includes('generic-animates')
+                        )
+                            intervalID = setInterval(
+                                function() {
+                                    animationDomNodes.forEach(function(domNode) {
+                                        domNode.in = !domNode.in
+                                    })
+                                },
+                                1 * 1000
+                            )
+                    }
                 )
+                
                 // endregion
             }
         </script>
