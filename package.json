@@ -148,11 +148,6 @@
       }
     },
     "module": {
-      "cascadingStyleSheet": {
-        "#": "Transitive style dependencies are defined in java script files so we have to process them.",
-        "exclude": false,
-        "include": true
-      },
       "optimizer": {
         "babelMinify": {
           "#": "To provide a logging output we need to exclude this feature.",
