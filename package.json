@@ -30,10 +30,10 @@
     "url": "https://github.com/thaibault/web-input-material"
   },
   "scripts": {
-    "build": "yarn build:plain &&  yarn build:export:minimal && yarn build:export",
-    "build:export": "weboptimizer build '{__reference__: \"target:bundle\"}'",
-    "build:export:minimal": "weboptimizer build '{__reference__: [\"target:bundle\", \"target:minimal\", \"target:minimal:input\"]}'",
-    "build:export:stats": "weboptimizer build --json /tmp/stat.json '{__reference__: \"target:bundle\"}' && echo 'Results successfully written to \"/tmp/stat.json\".'",
+    "build": "yarn build:plain && yarn build:bundle:minimal && yarn build:bundle",
+    "build:bundle": "weboptimizer build '{__reference__: \"target:bundle\"}'",
+    "build:bundle:minimal": "weboptimizer build '{__reference__: [\"target:bundle\", \"target:minimal\", \"target:minimal:input\"]}'",
+    "build:bundle:stats": "weboptimizer build --json /tmp/stat.json '{__reference__: \"target:bundle\"}' && echo 'Results successfully written to \"/tmp/stat.json\".'",
     "build:plain": "weboptimizer build",
     "check": "yarn check:types; yarn lint",
     "check:types": "weboptimizer check:types",
