@@ -53,7 +53,11 @@
     "watch": "weboptimizer build --watch"
   },
   "dependencies": {
+    "prop-types": "*",
+    "react": "*",
+    "react-dom": "*",
     "react-input-material": "*",
+    "react-transition-group": "*",
     "web-component-wrapper": "*"
   },
   "devDependencies": {
@@ -97,11 +101,7 @@
     "jest": "*",
     "jsdoc": "*",
     "material-design-icons": "*",
-    "prop-types": "*",
-    "react": "*",
     "react-ace": "*",
-    "react-dom": "*",
-    "react-transition-group": "*",
     "react-useanimations": "*",
     "style-loader": "*",
     "tinymce": "^5.0.0",
@@ -110,8 +110,7 @@
   },
   "peerDependencies": {
     "@babel/runtime": "*",
-    "clientnode": "*",
-    "react-useanimations": "*"
+    "clientnode": "*"
   },
   "sideEffects": false,
   "webOptimizer": {
