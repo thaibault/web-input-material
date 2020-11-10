@@ -17,6 +17,7 @@
     endregion
 */
 // region imports
+import {boolean, string} from 'clientnode/property-types'
 import ReactGenericInput from 'react-input-material/components/GenericInput'
 import wrapAsWebComponent from 'web-component-wrapper'
 import {WebComponentAPI} from 'web-component-wrapper/type'
@@ -26,23 +27,23 @@ export const GenericInput:WebComponentAPI = wrapAsWebComponent(
     'GenericInput',
     {
         eventToPropertyMapping: {onChange: true},
-        propertiesToReflectAsAttributes: [
-            'dirty',
-            'focused',
-            'invalid',
-            'invalidMaximum',
-            'invalidMaximumLength',
-            'invalidMinimum',
-            'invalidMinimumLength',
-            'invalidPattern',
-            'invalidRequired',
-            'name',
-            'pristine',
-            'touched',
-            'untouched',
-            'valid',
-            'visited',
-        ]
+        propertiesToReflectAsAttributes: {
+            dirty: boolean,
+            focused: boolean,
+            invalid: boolean,
+            invalidMaximum: boolean,
+            invalidMaximumLength: boolean,
+            invalidMinimum: boolean,
+            invalidMinimumLength: boolean,
+            invalidPattern: boolean,
+            invalidRequired: boolean,
+            name: string,
+            pristine: boolean,
+            touched: boolean,
+            untouched: boolean,
+            valid: boolean,
+            visited: boolean
+        }
     }
 )
 export default GenericInput
