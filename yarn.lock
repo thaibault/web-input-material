@@ -3909,9 +3909,9 @@ cli-table3@^0.5.0:
     colors "^1.1.2"
 
 clientnode@*:
-  version "3.0.603"
-  resolved "https://registry.yarnpkg.com/clientnode/-/clientnode-3.0.603.tgz#c56a6b28920964654d6e1389e6906044094364a1"
-  integrity sha512-Fdd9sLiAIm4Q7pwc+Vu92tO/O9saDp2tc9AWHl+YwvEHDQWsswj4Y+vgZXtkkuX20W2FwaTOrWb3MK4Xy+D/sA==
+  version "3.0.604"
+  resolved "https://registry.yarnpkg.com/clientnode/-/clientnode-3.0.604.tgz#7d0fca7159d2e0ebde992cceab92efdb5a8ef988"
+  integrity sha512-9A9YhQF5yviq9xLHS93QuUUC64w1czzeC5DuqJLkfc9629n4L6LY9rMPRlkv3xdgwmIIolZIdl3Y54u0yxWVVQ==
 
 cliui@^4.0.0:
   version "4.1.0"
@@ -8285,9 +8285,9 @@ react-dom@*:
     scheduler "^0.20.1"
 
 react-input-material@*:
-  version "0.0.93"
-  resolved "https://registry.yarnpkg.com/react-input-material/-/react-input-material-0.0.93.tgz#fcc50b3fa6374209d716685a0eca3523fdb72682"
-  integrity sha512-QaXfC5XLGXvqUSzDBEtEUoSBsiNXp2rDE1gxmqIlpsfnyfA4rXZZ31ibtusdM+IPv5fIQBgNFv0lbfzdScgFiA==
+  version "0.0.94"
+  resolved "https://registry.yarnpkg.com/react-input-material/-/react-input-material-0.0.94.tgz#78a469e2041c0307df71a951d792f53aa8444a64"
+  integrity sha512-C9uZhTk59XXtpBqfTK50c1MMAiUiefZnRn11+ljVf6aFxHEabAK6IAPxq2/pvYSi2b2TZAdY8NlK92BpCuWhIQ==
 
 react-is@^16.12.0, react-is@^16.8.1:
   version "16.13.1"
@@ -9888,9 +9888,9 @@ wbuf@^1.1.0, wbuf@^1.7.3:
     minimalistic-assert "^1.0.0"
 
 web-component-wrapper@*:
-  version "0.0.97"
-  resolved "https://registry.yarnpkg.com/web-component-wrapper/-/web-component-wrapper-0.0.97.tgz#bc431254845e52506278ebc4a7f38c130e8e746f"
-  integrity sha512-3Jnv0dZo5ZdBay3CnjWz36iSbfgYU66RT4DIyCOvwzUl8yG1ZGi+sONVhZyBYwr7vQ/0/4Kr8vxtxKVpuj6OhA==
+  version "0.0.99"
+  resolved "https://registry.yarnpkg.com/web-component-wrapper/-/web-component-wrapper-0.0.99.tgz#1d843b7f163a4702ce12a585c4e2adb7d055e637"
+  integrity sha512-Rvmzd3a0AaPtAbVmJXGURpeVbKpWJ0pgyVUdlKbkVOdVzh4oks7TdY4AS88rrXtRHAdfyhd56a3XCxtqFQd4gg==
 
 webidl-conversions@^5.0.0:
   version "5.0.0"
@@ -9903,9 +9903,9 @@ webidl-conversions@^6.1.0:
   integrity sha512-qBIvFLGiBpLjfwmYAaHPXsn+ho5xZnGvyGvsarywGNc8VyQJUMHJ8OBKGGrPER0okBeMDaan4mNBlgBROxuI8w==
 
 weboptimizer@*:
-  version "2.0.829"
-  resolved "https://registry.yarnpkg.com/weboptimizer/-/weboptimizer-2.0.829.tgz#a8c77a35f4d3ddf93fc3713e064b9b78191fc793"
-  integrity sha512-RyhMtzOCFdWEQ60uxD4lZsQe8xIJGNJiPwpdu71Q2vcLQJ6rpKCO+gWGWH2Lu1yY7icmuJuCAMtLpytOc6dHCg==
+  version "2.0.830"
+  resolved "https://registry.yarnpkg.com/weboptimizer/-/weboptimizer-2.0.830.tgz#02d4fcdc511e380ad0cdad30b583ea090c7ecd88"
+  integrity sha512-SbPwMHUh3avFGCi5DWwjR8xbU4PLTsozrkwahRIt0HspGQQeONOpmr7RZANYR8hJnLuVDrHpDAkMWHu02vTPJw==
   dependencies:
     "@babel/core" "*"
     "@babel/plugin-proposal-class-properties" "*"
