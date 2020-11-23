@@ -91,7 +91,6 @@
     "@typescript-eslint/parser": "*",
     "@webcomponents/webcomponentsjs": "*",
     "babel-eslint": "*",
-    "canvas": "*",
     "clientnode": "*",
     "documentation-website": "*",
     "eslint": "*",
