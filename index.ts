@@ -18,9 +18,10 @@
 */
 // region imports
 import {Mapping} from 'clientnode/type'
+import ReactWeb from 'web-component-wrapper/React'
 import {ComponentType, WebComponentAPI} from 'web-component-wrapper/type'
 // endregion
-export const components:Mapping<WebComponentAPI> = {}
+export const components:Mapping<WebComponentAPI<typeof ReactWeb>> = {}
 /*
     Import all react components and extract a dynamically created web-component
     class wrapper with corresponding web component register method. A derived
@@ -28,7 +29,8 @@ export const components:Mapping<WebComponentAPI> = {}
 */
 const componentRetriever = require.context('./components', true, /^.+\.ts$/)
 componentRetriever.keys().map((name:string):void => {
-    const componentAPI:WebComponentAPI = componentRetriever(name).default
+    const componentAPI:WebComponentAPI<typeof ReactWeb> =
+        componentRetriever(name).default
     components[componentAPI.component._name] = componentAPI
 })
 export default components
