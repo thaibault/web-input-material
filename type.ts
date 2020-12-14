@@ -16,7 +16,7 @@
     endregion
 */
 export type {
-    Model, StaticFunctionInputComponent
+    GenericEvent, Model, StaticFunctionInputComponent
 } from 'react-input-material/type'
 // region vim modline
 // vim: set tabstop=4 shiftwidth=4 expandtab:
