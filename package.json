@@ -183,16 +183,14 @@
     },
     "target:minimal": {
       "module": {
-        "replacements": {
-          "normal": {
-            "#": "Mock unneeded optional dependencies away.",
-            "ace-builds$": "react-input-material/components/Dummy",
-            "@tinymce/tinymce-react$": "react-input-material/components/Dummy",
-            "react-ace$": "react-input-material/components/Dummy",
-            "react-useanimations$": "react-input-material/components/Dummy",
-            "react-useanimations/lib/lock$": "react-input-material/components/Dummy",
-            "react-useanimations/lib/plusToX$": "react-input-material/components/Dummy"
-          }
+        "aliases": {
+          "#": "Remove unneeded optional dependencies.",
+          "ace-builds$": false,
+          "@tinymce/tinymce-react$": false,
+          "react-ace$": false,
+          "react-useanimations$": false,
+          "react-useanimations/lib/lock$": false,
+          "react-useanimations/lib/plusToX$": false
         }
       }
     },
