@@ -1,0 +1,659 @@
+<!doctype html>
+<%_ /*
+    region header
+    Copyright Torben Sickert (info["~at~"]torben.website) 16.12.2012
+
+    License
+    -------
+
+    This library written by Torben Sickert stand under a creative commons
+    naming 3.0 unported license.
+    See https://creativecommons.org/licenses/by/3.0/deed.de
+    endregion
+*/ _%>
+<html lang="en">
+    <!--region head-->
+    <head>
+        <meta charset="utf-8">
+        <!--Prevent browser caching-->
+        <meta http-equiv="cache-control" content="no-cache">
+        <meta http-equiv="expires" content="0">
+        <meta http-equiv="pragma" content="no-cache">
+        <title>playground</title>
+
+        <link rel="stylesheet" href="/react-input-material/index.styles.css">
+        <!--region tabs-->
+        <link rel="stylesheet" href="/@material/tab-bar/dist/mdc.tab-bar.css">
+        <link rel="stylesheet" href="/@material/tab/dist/mdc.tab.css">
+        <link rel="stylesheet" href="/@material/tab-scroller/dist/mdc.tab-scroller.css">
+        <link rel="stylesheet" href="/@material/tab-indicator/dist/mdc.tab-indicator.css">
+        <link rel="stylesheet" href="/@material/ripple/dist/mdc.ripple.css">
+        <link rel="stylesheet" href="/@rmwc/icon/icon.css">
+        <!--endregion-->
+        <!--region style-->
+        <style>
+            .inputs {
+                float: left;
+                width: 50%;
+            }
+            .tab.hide {
+                display: none;
+            }
+            generic-input {
+                display: block;
+                margin-bottom: 20px;
+            }
+            .outputs {
+                height: -webkit-fill-available;
+                overflow: auto;
+                position: fixed;
+                right: 0;
+                top: 0;
+            }
+            <%-
+                require('material-design-icons/iconfont/material-icons.css')
+                    .replace(
+                        /(url\()(MaterialIcons-Regular\.[^.]+\))/g,
+                        '$1./material-design-icons/iconfont/$2'
+                    )
+             %>
+        </style>
+        <!--endregion-->
+        <!--region polyfill-->
+        <%-
+            include(
+                'web-component-wrapper/polyfill.html',
+                {additionalFeatures: [
+                    // MDC-Select - Throws about missing object.
+                    'CustomEvent'
+                ]}
+            )
+        %>
+        <!--endregion-->
+        <!--region script-->
+        <script>
+            window.onload = function() {
+                const components = webInputMaterial.index.components
+                const Tools = webInputMaterial.clientnode.Tools
+                const GenericInput = components.GenericInput.component.content
+
+                GenericInput.local = 'de-DE'
+                GenericInput.transformer.currency.format.final.options =
+                    {currency: 'EUR'}
+
+                Object.values(components).map(function(component) {
+                    component.register()
+                })
+
+                // region tabs
+                const tabs = Tools.arrayMake(document.querySelectorAll('.tab'))
+                const showTab = function(currentIndex) {
+                    tabs.forEach(function(tab) {
+                        if (tab === tabs[currentIndex]) {
+                            if (tab.getAttribute('class').includes(' hide'))
+                                tab.setAttribute(
+                                    'class',
+                                    tab.getAttribute('class')
+                                        .replace(' hide', '')
+                                )
+                        } else if (
+                            !tab.getAttribute('class').includes(' hide')
+                        )
+                            tab.setAttribute(
+                                'class', tab.getAttribute('class') + ' hide'
+                            )
+                    })
+                }
+                const tabBar = document.querySelector('generic-tab-bar')
+                tabBar.addEventListener(
+                    'onActivate',
+                    function(event) {
+                        showTab(event.detail.parameter[0].detail.index)
+                    }
+                )
+                // endregion
+                // region inputs
+                function represent(event) {
+                    return Tools.represent(
+                        Object.keys(
+                            event.target.name === event.parameter[0].name ?
+                                event.parameter[0] :
+                                event.target.properties
+                        )
+                            .filter(function(key) {
+                                return (
+                                    key !== 'children' && !/^on[A-Z]/.test(key)
+                                )
+                            })
+                            .reduce(
+                                function(result, key) {
+                                    /*
+                                        NOTE: We want to call the corresponding
+                                        getter on the dom node for each
+                                        property.
+                                    */
+                                    result[key] = event.target[key]
+                                    return result
+                                },
+                                {}
+                            )
+                    )
+                }
+                // NOTE: Wait until all inputs have stabilized.
+                Tools.timeout(function() {
+                    Tools.arrayMake(document.querySelectorAll('[name]'))
+                        .forEach(function(domNode) {
+                            domNode.addEventListener(
+                                'onChange',
+                                function(event) {
+                                    Tools.timeout(function() {
+                                        document.querySelector('pre').innerHTML =
+                                            represent(event.detail)
+                                    })
+                                }
+                            )
+                        })
+                })
+                // endregion
+                // region animation
+                const animationDomNodes = Tools.arrayMake(
+                    document.querySelectorAll('generic-animate')
+                )
+                let intervalID = null
+                tabBar.addEventListener(
+                    'onActivate',
+                    function(event) {
+                        if (intervalID !== null) {
+                            clearInterval(intervalID)
+                            intervalID = null
+                        }
+                        if (
+                            tabs[event.detail.parameter[0].detail.index]
+                                .getAttribute('class')
+                                .includes('generic-animates')
+                        )
+                            intervalID = setInterval(
+                                function() {
+                                    animationDomNodes.forEach(function(domNode) {
+                                        domNode.in = !domNode.in
+                                    })
+                                },
+                                1 * 1000
+                            )
+                    }
+                )
+                
+                // endregion
+            }
+        </script>
+        <!--endregion-->
+    </head>
+    <!--endregion-->
+    <body class="no-javascript">
+
+        <div class="inputs">
+
+            <!--region tabs-->
+            <generic-tab-bar>
+
+                <generic-tab>
+                    generic-input (with <sup>markup</sup>)
+                </generic-tab>
+                <generic-tab>generic-animate</generic-tab>
+                <generic-tab>requireable-checkbox</generic-tab>
+                <generic-tab>circular-spinner</generic-tab>
+
+            </generic-tab-bar>
+            <!--endregion-->
+
+            <!--region generic-inputs-->
+            <div class="generic-inputs tab">
+
+                <generic-input></generic-input>
+
+                <hr/>
+
+                <generic-input name="input1"></generic-input>
+                <generic-input model="{name: 'input1Model'}"></generic-input>
+
+                <hr/>
+
+                <generic-input name="input2" intial-value="'value2'">
+                </generic-input>
+                <generic-input model="{
+                    name: 'input2Model',
+                    value: 'value2Model'
+                }">
+                </generic-input>
+
+                <hr/>
+
+                <generic-input
+                    declaration="Disabled"
+                    disabled
+                    initial-value="'value3'"
+                    name="input3"
+                ></generic-input>
+                <generic-input
+                    model="{
+                        declaration: 'Disabled',
+                        default: 'value3Model',
+                        mutable: false,
+                        name: 'input3Model'
+                    }"
+                ></generic-input>
+
+                <hr/>
+
+                <generic-input
+                    declaration="placeholder"
+                    name="input4"
+                    placeholder="input4"
+                    required
+                    trailing-icon="'clear_preset'"
+                ></generic-input>
+                <generic-input
+                    default="'value4Model'"
+                    icon="'backup'"
+                    model="{
+                        declaration: 'placeholder',
+                        name: 'input4Model',
+                        nullable: false,
+                        value: 'value4Model'
+                    }"
+                    placholder="input4Model"
+                    trailing-icon="'clear_preset'"
+                ></generic-input>
+
+                <hr/>
+
+                <generic-input
+                    declaration="pattern"
+                    description="input5Description"
+                    icon="'search'"
+                    initial-value="'only a`s allowed'"
+                    name="input5"
+                    pattern="/a+/"
+                    placeholder="input5Placeholder"
+                ></generic-input>
+                <generic-input
+                    model="{
+                        declaration: 'pattern',
+                        description: 'input5ModelDescription',
+                        regularExpressionPattern: 'a+',
+                        value: 'only a`s allowed'
+                    }"
+                    name="input5Model"
+                    placeholder="input5ModelPlaceholder"
+                    trailing-icon="'search'"
+                ></generic-input>
+
+                <hr/>
+
+                <generic-input
+                    declaration="password"
+                    description="input6Description"
+                    icon="'search'"
+                    initial-value="'hans'"
+                    name="passwordInput6"
+                    pattern="/a+/"
+                    placeholder="input6Placeholder"
+                    tooltip="'Please type in your password.'"
+                    trailing-icon="'password_preset'"
+                ></generic-input>
+                <generic-input
+                    model="{
+                        declaration: 'password',
+                        description: 'input6ModelDescription',
+                        regularExpressionPattern: 'a+',
+                        value: 'hans'
+                    }"
+                    name="passwordInput6Model"
+                    placeholder="input6ModelPlaceholder"
+                    trailing-icon="'password_preset'"
+                ></generic-input>
+
+                <hr/>
+
+                <generic-input
+                    declaration="selection"
+                    description="input7Description"
+                    initial-value="'A'"
+                    name="input7"
+                    placeholder="input7Placeholder"
+                    selection="['A', 'B', 'C']"
+                    required
+                ></generic-input>
+                <generic-input
+                    labels="['Label A', 'Label B', 'Label C']"
+                    model="{
+                        declaration: 'selection',
+                        description: 'input7ModelDescription',
+                        mutable: false,
+                        name: 'input7Model',
+                        nullable: false,
+                        selection: ['A', 'B', 'C'],
+                        value: 'A'
+                    }"
+                    placeholder="input7ModelPlaceholder"
+                ></generic-input>
+
+                <hr/>
+
+                <generic-input
+                    declaration="selection"
+                    description="input8Description"
+                    initial-value="true"
+                    name="input8"
+                    placeholder="input8Placeholder"
+                    type="boolean"
+                    required
+                ></generic-input>
+                <generic-input
+                    initial-value="false"
+                    labels="{true: 'JA', false: 'NEIN'}"
+                    model="{
+                        declaration: 'selection',
+                        description: 'input8ModelDescription',
+                        name: 'input8Model',
+                        nullable: false,
+                        type: 'boolean'
+                    }"
+                    placeholder="input8ModelPlaceholder"
+                ></generic-input>
+
+                <hr/>
+
+                <generic-input
+                    declaration="selection"
+                    description="input9Description"
+                    initial-value="true"
+                    labels="{true: 'JA', false: 'NEIN'}"
+                    name="input9"
+                    required
+                ></generic-input>
+                <generic-input
+                    initial-value="false"
+                    labels="{true: 'JA', false: 'NEIN'}"
+                    model="{
+                        declaration: 'selection',
+                        description: 'input9ModelDescription',
+                        name: 'input9Model',
+                        nullable: false,
+                        type: 'string'
+                    }"
+                ></generic-input>
+
+                <hr/>
+
+                <generic-input
+                    declaration="selection"
+                    description="input10Description"
+                    initial-value="'b'"
+                    name="input10"
+                    selection="{a: 'A', b: 'B', c: 'C'}"
+                    required
+                ></generic-input>
+                <generic-input
+                    model="{
+                        declaration: 'selection',
+                        description: 'input10ModelDescription',
+                        name: 'input10Model',
+                        nullable: false,
+                        selection: {a: 'A', b: 'B', c: 'C'},
+                        value: 'b'
+                    }"
+                ></generic-input>
+
+                <hr/>
+
+                <generic-input
+                    declaration="text"
+                    description="input11Description"
+                    initial-value="'a'"
+                    name="input11"
+                    required
+                    rows="3"
+                    theme="{primary: 'yellow', secondary: 'blue'}"
+                ></generic-input>
+                <generic-input
+                    editor="text"
+                    model="{
+                        declaration: 'text',
+                        description: 'input11ModelDescription',
+                        name: 'input11Model',
+                        nullable: false,
+                        value: 'a'
+                    }"
+                    rows="2"
+                ></generic-input>
+
+                <hr/>
+
+                <generic-input
+                    declaration="code"
+                    description="input12Description"
+                    disabled
+                    editor="code"
+                    initial-value="'const value = 2'"
+                    name="input12"
+                    rows="2"
+                    selectable-editor
+                ></generic-input>
+                <generic-input
+                    editor="code"
+                    model="{
+                        declaration: 'code',
+                        description: 'input12ModelDescription',
+                        name: 'input12Model',
+                        nullable: false,
+                        value: 'const value = 2'
+                    }"
+                    rows="6"
+                    selectable-editor
+                ></generic-input>
+
+                <hr/>
+
+                <generic-input
+                    declaration="code"
+                    description="input13Description"
+                    editor="code"
+                    maximum-length="10"
+                    name="input13"
+                    required
+                    rows="2"
+                    selectable-editor
+                ></generic-input>
+                <generic-input
+                    editor="code"
+                    model="{
+                        declaration: 'code',
+                        description: 'input13ModelDescription',
+                        name: 'input13Model',
+                        nullable: false
+                    }"
+                    rows="6"
+                    selectable-editor
+                ></generic-input>
+
+                <hr/>
+
+                <generic-input
+                    declaration="richtext(raw)"
+                    description="input14Description"
+                    editor="richtext(raw)"
+                    initial-value="'Hello Mr. Smith,<br><br>how are you?'"
+                    name="input14"
+                    required
+                    rows="2"
+                    selectable-editor
+                ></generic-input>
+                <generic-input
+                    editor="richtext(simple)"
+                    model="{
+                        declaration: 'richtext(simple)',
+                        description: 'input14ModelDescription',
+                        mutable: false,
+                        name: 'input14Model',
+                        nullable: false,
+                        value: 'Hello Mr. Smith,<br><br>how are you?'
+                    }"
+                    rows="6"
+                    selectable-editor
+                ></generic-input>
+
+                <hr/>
+
+                <generic-input
+                    declaration="Number"
+                    description="input15Description"
+                    maximum="200000"
+                    minimum="10"
+                    name="input15"
+                    placeholder="100000"
+                    required
+                    type="number"
+                ></generic-input>
+                <generic-input
+                    initial-value="100000"
+                    model="{
+                        declaration: 'Number',
+                        description: 'input15ModelDescription',
+                        maximum: 200000,
+                        minimum: 10,
+                        mutable: false,
+                        name: 'input15Model',
+                        nullable: false
+                    }"
+                ></generic-input>
+
+                <hr/>
+
+                <generic-input
+                    declaration="Number"
+                    description="input16Description"
+                    maximum="200000"
+                    minimum="10"
+                    minimumText="Please at least ${formatValue(minimum)}."
+                    name="input16"
+                    placeholder="100.000"
+                    required
+                    type="integer"
+                ></generic-input>
+                <generic-input
+                    initial-value="100000.01"
+                    model="{
+                        declaration: 'Number',
+                        description: 'input16ModelDescription',
+                        maximum: 200000,
+                        minimum: 10,
+                        name: 'input16Model',
+                        nullable: false,
+                        type: 'float'
+                    }"
+                ></generic-input>
+
+                <hr/>
+
+                <generic-input
+                    declaration="Number"
+                    description="input17Description"
+                    maximum="200000"
+                    minimum="10"
+                    name="input17"
+                    placeholder="100.000"
+                    required
+                    type="currency"
+                ></generic-input>
+                <generic-input
+                    initial-value="100000.01"
+                    model="{
+                        declaration: 'Number',
+                        description: 'input17ModelDescription',
+                        maximum: 200000,
+                        minimum: 10,
+                        name: 'input17Model',
+                        nullable: false,
+                        type: 'currency'
+                    }"
+                ></generic-input>
+
+            </div>
+            <!--endregion-->
+            <!--region generic-animates-->
+            <div class="generic-animates tab" style="height: 50px">
+
+                <generic-animate in>Fade it!</generic-animate>
+                <br/>
+                <generic-animate in="false">Fade it!</generic-animate>
+
+            </div>
+            <!--endregion-->
+            <!--region requireable-checkboxes-->
+            <div class="requireable-checkboxes tab">
+
+                <requireable-checkbox></requireable-checkbox>
+
+                <hr/>
+
+                <requireable-checkbox name="checkbox1"></requireable-checkbox>
+                <requireable-checkbox model="{name: 'checkbox1Model'}">
+                </requireable-checkbox>
+
+                <hr/>
+
+                <requireable-checkbox
+                    default="true" disabled name="checkbox2" required
+                ></requireable-checkbox>
+                <requireable-checkbox
+                    model="{
+                        name: 'checkbox2Model',
+                        mutable: false,
+                        nullable: false
+                    }"
+                ></requireable-checkbox>
+
+                <hr/>
+
+                <requireable-checkbox
+                    description="checkbox3Description"
+                    name="checkbox3"
+                    required
+                    show-initial-validation-state
+                ></requireable-checkbox>
+                <requireable-checkbox
+                    model="{
+                        default: true,
+                        description: 'checkbox3ModelDescription',
+                        name: 'checkbox3Model',
+                        nullable: false
+                    }"
+                    show-initial-validation-state
+                    tooltip="'Check this one!'"
+                ></requireable-checkbox>
+
+            </div>
+            <!--endregion-->
+            <!--region circular-spinners-->
+            <div class="circular-spinners tab">
+
+                <circular-spinner></circular-spinner>
+                <circular-spinner size="'xlarge'"></circular-spinner>
+                <circular-spinner size="80"></circular-spinner>
+
+            </div>
+            <!--endregion-->
+
+        </div>
+
+        <pre class="outputs"></pre>
+
+    </body>
+<html>
+<%_ /*
+    region vim modline
+    vim: set tabstop=4 shiftwidth=4 expandtab:
+    vim: foldmethod=marker foldmarker=region,endregion:
+    endregion
+*/ _%>
