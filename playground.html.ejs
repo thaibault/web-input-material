@@ -147,8 +147,9 @@
                                 'onChange',
                                 function(event) {
                                     Tools.timeout(function() {
-                                        document.querySelector('pre').innerHTML =
-                                            represent(event.detail)
+                                        document.querySelector('pre')
+                                            .innerHTML =
+                                                represent(event.detail)
                                     })
                                 }
                             )
