@@ -7688,9 +7688,9 @@ react-dom@*:
     scheduler "^0.20.1"
 
 react-input-material@*:
-  version "0.0.159"
-  resolved "https://registry.yarnpkg.com/react-input-material/-/react-input-material-0.0.159.tgz#05d80f910d9e787a7592e2f6a2b840564c03ac50"
-  integrity sha512-dfFNNg830oAjXw67QuzKqf3MjZ0jra+vrIwLCZQxZotuyCEmLGdiWU3e6fTdEP8cG9rSHbMT2TCh/blIKuHr1Q==
+  version "0.0.160"
+  resolved "https://registry.yarnpkg.com/react-input-material/-/react-input-material-0.0.160.tgz#763d2f4160576c145fbbd9a501522b1b33f4edb6"
+  integrity sha512-+qPKqeRzBuOYWOJa8+r90OpxSwzUB1DSrmEAz4E+J8bQbhjMORW28ugZt4nSHaacjtoCVVs5xMqMnYT/UN4bVw==
 
 react-is@^16.12.0, react-is@^16.8.1:
   version "16.13.1"
@@ -9186,9 +9186,9 @@ wbuf@^1.1.0, wbuf@^1.7.3:
     minimalistic-assert "^1.0.0"
 
 web-component-wrapper@*:
-  version "0.0.169"
-  resolved "https://registry.yarnpkg.com/web-component-wrapper/-/web-component-wrapper-0.0.169.tgz#5c24c68674b3825553ea42bd5037a0720d00a91e"
-  integrity sha512-NtvPVcKZ7WBzKXk3QS/7zvVPhUbDGDuancn6sfgRtmpGcizLU7W7Kgl+jCRuSqJDCOpKoIAe+cBQsc/CxqVQdA==
+  version "0.0.170"
+  resolved "https://registry.yarnpkg.com/web-component-wrapper/-/web-component-wrapper-0.0.170.tgz#854dee8ca74fdcf6c3e6da6a3e5b01106cd849d5"
+  integrity sha512-dSamnbVY+KjLbxSLYSZWPnFmFCIfj7sNYRZCwJIV5c9G0BB/PwnwHWrF4yKeIRhVyTR/eqnK/8wJTOPgC6fSAg==
 
 webidl-conversions@^5.0.0:
   version "5.0.0"
