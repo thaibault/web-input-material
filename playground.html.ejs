@@ -106,7 +106,7 @@
                 }
                 const tabBar = document.querySelector('generic-tab-bar')
                 tabBar.addEventListener(
-                    'onActivate',
+                    'activate',
                     function(event) {
                         showTab(event.detail.parameter[0].detail.index)
                     }
@@ -144,7 +144,7 @@
                     Tools.arrayMake(document.querySelectorAll('[name]'))
                         .forEach(function(domNode) {
                             domNode.addEventListener(
-                                'onChange',
+                                'change',
                                 function(event) {
                                     Tools.timeout(function() {
                                         document.querySelector('pre')
@@ -162,7 +162,7 @@
                 )
                 let intervalID = null
                 tabBar.addEventListener(
-                    'onActivate',
+                    'activate',
                     function(event) {
                         if (intervalID !== null) {
                             clearInterval(intervalID)
