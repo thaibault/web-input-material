@@ -114,10 +114,11 @@
                 // endregion
                 // region inputs
                 function represent(event) {
+                    const properties = event.detail.parameter[0]
                     return Tools.represent(
                         Object.keys(
-                            event.target.name === event.parameter[0].name ?
-                                event.parameter[0] :
+                            event.target.name === properties.name ?
+                                properties :
                                 event.target.properties
                         )
                             .filter(function(key) {
@@ -141,16 +142,16 @@
                 }
                 // NOTE: Wait until all inputs have stabilized.
                 Tools.timeout(function() {
-                    Tools.arrayMake(document.querySelectorAll('[name]'))
+                    Tools.arrayMake(document.querySelectorAll('[is-root][name]'))
                         .forEach(function(domNode) {
                             domNode.addEventListener(
                                 'change',
                                 function(event) {
-                                    Tools.timeout(function() {
-                                        document.querySelector('pre')
-                                            .innerHTML =
-                                                represent(event.detail)
-                                    })
+                                    if (event.target === domNode)
+                                        Tools.timeout(function() {
+                                            document.querySelector('pre')
+                                                .innerHTML = represent(event)
+                                        })
                                 }
                             )
                         })

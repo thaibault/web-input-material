@@ -153,6 +153,15 @@
     },
     "module": {
       "enforceDeduplication": true,
+      "html": {
+        "options": {
+          "sources": {
+            "urlFilter": {
+              "__evaluate__": "() => false"
+            }
+          }
+        }
+      },
       "optimizer": {
         "babelMinify": {
           "#": "To provide a logging output we need to exclude this feature.",
