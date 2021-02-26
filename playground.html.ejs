@@ -23,6 +23,7 @@
 
         <link rel="stylesheet" href="/react-input-material/index.styles.css">
         <!--region tabs-->
+        <link rel="stylesheet" href="/@material/slider/dist/mdc.slider.css">
         <link rel="stylesheet" href="/@material/tab-bar/dist/mdc.tab-bar.css">
         <link rel="stylesheet" href="/@material/tab/dist/mdc.tab.css">
         <link rel="stylesheet" href="/@material/tab-scroller/dist/mdc.tab-scroller.css">
@@ -184,7 +185,6 @@
                             )
                     }
                 )
-                
                 // endregion
             }
         </script>
@@ -204,6 +204,7 @@
                 <generic-tab>generic-animate</generic-tab>
                 <generic-tab>requireable-checkbox</generic-tab>
                 <generic-tab>circular-spinner</generic-tab>
+                <generic-tab>slider-input</generic-tab>
 
             </generic-tab-bar>
             <!--endregion-->
@@ -643,6 +644,15 @@
                 <circular-spinner></circular-spinner>
                 <circular-spinner size="'xlarge'"></circular-spinner>
                 <circular-spinner size="80"></circular-spinner>
+
+            </div>
+            <!--endregion-->
+            <!--region slider-input-->
+            <div class="slider-input tab">
+
+                <slider-input></slider-input>
+                <slider-input name="test"></slider-input>
+                <slider-input disabled></slider-input>
 
             </div>
             <!--endregion-->
