@@ -651,7 +651,18 @@
             <div class="slider-input tab">
 
                 <slider-input></slider-input>
-                <slider-input name="test"></slider-input>
+                <slider-input max="100" min="10" step="2" name="test">
+                </slider-input>
+                <slider-input discrete max="100" min="10" step="2" name="test">
+                </slider-input>
+                <slider-input
+                    discrete
+                    displayMarkers
+                    max="100"
+                    min="10"
+                    name="test"
+                    step="2"
+                ></slider-input>
                 <slider-input disabled></slider-input>
 
             </div>

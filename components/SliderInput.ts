@@ -27,11 +27,17 @@ export const SliderInput:WebComponentAPI = wrapAsWebComponent(
     Slider,
     'SliderInput',
     {
-        eventToPropertyMapping: {onChange: (event:Event) =>
-            console.log(event.detail) || {value: event.detail.value || 0}
-        },
+        // TODO
+        eventToPropertyMapping: {onChange: (event:Event) => (
+            {value: event.detail.value}
+        )},
         propertyTypes: {
             disabled: boolean,
+            discrete: boolean,
+            displayMarkers: boolean,
+            max: number,
+            min: number,
+            step: number,
             onChange: func,
             value: number
         }
