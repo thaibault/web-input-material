@@ -1,6 +1,6 @@
 // #!/usr/bin/env babel-node
 // -*- coding: utf-8 -*-
-/** @module GenericTabBar */
+/** @module TabBar */
 'use strict'
 /* !
     region header
@@ -18,16 +18,16 @@
 */
 // region imports
 import {func, number} from 'clientnode/property-types'
-import {TabBar} from '@rmwc/tabs'
+import {ReactTabBar} from '@rmwc/tabs'
 import wrapAsWebComponent from 'web-component-wrapper'
 import {WebComponentAPI} from 'web-component-wrapper/type'
 // endregion
-export const GenericTabBar:WebComponentAPI = wrapAsWebComponent(
-    TabBar,
-    'GenericTabBar',
+export const TabBar:WebComponentAPI = wrapAsWebComponent(
+    ReactTabBar,
+    'TabBar',
     {propTypes: {activeTabIndex: number, onActivate: func}}
 )
-export default GenericTabBar
+export default TabBar
 // region vim modline
 // vim: set tabstop=4 shiftwidth=4 expandtab:
 // vim: foldmethod=marker foldmarker=region,endregion:

@@ -115,6 +115,7 @@
                 // endregion
                 // region inputs
                 function represent(event) {
+                    console.log('TODO E', event)
                     const properties = event.detail.parameter[0]
                     return Tools.represent(
                         Object.keys(
@@ -196,17 +197,17 @@
         <div class="inputs">
 
             <!--region tabs-->
-            <generic-tab-bar>
+            <tab-bar>
 
-                <generic-tab>
+                <tab-item>
                     generic-input (with <sup>markup</sup>)
-                </generic-tab>
-                <generic-tab>generic-animate</generic-tab>
-                <generic-tab>requireable-checkbox</generic-tab>
-                <generic-tab>circular-spinner</generic-tab>
-                <generic-tab>slider-input</generic-tab>
+                </tab-item>
+                <tab-item>generic-animate</tab-item>
+                <tab-item>requireable-checkbox</tab-item>
+                <tab-item>circular-spinner</tab-item>
+                <tab-item>slider-input</tab-item>
 
-            </generic-tab-bar>
+            </tab-bar>
             <!--endregion-->
 
             <!--region generic-inputs-->
@@ -650,20 +651,31 @@
             <!--region slider-input-->
             <div class="slider-input tab">
 
-                <slider-input></slider-input>
-                <slider-input max="100" min="10" step="2" name="test">
-                </slider-input>
-                <slider-input discrete max="100" min="10" step="2" name="test">
-                </slider-input>
+                <slider-input name="sliderInput1"></slider-input>
+                <slider-input
+                    max="100"
+                    min="10"
+                    name="sliderInput2"
+                    step="2"
+                    name="test"
+                ></slider-input>
+                <slider-input
+                    discrete
+                    max="100"
+                    min="10"
+                    name="sliderInput3"
+                    step="2"
+                    name="test"
+                ></slider-input>
                 <slider-input
                     discrete
                     displayMarkers
                     max="100"
                     min="10"
-                    name="test"
+                    name="sliderInput4"
                     step="2"
                 ></slider-input>
-                <slider-input disabled></slider-input>
+                <slider-input disabled name="sliderInput5"></slider-input>
 
             </div>
             <!--endregion-->
