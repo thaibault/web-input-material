@@ -105,7 +105,7 @@
                             )
                     })
                 }
-                const tabBar = document.querySelector('generic-tab-bar')
+                const tabBar = document.querySelector('tab-bar')
                 tabBar.addEventListener(
                     'activate',
                     function(event) {
@@ -115,8 +115,11 @@
                 // endregion
                 // region inputs
                 function represent(event) {
-                    console.log('TODO E', event)
-                    const properties = event.detail.parameter[0]
+                    var properties = event.detail.parameter[0]
+                    // We unwrap nested event objects.
+                    while (properties.detail)
+                        properties = properties.detail
+
                     return Tools.represent(
                         Object.keys(
                             event.target.name === properties.name ?

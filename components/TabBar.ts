@@ -18,7 +18,7 @@
 */
 // region imports
 import {func, number} from 'clientnode/property-types'
-import {ReactTabBar} from '@rmwc/tabs'
+import {TabBar as ReactTabBar} from '@rmwc/tabs'
 import wrapAsWebComponent from 'web-component-wrapper'
 import {WebComponentAPI} from 'web-component-wrapper/type'
 // endregion
