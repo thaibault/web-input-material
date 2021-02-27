@@ -22,16 +22,18 @@ import {Slider} from '@rmwc/slider'
 import wrapAsWebComponent from 'web-component-wrapper'
 import {WebComponentAPI} from 'web-component-wrapper/type'
 // endregion
-// TODO
 export const SliderInput:WebComponentAPI = wrapAsWebComponent(
     Slider,
     'SliderInput',
     {
-        eventToPropertyMapping: {onChange: (event:Event) =>
-            console.log(event.detail) || {value: event.detail.value || 0}
-        },
-        propertyTypes: {
+        attachWebComponentAdapterIfNotExists: false,
+        propTypes: {
             disabled: boolean,
+            discrete: boolean,
+            displayMarkers: boolean,
+            max: number,
+            min: number,
+            step: number,
             onChange: func,
             value: number
         }

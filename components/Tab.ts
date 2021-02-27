@@ -1,6 +1,6 @@
 // #!/usr/bin/env babel-node
 // -*- coding: utf-8 -*-
-/** @module GenericTab */
+/** @module TabItem */
 'use strict'
 /* !
     region header
@@ -22,10 +22,10 @@ import {Tab} from '@rmwc/tabs'
 import wrapAsWebComponent from 'web-component-wrapper'
 import {WebComponentAPI} from 'web-component-wrapper/type'
 // endregion
-export const GenericTab:WebComponentAPI = wrapAsWebComponent(
-    Tab, 'GenericTab', {propTypes: {stacked: boolean}}
+export const TabItem:WebComponentAPI = wrapAsWebComponent(
+    Tab, 'TabItem', {propTypes: {stacked: boolean}}
 )
-export default GenericTab
+export default TabItem
 // region vim modline
 // vim: set tabstop=4 shiftwidth=4 expandtab:
 // vim: foldmethod=marker foldmarker=region,endregion:
