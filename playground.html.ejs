@@ -421,7 +421,7 @@
                     name="input11"
                     required
                     rows="3"
-                    theme="{primary: 'yellow', secondary: 'blue'}"
+                    theme-configuration="{primary: 'yellow', secondary: 'blue'}"
                 ></generic-input>
                 <generic-input
                     editor="text"
@@ -646,7 +646,8 @@
             <div class="circular-spinners tab">
 
                 <circular-spinner></circular-spinner>
-                <circular-spinner size="'xlarge'"></circular-spinner>
+                <circular-spinner size="'xlarge'" theme="error">
+                </circular-spinner>
                 <circular-spinner size="80"></circular-spinner>
 
             </div>
@@ -668,7 +669,8 @@
                     min="10"
                     name="sliderInput3"
                     step="2"
-                    name="test"
+                    theme="primary"
+                    value="66"
                 ></slider-input>
                 <slider-input
                     discrete
@@ -677,8 +679,10 @@
                     min="10"
                     name="sliderInput4"
                     step="2"
+                    value="33"
                 ></slider-input>
-                <slider-input disabled name="sliderInput5"></slider-input>
+                <slider-input disabled name="sliderInput5" value="33">
+                </slider-input>
 
             </div>
             <!--endregion-->

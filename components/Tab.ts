@@ -17,13 +17,18 @@
     endregion
 */
 // region imports
-import {boolean} from 'clientnode/property-types'
-import {Tab} from '@rmwc/tabs'
+import {boolean, object, string} from 'clientnode/property-types'
+import {
+    createWrapConfigurationsComponent
+} from 'react-input-material/components/WrapConfigurations'
 import wrapAsWebComponent from 'web-component-wrapper'
 import {WebComponentAPI} from 'web-component-wrapper/type'
+import {Tab} from '@rmwc/tabs'
 // endregion
 export const TabItem:WebComponentAPI = wrapAsWebComponent(
-    Tab, 'TabItem', {propTypes: {stacked: boolean}}
+    createWrapConfigurationsComponent(Tab),
+    'TabItem',
+    {propTypes: {stacked: boolean, theme: string, themeConfiguration: object}}
 )
 export default TabItem
 // region vim modline
