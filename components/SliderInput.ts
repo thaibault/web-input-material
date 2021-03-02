@@ -17,16 +17,18 @@
     endregion
 */
 // region imports
-import {boolean, func, number} from 'clientnode/property-types'
-import {Slider} from '@rmwc/slider'
+import {boolean, func, number, object, string} from 'clientnode/property-types'
+import {
+    createWrapConfigurationsComponent
+} from 'react-input-material/components/WrapConfigurations'
 import wrapAsWebComponent from 'web-component-wrapper'
 import {WebComponentAPI} from 'web-component-wrapper/type'
+import {Slider} from '@rmwc/slider'
 // endregion
 export const SliderInput:WebComponentAPI = wrapAsWebComponent(
-    Slider,
+    createWrapConfigurationsComponent(Slider),
     'SliderInput',
     {
-        attachWebComponentAdapterIfNotExists: false,
         propTypes: {
             disabled: boolean,
             discrete: boolean,
@@ -34,6 +36,8 @@ export const SliderInput:WebComponentAPI = wrapAsWebComponent(
             max: number,
             min: number,
             step: number,
+            theme: string,
+            themeConfiguration: object,
             onChange: func,
             value: number
         }

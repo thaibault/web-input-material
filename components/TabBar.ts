@@ -17,15 +17,23 @@
     endregion
 */
 // region imports
-import {func, number} from 'clientnode/property-types'
-import {TabBar as ReactTabBar} from '@rmwc/tabs'
+import {func, number, object, string} from 'clientnode/property-types'
+import {
+    createWrapConfigurationsComponent
+} from 'react-input-material/components/WrapConfigurations'
 import wrapAsWebComponent from 'web-component-wrapper'
 import {WebComponentAPI} from 'web-component-wrapper/type'
+import {TabBar as ReactTabBar} from '@rmwc/tabs'
 // endregion
 export const TabBar:WebComponentAPI = wrapAsWebComponent(
-    ReactTabBar,
+    createWrapConfigurationsComponent(ReactTabBar),
     'TabBar',
-    {propTypes: {activeTabIndex: number, onActivate: func}}
+    {propTypes: {
+        activeTabIndex: number,
+        onActivate: func,
+        theme: string,
+        themeConfiguration: object
+    }}
 )
 export default TabBar
 // region vim modline

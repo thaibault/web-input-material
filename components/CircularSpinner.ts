@@ -17,17 +17,26 @@
     endregion
 */
 // region imports
-import {number, oneOfType, oneOf} from 'clientnode/property-types'
-import {CircularProgress} from '@rmwc/circular-progress'
+import {number, object, oneOfType, oneOf, string} from 'clientnode/property-types'
+import {
+    createWrapConfigurationsComponent
+} from 'react-input-material/components/WrapConfigurations'
 import wrapAsWebComponent from 'web-component-wrapper'
 import {WebComponentAPI} from 'web-component-wrapper/type'
+import {CircularProgress} from '@rmwc/circular-progress'
 // endregion
 export const CircularSpinner:WebComponentAPI = wrapAsWebComponent(
-    CircularProgress,
+    createWrapConfigurationsComponent(
+        CircularProgress, {withReference: false}
+    ),
     'CircularSpinner',
-    {propTypes: {size: oneOfType(
-        [oneOf(['xsmall', 'small', 'medium', 'large', 'xlarge']), number]
-    )}}
+    {propTypes: {
+        size: oneOfType(
+            [oneOf(['xsmall', 'small', 'medium', 'large', 'xlarge']), number]
+        ),
+        theme: string,
+        themeConfiguration: object
+    }}
 )
 export default CircularSpinner
 // region vim modline
