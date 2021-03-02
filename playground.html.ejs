@@ -605,8 +605,10 @@
                 <hr/>
 
                 <requireable-checkbox name="checkbox1"></requireable-checkbox>
-                <requireable-checkbox model="{name: 'checkbox1Model'}">
-                </requireable-checkbox>
+                <requireable-checkbox
+                    model="{name: 'checkbox1Model'}"
+                    theme-configuration="{primary: 'yellow', secondary: 'blue'}"
+                ></requireable-checkbox>
 
                 <hr/>
 
@@ -669,7 +671,7 @@
                     min="10"
                     name="sliderInput3"
                     step="2"
-                    theme="primary"
+                    theme-configuration="{secondary: 'red'}"
                     value="66"
                 ></slider-input>
                 <slider-input
