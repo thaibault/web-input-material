@@ -101,7 +101,7 @@
     "identity-obj-proxy": "*",
     "jest": "*",
     "jsdoc": "*",
-    "material-design-icons": "*",
+    "material-design-icons-iconfont": "*",
     "react-ace": "*",
     "react-useanimations": "*",
     "style-loader": "*",
