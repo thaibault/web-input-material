@@ -115,17 +115,8 @@
                 // endregion
                 // region inputs
                 function represent(event) {
-                    var properties = event.detail.parameter[0]
-                    // We unwrap nested event objects.
-                    while (properties.detail)
-                        properties = properties.detail
-
                     return Tools.represent(
-                        Object.keys(
-                            event.target.name === properties.name ?
-                                properties :
-                                event.target.properties
-                        )
+                        Object.keys(event.detail.parameter[0])
                             .filter(function(key) {
                                 return (
                                     key !== 'children' && !/^on[A-Z]/.test(key)
