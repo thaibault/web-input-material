@@ -22,6 +22,7 @@ import {
     createWrapConfigurationsComponent
 } from 'react-input-material/components/WrapConfigurations'
 import wrapAsWebComponent from 'web-component-wrapper'
+import ReactWrapper from 'web-component-wrapper/React'
 import {WebComponentAPI} from 'web-component-wrapper/type'
 import {Slider} from '@rmwc/slider'
 // endregion
@@ -29,6 +30,19 @@ export const SliderInput:WebComponentAPI = wrapAsWebComponent(
     createWrapConfigurationsComponent(Slider),
     'SliderInput',
     {
+        eventToPropertyMapping: {
+            onChange: (event:Event, self:ReactWrapper):{
+                disabled:boolean
+                discrete:boolean
+                displayMarkers:boolean
+                max:number
+                min:number
+                step:number
+                value:number
+            } => ({...self.externalProperties, value: event.detail.value}),
+            onInput: (event:Event):[{value:number}, {value:number}] =>
+                [{value: event.detail.value}, {value: event.detail.value}]
+        },
         propTypes: {
             disabled: boolean,
             discrete: boolean,
@@ -39,6 +53,7 @@ export const SliderInput:WebComponentAPI = wrapAsWebComponent(
             theme: string,
             themeConfiguration: object,
             onChange: func,
+            onInput: func,
             value: number
         }
     }
