@@ -33,24 +33,28 @@
         <!--endregion-->
         <!--region style-->
         <style>
-            .inputs {
-                float: left;
-                width: 50%;
-            }
-            .tab.hide {
-                display: none;
-            }
             generic-input {
                 display: block;
                 margin-bottom: 20px;
             }
-            .outputs {
+
+            .playground__tab.hide {
+                display: none;
+            }
+
+            .playground__inputs {
+                float: left;
+                width: 50%;
+            }
+
+            .playground__outputs {
                 height: -webkit-fill-available;
                 overflow: auto;
                 position: fixed;
                 right: 0;
                 top: 0;
             }
+
             <%-
                 require('material-icons/iconfont/material-icons.css')
                     .replace(
@@ -87,7 +91,7 @@
                 })
 
                 // region tabs
-                const tabs = Tools.arrayMake(document.querySelectorAll('.tab'))
+                const tabs = Tools.arrayMake(document.querySelectorAll('.playground__tab'))
                 const showTab = function(currentIndex) {
                     tabs.forEach(function(tab) {
                         if (tab === tabs[currentIndex]) {
@@ -105,7 +109,8 @@
                             )
                     })
                 }
-                const tabBar = document.querySelector('tab-bar')
+                const tabBar =
+                    document.querySelector('.playground__inputs__tab-bar')
                 tabBar.addEventListener(
                     'activate',
                     function(event) {
@@ -186,12 +191,10 @@
         <!--endregion-->
     </head>
     <!--endregion-->
-    <body class="no-javascript">
-
-        <div class="inputs">
-
+    <body class="no-javascript playground">
+        <div class="playground__inputs">
             <!--region tabs-->
-            <tab-bar>
+            <tab-bar class="playground__inputs__tab-bar">
 
                 <tab-item>
                     generic-input (with <sup>markup</sup>)
@@ -203,9 +206,8 @@
 
             </tab-bar>
             <!--endregion-->
-
             <!--region generic-inputs-->
-            <div class="generic-inputs tab">
+            <div class="playground__inputs__generic-inputs playground__tab">
 
                 <generic-input></generic-input>
 
@@ -229,9 +231,14 @@
                 <generic-input
                     default="120" name="input3" type="datetime-local"
                 ></generic-input>
-                <GenericInput
-                    model="{default: 60, name: 'input3Model', type: 'time'}"
-                />
+                <generic-input model="{
+                    default: 60,
+                    maximum: 60,
+                    minimum: 1,
+                    name: 'input3Model',
+                    step: 1,
+                    type: 'time'
+                }"></generic-input>
 
                 <hr/>
 
@@ -589,7 +596,10 @@
             </div>
             <!--endregion-->
             <!--region generic-animates-->
-            <div class="generic-animates tab" style="height: 50px">
+            <div
+                class="playground__inputs__generic-animates playground__tab"
+                style="height: 50px"
+            >
 
                 <generic-animate in>Fade it!</generic-animate>
                 <br/>
@@ -598,7 +608,7 @@
             </div>
             <!--endregion-->
             <!--region requireable-checkboxes-->
-            <div class="requireable-checkboxes tab">
+            <div class="playground__inputs__requireable-checkboxes playground__tab">
 
                 <requireable-checkbox></requireable-checkbox>
 
@@ -645,7 +655,7 @@
             </div>
             <!--endregion-->
             <!--region circular-spinners-->
-            <div class="circular-spinners tab">
+            <div class="playground__inputs__circular-spinners playground__tab">
 
                 <circular-spinner></circular-spinner>
                 <circular-spinner size="'xlarge'" theme="error">
@@ -655,7 +665,7 @@
             </div>
             <!--endregion-->
             <!--region slider-input-->
-            <div class="slider-input tab">
+            <div class="playground__inputs__slider-input playground__tab">
 
                 <slider-input name="sliderInput1"></slider-input>
                 <slider-input
@@ -688,10 +698,9 @@
 
             </div>
             <!--endregion-->
-
         </div>
 
-        <pre class="outputs"></pre>
+        <pre class="playground__outputs"></pre>
 
     </body>
 <html>
