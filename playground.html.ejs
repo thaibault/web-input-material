@@ -566,6 +566,10 @@
                         nullable: false,
                         type: 'float'
                     }"
+                    transformer="{float: {format: {final: {options: {
+                        maximumFractionDigits: 20,
+                        minimumFractionDigits: 2
+                    }}}}}"
                 ></generic-input>
 
                 <hr/>
