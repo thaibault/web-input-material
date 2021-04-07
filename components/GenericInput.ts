@@ -27,6 +27,7 @@ export const GenericInput:WebComponentAPI = wrapAsWebComponent(
     'GenericInput',
     {
         eventToPropertyMapping: {onChange: true},
+        internalProperties: {enforceUncontrolled: true},
         propertiesToReflectAsAttributes: {
             dirty: boolean,
             focused: boolean,
