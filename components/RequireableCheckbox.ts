@@ -27,6 +27,7 @@ export const RequireableCheckbox:WebComponentAPI = wrapAsWebComponent(
     'RequireableCheckbox',
     {
         eventToPropertyMapping: {onChange: true},
+        internalProperties: {enforceUncontrolled: true},
         propertiesToReflectAsAttributes: {
             dirty: boolean,
             focused: boolean,
