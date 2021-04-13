@@ -1,6 +1,6 @@
 // #!/usr/bin/env babel-node
 // -*- coding: utf-8 -*-
-/** @module Interval */
+/** @module GenericInterval */
 'use strict'
 /* !
     region header
@@ -18,19 +18,19 @@
 */
 // region imports
 import {boolean, string} from 'clientnode/property-types'
-import ReactInterval from 'react-input-material/components/Interval'
+import Interval from 'react-input-material/components/Interval'
 import wrapAsWebComponent from 'web-component-wrapper'
 import {WebComponentAPI} from 'web-component-wrapper/type'
 // endregion
-export const Interval:WebComponentAPI = wrapAsWebComponent(
-    ReactInterval,
-    'Interval',
+export const GenericInterval:WebComponentAPI = wrapAsWebComponent(
+    Interval,
+    'GenericInterval',
     {
         eventToPropertyMapping: {onChange: true},
         internalProperties: {enforceUncontrolled: true}
     }
 )
-export default Interval
+export default GenericInterval
 // region vim modline
 // vim: set tabstop=4 shiftwidth=4 expandtab:
 // vim: foldmethod=marker foldmarker=region,endregion:
