@@ -7713,9 +7713,9 @@ react-dom@*:
     scheduler "^0.20.2"
 
 react-input-material@*:
-  version "0.0.232"
-  resolved "https://registry.yarnpkg.com/react-input-material/-/react-input-material-0.0.232.tgz#6e36569f4aa6366d3a93a41e13c238bc87f908af"
-  integrity sha512-SOZmiuSjWpSIS+2MwREUS6yNJXPluKrbVM0dpuEkFQeUEOvDEUcE6IruNX36CawI7IAUJZwllNWmZXSILm2ozw==
+  version "0.0.234"
+  resolved "https://registry.yarnpkg.com/react-input-material/-/react-input-material-0.0.234.tgz#b3d406920d06618f668359b2aaabe7e2b7871ba3"
+  integrity sha512-3L4fZ2e63CaiqhMrcYhC5N1/tB7k75bFMSx27ul9RCebZOuy/MJIUuY04CzS+zj7Ysx3vWnfbEva0CLjXkGoIw==
   dependencies:
     "@types/webpack" "https://registry.yarnpkg.com/@favware/skip-dependency/-/skip-dependency-1.1.0.tgz"
 

@@ -27,7 +27,19 @@ export const GenericInterval:WebComponentAPI = wrapAsWebComponent(
     'GenericInterval',
     {
         eventToPropertyMapping: {onChange: true},
-        internalProperties: {enforceUncontrolled: true}
+        internalProperties: {enforceUncontrolled: true},
+        propertiesToReflectAsAttributes: {
+            dirty: boolean,
+            focused: boolean,
+            invalid: boolean,
+            invalidRequired: boolean,
+            name: string,
+            pristine: boolean,
+            touched: boolean,
+            untouched: boolean,
+            valid: boolean,
+            visited: boolean
+        }
     }
 )
 export default GenericInterval
