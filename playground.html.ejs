@@ -196,9 +196,8 @@
             <!--region tabs-->
             <tab-bar class="playground__inputs__tab-bar">
 
-                <tab-item>
-                    generic-input (with <sup>markup</sup>)
-                </tab-item>
+                <tab-item>generic-input (with <sup>markup</sup>)</tab-item>
+                <tab-item>generic-interval</tab-item>
                 <tab-item>generic-animate</tab-item>
                 <tab-item>requireable-checkbox</tab-item>
                 <tab-item>circular-spinner</tab-item>
@@ -595,6 +594,18 @@
                         type: 'currency'
                     }"
                 ></generic-input>
+
+            </div>
+            <!--endregion-->
+            <!--region interval-->
+            <div class="playground__inputs__generic-interval playground__tab">
+
+                <generic-interval
+                    end="{default: 240, minimum: 120}"
+                    required
+                    start="{default: 120, maximum: 3600}"
+                    step="60"
+                ></generic-interval>
 
             </div>
             <!--endregion-->
