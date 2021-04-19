@@ -179,6 +179,7 @@
             <tab-bar class="playground__inputs__tab-bar">
 
                 <tab-item>generic-input (with <sup>markup</sup>)</tab-item>
+                <tab-item>generic-inputs</tab-item>
                 <tab-item>generic-interval</tab-item>
                 <tab-item>generic-animate</tab-item>
                 <tab-item>requireable-checkbox</tab-item>
@@ -187,8 +188,8 @@
 
             </tab-bar>
             <!--endregion-->
-            <!--region generic-inputs-->
-            <div class="playground__inputs__generic-inputs playground__tab">
+            <!--region generic-input-->
+            <div class="playground__inputs__generic-input playground__tab">
 
                 <generic-input></generic-input>
 
@@ -583,7 +584,23 @@
 
             </div>
             <!--endregion-->
-            <!--region interval-->
+            <!--region generic-inputs-->
+            <div class="playground__inputs__generic-inputs playground__tab">
+                <generic-inputs
+                    model="{default: [false], name: 'inputs1'}"
+                    show-initial-validation-state
+                >
+                    <!--TODO
+                        {(properties:Properties<boolean>, index:number) =>
+                        <requireable-checkbox
+                            {...properties} name={`inputs1-${index}`}
+                        ></requireable-checkbox>
+                    }
+                    -->
+                </generic-inputs>
+            </div>
+            <!--endregion-->
+            <!--region generic-interval-->
             <div class="playground__inputs__generic-interval playground__tab">
 
                 <generic-interval
@@ -595,9 +612,9 @@
 
             </div>
             <!--endregion-->
-            <!--region generic-animates-->
+            <!--region generic-animate-->
             <div
-                class="playground__inputs__generic-animates playground__tab"
+                class="playground__inputs__generic-animate playground__tab"
                 style="height: 50px"
             >
 
@@ -607,8 +624,8 @@
 
             </div>
             <!--endregion-->
-            <!--region requireable-checkboxes-->
-            <div class="playground__inputs__requireable-checkboxes playground__tab">
+            <!--region requireable-checkbox-->
+            <div class="playground__inputs__requireable-checkbox playground__tab">
 
                 <requireable-checkbox></requireable-checkbox>
 
@@ -654,8 +671,8 @@
 
             </div>
             <!--endregion-->
-            <!--region circular-spinners-->
-            <div class="playground__inputs__circular-spinners playground__tab">
+            <!--region circular-spinner-->
+            <div class="playground__inputs__circular-spinner playground__tab">
 
                 <circular-spinner></circular-spinner>
                 <circular-spinner size="'xlarge'" theme="error">
