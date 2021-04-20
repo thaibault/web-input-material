@@ -343,7 +343,7 @@
                 <generic-input
                     declaration="selection"
                     description="input9Description"
-                    initial-value="true"
+                    initial-value
                     name="input9"
                     placeholder="input9Placeholder"
                     type="boolean"
@@ -367,7 +367,7 @@
                 <generic-input
                     declaration="selection"
                     description="input10Description"
-                    initial-value="true"
+                    initial-value
                     labels="{true: 'JA', false: 'NEIN'}"
                     name="input10"
                     required
@@ -587,6 +587,11 @@
             <!--region generic-inputs-->
             <div class="playground__inputs__generic-inputs playground__tab">
                 <generic-inputs
+                    default="['test']"
+                    name="inputs1"
+                    show-initial-validation-state
+                ></generic-inputs>
+                <generic-inputs
                     model="{default: [false], name: 'inputs1'}"
                     show-initial-validation-state
                 >
@@ -640,7 +645,7 @@
                 <hr/>
 
                 <requireable-checkbox
-                    default="true" disabled name="checkbox2" required
+                    default disabled name="checkbox2" required
                 ></requireable-checkbox>
                 <requireable-checkbox
                     model="{
