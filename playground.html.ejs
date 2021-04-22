@@ -595,13 +595,10 @@
                     model="{default: [false], name: 'inputs1'}"
                     show-initial-validation-state
                 >
-                    <!--TODO
-                        {(properties:Properties<boolean>, index:number) =>
-                        <requireable-checkbox
-                            {...properties} name={`inputs1-${index}`}
-                        ></requireable-checkbox>
-                    }
-                    -->
+                    <!--TODO: {...parameters[0]}-->
+                    <requireable-checkbox
+                        name="'inputs1-' + parameters[1]"
+                    ></requireable-checkbox>
                 </generic-inputs>
             </div>
             <!--endregion-->
