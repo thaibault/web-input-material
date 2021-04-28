@@ -114,7 +114,7 @@
                 tabBar.addEventListener(
                     'activate',
                     function(event) {
-                        showTab(event.detail.parameter[0].detail.index)
+                        showTab(event.detail.parameters[0].detail.index)
                     }
                 )
                 // endregion
@@ -130,9 +130,9 @@
                                         Tools.timeout(function() {
                                             document.querySelector('pre')
                                                 .innerHTML = Tools.represent(
-                                                    event.detail.parameter[0]
+                                                    event.detail.parameters[0]
                                                         .model ||
-                                                    event.detail.parameter[0]
+                                                    event.detail.parameters[0]
                                                 )
                                         })
                                 }
@@ -153,7 +153,7 @@
                             intervalID = null
                         }
                         if (
-                            tabs[event.detail.parameter[0].detail.index]
+                            tabs[event.detail.parameters[0].detail.index]
                                 .getAttribute('class')
                                 .includes('generic-animates')
                         )
@@ -178,13 +178,13 @@
             <!--region tabs-->
             <tab-bar class="playground__inputs__tab-bar">
 
-                <tab-item>'generic-input (with '<sup>markup</sup>')'</tab-item>
-                <tab-item>'generic-inputs'</tab-item>
-                <tab-item>'generic-interval'</tab-item>
-                <tab-item>'generic-animate'</tab-item>
-                <tab-item>'requireable-checkbox'</tab-item>
-                <tab-item>'circular-spinner'</tab-item>
-                <tab-item>'slider-input'</tab-item>
+                <tab-item>generic-input (with <sup>markup</sup>)</tab-item>
+                <tab-item>generic-inputs</tab-item>
+                <tab-item>generic-interval</tab-item>
+                <tab-item>generic-animate</tab-item>
+                <tab-item>requireable-checkbox</tab-item>
+                <tab-item>circular-spinner</tab-item>
+                <tab-item>slider-input</tab-item>
 
             </tab-bar>
             <!--endregion-->
@@ -595,9 +595,10 @@
                     model="{default: [false], name: 'inputs1'}"
                     show-initial-validation-state
                 >
-                    <!--TODO: {...parameters[0]}-->
                     <requireable-checkbox
-                        name="'inputs1-' + parameters[1]"
+                        bind-properties="parameters[0]"
+                        bind-property-name="'inputs1-' + parameters[1]"
+                        slot="default"
                     ></requireable-checkbox>
                 </generic-inputs>
             </div>
