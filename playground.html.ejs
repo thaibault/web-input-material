@@ -597,7 +597,7 @@
                 >
                     <requireable-checkbox
                         bind-properties="parameters[0]"
-                        bind-property-name="'inputs1-' + parameters[1]"
+                        bind-property-name="parameters[0].name + '-' + parameters[1]"
                         slot="default"
                     ></requireable-checkbox>
                 </generic-inputs>

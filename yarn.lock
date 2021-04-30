@@ -7692,9 +7692,9 @@ react-dom@*:
     scheduler "^0.20.2"
 
 react-input-material@*:
-  version "0.0.240"
-  resolved "https://registry.yarnpkg.com/react-input-material/-/react-input-material-0.0.240.tgz#8f9604bea5c7f75d9e06611423ed985d50afc212"
-  integrity sha512-wygrHa5RoRbuvkCCpw/BdLRX1Yc7FVWGp2E33TvyOk+T3XxG42MQaekFBtdnrm+yJmGACiPPzNSBiz2H/102kw==
+  version "0.0.241"
+  resolved "https://registry.yarnpkg.com/react-input-material/-/react-input-material-0.0.241.tgz#3ecfb66e202ee5d7c3b9494bb354d2e654b699ca"
+  integrity sha512-5sefInpvmLdmGefuF87cWEihFMYy3v4vEHbV5qsNUsLOKbPXY7gg+Tbesl7vvFxVib0cHo8hXIgxp4rnDa9ZJA==
   dependencies:
     "@types/webpack" "https://registry.yarnpkg.com/@favware/skip-dependency/-/skip-dependency-1.1.0.tgz"
 
@@ -9207,9 +9207,9 @@ wbuf@^1.1.0, wbuf@^1.7.3:
     minimalistic-assert "^1.0.0"
 
 web-component-wrapper@*:
-  version "0.0.242"
-  resolved "https://registry.yarnpkg.com/web-component-wrapper/-/web-component-wrapper-0.0.242.tgz#4f1f6812cd2c26df70af4ccc6a000a66ddfff486"
-  integrity sha512-wws0ms3Osu4dy7ZOuwoEBX5MnWiy211ph8RiF7RmjNgpjoK9XUdjo1xe3o3YzO0EYuWid8pkGNAq4d5aXyfmAw==
+  version "0.0.244"
+  resolved "https://registry.yarnpkg.com/web-component-wrapper/-/web-component-wrapper-0.0.244.tgz#85002426713bdb6ef6c62381984cf968a0bb5273"
+  integrity sha512-mEtnW0BzOJia8nJfAKdSDhu8DD0FRYtYOQz4k8uYPrrEsD6RDV7Qd9StDGJaWvZLsy/nm6q7EW2VkAXLfdKocQ==
   dependencies:
     "@types/webpack" "https://registry.yarnpkg.com/@favware/skip-dependency/-/skip-dependency-1.1.0.tgz"
 
@@ -9354,9 +9354,9 @@ webpack-sources@*, webpack-sources@^2.1.1:
     source-map "^0.6.1"
 
 webpack@*:
-  version "5.36.0"
-  resolved "https://registry.yarnpkg.com/webpack/-/webpack-5.36.0.tgz#d008da31b721f8fecce88ef2adaf1b16dc2161d1"
-  integrity sha512-HdOhLXClUEwTnzQnzpSG9iL00ej23ojvfnGpF49ba0MkuAT2q+WhQilHFFJHOIVRBqbzakQ1vCWQV2K+QLX0Qw==
+  version "5.36.1"
+  resolved "https://registry.yarnpkg.com/webpack/-/webpack-5.36.1.tgz#d82bad3384f84ed45a8de3844c31730f56361ab7"
+  integrity sha512-2u25a82T+6quAxSlzEpN/R/RICwt20ONU3z3Ko05S8KVH9FXILcBYb2hD/rQtZT5y7lRAIsIIs05pdndY7ourQ==
   dependencies:
     "@types/eslint-scope" "^3.7.0"
     "@types/estree" "^0.0.47"

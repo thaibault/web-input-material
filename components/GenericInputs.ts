@@ -26,7 +26,6 @@ export const GenericInputs:WebComponentAPI = wrapAsWebComponent(
     ReactInputs,
     'GenericInputs',
     {
-        // TODO shadows implicit render property here!
         eventToPropertyMapping: {onChange: true},
         internalProperties: {enforceUncontrolled: true},
         propertiesToReflectAsAttributes: {
