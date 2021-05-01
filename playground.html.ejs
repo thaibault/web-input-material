@@ -596,8 +596,8 @@
                     show-initial-validation-state
                 >
                     <requireable-checkbox
-                        bind-properties="parameters[0]"
-                        bind-property-name="parameters[0].name + '-' + parameters[1]"
+                        bind-properties="options.properties"
+                        bind-property-name="options.inputsProperties.name + '-' + String(options.index + 1)"
                         slot="default"
                     ></requireable-checkbox>
                 </generic-inputs>
