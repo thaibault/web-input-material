@@ -47,6 +47,12 @@
                 width: 50%;
             }
 
+            .playground__inputs__generic-animate .generic-animate-appear-active,
+            .playground__inputs__generic-animate .generic-animate-enter-active,
+            .playground__inputs__generic-animate .generic-animate-exit-active {
+                transition: opacity 2000ms ease-in !important;
+            }
+
             .playground__outputs {
                 height: -webkit-fill-available;
                 overflow: auto;
@@ -155,7 +161,7 @@
                         if (
                             tabs[event.detail.parameters[0].detail.index]
                                 .getAttribute('class')
-                                .includes('generic-animates')
+                                .includes('playground__inputs__generic-animate')
                         )
                             intervalID = setInterval(
                                 function() {
@@ -163,7 +169,7 @@
                                         domNode.in = !domNode.in
                                     })
                                 },
-                                1 * 1000
+                                2 * 1000
                             )
                     }
                 )
@@ -644,9 +650,11 @@
                 style="height: 50px"
             >
 
-                <generic-animate in>Fade it!</generic-animate>
+                <generic-animate in timeout="2000">Fade it!</generic-animate>
                 <br/>
-                <generic-animate in="false">Fade it!</generic-animate>
+                <generic-animate
+                    in="false" timeout="2000"
+                >Fade it!</generic-animate>
 
             </div>
             <!--endregion-->

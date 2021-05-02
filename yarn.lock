@@ -3710,9 +3710,9 @@ camelcase@^6.0.0:
   integrity sha512-c7wVvbw3f37nuobQNtgsgG9POC9qMbNuMQmTCqZv23b6MIz0fcYpBiOlv9gEN/hdLdnZTDQhg6e9Dq5M1vKvfg==
 
 caniuse-lite@^1.0.30000844, caniuse-lite@^1.0.30001219:
-  version "1.0.30001219"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001219.tgz#5bfa5d0519f41f993618bd318f606a4c4c16156b"
-  integrity sha512-c0yixVG4v9KBc/tQ2rlbB3A/bgBFRvl8h8M4IeUbqCca4gsiCfvtaheUssbnux/Mb66Vjz7x8yYjDgYcNQOhyQ==
+  version "1.0.30001220"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001220.tgz#c080e1c8eefb99f6cc9685da6313840bdbaf4c36"
+  integrity sha512-pjC2T4DIDyGAKTL4dMvGUQaMUHRmhvPpAgNNTa14jaBWHu+bLQgvpFqElxh9L4829Fdx0PlKiMp3wnYldRtECA==
 
 capture-exit@^2.0.0:
   version "2.0.0"
@@ -7735,9 +7735,9 @@ react-dom@*:
     scheduler "^0.20.2"
 
 react-input-material@*:
-  version "0.0.244"
-  resolved "https://registry.yarnpkg.com/react-input-material/-/react-input-material-0.0.244.tgz#3bebe98f2fd7296f7d7ff67e955c9c3cb9d6e538"
-  integrity sha512-tTKJG+At7NrkFaNqUA6Qnl0bA9YzoJ0XFv5zNr+8CF+yQ92t1FLVZqyfPDq37dmbUta8c1yYeqsv4SSQHcQ4wg==
+  version "0.0.248"
+  resolved "https://registry.yarnpkg.com/react-input-material/-/react-input-material-0.0.248.tgz#8da086ea9fd427382432d35734152ac42830dc2f"
+  integrity sha512-tgCZPFDpXypFhOygpNkfkQGzM+wn/AM90+DsaytmmXxJVRq0Y3r9tsEduQgPnRiJp6Puz45+0Nz2IJRpMarl2w==
   dependencies:
     "@types/webpack" "https://registry.yarnpkg.com/@favware/skip-dependency/-/skip-dependency-1.1.0.tgz"
 
@@ -9250,9 +9250,9 @@ wbuf@^1.1.0, wbuf@^1.7.3:
     minimalistic-assert "^1.0.0"
 
 web-component-wrapper@*:
-  version "0.0.248"
-  resolved "https://registry.yarnpkg.com/web-component-wrapper/-/web-component-wrapper-0.0.248.tgz#9b184f632b0bd4b7764ac5508ec72aedee3a7b3a"
-  integrity sha512-m2GKSnIfWIlKeEF321qKvHiFPcnP9VJmBFj9Wy2DqsWkOdedchxAJZ1YPVrqlO9qn43Wcxx2HXyhMVKLaIAVxg==
+  version "0.0.249"
+  resolved "https://registry.yarnpkg.com/web-component-wrapper/-/web-component-wrapper-0.0.249.tgz#ae6a69200e3267dfae4eddd7d29171c7a37562d0"
+  integrity sha512-OtZpDqiDsKtAXTPHfqjCFUwFdy4NlDZI2IKe2ZG8yiRQUNYhSXj7GfnNlKBCEN56gNjh1DlppTTbhdXSNtD+cw==
   dependencies:
     "@types/webpack" "https://registry.yarnpkg.com/@favware/skip-dependency/-/skip-dependency-1.1.0.tgz"
 
