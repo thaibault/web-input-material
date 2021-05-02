@@ -47,6 +47,12 @@
                 width: 50%;
             }
 
+            .playground__inputs__generic-animate .generic-animate-appear-active,
+            .playground__inputs__generic-animate .generic-animate-enter-active,
+            .playground__inputs__generic-animate .generic-animate-exit-active {
+                transition: opacity 2000ms ease-in !important;
+            }
+
             .playground__outputs {
                 height: -webkit-fill-available;
                 overflow: auto;
@@ -114,7 +120,7 @@
                 tabBar.addEventListener(
                     'activate',
                     function(event) {
-                        showTab(event.detail.parameter[0].detail.index)
+                        showTab(event.detail.parameters[0].detail.index)
                     }
                 )
                 // endregion
@@ -130,9 +136,9 @@
                                         Tools.timeout(function() {
                                             document.querySelector('pre')
                                                 .innerHTML = Tools.represent(
-                                                    event.detail.parameter[0]
+                                                    event.detail.parameters[0]
                                                         .model ||
-                                                    event.detail.parameter[0]
+                                                    event.detail.parameters[0]
                                                 )
                                         })
                                 }
@@ -153,9 +159,9 @@
                             intervalID = null
                         }
                         if (
-                            tabs[event.detail.parameter[0].detail.index]
+                            tabs[event.detail.parameters[0].detail.index]
                                 .getAttribute('class')
-                                .includes('generic-animates')
+                                .includes('playground__inputs__generic-animate')
                         )
                             intervalID = setInterval(
                                 function() {
@@ -163,7 +169,7 @@
                                         domNode.in = !domNode.in
                                     })
                                 },
-                                1 * 1000
+                                2 * 1000
                             )
                     }
                 )
@@ -587,22 +593,43 @@
             <!--region generic-inputs-->
             <div class="playground__inputs__generic-inputs playground__tab">
                 <generic-inputs
-                    default="['test']"
-                    name="inputs1"
-                    show-initial-validation-state
-                ></generic-inputs>
-                <generic-inputs
-                    model="{default: [false], name: 'inputs1'}"
+                    create-prototype="Tools.extend(
+                        options.prototype,
+                        {name: options.properties.name + '-' + String(options.index + 1)}
+                    )"
+                    model="{
+                        default: [{
+                            name: 'inputs1-1',
+                            type: 'boolean',
+                            value: false
+                        }],
+                        name: 'inputs1'
+                    }"
                     show-initial-validation-state
                 >
-                    <!--TODO
-                        {(properties:Properties<boolean>, index:number) =>
-                        <requireable-checkbox
-                            {...properties} name={`inputs1-${index}`}
-                        ></requireable-checkbox>
-                    }
-                    -->
+                    <requireable-checkbox bind-properties="options.properties">
+                    </requireable-checkbox>
                 </generic-inputs>
+                <generic-inputs
+                    create-prototype="Tools.extend(
+                        options.prototype,
+                        {name: options.properties.name + '-' + String(options.index + 1)}
+                    )"
+                    model="{
+                        default: [{
+                            name: 'inputs2-1',
+                            type: 'date'
+                        }],
+                        name: 'inputs2'
+                    }"
+                    show-initial-validation-state
+                >
+                    <generic-interval bind-properties="options.properties">
+                    </generic-interval>
+                </generic-inputs>
+                <generic-inputs
+                    name="inputs3" value="['first item']"
+                ></generic-inputs>
             </div>
             <!--endregion-->
             <!--region generic-interval-->
@@ -623,9 +650,11 @@
                 style="height: 50px"
             >
 
-                <generic-animate in>Fade it!</generic-animate>
+                <generic-animate in timeout="2000">Fade it!</generic-animate>
                 <br/>
-                <generic-animate in="false">Fade it!</generic-animate>
+                <generic-animate
+                    in="false" timeout="2000"
+                >Fade it!</generic-animate>
 
             </div>
             <!--endregion-->
