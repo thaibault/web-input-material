@@ -587,20 +587,41 @@
             <!--region generic-inputs-->
             <div class="playground__inputs__generic-inputs playground__tab">
                 <generic-inputs
-                    default="['test']"
-                    name="inputs1"
-                    show-initial-validation-state
-                ></generic-inputs>
-                <generic-inputs
-                    model="{default: [false], name: 'inputs1'}"
+                    create-prototype="({index, properties: {name}, prototype}) => ({
+                        ...prototype, name: `${name}-${index + 1}`
+                    })"
+                    model="{
+                        default: [{
+                            name: 'inputs1-1',
+                            type: 'boolean',
+                            value: false
+                        }],
+                        name: 'inputs1'
+                    }"
                     show-initial-validation-state
                 >
-                    <requireable-checkbox
-                        bind-properties="options.properties"
-                        bind-property-name="options.inputsProperties.name + '-' + String(options.index + 1)"
-                        slot="default"
-                    ></requireable-checkbox>
+                    <requireable-checkbox bind-properties="options.properties">
+                    </requireable-checkbox>
                 </generic-inputs>
+                <generic-inputs
+                    create-prototype="({index, properties: {name}, prototype}) => ({
+                        ...prototype, name: `${name}-${index + 1}`
+                    })"
+                    model="{
+                        default: [{
+                            name: 'inputs2-1',
+                            type: 'date'
+                        }],
+                        name: 'inputs2'
+                    }"
+                    show-initial-validation-state
+                >
+                    <generic-interval bind-properties="options.properties">
+                    </generic-interval>
+                </generic-inputs>
+                <generic-inputs
+                    name="inputs3" value="['first item']"
+                ></generic-inputs>
             </div>
             <!--endregion-->
             <!--region generic-interval-->
