@@ -93,6 +93,7 @@
     "@typescript-eslint/parser": "*",
     "@webcomponents/webcomponentsjs": "*",
     "babel-eslint": "*",
+    "blob-util": "*",
     "clientnode": "*",
     "documentation-website": "*",
     "eslint": "*",
@@ -134,7 +135,7 @@
     },
     "injection": {
       "entry": {
-        "__evaluate__": "2 < self.givenCommandLineArguments.length && self.givenCommandLineArguments[2].startsWith('test') ? './test.ts' : 2 < self.givenCommandLineArguments.length && self.givenCommandLineArguments[2] === 'serve' ? {clientnode: 'clientnode', index: './index'} : {'./components/CircularSpinner': './components/CircularSpinner', './components/GenericAnimate': './components/GenericAnimate', './components/GenericInput': './components/GenericInput', './components/GenericInputs': './components/GenericInputs', './components/Tabs': ['./components/Tab', './components/TabBar'], './components/RequireableCheckbox': './components/RequireableCheckbox', './components/SliderInput': './components/SliderInput', index: './index'}"
+        "__evaluate__": "2 < self.givenCommandLineArguments.length && self.givenCommandLineArguments[2].startsWith('test') ? './test.ts' : 2 < self.givenCommandLineArguments.length && self.givenCommandLineArguments[2] === 'serve' ? {clientnode: 'clientnode', index: './index'} : {'./components/CircularSpinner': './components/CircularSpinner', './components/FileInput': './components/FileInput', './components/GenericAnimate': './components/GenericAnimate', './components/GenericInput': './components/GenericInput', './components/GenericInputs': './components/GenericInputs', './components/Tabs': ['./components/Tab', './components/TabBar'], './components/RequireableCheckbox': './components/RequireableCheckbox', './components/SliderInput': './components/SliderInput', index: './index'}"
       },
       "external": {
         "implicit": {
