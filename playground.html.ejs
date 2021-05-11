@@ -33,7 +33,7 @@
         <!--endregion-->
         <!--region style-->
         <style>
-            generic-input {
+            file-input, generic-input {
                 display: block;
                 margin-bottom: 20px;
             }
@@ -55,6 +55,7 @@
 
             .playground__outputs {
                 height: -webkit-fill-available;
+                width: 50%;
                 overflow: auto;
                 position: fixed;
                 right: 0;
@@ -197,12 +198,10 @@
             <!--endregion-->
             <!--region circular-spinner-->
             <div class="playground__inputs__circular-spinner playground__tab">
-
                 <circular-spinner></circular-spinner>
                 <circular-spinner size="'xlarge'" theme="error">
                 </circular-spinner>
                 <circular-spinner size="80"></circular-spinner>
-
             </div>
             <!--endregion-->
             <!--region file-input-->
@@ -257,7 +256,6 @@
             <!--endregion-->
             <!--region generic-input-->
             <div class="playground__inputs__generic-input playground__tab">
-
                 <generic-input></generic-input>
 
                 <hr/>
@@ -648,7 +646,6 @@
                         type: 'currency'
                     }"
                 ></generic-input>
-
             </div>
             <!--endregion-->
             <!--region generic-inputs-->
@@ -706,14 +703,12 @@
             <!--endregion-->
             <!--region generic-interval-->
             <div class="playground__inputs__generic-interval playground__tab">
-
                 <generic-interval
                     end="{default: 240, minimum: 120}"
                     required
                     start="{default: 120, maximum: 3600}"
                     step="60"
                 ></generic-interval>
-
             </div>
             <!--endregion-->
             <!--region generic-animate-->
@@ -721,18 +716,15 @@
                 class="playground__inputs__generic-animate playground__tab"
                 style="height: 50px"
             >
-
                 <generic-animate in timeout="2000">Fade it!</generic-animate>
                 <br/>
                 <generic-animate
                     in="false" timeout="2000"
                 >Fade it!</generic-animate>
-
             </div>
             <!--endregion-->
             <!--region requireable-checkbox-->
             <div class="playground__inputs__requireable-checkbox playground__tab">
-
                 <requireable-checkbox></requireable-checkbox>
 
                 <hr/>
@@ -774,12 +766,10 @@
                     show-initial-validation-state
                     tooltip="'Check this one!'"
                 ></requireable-checkbox>
-
             </div>
             <!--endregion-->
             <!--region slider-input-->
             <div class="playground__inputs__slider-input playground__tab">
-
                 <slider-input name="sliderInput1"></slider-input>
                 <slider-input
                     max="100"
@@ -808,7 +798,6 @@
                 ></slider-input>
                 <slider-input disabled name="sliderInput5" value="33">
                 </slider-input>
-
             </div>
             <!--endregion-->
         </div>

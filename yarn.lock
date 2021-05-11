@@ -3519,6 +3519,11 @@ bindings@^1.5.0:
   dependencies:
     file-uri-to-path "1.0.0"
 
+blob-util@*:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/blob-util/-/blob-util-2.0.2.tgz#3b4e3c281111bb7f11128518006cdc60b403a1eb"
+  integrity sha512-T7JQa+zsXXEa6/8ZhHcQEW1UFfVM49Ts65uBkFL6fz2QmrElqmbajIDJvuA0tEhRe5eIjpV9ZF+0RfZR9voJFQ==
+
 bluebird@^3.7.2:
   version "3.7.2"
   resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.7.2.tgz#9f229c15be272454ffa973ace0dbee79a1b0c36f"
@@ -4567,9 +4572,9 @@ eslint-config-google@*:
   integrity sha512-WsbX4WbjuMvTdeVL6+J3rK1RGhCTqjsFjX7UMSMgZiyxxaNLkoJENbrGExzERFeoTpGw3F3FypTiWAP9ZXzkEw==
 
 eslint-plugin-jsdoc@*:
-  version "34.0.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-jsdoc/-/eslint-plugin-jsdoc-34.0.0.tgz#aa62e7550fe6761a373e640974e2d685965168b7"
-  integrity sha512-xosfhLEQgy8fFzwI/qcDn/YdCkOMPcYUrZsAICz3JBoTp+kjmbTmSJjqz7xPvErLcBETEy94Mrjn64iHzdAqkw==
+  version "34.0.1"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-jsdoc/-/eslint-plugin-jsdoc-34.0.1.tgz#d1ec714e8ea6ab13416f22ce9423bc9e6dca3640"
+  integrity sha512-fXFyhM571aW1Eg5Z9INobK1VeMIcfflY4cnqDYFf5KRUwcR5R+TQIC6pU2C+4xA84s7lML3zi7UIbPOWBjU1YQ==
   dependencies:
     "@es-joy/jsdoccomment" "^0.4.4"
     comment-parser "1.1.5"
@@ -7735,9 +7740,9 @@ react-dom@*:
     scheduler "^0.20.2"
 
 react-input-material@*:
-  version "0.0.253"
-  resolved "https://registry.yarnpkg.com/react-input-material/-/react-input-material-0.0.253.tgz#9790175978da4abd2ca2bfaf2a7efe97231df567"
-  integrity sha512-8j7Btb6gi/AXkCfzZoDCm6QuVxhvjVHHMo4N3H9s9O9MXUMmrfeJNf8wrCDkq2d6BLpBxUWHJJXqBz8BN6s2dA==
+  version "0.0.255"
+  resolved "https://registry.yarnpkg.com/react-input-material/-/react-input-material-0.0.255.tgz#a4d1c2add435cb13a4ad5b0ef253c3fe3cc081a0"
+  integrity sha512-r/9bTI+yWKI+PVk0t66/WtiJxSgWow4Cl4pqW5hYJVYgQewgiX+R9EJO/KGDX9cjMEZhY3+m4AsV4/6yv1ONjQ==
   dependencies:
     "@types/webpack" "https://registry.yarnpkg.com/@favware/skip-dependency/-/skip-dependency-1.1.0.tgz"
 
@@ -9249,9 +9254,9 @@ wbuf@^1.1.0, wbuf@^1.7.3:
     minimalistic-assert "^1.0.0"
 
 web-component-wrapper@*:
-  version "0.0.254"
-  resolved "https://registry.yarnpkg.com/web-component-wrapper/-/web-component-wrapper-0.0.254.tgz#b259588357cf040af0c6a3b141fc57620934099c"
-  integrity sha512-N8npykDwuBrgBzSo8TfdIivYHrM7iG1z3oajkvFLVytc8q5PEbfqhBBxH0Be1/z8zyEhodKV+nMpXfz87rQaJw==
+  version "0.0.255"
+  resolved "https://registry.yarnpkg.com/web-component-wrapper/-/web-component-wrapper-0.0.255.tgz#986810b646f7831ccc5820fdc61797f682d9b789"
+  integrity sha512-ewNl7fn1V3Wnm0TRg3Y6gBitfuOzId9USWd/FMIHzqBpnhPNnQKY2fg72IwgxnvtbeWFUJicsoxhbRUDhEMqUg==
   dependencies:
     "@types/webpack" "https://registry.yarnpkg.com/@favware/skip-dependency/-/skip-dependency-1.1.0.tgz"
 
