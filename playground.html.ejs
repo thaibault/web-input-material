@@ -184,15 +184,76 @@
             <!--region tabs-->
             <tab-bar class="playground__inputs__tab-bar">
 
+                <tab-item>circular-spinner</tab-item>
+                <tab-item>file-input</tab-item>
                 <tab-item>generic-input (with <sup>markup</sup>)</tab-item>
                 <tab-item>generic-inputs</tab-item>
                 <tab-item>generic-interval</tab-item>
                 <tab-item>generic-animate</tab-item>
                 <tab-item>requireable-checkbox</tab-item>
-                <tab-item>circular-spinner</tab-item>
                 <tab-item>slider-input</tab-item>
 
             </tab-bar>
+            <!--endregion-->
+            <!--region circular-spinner-->
+            <div class="playground__inputs__circular-spinner playground__tab">
+
+                <circular-spinner></circular-spinner>
+                <circular-spinner size="'xlarge'" theme="error">
+                </circular-spinner>
+                <circular-spinner size="80"></circular-spinner>
+
+            </div>
+            <!--endregion-->
+            <!--region file-input-->
+            <div class="playground__inputs__file-input playground__tab">
+                <file-input></file-input>
+                <file-input
+                    default="{
+                        blob: new Blob(['test'], {type: 'text/plain'}),
+                        name: 'test.txt'
+                    }"
+                    name="UnControlled"
+                >
+                    <div bind-attribute-style="
+                        'margin-left: 10px' +
+                         (options.value && options.value.blob ? '' : ' display: none')
+                    ">
+                        <span bind-attribute-style="
+                            options.value && options.value.blob && options.value.blob.lastModified ?
+                                '' :
+                                'display: none'
+                        ">
+                            <span bind-property-text-content="
+                                options.value && options.value.blob && options.value.blob.lastModified ?
+                                    (
+                                        'Last modified date time: ' +
+                                        Tools.dateTimeFormat(
+                                            '${mediumDay}.${mediumMonth}.${fullYear}',
+                                            new Date(options.value.blob.lastModified)
+                                        )
+                                    ) :
+                                    ''
+                            "></span>
+                            <br />
+                        </span>
+
+                        <span bind-property-text-content="
+                            options.value && options.value.blob && options.value.blob.type ?
+                                ('Mime-Typ: ' + options.value.blob.type) :
+                                ''
+                        "></span>
+                        <br />
+
+                        <span bind-property-text-content="
+                            options.value && options.value.blob && options.value.blob.size ?
+                                ('Size: ' + options.value.blob.size) :
+                                ''
+                        "></span>
+                        <br />
+                    </div>
+                </file-input>
+            </div>
             <!--endregion-->
             <!--region generic-input-->
             <div class="playground__inputs__generic-input playground__tab">
@@ -597,13 +658,24 @@
                         options.prototype,
                         {name: options.properties.name + '-' + String(options.index + 1)}
                     )"
+                    model="{default: [{name: 'inputs1-1'}], name: 'inputs1'}"
+                    show-initial-validation-state
+                >
+                    <file-input bind-properties="options.properties">
+                    </file-input>
+                </generic-inputs>
+                <generic-inputs
+                    create-prototype="Tools.extend(
+                        options.prototype,
+                        {name: options.properties.name + '-' + String(options.index + 1)}
+                    )"
                     model="{
                         default: [{
-                            name: 'inputs1-1',
+                            name: 'inputs2-1',
                             type: 'boolean',
                             value: false
                         }],
-                        name: 'inputs1'
+                        name: 'inputs2'
                     }"
                     show-initial-validation-state
                 >
@@ -617,10 +689,10 @@
                     )"
                     model="{
                         default: [{
-                            name: 'inputs2-1',
+                            name: 'inputs3-1',
                             type: 'date'
                         }],
-                        name: 'inputs2'
+                        name: 'inputs3'
                     }"
                     show-initial-validation-state
                 >
@@ -628,7 +700,7 @@
                     </generic-interval>
                 </generic-inputs>
                 <generic-inputs
-                    name="inputs3" value="['first item']"
+                    name="inputs4" value="['first item']"
                 ></generic-inputs>
             </div>
             <!--endregion-->
@@ -702,16 +774,6 @@
                     show-initial-validation-state
                     tooltip="'Check this one!'"
                 ></requireable-checkbox>
-
-            </div>
-            <!--endregion-->
-            <!--region circular-spinner-->
-            <div class="playground__inputs__circular-spinner playground__tab">
-
-                <circular-spinner></circular-spinner>
-                <circular-spinner size="'xlarge'" theme="error">
-                </circular-spinner>
-                <circular-spinner size="80"></circular-spinner>
 
             </div>
             <!--endregion-->
