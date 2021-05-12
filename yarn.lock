@@ -1858,9 +1858,9 @@
     "@sinonjs/commons" "^1.7.0"
 
 "@tinymce/tinymce-react@*":
-  version "3.12.3"
-  resolved "https://registry.yarnpkg.com/@tinymce/tinymce-react/-/tinymce-react-3.12.3.tgz#d6f7cc97359d59f95545dda6a9f34ef8f8495812"
-  integrity sha512-jUWBNHIaNR7vnwYRwdCPUVsOqZS8S9/5ryQPLDAVDj3KxHf41twPZJqyc+WXhm8qIAn262MuNhPqum1DEzFeOQ==
+  version "3.12.4"
+  resolved "https://registry.yarnpkg.com/@tinymce/tinymce-react/-/tinymce-react-3.12.4.tgz#5c1bc317e660b8abd743940e2d0b5cdaf6c86f73"
+  integrity sha512-/zmIowylupAd52UyTEcSazxibmPJg5yi0FPAY0pb5kHpq4pUpS7Kxq3Pafuy3N+U/CCh+x7DAbUcnreOT0OMsA==
   dependencies:
     prop-types "^15.6.2"
     tinymce "^5.7.1"
@@ -4572,9 +4572,9 @@ eslint-config-google@*:
   integrity sha512-WsbX4WbjuMvTdeVL6+J3rK1RGhCTqjsFjX7UMSMgZiyxxaNLkoJENbrGExzERFeoTpGw3F3FypTiWAP9ZXzkEw==
 
 eslint-plugin-jsdoc@*:
-  version "34.0.1"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-jsdoc/-/eslint-plugin-jsdoc-34.0.1.tgz#d1ec714e8ea6ab13416f22ce9423bc9e6dca3640"
-  integrity sha512-fXFyhM571aW1Eg5Z9INobK1VeMIcfflY4cnqDYFf5KRUwcR5R+TQIC6pU2C+4xA84s7lML3zi7UIbPOWBjU1YQ==
+  version "34.0.2"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-jsdoc/-/eslint-plugin-jsdoc-34.0.2.tgz#9e7ec1a9dedd4ea4b04b7a0fa785f3f3cad9d4e1"
+  integrity sha512-QquvZgL/p8eIoMjOQ/G3xuEEfq+GJZn71D+1N8cM4VxZBJcjTN0J3MM+lQDN7zaiuYtLKwt1jeJbEt2C2HhXkg==
   dependencies:
     "@es-joy/jsdoccomment" "^0.4.4"
     comment-parser "1.1.5"
@@ -7740,9 +7740,9 @@ react-dom@*:
     scheduler "^0.20.2"
 
 react-input-material@*:
-  version "0.0.255"
-  resolved "https://registry.yarnpkg.com/react-input-material/-/react-input-material-0.0.255.tgz#a4d1c2add435cb13a4ad5b0ef253c3fe3cc081a0"
-  integrity sha512-r/9bTI+yWKI+PVk0t66/WtiJxSgWow4Cl4pqW5hYJVYgQewgiX+R9EJO/KGDX9cjMEZhY3+m4AsV4/6yv1ONjQ==
+  version "0.0.258"
+  resolved "https://registry.yarnpkg.com/react-input-material/-/react-input-material-0.0.258.tgz#7341c18a61dfc24976a3e4b5b59248872bb52171"
+  integrity sha512-MqzClpXSNdlZh8ukzA+aP+0Rqvr3eqUFIXhx/i1K2aF3TDA1iyGc7C5eKlmySlma5amW2rwMWCfM5ev2CsrbTg==
   dependencies:
     "@types/webpack" "https://registry.yarnpkg.com/@favware/skip-dependency/-/skip-dependency-1.1.0.tgz"
 
@@ -8811,16 +8811,16 @@ terminal-link@^2.0.0:
     supports-hyperlinks "^2.0.0"
 
 terser-webpack-plugin@^5.1.1:
-  version "5.1.1"
-  resolved "https://registry.yarnpkg.com/terser-webpack-plugin/-/terser-webpack-plugin-5.1.1.tgz#7effadee06f7ecfa093dbbd3e9ab23f5f3ed8673"
-  integrity sha512-5XNNXZiR8YO6X6KhSGXfY0QrGrCRlSwAEjIIrlRQR4W8nP69TaJUlh3bkuac6zzgspiGPfKEHcY295MMVExl5Q==
+  version "5.1.2"
+  resolved "https://registry.yarnpkg.com/terser-webpack-plugin/-/terser-webpack-plugin-5.1.2.tgz#51d295eb7cc56785a67a372575fdc46e42d5c20c"
+  integrity sha512-6QhDaAiVHIQr5Ab3XUWZyDmrIPCHMiqJVljMF91YKyqwKkL5QHnYMkrMBy96v9Z7ev1hGhSEw1HQZc2p/s5Z8Q==
   dependencies:
     jest-worker "^26.6.2"
     p-limit "^3.1.0"
     schema-utils "^3.0.0"
     serialize-javascript "^5.0.1"
     source-map "^0.6.1"
-    terser "^5.5.1"
+    terser "^5.7.0"
 
 terser@^4.6.3:
   version "4.8.0"
@@ -8831,7 +8831,7 @@ terser@^4.6.3:
     source-map "~0.6.1"
     source-map-support "~0.5.12"
 
-terser@^5.5.1:
+terser@^5.7.0:
   version "5.7.0"
   resolved "https://registry.yarnpkg.com/terser/-/terser-5.7.0.tgz#a761eeec206bc87b605ab13029876ead938ae693"
   integrity sha512-HP5/9hp2UaZt5fYkuhNBR8YyRcT8juw8+uFbAme53iN9hblvKnLUTKkmwJG6ocWpIKf8UK4DoeWG4ty0J6S6/g==
