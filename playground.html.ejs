@@ -470,11 +470,9 @@
                 <hr/>
 
                 <generic-input
-                    declaration="suggestion"
                     description="input12Description"
                     name="input12"
                     placeholder="input12Placeholder"
-                    required
                     suggest-selection
                     selection="['hans', 'peter', 'klaus']"
                 ></generic-input>
@@ -485,7 +483,11 @@
                         description: 'input12ModelDescription',
                         name: 'input12Model',
                         nullable: false,
-                        selection: ['hans', 'peter', 'klaus']
+                        selection: [
+                            'hans with veeeeeeeeeeeeeeeery loooooooooooooooong second name',
+                            'peter',
+                            'klaus'
+                        ]
                     }"
                     placeholder="input12ModelPlaceholder"
                     search-selection
