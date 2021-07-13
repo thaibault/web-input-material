@@ -529,14 +529,15 @@
                                 b: 'peter',
                                 c: 'klaus'
                             }
-                            resolve(Object.keys(selection)
-                                .filter(function(key) {
-                                    return (
-                                        !options.query ||
-                                        selection[key].includes(options.query)
-                                    )
-                                })
-                            )
+
+                            var result = {}
+                            for (var key in selection)
+                                if (
+                                    !options.query ||
+                                    selection[key].includes(options.query)
+                                )
+                                    result[key] = selection[key]
+                            return result
                         })
                     })"
                 ></generic-input>
