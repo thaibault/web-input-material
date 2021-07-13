@@ -503,10 +503,48 @@
                 <hr/>
 
                 <generic-input
-                    declaration="text"
                     description="input13Description"
-                    initial-value="'a'"
                     name="input13"
+                    placeholder="input13Placeholder"
+                    suggest-selection
+                    selection="{a: 'hans', b: 'peter', c: 'klaus'}"
+                ></generic-input>
+                <generic-input
+                    initial-value="'peter'"
+                    model="{
+                        declaration: 'selection',
+                        description: 'input13ModelDescription',
+                        name: 'input13Model',
+                        nullable: false
+                    }"
+                    placeholder="input13ModelPlaceholder"
+                    suggestion-creator="new Promise(function(resolve) {
+                        Tools.timeout(500, function() {
+                            var selection = {
+                                a: 'hans with veeeeeeeeeeeeeeeery ' +
+                                   'loooooooooooooooong second name',
+                                b: 'peter',
+                                c: 'klaus'
+                            }
+                            resolve(Object.keys(selection)
+                                .filter(function(key) {
+                                    return (
+                                        !parameters[0] ||
+                                        selection[key].includes(parameters[0])
+                                    )
+                                })
+                            )
+                        })
+                    })"
+                ></generic-input>
+
+                <hr/>
+
+                <generic-input
+                    declaration="text"
+                    description="input14Description"
+                    initial-value="'a'"
+                    name="input14"
                     required
                     rows="3"
                     theme-configuration="{primary: 'yellow', secondary: 'blue'}"
@@ -515,8 +553,8 @@
                     editor="text"
                     model="{
                         declaration: 'text',
-                        description: 'input13ModelDescription',
-                        name: 'input13Model',
+                        description: 'input14ModelDescription',
+                        name: 'input14Model',
                         nullable: false,
                         value: 'a'
                     }"
@@ -527,11 +565,11 @@
 
                 <generic-input
                     declaration="code"
-                    description="input14Description"
+                    description="input15Description"
                     disabled
                     editor="code"
                     initial-value="'const value = 2'"
-                    name="input14"
+                    name="input15"
                     rows="2"
                     selectable-editor
                 ></generic-input>
@@ -539,8 +577,8 @@
                     editor="code"
                     model="{
                         declaration: 'code',
-                        description: 'input14ModelDescription',
-                        name: 'input14Model',
+                        description: 'input15ModelDescription',
+                        name: 'input15Model',
                         nullable: false,
                         value: 'const value = 2'
                     }"
@@ -552,10 +590,10 @@
 
                 <generic-input
                     declaration="code"
-                    description="input15Description"
+                    description="input16Description"
                     editor="code"
                     maximum-length="10"
-                    name="input15"
+                    name="input16"
                     required
                     rows="2"
                     selectable-editor
@@ -564,8 +602,8 @@
                     editor="code"
                     model="{
                         declaration: 'code',
-                        description: 'input15ModelDescription',
-                        name: 'input15Model',
+                        description: 'input16ModelDescription',
+                        name: 'input16Model',
                         nullable: false
                     }"
                     rows="6"
@@ -576,10 +614,10 @@
 
                 <generic-input
                     declaration="richtext(raw)"
-                    description="input16Description"
+                    description="input17Description"
                     editor="richtext(raw)"
                     initial-value="'Hello Mr. Smith,<br><br>how are you?'"
-                    name="input16"
+                    name="input17"
                     required
                     rows="2"
                     selectable-editor
@@ -588,9 +626,9 @@
                     editor="richtext(simple)"
                     model="{
                         declaration: 'richtext(simple)',
-                        description: 'input16ModelDescription',
+                        description: 'input17ModelDescription',
                         mutable: false,
-                        name: 'input16Model',
+                        name: 'input17Model',
                         nullable: false,
                         value: 'Hello Mr. Smith,<br><br>how are you?'
                     }"
@@ -602,10 +640,10 @@
 
                 <generic-input
                     declaration="Number"
-                    description="input17Description"
+                    description="input18Description"
                     maximum="200000"
                     minimum="10"
-                    name="input17"
+                    name="input18"
                     placeholder="100000"
                     required
                     type="number"
@@ -614,11 +652,11 @@
                     initial-value="100000"
                     model="{
                         declaration: 'Number',
-                        description: 'input17ModelDescription',
+                        description: 'input18ModelDescription',
                         maximum: 200000,
                         minimum: 10,
                         mutable: false,
-                        name: 'input17Model',
+                        name: 'input18Model',
                         nullable: false
                     }"
                 ></generic-input>
@@ -627,11 +665,11 @@
 
                 <generic-input
                     declaration="Number"
-                    description="input18Description"
+                    description="input19Description"
                     maximum="200000"
                     minimum="10"
                     minimumText="Please at least ${formatValue(minimum)}."
-                    name="input18"
+                    name="input19"
                     placeholder="100.000"
                     required
                     type="integer"
@@ -640,9 +678,9 @@
                     initial-value="100000.01"
                     model="{
                         declaration: 'Number',
-                        description: 'input18ModelDescription',
+                        description: 'input19ModelDescription',
                         maximum: 200000,
-                        name: 'input18Model',
+                        name: 'input19Model',
                         nullable: false,
                         type: 'float'
                     }"
@@ -656,10 +694,10 @@
 
                 <generic-input
                     declaration="Number"
-                    description="input19Description"
+                    description="input20Description"
                     maximum="200000"
                     minimum="10"
-                    name="input19"
+                    name="input20"
                     placeholder="100.000"
                     required
                     type="currency"
@@ -668,10 +706,10 @@
                     initial-value="100000.01"
                     model="{
                         declaration: 'Number',
-                        description: 'input19ModelDescription',
+                        description: 'input20ModelDescription',
                         maximum: 200000,
                         minimum: 10,
-                        name: 'input19Model',
+                        name: 'input20Model',
                         nullable: false,
                         type: 'currency'
                     }"
