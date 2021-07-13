@@ -494,7 +494,10 @@
                                 'peter',
                                 'klaus'
                             ].filter(function(name) {
-                                return !parameters[0] || name.includes(parameters[0])
+                                return (
+                                    !options.query ||
+                                    name.includes(options.query)
+                                )
                             }))
                         })
                     })"
@@ -529,8 +532,8 @@
                             resolve(Object.keys(selection)
                                 .filter(function(key) {
                                     return (
-                                        !parameters[0] ||
-                                        selection[key].includes(parameters[0])
+                                        !options.query ||
+                                        selection[key].includes(options.query)
                                     )
                                 })
                             )
