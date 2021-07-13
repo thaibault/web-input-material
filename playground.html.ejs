@@ -537,7 +537,7 @@
                                     selection[key].includes(options.query)
                                 )
                                     result[key] = selection[key]
-                            return result
+                            resolve(result)
                         })
                     })"
                 ></generic-input>
