@@ -482,16 +482,23 @@
                         declaration: 'selection',
                         description: 'input12ModelDescription',
                         name: 'input12Model',
-                        nullable: false,
-                        selection: [
-                            'hans with veeeeeeeeeeeeeeeery loooooooooooooooong second name',
-                            'peter',
-                            'klaus'
-                        ]
+                        nullable: false
                     }"
                     placeholder="input12ModelPlaceholder"
                     search-selection
-                    ></generic-input>
+                    suggestion-creator="new Promise(function(resolve) {
+                        Tools.timeout(500, function() {
+                            resolve([
+                                'hans with veeeeeeeeeeeeeeeery ' +
+                                'loooooooooooooooong second name',
+                                'peter',
+                                'klaus'
+                            ].filter(function(name) {
+                                return !parameters[0] || name.includes(parameters[0])
+                            }))
+                        })
+                    })"
+                ></generic-input>
 
                 <hr/>
 
