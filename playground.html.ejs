@@ -76,10 +76,24 @@
             include(
                 'web-component-wrapper/polyfill.html',
                 {additionalFeatures: [
+                    // Most polyfills are determined via "create-polyfill-service-url" subracted by already includes one due to "web-component-wrapper"..
                     // Asynchronous suggestion creator.
                     'AbortController',
-                    // MDC-Select - Throws about missing object.
-                    'CustomEvent'
+                    'Array.prototype.every',
+                    'Array.prototype.forEach',
+                    'Array.prototype.indexOf',
+                    'Array.prototype.lastIndexOf',
+                    'Array.prototype.reduce',
+                    'Array.prototype.some',
+                    'Array.prototype.sort',
+                    'Blob',
+                    'Date.prototype.toISOString',
+                    'globalThis',
+                    'Intl',
+                    'Object.create',
+                    'Object.getOwnPropertyNames',
+                    'Object.getPrototypeOf',
+                    'Symbol.prototype.description'
                 ]}
             )
         %>
@@ -123,7 +137,9 @@
                 tabBar.addEventListener(
                     'activate',
                     function(event) {
-                        showTab(event.detail.parameters[0].detail.index)
+                        // NOTE: "event.detail" is sometimes set to "0" in IE11.
+                        if (event.detail)
+                            showTab(event.detail.parameters[0].detail.index)
                     }
                 )
                 // endregion
@@ -157,10 +173,15 @@
                 tabBar.addEventListener(
                     'activate',
                     function(event) {
+                        // NOTE: "event.detail" is sometimes set to "0" in IE11.
+                        if (!event.detail)
+                            return
+
                         if (intervalID !== null) {
                             clearInterval(intervalID)
                             intervalID = null
                         }
+
                         if (
                             tabs[event.detail.parameters[0].detail.index]
                                 .getAttribute('class')
@@ -270,11 +291,13 @@
 
                 <generic-input default="1526165029" name="input2" type="date">
                 </generic-input>
-                <generic-input model="{
-                    name: 'input2Model',
-                    type: 'time',
-                    value: 1
-                }"></generic-input>
+                <generic-input
+                    initial-value="1"
+                    model="{
+                        name: 'input2Model',
+                        type: 'time',
+                    }"
+                ></generic-input>
 
                 <hr/>
 
@@ -319,11 +342,11 @@
                 <generic-input
                     default="'value5Model'"
                     icon="'backup'"
+                    initial-value="'value5Model'"
                     model="{
                         declaration: 'placeholder',
                         name: 'input5Model',
-                        nullable: false,
-                        value: 'value5Model'
+                        nullable: false
                     }"
                     placholder="input5Model"
                     trailing-icon="'clear_preset'"
@@ -341,11 +364,11 @@
                     placeholder="input6Placeholder"
                 ></generic-input>
                 <generic-input
+                    initial-value="'only a`s allowed'"
                     model="{
                         declaration: 'pattern',
                         description: 'input6ModelDescription',
-                        regularExpressionPattern: 'a+',
-                        value: 'only a`s allowed'
+                        regularExpressionPattern: 'a+'
                     }"
                     name="input6Model"
                     placeholder="input6ModelPlaceholder"
@@ -366,11 +389,11 @@
                     trailing-icon="'password_preset'"
                 ></generic-input>
                 <generic-input
+                    initial-value="'hans'"
                     model="{
                         declaration: 'password',
                         description: 'input7ModelDescription',
-                        regularExpressionPattern: 'a+',
-                        value: 'hans'
+                        regularExpressionPattern: 'a+'
                     }"
                     name="passwordInput7Model"
                     placeholder="input7ModelPlaceholder"
@@ -389,6 +412,7 @@
                     required
                 ></generic-input>
                 <generic-input
+                    initial-value="'A'"
                     labels="['Label A', 'Label B', 'Label C']"
                     model="{
                         declaration: 'selection',
@@ -396,8 +420,7 @@
                         mutable: false,
                         name: 'input8Model',
                         nullable: false,
-                        selection: ['A', 'B', 'C'],
-                        value: 'A'
+                        selection: ['A', 'B', 'C']
                     }"
                     placeholder="input8ModelPlaceholder"
                 ></generic-input>
@@ -459,13 +482,13 @@
                     required
                 ></generic-input>
                 <generic-input
+                    initial-value="'b'"
                     model="{
                         declaration: 'selection',
                         description: 'input11ModelDescription',
                         name: 'input11Model',
                         nullable: false,
-                        selection: {a: 'A', b: 'B', c: 'C'},
-                        value: 'b'
+                        selection: {a: 'A', b: 'B', c: 'C'}
                     }"
                 ></generic-input>
 
@@ -557,12 +580,12 @@
                 ></generic-input>
                 <generic-input
                     editor="text"
+                    initial-value="'a'"
                     model="{
                         declaration: 'text',
                         description: 'input14ModelDescription',
                         name: 'input14Model',
-                        nullable: false,
-                        value: 'a'
+                        nullable: false
                     }"
                     rows="2"
                 ></generic-input>
@@ -581,12 +604,12 @@
                 ></generic-input>
                 <generic-input
                     editor="code"
+                    initial-value="'const value = 2'"
                     model="{
                         declaration: 'code',
                         description: 'input15ModelDescription',
                         name: 'input15Model',
-                        nullable: false,
-                        value: 'const value = 2'
+                        nullable: false
                     }"
                     rows="6"
                     selectable-editor
@@ -630,13 +653,13 @@
                 ></generic-input>
                 <generic-input
                     editor="richtext(simple)"
+                    initial-value="'Hello Mr. Smith,<br><br>how are you?'"
                     model="{
                         declaration: 'richtext(simple)',
                         description: 'input17ModelDescription',
                         mutable: false,
                         name: 'input17Model',
-                        nullable: false,
-                        value: 'Hello Mr. Smith,<br><br>how are you?'
+                        nullable: false
                     }"
                     rows="6"
                     selectable-editor
