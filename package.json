@@ -20,8 +20,8 @@
   "files": [
     "components",
     "index.minimal.input-bundle.js",
-    "index.ts",
-    "type.ts"
+    "index.d.ts",
+    "type.d.ts"
   ],
   "main": "index.js",
   "repository": {
@@ -29,24 +29,26 @@
     "url": "https://github.com/thaibault/web-input-material"
   },
   "scripts": {
-    "build": "yarn build:plain && yarn build:bundle:minimal-input",
+    "build": "yarn build:types; yarn build:plain && yarn build:bundle:minimal-input",
     "build:bundle": "weboptimizer build '{__reference__: \"target:bundle\"}'",
     "build:bundle:minimal-input": "weboptimizer build '{__reference__: [\"target:bundle\", \"target:minimal\", \"target:minimal:input\"]}'",
     "build:bundle:minimal-input:stats": "weboptimizer build --json /tmp/stat.json '{__reference__: [\"target:bundle\", \"target:minimal\", \"target:minimal:input\"]}' && echo 'Results successfully written to \"/tmp/stat.json\".'",
     "build:bundle:stats": "weboptimizer build --json /tmp/stat.json '{__reference__: \"target:bundle\"}' && echo 'Results successfully written to \"/tmp/stat.json\".'",
     "build:plain": "weboptimizer build",
+    "build:types": "weboptimizer build:types",
     "check": "yarn check:types; yarn lint",
     "check:types": "weboptimizer check:types",
     "clear": "weboptimizer clear",
     "document": "weboptimizer document",
     "lint": "weboptimizer lint",
     "prepare": "yarn build",
-    "report:coverage": "nyc report --reporter=text-lcov | coveralls",
     "serve": "weboptimizer serve",
     "serve:minimal": "weboptimizer serve '{__reference__: \"target:minimal\"}'",
     "start": "yarn serve",
     "test": "weboptimizer test",
     "test:browser": "weboptimizer test:browser",
+    "test:coverage": "weboptimizer test:coverage",
+    "test:coverage:report": "weboptimizer test:coverage:report",
     "update": "yarn version --patch && yarn publish",
     "update:documentation": "documentationWebsite --log-level info",
     "watch": "weboptimizer build --watch"
@@ -82,7 +84,6 @@
     "@types/jest": "*",
     "@types/jquery": "*",
     "@types/jsdom": "*",
-    "@types/loader-utils": "*",
     "@types/node": "*",
     "@types/react": "*",
     "@types/react-dom": "*",
@@ -113,6 +114,14 @@
   "peerDependencies": {
     "@babel/runtime": "*",
     "clientnode": "*"
+  },
+  "peerDependenciesMeta": {
+    "@babel/runtime": {
+      "optional": true
+    },
+    "clientnode": {
+      "optional": true
+    }
   },
   "resolutions": {
     "@types/webpack": "https://registry.yarnpkg.com/@favware/skip-dependency/-/skip-dependency-1.1.0.tgz"
