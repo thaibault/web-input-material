@@ -21,6 +21,17 @@ import {Mapping} from 'clientnode/type'
 import ReactWeb from 'web-component-wrapper/React'
 import {ComponentType, WebComponentAPI} from 'web-component-wrapper/type'
 // endregion
+export {CircularSpinner} from './components/CircularSpinner'
+export {FileInput} from './components/FileInput'
+export {GenericAnimate} from './components/GenericAnimate'
+export {GenericInput} from './components/GenericInput'
+export {GenericInputs} from './components/GenericInputs'
+export {GenericInterval} from './components/GenericInterval'
+export {RequireableCheckbox} from './components/RequireableCheckbox'
+export {SliderInput} from './components/SliderInput'
+export {TabBar} from './components/TabBar'
+export {TabItem} from './components/TabItem'
+
 export const components:Mapping<WebComponentAPI<typeof ReactWeb>> = {}
 /*
     Import all react components and extract a dynamically created web-component
