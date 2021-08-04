@@ -63,6 +63,7 @@
     "web-component-wrapper": "*"
   },
   "devDependencies": {
+    "@babel/eslint-parser": "*",
     "@babel/plugin-transform-proto-to-assign": "*",
     "@babel/preset-react": "*",
     "@rmwc/card": "*",
@@ -93,7 +94,6 @@
     "@typescript-eslint/eslint-plugin": "*",
     "@typescript-eslint/parser": "*",
     "@webcomponents/webcomponentsjs": "*",
-    "babel-eslint": "*",
     "blob-util": "*",
     "clientnode": "*",
     "documentation-website": "*",
