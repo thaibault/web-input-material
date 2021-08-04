@@ -19,8 +19,8 @@
   ],
   "files": [
     "components",
-    "index.minimal.input-bundle.js",
     "index.d.ts",
+    "index.minimal.input-bundle.js",
     "type.d.ts"
   ],
   "main": "index.js",
