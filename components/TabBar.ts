@@ -25,8 +25,9 @@ import wrapAsWebComponent from 'web-component-wrapper'
 import {WebComponentAPI} from 'web-component-wrapper/type'
 import {TabBar as ReactTabBar} from '@rmwc/tabs'
 // endregion
-export const TabBar:WebComponentAPI = wrapAsWebComponent(
-    createWrapConfigurationsComponent(ReactTabBar),
+export const TabBar:WebComponentAPI = wrapAsWebComponent<typeof ReactTabBar>(
+    createWrapConfigurationsComponent<typeof ReactTabBar>(ReactTabBar) as
+        typeof ReactTabBar,
     'TabBar',
     {propTypes: {
         activeTabIndex: number,

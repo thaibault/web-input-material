@@ -20,10 +20,10 @@
 import {boolean} from 'clientnode/property-types'
 import ReactGenericAnimate from 'react-input-material/components/GenericAnimate'
 import wrapAsWebComponent from 'web-component-wrapper'
-import {WebComponentAPI} from 'web-component-wrapper/type'
+import {ComponentType, WebComponentAPI} from 'web-component-wrapper/type'
 // endregion
 export const GenericAnimate:WebComponentAPI = wrapAsWebComponent(
-    ReactGenericAnimate,
+    ReactGenericAnimate as ComponentType,
     'GenericAnimate',
     {propertiesToReflectAsAttributes: 'in'}
 )

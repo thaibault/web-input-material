@@ -20,10 +20,10 @@
 import {boolean, string} from 'clientnode/property-types'
 import ReactFileInput from 'react-input-material/components/FileInput'
 import wrapAsWebComponent from 'web-component-wrapper'
-import {WebComponentAPI} from 'web-component-wrapper/type'
+import {ComponentType, WebComponentAPI} from 'web-component-wrapper/type'
 // endregion
 export const FileInput:WebComponentAPI = wrapAsWebComponent(
-    ReactFileInput,
+    ReactFileInput as ComponentType,
     'FileInput',
     {
         eventToPropertyMapping: {onChange: true},

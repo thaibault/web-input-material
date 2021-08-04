@@ -25,10 +25,12 @@ import wrapAsWebComponent from 'web-component-wrapper'
 import {WebComponentAPI} from 'web-component-wrapper/type'
 import {CircularProgress} from '@rmwc/circular-progress'
 // endregion
-export const CircularSpinner:WebComponentAPI = wrapAsWebComponent(
-    createWrapConfigurationsComponent(
+export const CircularSpinner:WebComponentAPI = wrapAsWebComponent<
+    typeof CircularProgress
+>(
+    createWrapConfigurationsComponent<typeof CircularProgress>(
         CircularProgress, {withReference: false}
-    ),
+    ) as typeof CircularProgress,
     'CircularSpinner',
     {propTypes: {
         size: oneOfType(
