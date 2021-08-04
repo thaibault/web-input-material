@@ -25,8 +25,8 @@ import wrapAsWebComponent from 'web-component-wrapper'
 import {WebComponentAPI} from 'web-component-wrapper/type'
 import {Tab} from '@rmwc/tabs'
 // endregion
-export const TabItem:WebComponentAPI = wrapAsWebComponent(
-    createWrapConfigurationsComponent(Tab),
+export const TabItem:WebComponentAPI = wrapAsWebComponent<typeof Tab>(
+    createWrapConfigurationsComponent<typeof Tab>(Tab) as typeof Tab,
     'TabItem',
     {propTypes: {stacked: boolean, theme: string, themeConfiguration: object}}
 )

@@ -20,10 +20,10 @@
 import {boolean, string} from 'clientnode/property-types'
 import Checkbox from 'react-input-material/components/RequireableCheckbox'
 import wrapAsWebComponent from 'web-component-wrapper'
-import {WebComponentAPI} from 'web-component-wrapper/type'
+import {ComponentType, WebComponentAPI} from 'web-component-wrapper/type'
 // endregion
 export const RequireableCheckbox:WebComponentAPI = wrapAsWebComponent(
-    Checkbox,
+    Checkbox as ComponentType,
     'RequireableCheckbox',
     {
         eventToPropertyMapping: {onChange: true},

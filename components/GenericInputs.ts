@@ -20,10 +20,10 @@
 import {boolean, string} from 'clientnode/property-types'
 import ReactInputs from 'react-input-material/components/Inputs'
 import wrapAsWebComponent from 'web-component-wrapper'
-import {WebComponentAPI} from 'web-component-wrapper/type'
+import {ComponentType, WebComponentAPI} from 'web-component-wrapper/type'
 // endregion
 export const GenericInputs:WebComponentAPI = wrapAsWebComponent(
-    ReactInputs,
+    ReactInputs as ComponentType,
     'GenericInputs',
     {
         eventToPropertyMapping: {onChange: true},

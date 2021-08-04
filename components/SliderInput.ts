@@ -21,27 +21,35 @@ import {boolean, func, number, object, string} from 'clientnode/property-types'
 import {
     createWrapConfigurationsComponent
 } from 'react-input-material/components/WrapConfigurations'
+import {GenericEvent} from 'react-input-material/type'
 import wrapAsWebComponent from 'web-component-wrapper'
 import ReactWrapper from 'web-component-wrapper/React'
 import {WebComponentAPI} from 'web-component-wrapper/type'
 import {Slider} from '@rmwc/slider'
 // endregion
-export const SliderInput:WebComponentAPI = wrapAsWebComponent(
-    createWrapConfigurationsComponent(Slider),
+export type State = {
+    disabled:boolean
+    discrete:boolean
+    displayMarkers:boolean
+    max:number
+    min:number
+    step:number
+    value:number
+}
+
+export const SliderInput:WebComponentAPI = wrapAsWebComponent<typeof Slider>(
+    createWrapConfigurationsComponent<typeof Slider>(Slider) as typeof Slider,
     'SliderInput',
     {
         eventToPropertyMapping: {
-            onChange: (event:Event, self:ReactWrapper):{
-                disabled:boolean
-                discrete:boolean
-                displayMarkers:boolean
-                max:number
-                min:number
-                step:number
-                value:number
-            } => ({...self.externalProperties, value: event.detail.value}),
-            onInput: (event:Event):[{value:number}, {value:number}] =>
-                [{value: event.detail.value}, {value: event.detail.value}]
+            onChange: (event:GenericEvent, self:ReactWrapper):State => ({
+                ...self.externalProperties as State,
+                value: (event.detail as {value:number}).value
+            }),
+            onInput: (event:GenericEvent):[{value:number}, {value:number}] => [
+                {value: (event.detail as {value:number}).value},
+                {value: (event.detail as {value:number}).value}
+            ]
         },
         propTypes: {
             disabled: boolean,
