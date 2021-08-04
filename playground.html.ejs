@@ -515,9 +515,9 @@
                     }"
                     placeholder="input12ModelPlaceholder"
                     search-selection
-                    suggestion-creator="new Promise(function(resolve) {
-                        Tools.timeout(2000, function() {
-                            resolve([
+                    suggestion-creator="Tools.debounce().then(function() {
+                        return Tools.timeout(2000).then(function() {
+                            return [
                                 'hans with veeeeeeeeeeeeeeeery ' +
                                 'loooooooooooooooong second name',
                                 'peter',
@@ -527,7 +527,7 @@
                                     !options.query ||
                                     name.includes(options.query)
                                 )
-                            }))
+                            })
                         })
                     })"
                 ></generic-input>
