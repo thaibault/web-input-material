@@ -515,7 +515,7 @@
                     }"
                     placeholder="input12ModelPlaceholder"
                     search-selection
-                    suggestion-creator="Tools.debounce(function() {
+                    -suggestion-creator="Tools.debounce(function(search) {
                         return Tools.timeout(2000).then(function() {
                             return [
                                 'hans with veeeeeeeeeeeeeeeery ' +
@@ -524,8 +524,8 @@
                                 'klaus'
                             ].filter(function(name) {
                                 return (
-                                    !options.query ||
-                                    name.includes(options.query)
+                                    !search.query ||
+                                    name.includes(search.query)
                                 )
                             })
                         })
