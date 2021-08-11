@@ -516,13 +516,18 @@
                     placeholder="input12ModelPlaceholder"
                     search-selection
                     -suggestion-creator="Tools.debounce(function(search) {
+                        const suggestions = [
+                            'hans with veeeeeeeeeeeeeeeery ' +
+                            'loooooooooooooooong second name',
+                            'peter',
+                            'klaus'
+                        ]
+
+                        if (!search.query || search.query.length < 3)
+                            return suggestions
+
                         return Tools.timeout(2000).then(function() {
-                            return [
-                                'hans with veeeeeeeeeeeeeeeery ' +
-                                'loooooooooooooooong second name',
-                                'peter',
-                                'klaus'
-                            ].filter(function(name) {
+                            return suggestions.filter(function(name) {
                                 return (
                                     !search.query ||
                                     name.includes(search.query)
