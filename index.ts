@@ -40,9 +40,11 @@ export const components:Mapping<WebComponentAPI<typeof ReactWeb>> = {}
 */
 const componentRetriever = require.context('./components', true, /^.+\.ts$/)
 componentRetriever.keys().map((name:string):void => {
-    const componentAPI:WebComponentAPI<typeof ReactWeb> =
-        componentRetriever(name).default
-    components[componentAPI.component._name] = componentAPI
+    if (!name.endsWith('.d.ts')) {
+        const componentAPI:WebComponentAPI<typeof ReactWeb> =
+            componentRetriever(name).default
+        components[componentAPI.component._name] = componentAPI
+    }
 })
 export default components
 // region vim modline
