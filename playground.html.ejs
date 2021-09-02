@@ -368,11 +368,11 @@
                     placeholder="input6Placeholder"
                 ></generic-input>
                 <generic-input
-                    initial-value="'only a`s allowed'"
+                    initial-value="'has a`s and b`s'"
                     model="{
                         declaration: 'pattern',
                         description: 'input6ModelDescription',
-                        regularExpressionPattern: 'a+'
+                        regularExpressionPattern: ['.*a+.*', /.*b+.*/]
                     }"
                     name="input6Model"
                     placeholder="input6ModelPlaceholder"
