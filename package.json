@@ -118,9 +118,6 @@
   "peerDependenciesMeta": {
     "@babel/runtime": {
       "optional": true
-    },
-    "clientnode": {
-      "optional": true
     }
   },
   "resolutions": {
