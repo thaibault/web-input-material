@@ -15,7 +15,33 @@
     See https://creativecommons.org/licenses/by/3.0/deed.de
     endregion
 */
-export type {GenericEvent, Model} from 'react-input-material/type'
+export type {
+    BaseModel,
+    CommonBaseModel,
+    CommonModel,
+
+    BaseProperties,
+    BaseProps,
+    Properties,
+    Props,
+    TypedProperties,
+
+    DefaultBaseProperties,
+    DefaultProperties,
+
+    GenericEvent,
+
+    Model,
+    ModelState,
+
+    EditorState,
+    State,
+    ValueState,
+
+    StaticComponent,
+    StaticFunctionComponent,
+    StaticWebComponent
+} from 'react-input-material/type'
 // region vim modline
 // vim: set tabstop=4 shiftwidth=4 expandtab:
 // vim: foldmethod=marker foldmarker=region,endregion:
