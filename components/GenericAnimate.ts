@@ -17,7 +17,6 @@
     endregion
 */
 // region imports
-import {boolean} from 'clientnode/property-types'
 import ReactGenericAnimate from 'react-input-material/components/GenericAnimate'
 import wrapAsWebComponent from 'web-component-wrapper'
 import {ComponentType, WebComponentAPI} from 'web-component-wrapper/type'
