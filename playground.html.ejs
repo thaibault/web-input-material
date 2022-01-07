@@ -118,7 +118,9 @@
                 })
 
                 // region tabs
-                const tabs = Tools.arrayMake(document.querySelectorAll('.playground__tab'))
+                const tabs = Tools.arrayMake(document.querySelectorAll(
+                    '.playground__tab'
+                ))
                 const showTab = function(currentIndex) {
                     tabs.forEach(function(tab) {
                         if (tab === tabs[currentIndex]) {
@@ -141,6 +143,7 @@
                 tabBar.addEventListener(
                     'activate',
                     function(event) {
+                        console.log('E', event)
                         // NOTE: "event.detail" is sometimes set to "0" in IE11.
                         if (event.detail)
                             showTab(event.detail.parameters[0].detail.index)
@@ -280,7 +283,9 @@
             <!--endregion-->
             <!--region generic-input-->
             <div class="playground__inputs__generic-input playground__tab">
-                <generic-input></generic-input>
+                <generic-input
+                    bind-on-keydown="console.info('Typed key:', event.key)"
+                ></generic-input>
 
                 <hr/>
 
