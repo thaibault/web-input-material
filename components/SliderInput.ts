@@ -27,7 +27,7 @@ import ReactWrapper from 'web-component-wrapper/React'
 import {WebComponentAPI} from 'web-component-wrapper/type'
 import {Slider} from '@rmwc/slider'
 // endregion
-export type State = {
+export interface State {
     disabled:boolean
     discrete:boolean
     displayMarkers:boolean
@@ -37,7 +37,9 @@ export type State = {
     value:number
 }
 
-export const SliderInput:WebComponentAPI = wrapAsWebComponent<typeof Slider>(
+export const SliderInput:WebComponentAPI = wrapAsWebComponent<
+    typeof Slider, State, State
+>(
     createWrapConfigurationsComponent<typeof Slider>(Slider) as typeof Slider,
     'SliderInput',
     {
