@@ -41,8 +41,11 @@ export const components:Mapping<WebComponentAPI<typeof ReactWeb>> = {}
 const componentRetriever = require.context('./components', true, /^.+\.ts$/)
 componentRetriever.keys().map((name:string):void => {
     if (!name.endsWith('.d.ts')) {
-        const componentAPI:WebComponentAPI<typeof ReactWeb> =
-            componentRetriever(name).default
+        const componentAPI:WebComponentAPI<typeof ReactWeb> = (
+            componentRetriever(name) as
+                {default:WebComponentAPI<typeof ReactWeb>}
+        ).default
+
         components[componentAPI.component._name] = componentAPI
     }
 })
