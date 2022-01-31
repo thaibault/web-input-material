@@ -140,11 +140,9 @@
                 }
                 const tabBar =
                     document.querySelector('.playground__inputs__tab-bar')
-                console.log('TODO', tabBar)
                 tabBar.addEventListener(
                     'activate',
                     function(event) {
-                        console.log('TODO E', tabBar)
                         // NOTE: "event.detail" is sometimes set to "0" in IE11.
                         if (event.detail)
                             showTab(event.detail.parameters[0].detail.index)
