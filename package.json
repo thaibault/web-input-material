@@ -90,7 +90,6 @@
     "@types/react-dom": "*",
     "@types/react-transition-group": "*",
     "@types/webpack-env": "*",
-    "@types/workbox-webpack-plugin": "*",
     "@typescript-eslint/eslint-plugin": "*",
     "@typescript-eslint/parser": "*",
     "@webcomponents/webcomponentsjs": "*",
@@ -108,6 +107,7 @@
     "react-useanimations": "*",
     "style-loader": "*",
     "tinymce": "^5.0.0",
+    "tslib": "*",
     "weboptimizer": "*",
     "webpack-dev-server": "*"
   },
