@@ -106,7 +106,6 @@
     "react-ace": "*",
     "react-useanimations": "*",
     "style-loader": "*",
-    "tinymce": "^5.0.0",
     "tslib": "*",
     "weboptimizer": "*",
     "webpack-dev-server": "*"
