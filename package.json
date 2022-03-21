@@ -1,13 +1,7 @@
 {
   "name": "web-input-material",
   "version": "0.0.246",
-  "license": "CC-BY-3.0",
   "description": "Reusable material design based input field with support for (richt-)text, code, selections, numbers, dates and so on.",
-  "homepage": "https://torben.website/web-input-material",
-  "documentationWebsite": {
-    "tagline": "Do not refactor input fields anymore.<!--deDE:Nie wieder Eingabefelder anpassen.-->",
-    "trackingCode": "TODO"
-  },
   "keywords": [
     "form-field",
     "input",
@@ -17,6 +11,17 @@
     "webcomponent",
     "component"
   ],
+  "homepage": "https://torben.website/web-input-material",
+  "bugs": {
+    "email": "info@torben.website",
+    "url": "https://github.com/thaibault/web-input-material/issues"
+  },
+  "license": "CC-BY-3.0",
+  "author": {
+    "name": "Torben Sickert",
+    "email": "info@torben.website",
+    "url": "https://torben.website"
+  },
   "files": [
     "components",
     "index.d.ts",
@@ -46,7 +51,7 @@
     "serve:minimal": "weboptimizer serve '{__reference__: \"target:minimal\"}'",
     "start": "yarn serve",
     "test": "weboptimizer test",
-    "test:browser": "weboptimizer test:browser",
+    "test:browser": "yarn clear && weboptimizer test:browser",
     "test:coverage": "weboptimizer test:coverage",
     "test:coverage:report": "weboptimizer test:coverage:report",
     "update": "yarn version --patch && yarn publish",
@@ -119,11 +124,19 @@
       "optional": true
     }
   },
+  "engines": {
+    "node": ">=17",
+    "npm": ">=7"
+  },
   "resolutions": {
     "@types/webpack": "https://registry.yarnpkg.com/@favware/skip-dependency/-/skip-dependency-1.1.1.tgz",
     "colors": "1.4.0"
   },
   "sideEffects": false,
+  "documentationWebsite": {
+    "tagline": "Do not refactor input fields anymore.<!--deDE:Nie wieder Eingabefelder anpassen.-->",
+    "trackingCode": "TODO"
+  },
   "webOptimizer": {
     "commandLine": {
       "test": {
