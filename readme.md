@@ -34,4 +34,5 @@ Project status
 Use case
 --------
 
-Reusable material design based input field with support for (richt-)text, code, selections, numbers, dates and so on.
+Reusable material design based input field with support for (richt-)text, code,
+selections, numbers, dates and so on.
