@@ -15,6 +15,7 @@
 */
 // region imports
 import {describe, expect, test} from '@jest/globals'
+import '@webcomponents/webcomponentsjs/custom-elements-es5-adapter'
 
 import components from './index'
 // endregion
