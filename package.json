@@ -17,6 +17,7 @@
     "url": "https://github.com/thaibault/web-input-material/issues"
   },
   "license": "CC-BY-3.0",
+  "main": "index.js",
   "author": {
     "name": "Torben Sickert",
     "email": "info@torben.website",
@@ -35,7 +36,8 @@
   },
   "scripts": {
     "build": "yarn build:types; yarn build:plain; yarn build:bundle:minimal-input",
-    "build:bundle": "weboptimizer build '{__reference__: \"target:bundle\"}'",
+    "build:bundle": "yarn build:types; yarn build:bundle:plain",
+    "build:bundle:plain": "weboptimizer build '{__reference__: \"target:bundle\"}'",
     "build:bundle:minimal-input": "weboptimizer build '{__reference__: [\"target:bundle\", \"target:minimal\", \"target:minimal:input\"]}'",
     "build:bundle:minimal-input:stats": "weboptimizer build --json /tmp/stat.json '{__reference__: [\"target:bundle\", \"target:minimal\", \"target:minimal:input\"]}' && echo 'Results successfully written to \"/tmp/stat.json\".'",
     "build:bundle:stats": "weboptimizer build --json /tmp/stat.json '{__reference__: \"target:bundle\"}' && echo 'Results successfully written to \"/tmp/stat.json\".'",
@@ -154,23 +156,13 @@
     "injection": {
       "entry": {
         "__evaluate__": "2 < self.givenCommandLineArguments.length && self.givenCommandLineArguments[2].startsWith('test') ? {testBundle: './test.ts'} : 2 < self.givenCommandLineArguments.length && self.givenCommandLineArguments[2] === 'serve' ? {clientnode: 'clientnode', index: './index'} : {'./components/CircularSpinner': './components/CircularSpinner', './components/FileInput': './components/FileInput', './components/GenericAnimate': './components/GenericAnimate', './components/GenericInput': './components/GenericInput', './components/GenericInputs': './components/GenericInputs', './components/Tabs': ['./components/TabItem', './components/TabBar'], './components/RequireableCheckbox': './components/RequireableCheckbox', './components/SliderInput': './components/SliderInput', index: './index'}"
-      },
-      "external": {
-        "implicit": {
-          "pattern": {
-            "exclude": {
-              "__append__": {
-                "__evaluate__": "/(?:^|\\/)((react-input-material)|(web-component-wrapper))(?:$|\\/)/"
-              }
-            }
-          }
-        }
-      },
-      "ignorePattern": {
-        "resourceRegExp": "jquery"
       }
     },
     "module": {
+      "aliases": {
+        "#": "Remove unneeded optional dependencies.",
+        "jquery$": false
+      },
       "enforceDeduplication": true,
       "html": {
         "options": {

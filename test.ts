@@ -15,12 +15,25 @@
 */
 // region imports
 import {describe, expect, test} from '@jest/globals'
+import '@webcomponents/webcomponentsjs/custom-elements-es5-adapter'
 
 import components from './index'
 // endregion
 describe('web-input-material', ():void => {
     test('components', ():void => {
         expect(Object.keys(components).length).toBeGreaterThan(1)
+    })
+
+    test('GenericInput', ():void => {
+        expect(components.GenericInput).toBeDefined()
+        expect(components.GenericInput.component).toBeDefined()
+        expect(components.GenericInput.register).toBeDefined()
+
+        components.GenericInput.register()
+        const genericInput:HTMLElement =
+            document.createElement('generic-input')
+
+        expect(genericInput).toBeDefined()
     })
 })
 // region vim modline
