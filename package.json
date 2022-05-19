@@ -247,6 +247,17 @@
           "__evaluate__": "{'./components/GenericInput': './components/GenericInput'}"
         }
       }
+    },
+    "test": {
+      "module": {
+        "replacements": {
+          "normal": {
+            "#": "We need native class to get web components work in test context.",
+            "web-component-wrapper/React$": "web-component-wrapper/ReactNext",
+            "web-component-wrapper/Web$": "web-component-wrapper/WebNext"
+          }
+        }
+      }
     }
   }
 }
