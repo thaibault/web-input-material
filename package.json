@@ -17,6 +17,7 @@
     "url": "https://github.com/thaibault/web-input-material/issues"
   },
   "license": "CC-BY-3.0",
+  "main": "index.js",
   "author": {
     "name": "Torben Sickert",
     "email": "info@torben.website",
@@ -155,23 +156,13 @@
     "injection": {
       "entry": {
         "__evaluate__": "2 < self.givenCommandLineArguments.length && self.givenCommandLineArguments[2].startsWith('test') ? {testBundle: './test.ts'} : 2 < self.givenCommandLineArguments.length && self.givenCommandLineArguments[2] === 'serve' ? {clientnode: 'clientnode', index: './index'} : {'./components/CircularSpinner': './components/CircularSpinner', './components/FileInput': './components/FileInput', './components/GenericAnimate': './components/GenericAnimate', './components/GenericInput': './components/GenericInput', './components/GenericInputs': './components/GenericInputs', './components/Tabs': ['./components/TabItem', './components/TabBar'], './components/RequireableCheckbox': './components/RequireableCheckbox', './components/SliderInput': './components/SliderInput', index: './index'}"
-      },
-      "external": {
-        "implicit": {
-          "pattern": {
-            "exclude": {
-              "__append__": {
-                "__evaluate__": "/(?:^|\\/)((react-input-material)|(web-component-wrapper))(?:$|\\/)/"
-              }
-            }
-          }
-        }
-      },
-      "ignorePattern": {
-        "resourceRegExp": "jquery"
       }
     },
     "module": {
+      "aliases": {
+        "#": "Remove unneeded optional dependencies.",
+        "jquery$": false
+      },
       "enforceDeduplication": true,
       "html": {
         "options": {
@@ -254,6 +245,8 @@
         "replacements": {
           "normal": {
             "#": "We need native class to get web components work in test context.",
+            "web-component-wrapper$": "web-component-wrapper/indexNext",
+            "web-component-wrapper/index$": "web-component-wrapper/indexNext",
             "web-component-wrapper/React$": "web-component-wrapper/ReactNext",
             "web-component-wrapper/Web$": "web-component-wrapper/WebNext"
           }

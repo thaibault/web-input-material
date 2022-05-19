@@ -16,7 +16,6 @@
 // region imports
 import {describe, expect, test} from '@jest/globals'
 
-import GenericInput from './components/GenericInput'
 import components from './index'
 // endregion
 describe('web-input-material', ():void => {
@@ -30,13 +29,10 @@ describe('web-input-material', ():void => {
         expect(components.GenericInput.register).toBeDefined()
 
         components.GenericInput.register()
-        /*
-         * TODO
-        const genericInput:GenericInput =
-            document.createElement('generic-input') as GenericInput
+        const genericInput:HTMLElement =
+            document.createElement('generic-input')
 
         expect(genericInput).toBeDefined()
-        */
     })
 })
 // region vim modline
