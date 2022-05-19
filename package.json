@@ -35,7 +35,8 @@
   },
   "scripts": {
     "build": "yarn build:types; yarn build:plain; yarn build:bundle:minimal-input",
-    "build:bundle": "weboptimizer build '{__reference__: \"target:bundle\"}'",
+    "build:bundle": "yarn build:types; yarn build:bundle:plain",
+    "build:bundle:plain": "weboptimizer build '{__reference__: \"target:bundle\"}'",
     "build:bundle:minimal-input": "weboptimizer build '{__reference__: [\"target:bundle\", \"target:minimal\", \"target:minimal:input\"]}'",
     "build:bundle:minimal-input:stats": "weboptimizer build --json /tmp/stat.json '{__reference__: [\"target:bundle\", \"target:minimal\", \"target:minimal:input\"]}' && echo 'Results successfully written to \"/tmp/stat.json\".'",
     "build:bundle:stats": "weboptimizer build --json /tmp/stat.json '{__reference__: \"target:bundle\"}' && echo 'Results successfully written to \"/tmp/stat.json\".'",
