@@ -764,7 +764,7 @@
             <div class="playground__inputs__generic-inputs playground__tab">
                 <generic-inputs
                     create-prototype="Tools.extend(
-                        options.prototype,
+                        options.item,
                         {name: options.properties.name + '-' + String(options.index + 1)}
                     )"
                     model="{default: [{name: 'inputs1-1'}], name: 'inputs1'}"
@@ -775,7 +775,7 @@
                 </generic-inputs>
                 <generic-inputs
                     create-prototype="Tools.extend(
-                        options.prototype,
+                        options.item,
                         {name: options.properties.name + '-' + String(options.index + 1)}
                     )"
                     maximum-number="2"
@@ -795,7 +795,7 @@
                 </generic-inputs>
                 <generic-inputs
                     create-prototype="Tools.extend(
-                        options.prototype,
+                        options.item,
                         {name: options.properties.name + '-' + String(options.index + 1)}
                     )"
                     model="{
