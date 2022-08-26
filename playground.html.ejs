@@ -237,20 +237,43 @@
             <div class="playground__inputs__file-input playground__tab">
                 <file-input></file-input>
                 <file-input
-                    default="{source: 'https://via.placeholder.com/150'}"
+                    default="{
+                        blob: {type: 'image/png'},
+                        url: 'https://via.placeholder.com/150'
+                    }"
                     name="UnControlled"
+                    -generate-file-name-input-properties="function(prototype, properties) {
+                        var fileName = properties.value.name || ''
+
+                        return Tools.extend(
+                            prototype,
+                            {
+                                disabled: true,
+                                value:
+                                    properties.name +
+                                    (fileName.includes('.') ?
+                                        fileName.substring(
+                                            fileName.lastIndexOf('.')
+                                        ) :
+                                        ''
+                                    )
+                            }
+                        )
+                    }"
                 >
                     <div bind-attribute-style="
                         'margin-left: 10px' +
                          (options.value && options.value.blob ? '' : ' display: none')
                     ">
                         <span bind-attribute-style="
-                            options.value && options.value.blob && options.value.blob.lastModified ?
+                            options.value && options.value.blob &&
+                            options.value.blob.lastModified ?
                                 '' :
                                 'display: none'
                         ">
                             <span bind-property-text-content="
-                                options.value && options.value.blob && options.value.blob.lastModified ?
+                                options.value && options.value.blob &&
+                                options.value.blob.lastModified ?
                                     (
                                         'Last modified date time: ' +
                                         Tools.dateTimeFormat(
@@ -264,14 +287,16 @@
                         </span>
 
                         <span bind-property-text-content="
-                            options.value && options.value.blob && options.value.blob.type ?
+                            options.value &&
+                            options.value.blob && options.value.blob.type ?
                                 ('Mime-Typ: ' + options.value.blob.type) :
                                 ''
                         "></span>
                         <br />
 
                         <span bind-property-text-content="
-                            options.value && options.value.blob && options.value.blob.size ?
+                            options.value &&
+                            options.value.blob && options.value.blob.size ?
                                 ('Size: ' + options.value.blob.size) :
                                 ''
                         "></span>
