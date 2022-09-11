@@ -322,7 +322,11 @@
 
                 <hr/>
 
-                <generic-input default="1526165029" name="input2" type="date">
+                <generic-input
+                    default="new Date('2025-01-01T00:00:00.000Z').getTime() / 1000"
+                    name="input2"
+                    type="date"
+                >
                 </generic-input>
                 <generic-input
                     initial-value="'1970-01-01T08:00:00.000Z'"
@@ -344,7 +348,7 @@
                         maximum: 3600,
                         minimum: 60,
                         name: 'input3Model',
-                        type: 'time'
+                        type: 'time-local'
                     }"
                 ></generic-input>
 

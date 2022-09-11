@@ -2034,9 +2034,9 @@
     "@rmwc/types" "^8.0.1"
 
 "@sinclair/typebox@^0.24.1":
-  version "0.24.39"
-  resolved "https://registry.yarnpkg.com/@sinclair/typebox/-/typebox-0.24.39.tgz#21d0c56c295a00e391e20a88a48c11d4a1210ac5"
-  integrity sha512-GqtkxoAjhTzoMwFg/JYRl+1+miOoyvp6mkLpbMSd2fIQak2KvY00ndlXxxkDBpuCPYkorZeEZf0LEQn9V9NRVQ==
+  version "0.24.40"
+  resolved "https://registry.yarnpkg.com/@sinclair/typebox/-/typebox-0.24.40.tgz#00ee9b48537b147f6ffc80ebc28ab16d6016ed5c"
+  integrity sha512-Xint60L8rF0+nRy+6fCjW9jQMmu7fTpbwTBrXZiK6eq/RHDJS7LvWX/0oXC8O7fCePmrY/XdfaTv2HiUDeCq4g==
 
 "@sinonjs/commons@^1.7.0":
   version "1.8.3"
@@ -7034,9 +7034,9 @@ react-dom@*:
     scheduler "^0.23.0"
 
 react-input-material@*:
-  version "0.0.426"
-  resolved "https://registry.yarnpkg.com/react-input-material/-/react-input-material-0.0.426.tgz#03381e709aee3b707cb04e539391aa7806d69fa7"
-  integrity sha512-R89aEv18cfDFs3iv+UTB2Ouj0WyHKFMmNsRgKYC2EIzNHrLy2Qa5vbnXgdfdgpwIHApaSa0rGWtKJv81pBZrGg==
+  version "0.0.429"
+  resolved "https://registry.yarnpkg.com/react-input-material/-/react-input-material-0.0.429.tgz#889aef36f9ea1b2c8e9d5e9b5986f603a811f38c"
+  integrity sha512-pAL6Xda40dUVImUxNSb8LSWXmF1WopADMkY9coo4yLoeytxOt/UGNAweFkpPh4v+awL90cUSlLT6XVIS5zsrqw==
   dependencies:
     "@types/webpack" "https://registry.yarnpkg.com/@favware/skip-dependency/-/skip-dependency-1.1.1.tgz"
 
