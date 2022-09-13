@@ -52,12 +52,11 @@ export const SliderInput:WebComponentAPI = wrapAsWebComponent<
                 ...self.externalProperties as Properties,
                 value: (event.detail as {value:number}).value
             }),
-            onInput: (event:GenericEvent):[
-                {value:number}, {value:number}
-            ] => [
-                {value: (event.detail as {value:number}).value},
-                {value: (event.detail as {value:number}).value}
-            ]
+            onInput: (event:GenericEvent):[{value:number}, {value:number}] =>
+                [
+                    {value: (event.detail as {value:number}).value},
+                    {value: (event.detail as {value:number}).value}
+                ]
         },
         propTypes: {
             disabled: boolean,

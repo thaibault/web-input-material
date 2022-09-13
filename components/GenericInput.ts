@@ -16,37 +16,39 @@
     See https://creativecommons.org/licenses/by/3.0/deed.de
     endregion
 */
+// TODO apply and understand type approach to other components!
 // region imports
 import {boolean, string} from 'clientnode/property-types'
 import ReactGenericInput from 'react-input-material/components/GenericInput'
-import wrapAsWebComponent from 'web-component-wrapper'
-import {ComponentType, WebComponentAPI} from 'web-component-wrapper/type'
+import wrapAsWebComponent, {ReactWeb} from 'web-component-wrapper'
+import {WebComponentAPI} from 'web-component-wrapper/type'
 // endregion
-export const GenericInput:WebComponentAPI = wrapAsWebComponent(
-    ReactGenericInput as ComponentType,
-    'GenericInput',
-    {
-        eventToPropertyMapping: {onChange: true},
-        internalProperties: {enforceUncontrolled: true},
-        propertiesToReflectAsAttributes: {
-            dirty: boolean,
-            focused: boolean,
-            invalid: boolean,
-            invalidMaximum: boolean,
-            invalidMaximumLength: boolean,
-            invalidMinimum: boolean,
-            invalidMinimumLength: boolean,
-            invalidPattern: boolean,
-            invalidRequired: boolean,
-            name: string,
-            pristine: boolean,
-            touched: boolean,
-            untouched: boolean,
-            valid: boolean,
-            visited: boolean
+export const GenericInput:WebComponentAPI<typeof ReactWeb> =
+    wrapAsWebComponent<typeof ReactGenericInput>(
+        ReactGenericInput,
+        'GenericInput',
+        {
+            eventToPropertyMapping: {onChange: true},
+            internalProperties: {enforceUncontrolled: true},
+            propertiesToReflectAsAttributes: {
+                dirty: boolean,
+                focused: boolean,
+                invalid: boolean,
+                invalidMaximum: boolean,
+                invalidMaximumLength: boolean,
+                invalidMinimum: boolean,
+                invalidMinimumLength: boolean,
+                invalidPattern: boolean,
+                invalidRequired: boolean,
+                name: string,
+                pristine: boolean,
+                touched: boolean,
+                untouched: boolean,
+                valid: boolean,
+                visited: boolean
+            }
         }
-    }
-)
+    )
 export default GenericInput
 // region vim modline
 // vim: set tabstop=4 shiftwidth=4 expandtab:
