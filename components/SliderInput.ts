@@ -24,7 +24,7 @@ import {
 } from 'react-input-material/components/WrapConfigurations'
 import {GenericEvent} from 'react-input-material/type'
 import wrapAsWebComponent from 'web-component-wrapper'
-import ReactWrapper from 'web-component-wrapper/React'
+import ReactWeb from 'web-component-wrapper/React'
 import {WebComponentAPI} from 'web-component-wrapper/type'
 import {Slider} from '@rmwc/slider'
 // endregion
@@ -37,18 +37,23 @@ export interface Properties extends Mapping<unknown> {
     step:number
     value:number
 }
-
-export const SliderInput:WebComponentAPI = wrapAsWebComponent<
+/*
+    NOTE: Resulting component type is dynamically created from derived wrapped
+    react component.
+*/
+export const SliderInput:WebComponentAPI<
+    typeof Slider, Properties, Properties
+> = wrapAsWebComponent<
     typeof Slider,
     Properties,
     Properties,
-    [GenericEvent, ReactWrapper]
+    [GenericEvent, ReactWeb]
 >(
     createWrapConfigurationsComponent<typeof Slider>(Slider) as typeof Slider,
     'SliderInput',
     {
         eventToPropertyMapping: {
-            onChange: (event:GenericEvent, self:ReactWrapper):Properties => ({
+            onChange: (event:GenericEvent, self:ReactWeb):Properties => ({
                 ...self.externalProperties as Properties,
                 value: (event.detail as {value:number}).value
             }),
@@ -73,6 +78,7 @@ export const SliderInput:WebComponentAPI = wrapAsWebComponent<
         }
     }
 )
+
 export default SliderInput
 // region vim modline
 // vim: set tabstop=4 shiftwidth=4 expandtab:

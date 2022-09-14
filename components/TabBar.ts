@@ -25,17 +25,19 @@ import wrapAsWebComponent from 'web-component-wrapper'
 import {WebComponentAPI} from 'web-component-wrapper/type'
 import {TabBar as ReactTabBar} from '@rmwc/tabs'
 // endregion
-export const TabBar:WebComponentAPI = wrapAsWebComponent<typeof ReactTabBar>(
-    createWrapConfigurationsComponent<typeof ReactTabBar>(ReactTabBar) as
-        typeof ReactTabBar,
-    'TabBar',
-    {propTypes: {
-        activeTabIndex: number,
-        onActivate: func,
-        theme: string,
-        themeConfiguration: object
-    }}
-)
+export const TabBar:WebComponentAPI<typeof ReactTabBar> =
+    wrapAsWebComponent<typeof ReactTabBar>(
+        createWrapConfigurationsComponent<typeof ReactTabBar>(ReactTabBar) as
+            typeof ReactTabBar,
+        'TabBar',
+        {propTypes: {
+            activeTabIndex: number,
+            onActivate: func,
+            theme: string,
+            themeConfiguration: object
+        }}
+    )
+
 export default TabBar
 // region vim modline
 // vim: set tabstop=4 shiftwidth=4 expandtab:

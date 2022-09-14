@@ -16,14 +16,13 @@
     See https://creativecommons.org/licenses/by/3.0/deed.de
     endregion
 */
-// TODO apply and understand type approach to other components!
 // region imports
 import {boolean, string} from 'clientnode/property-types'
 import ReactGenericInput from 'react-input-material/components/GenericInput'
-import wrapAsWebComponent, {ReactWeb} from 'web-component-wrapper'
+import wrapAsWebComponent from 'web-component-wrapper'
 import {WebComponentAPI} from 'web-component-wrapper/type'
 // endregion
-export const GenericInput:WebComponentAPI<typeof ReactWeb> =
+export const GenericInput:WebComponentAPI<typeof ReactGenericInput> =
     wrapAsWebComponent<typeof ReactGenericInput>(
         ReactGenericInput,
         'GenericInput',
@@ -49,6 +48,7 @@ export const GenericInput:WebComponentAPI<typeof ReactWeb> =
             }
         }
     )
+
 export default GenericInput
 // region vim modline
 // vim: set tabstop=4 shiftwidth=4 expandtab:
