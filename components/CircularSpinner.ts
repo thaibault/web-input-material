@@ -27,21 +27,24 @@ import wrapAsWebComponent from 'web-component-wrapper'
 import {WebComponentAPI} from 'web-component-wrapper/type'
 import {CircularProgress} from '@rmwc/circular-progress'
 // endregion
-export const CircularSpinner:WebComponentAPI = wrapAsWebComponent<
-    typeof CircularProgress
->(
-    createWrapConfigurationsComponent<typeof CircularProgress>(
-        CircularProgress, {withReference: false}
-    ) as typeof CircularProgress,
-    'CircularSpinner',
-    {propTypes: {
-        size: oneOfType(
-            [oneOf(['xsmall', 'small', 'medium', 'large', 'xlarge']), number]
-        ),
-        theme: string,
-        themeConfiguration: object
-    }}
-)
+export const CircularSpinner:WebComponentAPI<typeof CircularProgress> =
+    wrapAsWebComponent<typeof CircularProgress>(
+        createWrapConfigurationsComponent<typeof CircularProgress>(
+            CircularProgress, {withReference: false}
+        ) as typeof CircularProgress,
+        'CircularSpinner',
+        {propTypes: {
+            size: oneOfType(
+                [
+                    oneOf(['xsmall', 'small', 'medium', 'large', 'xlarge']),
+                    number
+                ]
+            ),
+            theme: string,
+            themeConfiguration: object
+        }}
+    )
+
 export default CircularSpinner
 // region vim modline
 // vim: set tabstop=4 shiftwidth=4 expandtab:
