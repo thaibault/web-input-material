@@ -17,6 +17,7 @@
     endregion
 */
 // region imports
+import Tools from 'clientnode'
 import {func, number, object, string} from 'clientnode/property-types'
 import {
     createWrapConfigurationsComponent
@@ -30,12 +31,21 @@ export const TabBar:WebComponentAPI<typeof ReactTabBar> =
         createWrapConfigurationsComponent<typeof ReactTabBar>(ReactTabBar) as
             typeof ReactTabBar,
         'TabBar',
-        {propTypes: {
-            activeTabIndex: number,
-            onActivate: func,
-            theme: string,
-            themeConfiguration: object
-        }}
+        {
+            eventToPropertyMapping: {
+                onActivate: async ():Promise<null> => {
+                    await Tools.timeout()
+
+                    return null
+                }
+            },
+            propTypes: {
+                activeTabIndex: number,
+                onActivate: func,
+                theme: string,
+                themeConfiguration: object
+            }
+        }
     )
 
 export default TabBar
