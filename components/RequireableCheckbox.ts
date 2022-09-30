@@ -18,7 +18,7 @@
 */
 // region imports
 import {boolean, string} from 'clientnode/property-types'
-import Checkbox from 'react-input-material/components/RequireableCheckbox'
+import Checkbox from 'react-input-material/dist/components/RequireableCheckbox'
 import wrapAsWebComponent from 'web-component-wrapper'
 import {WebComponentAPI} from 'web-component-wrapper/type'
 // endregion

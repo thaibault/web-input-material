@@ -18,7 +18,8 @@
 */
 // region imports
 import {boolean, string} from 'clientnode/property-types'
-import ReactGenericInput from 'react-input-material/components/GenericInput'
+import ReactGenericInput from
+    'react-input-material/dist/components/GenericInput'
 import wrapAsWebComponent from 'web-component-wrapper'
 import {WebComponentAPI} from 'web-component-wrapper/type'
 // endregion

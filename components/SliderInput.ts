@@ -21,8 +21,8 @@ import {boolean, func, number, object, string} from 'clientnode/property-types'
 import {Mapping} from 'clientnode/type'
 import {
     createWrapConfigurationsComponent
-} from 'react-input-material/components/WrapConfigurations'
-import {GenericEvent} from 'react-input-material/type'
+} from 'react-input-material/dist/components/WrapConfigurations'
+import {GenericEvent} from 'react-input-material/dist/type'
 import wrapAsWebComponent from 'web-component-wrapper'
 import ReactWeb from 'web-component-wrapper/React'
 import {WebComponentAPI} from 'web-component-wrapper/type'
