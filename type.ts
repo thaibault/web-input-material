@@ -41,7 +41,7 @@ export type {
     StaticComponent,
     StaticFunctionComponent,
     StaticWebComponent
-} from 'react-input-material/type'
+} from 'react-input-material/dist/type'
 // region vim modline
 // vim: set tabstop=4 shiftwidth=4 expandtab:
 // vim: foldmethod=marker foldmarker=region,endregion:

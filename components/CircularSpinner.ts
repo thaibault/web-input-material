@@ -22,7 +22,7 @@ import {
 } from 'clientnode/property-types'
 import {
     createWrapConfigurationsComponent
-} from 'react-input-material/components/WrapConfigurations'
+} from 'react-input-material/dist/components/WrapConfigurations'
 import wrapAsWebComponent from 'web-component-wrapper'
 import {WebComponentAPI} from 'web-component-wrapper/type'
 import {CircularProgress} from '@rmwc/circular-progress'

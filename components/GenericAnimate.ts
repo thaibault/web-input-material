@@ -17,7 +17,8 @@
     endregion
 */
 // region imports
-import ReactGenericAnimate from 'react-input-material/components/GenericAnimate'
+import ReactGenericAnimate from
+    'react-input-material/dist/components/GenericAnimate'
 import wrapAsWebComponent from 'web-component-wrapper'
 import {WebComponentAPI} from 'web-component-wrapper/type'
 // endregion

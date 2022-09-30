@@ -18,7 +18,7 @@
 */
 // region imports
 import {boolean, string} from 'clientnode/property-types'
-import ReactFileInput from 'react-input-material/components/FileInput'
+import ReactFileInput from 'react-input-material/dist/components/FileInput'
 import wrapAsWebComponent from 'web-component-wrapper'
 import {WebComponentAPI} from 'web-component-wrapper/type'
 // endregion
