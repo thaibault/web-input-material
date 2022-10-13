@@ -18,34 +18,36 @@
 */
 // region imports
 import {boolean, string} from 'clientnode/property-types'
-import ReactFileInput from 'react-input-material/components/FileInput'
+import ReactFileInput from 'react-input-material/dist/components/FileInput'
 import wrapAsWebComponent from 'web-component-wrapper'
-import {ComponentType, WebComponentAPI} from 'web-component-wrapper/type'
+import {WebComponentAPI} from 'web-component-wrapper/type'
 // endregion
-export const FileInput:WebComponentAPI = wrapAsWebComponent(
-    ReactFileInput as ComponentType,
-    'FileInput',
-    {
-        eventToPropertyMapping: {onChange: true},
-        internalProperties: {enforceUncontrolled: true},
-        propertiesToReflectAsAttributes: {
-            dirty: boolean,
-            focused: boolean,
-            invalid: boolean,
-            invalidMaximumSize: boolean,
-            invalidMinimumSize: boolean,
-            invalidMimeTypePattern: boolean,
-            invalidNamePattern: boolean,
-            invalidRequired: boolean,
-            name: string,
-            pristine: boolean,
-            touched: boolean,
-            untouched: boolean,
-            valid: boolean,
-            visited: boolean
+export const FileInput:WebComponentAPI<typeof ReactFileInput> =
+    wrapAsWebComponent<typeof ReactFileInput>(
+        ReactFileInput,
+        'FileInput',
+        {
+            eventToPropertyMapping: {onChange: true},
+            internalProperties: {enforceUncontrolled: true},
+            propertiesToReflectAsAttributes: {
+                dirty: boolean,
+                focused: boolean,
+                invalid: boolean,
+                invalidMaximumSize: boolean,
+                invalidMinimumSize: boolean,
+                invalidMimeTypePattern: boolean,
+                invalidNamePattern: boolean,
+                invalidRequired: boolean,
+                name: string,
+                pristine: boolean,
+                touched: boolean,
+                untouched: boolean,
+                valid: boolean,
+                visited: boolean
+            }
         }
-    }
-)
+    )
+
 export default FileInput
 // region vim modline
 // vim: set tabstop=4 shiftwidth=4 expandtab:

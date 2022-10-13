@@ -17,15 +17,18 @@
     endregion
 */
 // region imports
-import ReactGenericAnimate from 'react-input-material/components/GenericAnimate'
+import ReactGenericAnimate from
+    'react-input-material/dist/components/GenericAnimate'
 import wrapAsWebComponent from 'web-component-wrapper'
-import {ComponentType, WebComponentAPI} from 'web-component-wrapper/type'
+import {WebComponentAPI} from 'web-component-wrapper/type'
 // endregion
-export const GenericAnimate:WebComponentAPI = wrapAsWebComponent(
-    ReactGenericAnimate as ComponentType,
-    'GenericAnimate',
-    {propertiesToReflectAsAttributes: 'in'}
-)
+export const GenericAnimate:WebComponentAPI<typeof ReactGenericAnimate> =
+    wrapAsWebComponent<typeof ReactGenericAnimate>(
+        ReactGenericAnimate,
+        'GenericAnimate',
+        {propertiesToReflectAsAttributes: 'in'}
+    )
+
 export default GenericAnimate
 // region vim modline
 // vim: set tabstop=4 shiftwidth=4 expandtab:

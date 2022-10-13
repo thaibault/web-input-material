@@ -18,33 +18,35 @@
 */
 // region imports
 import {boolean, string} from 'clientnode/property-types'
-import ReactInputs from 'react-input-material/components/Inputs'
+import ReactInputs from 'react-input-material/dist/components/Inputs'
 import wrapAsWebComponent from 'web-component-wrapper'
-import {ComponentType, WebComponentAPI} from 'web-component-wrapper/type'
+import {WebComponentAPI} from 'web-component-wrapper/type'
 // endregion
-export const GenericInputs:WebComponentAPI = wrapAsWebComponent(
-    ReactInputs as ComponentType,
-    'GenericInputs',
-    {
-        eventToPropertyMapping: {onChange: true},
-        internalProperties: {enforceUncontrolled: true},
-        propertiesToReflectAsAttributes: {
-            dirty: boolean,
-            focused: boolean,
-            invalid: boolean,
-            /*
-            invalidMaximumLength: boolean,
-            invalidMinimumLength: boolean,
-            */
-            name: string,
-            pristine: boolean,
-            touched: boolean,
-            untouched: boolean,
-            valid: boolean,
-            visited: boolean
+export const GenericInputs:WebComponentAPI<typeof ReactInputs> =
+    wrapAsWebComponent<typeof ReactInputs>(
+        ReactInputs,
+        'GenericInputs',
+        {
+            eventToPropertyMapping: {onChange: true},
+            internalProperties: {enforceUncontrolled: true},
+            propertiesToReflectAsAttributes: {
+                dirty: boolean,
+                focused: boolean,
+                invalid: boolean,
+                /*
+                invalidMaximumLength: boolean,
+                invalidMinimumLength: boolean,
+                */
+                name: string,
+                pristine: boolean,
+                touched: boolean,
+                untouched: boolean,
+                valid: boolean,
+                visited: boolean
+            }
         }
-    }
-)
+    )
+
 export default GenericInputs
 // region vim modline
 // vim: set tabstop=4 shiftwidth=4 expandtab:
