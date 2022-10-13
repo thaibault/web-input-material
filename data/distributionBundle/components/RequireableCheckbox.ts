@@ -18,30 +18,32 @@
 */
 // region imports
 import {boolean, string} from 'clientnode/property-types'
-import Checkbox from 'react-input-material/components/RequireableCheckbox'
+import Checkbox from 'react-input-material/dist/components/RequireableCheckbox'
 import wrapAsWebComponent from 'web-component-wrapper'
-import {ComponentType, WebComponentAPI} from 'web-component-wrapper/type'
+import {WebComponentAPI} from 'web-component-wrapper/type'
 // endregion
-export const RequireableCheckbox:WebComponentAPI = wrapAsWebComponent(
-    Checkbox as ComponentType,
-    'RequireableCheckbox',
-    {
-        eventToPropertyMapping: {onChange: true},
-        internalProperties: {enforceUncontrolled: true},
-        propertiesToReflectAsAttributes: {
-            dirty: boolean,
-            focused: boolean,
-            invalid: boolean,
-            invalidRequired: boolean,
-            name: string,
-            pristine: boolean,
-            touched: boolean,
-            untouched: boolean,
-            valid: boolean,
-            visited: boolean
+export const RequireableCheckbox:WebComponentAPI<typeof Checkbox> =
+    wrapAsWebComponent<typeof Checkbox>(
+        Checkbox,
+        'RequireableCheckbox',
+        {
+            eventToPropertyMapping: {onChange: true},
+            internalProperties: {enforceUncontrolled: true},
+            propertiesToReflectAsAttributes: {
+                dirty: boolean,
+                focused: boolean,
+                invalid: boolean,
+                invalidRequired: boolean,
+                name: string,
+                pristine: boolean,
+                touched: boolean,
+                untouched: boolean,
+                valid: boolean,
+                visited: boolean
+            }
         }
-    }
-)
+    )
+
 export default RequireableCheckbox
 // region vim modline
 // vim: set tabstop=4 shiftwidth=4 expandtab:

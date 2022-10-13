@@ -20,16 +20,20 @@
 import {boolean, object, string} from 'clientnode/property-types'
 import {
     createWrapConfigurationsComponent
-} from 'react-input-material/components/WrapConfigurations'
+} from 'react-input-material/dist/components/WrapConfigurations'
 import wrapAsWebComponent from 'web-component-wrapper'
 import {WebComponentAPI} from 'web-component-wrapper/type'
 import {Tab} from '@rmwc/tabs'
 // endregion
-export const TabItem:WebComponentAPI = wrapAsWebComponent<typeof Tab>(
-    createWrapConfigurationsComponent<typeof Tab>(Tab) as typeof Tab,
-    'TabItem',
-    {propTypes: {stacked: boolean, theme: string, themeConfiguration: object}}
-)
+export const TabItem:WebComponentAPI<typeof Tab> =
+    wrapAsWebComponent<typeof Tab>(
+        createWrapConfigurationsComponent<typeof Tab>(Tab) as typeof Tab,
+        'TabItem',
+        {propTypes: {
+            stacked: boolean, theme: string, themeConfiguration: object
+        }}
+    )
+
 export default TabItem
 // region vim modline
 // vim: set tabstop=4 shiftwidth=4 expandtab:
