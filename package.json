@@ -25,7 +25,6 @@
   "files": [
     "components",
     "declarations.d.ts",
-    "index.bundle.js",
     "index.d.ts",
     "index.js",
     "type.d.ts"
@@ -35,7 +34,7 @@
     "url": "https://github.com/thaibault/web-input-material"
   },
   "scripts": {
-    "build": "yarn build:types; yarn build:plain; yarn build:bundle:plain; yarn build:bundle:minimal-input",
+    "build": "yarn build:types; yarn build:plain; yarn build:bundle:minimal-input",
     "build:bundle": "yarn build:types; yarn build:bundle:plain",
     "build:bundle:plain": "weboptimizer build '{__reference__: \"target:bundle\"}'",
     "build:bundle:minimal-input": "weboptimizer build '{__reference__: [\"target:bundle\", \"target:minimal\", \"target:minimal:input\"]}'",
@@ -208,6 +207,7 @@
           "normal": true
         }
       },
+      "libraryName": "webInputMaterial",
       "module": {
         "preprocessor": {
           "javaScript": {
