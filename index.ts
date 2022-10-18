@@ -49,6 +49,12 @@ componentRetriever.keys().map((name:string):void => {
         components[componentAPI.component._name] = componentAPI
     }
 })
+
+export const register = () =>
+    Object.values(components).map(
+        (component:WebComponentAPI<typeof ReactWeb>) => component.register()
+    )
+
 export default components
 // region vim modline
 // vim: set tabstop=4 shiftwidth=4 expandtab:
