@@ -62,6 +62,7 @@
     "update:documentation": "documentation-website",
     "watch": "weboptimizer build --watch"
   },
+  "runkitExample": "require('@babel/runtime/package.json')\n\nglobalThis.window = globalThis\n\nconst {GenericInput} = require('web-input-material')\n\nGenericInput.component._name",
   "dependencies": {
     "@types/webpack": "https://registry.yarnpkg.com/@favware/skip-dependency/-/skip-dependency-1.1.1.tgz",
     "prop-types": "*",
