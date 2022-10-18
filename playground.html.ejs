@@ -105,17 +105,16 @@
         <!--region script-->
         <script>
             window.onload = function() {
-                const components = webInputMaterial.index.components
                 const Tools = webInputMaterial.clientnode.Tools
-                const GenericInput = components.GenericInput.component.content
 
+                const GenericInput =
+                    webInputMaterial.index.components.GenericInput.component
+                        .content
                 GenericInput.locales.push('de-DE')
                 GenericInput.transformer.currency.format.final.options =
                     {currency: 'EUR'}
 
-                Object.values(components).map(function(component) {
-                    component.register()
-                })
+                webInputMaterial.index.register()
 
                 // region tabs
                 const tabs = Tools.arrayMake(document.querySelectorAll(
