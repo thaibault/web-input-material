@@ -209,7 +209,9 @@
           "normal": true
         }
       },
-      "libraryName": "webInputMaterial",
+      "libraryName": {
+        "__evaluate__": "Tools.stringDelimitedToCamelCase(self.name)"
+      },
       "module": {
         "preprocessor": {
           "javaScript": {
