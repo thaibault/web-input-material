@@ -18,17 +18,12 @@ Project status
 
 [![<LABEL>](https://github.com/thaibault/web-input-material/actions/workflows/build.yaml/badge.svg)](https://github.com/thaibault/web-input-material/actions/workflows/build.yaml)
 [![<LABEL>](https://github.com/thaibault/web-input-material/actions/workflows/test.yaml/badge.svg)](https://github.com/thaibault/web-input-material/actions/workflows/test.yaml)
-[![<LABEL>](https://github.com/thaibault/web-input-material/actions/workflows/test:coverage:report.yaml/badge.svg)](https://github.com/thaibault/web-input-material/actions/workflows/test:coverage:report.yaml)
-[![<LABEL>](https://github.com/thaibault/web-input-material/actions/workflows/check:types.yaml/badge.svg)](https://github.com/thaibault/web-input-material/actions/workflows/check:types.yaml)
+[![<LABEL>](https://github.com/thaibault/web-input-material/actions/workflows/test-coverage-report.yaml/badge.svg)](https://github.com/thaibault/web-input-material/actions/workflows/test-coverage-report.yaml)
+[![<LABEL>](https://github.com/thaibault/web-input-material/actions/workflows/check-types.yaml/badge.svg)](https://github.com/thaibault/web-input-material/actions/workflows/check-types.yaml)
 [![<LABEL>](https://github.com/thaibault/web-input-material/actions/workflows/lint.yaml/badge.svg)](https://github.com/thaibault/web-input-material/actions/workflows/lint.yaml)
 
 [![code coverage](https://coveralls.io/repos/github/thaibault/web-input-material/badge.svg)](https://coveralls.io/github/thaibault/web-input-material)
 
-<!-- Too unstable yet
-[![dependencies](https://img.shields.io/david/thaibault/web-input-material.svg)](https://david-dm.org/thaibault/web-input-material)
-[![development dependencies](https://img.shields.io/david/dev/thaibault/web-input-material.svg)](https://david-dm.org/thaibault/web-input-material?type=dev)
-[![peer dependencies](https://img.shields.io/david/peer/thaibault/web-input-material.svg)](https://david-dm.org/thaibault/web-input-material?type=peer)
--->
 [![documentation website](https://img.shields.io/website-up-down-green-red/https/torben.website/web-input-material.svg?label=documentation-website)](https://torben.website/web-input-material)
 
 Use case
