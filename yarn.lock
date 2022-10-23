@@ -7019,6 +7019,13 @@ react-dom@*:
     loose-envify "^1.1.0"
     scheduler "^0.23.0"
 
+react-generic-dummy@*:
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/react-generic-dummy/-/react-generic-dummy-0.0.8.tgz#af2f94f51718263337226bb7aa6d97b278d68622"
+  integrity sha512-CpVbLE3zZXksqhMB46AlL/6Cm8arJJ/DM6bUrQYKq/c5TosTvyYNVtzh0N9Y7fCwdSOOfcSZnpgXab2F0rm7rA==
+  dependencies:
+    "@types/webpack" "https://registry.yarnpkg.com/@favware/skip-dependency/-/skip-dependency-1.1.1.tgz"
+
 react-input-material@*:
   version "0.0.477"
   resolved "https://registry.yarnpkg.com/react-input-material/-/react-input-material-0.0.477.tgz#310ecc2d07f31f35c2e35ff7fe7dac993ca93b71"
