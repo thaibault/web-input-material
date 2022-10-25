@@ -3954,9 +3954,9 @@ cli-table3@^0.5.0:
     colors "^1.1.2"
 
 clientnode@*:
-  version "3.0.980"
-  resolved "https://registry.yarnpkg.com/clientnode/-/clientnode-3.0.980.tgz#099f2f5b112f3121e0ed016e4a82e82ace94f685"
-  integrity sha512-Hvw+wMu9LPK2107KtQ9J2IvnXFBXK0/IzBHTRUY5v7Xp+phzaCBzTBhYTQEySfB603pv9yY790iBataq9mheKQ==
+  version "3.0.981"
+  resolved "https://registry.yarnpkg.com/clientnode/-/clientnode-3.0.981.tgz#6555fcdd3a8b62b2ca564190d4a7cfc4b32f0dcb"
+  integrity sha512-zGXnFnWq7618t70SHsFf/sCF7qKEB9GypdnDZcQIUpnn3GgVZq0j3jfSa2mTi6akgw+tVyYm4iF9mkuR4hkQNQ==
 
 cliui@^4.0.0:
   version "4.1.0"
@@ -4355,9 +4355,9 @@ doctrine@^3.0.0:
     esutils "^2.0.2"
 
 documentation-website@*:
-  version "1.0.279"
-  resolved "https://registry.yarnpkg.com/documentation-website/-/documentation-website-1.0.279.tgz#6964083e76a4bb3b19c520b58adca22b8d9a9a1a"
-  integrity sha512-aziR/3bPrYwO+byZfEQ+rfDNGdv5scry3y2O77uTtEH4Dh0MjO1ZgYmaZe/vj80I7S/3fFQySec+bDjOzGhWHw==
+  version "1.0.282"
+  resolved "https://registry.yarnpkg.com/documentation-website/-/documentation-website-1.0.282.tgz#5305208e53898c28c23301d23fa613716d0af067"
+  integrity sha512-OvUJ7uvI6qJo4QFfM/DslvvrMoI0FwMMBYfP+cFyv8Apxi54C3DGqK15NzIpj8/c7ky142LMC5v/yV+kZiTh6g==
   dependencies:
     "@types/webpack" "https://registry.yarnpkg.com/@favware/skip-dependency/-/skip-dependency-1.1.1.tgz"
 
@@ -4546,9 +4546,9 @@ eslint-config-google@*:
   integrity sha512-WsbX4WbjuMvTdeVL6+J3rK1RGhCTqjsFjX7UMSMgZiyxxaNLkoJENbrGExzERFeoTpGw3F3FypTiWAP9ZXzkEw==
 
 eslint-plugin-jsdoc@*:
-  version "39.3.21"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-jsdoc/-/eslint-plugin-jsdoc-39.3.21.tgz#3dc9ccbee175d8ab29be209baae5c27e718069e3"
-  integrity sha512-y10zOn+lxYPZCy3WyQeD1bp25Wtz40VcZ3tSlLJs4iWM8r9l1qh6cAe9OjXD25CxMLnfbqLst3UoEvI5o7E5nA==
+  version "39.3.22"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-jsdoc/-/eslint-plugin-jsdoc-39.3.22.tgz#500d7ea4f5c924299921cc743726954eb96bc86b"
+  integrity sha512-3LqaKwhVybHVFV/l1krF1NNKUALX/y4yD8lw2oInb1jIE2Dx6Bk0Z7YPi1V6eGMnYV4+SOA9qCHsjP9JjiinNQ==
   dependencies:
     "@es-joy/jsdoccomment" "~0.33.0"
     comment-parser "1.3.1"
@@ -7020,16 +7020,16 @@ react-dom@*:
     scheduler "^0.23.0"
 
 react-generic-dummy@*:
-  version "0.0.8"
-  resolved "https://registry.yarnpkg.com/react-generic-dummy/-/react-generic-dummy-0.0.8.tgz#af2f94f51718263337226bb7aa6d97b278d68622"
-  integrity sha512-CpVbLE3zZXksqhMB46AlL/6Cm8arJJ/DM6bUrQYKq/c5TosTvyYNVtzh0N9Y7fCwdSOOfcSZnpgXab2F0rm7rA==
+  version "0.0.10"
+  resolved "https://registry.yarnpkg.com/react-generic-dummy/-/react-generic-dummy-0.0.10.tgz#3e39e41aeba19409a22c6d59d7a4245fce565a08"
+  integrity sha512-7s9rPg44YgMxmH10s74XYJt9gKjw08XdjPr5DfiQc0pH7hOiKJx12IKawuQ9mTkRobzFpuws9duVDS1hrFA/Dw==
   dependencies:
     "@types/webpack" "https://registry.yarnpkg.com/@favware/skip-dependency/-/skip-dependency-1.1.1.tgz"
 
 react-input-material@*:
-  version "0.0.477"
-  resolved "https://registry.yarnpkg.com/react-input-material/-/react-input-material-0.0.477.tgz#310ecc2d07f31f35c2e35ff7fe7dac993ca93b71"
-  integrity sha512-ZCxjGOhYoRyKTb6BsTpqgj0H/6mgcTK04M/25fs3/kONOk9qOv75iYXO3ICprDJqKLjvlE/8yeQjy7z6FHW7Mw==
+  version "0.0.480"
+  resolved "https://registry.yarnpkg.com/react-input-material/-/react-input-material-0.0.480.tgz#53931d9a46c88342899f36b57c1cc7830e7c0fbe"
+  integrity sha512-KoKup5fFyGE01BQ5yq4+7rGb8KgiAYaFGHkmoQJ8VquFt44d5c6grWHQMpHovHYY9PnNoLVZwsVrQKfgE1W4/A==
   dependencies:
     "@types/webpack" "https://registry.yarnpkg.com/@favware/skip-dependency/-/skip-dependency-1.1.1.tgz"
 
@@ -7941,9 +7941,9 @@ uc.micro@^1.0.1, uc.micro@^1.0.5:
   integrity sha512-8Y75pvTYkLJW2hWQHXxoqRgV7qb9B+9vFEtidML+7koHUFapnVJAZ6cKs+Qjz5Aw3aZWHMC6u0wJE3At+nSGwA==
 
 uglify-js@^3.5.1:
-  version "3.17.3"
-  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.17.3.tgz#f0feedf019c4510f164099e8d7e72ff2d7304377"
-  integrity sha512-JmMFDME3iufZnBpyKL+uS78LRiC+mK55zWfM5f/pWBJfpOttXAqYfdDGRukYhJuyRinvPVAtUhvy7rlDybNtFg==
+  version "3.17.4"
+  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.17.4.tgz#61678cf5fa3f5b7eb789bb345df29afb8257c22c"
+  integrity sha512-T9q82TJI9e/C1TAxYvfb16xO120tMVFZrGA3f9/P4424DNu6ypK103y0GPFVa17yotwSyZW5iYXgjYHkGrJW/g==
 
 underscore@~1.13.2:
   version "1.13.6"
@@ -8075,9 +8075,9 @@ wbuf@^1.1.0, wbuf@^1.7.3:
     minimalistic-assert "^1.0.0"
 
 web-component-wrapper@*:
-  version "0.0.414"
-  resolved "https://registry.yarnpkg.com/web-component-wrapper/-/web-component-wrapper-0.0.414.tgz#c0345461723b995090f11afc1fa89d95d90e4966"
-  integrity sha512-SF8kYPulLju3Basov0lqH/r01FkGyX1CZh9qn8x9cL9d9KV/BNgX6HTO3cnAMBr04lO/U2WkzcUyA+9yk04Gdw==
+  version "0.0.415"
+  resolved "https://registry.yarnpkg.com/web-component-wrapper/-/web-component-wrapper-0.0.415.tgz#b5b44f103ec889f18983c2d7a5ddeb5091cada00"
+  integrity sha512-L8i6FeVPH3CiUSqlEVugD15FN34uzdASArW4XH/hLb1VmcF0bUT0k0F9ZbrPZeWf629ZBEeQzVeNreazRrPjUQ==
   dependencies:
     "@types/webpack" "https://registry.yarnpkg.com/@favware/skip-dependency/-/skip-dependency-1.1.1.tgz"
 
@@ -8087,9 +8087,9 @@ webidl-conversions@^7.0.0:
   integrity sha512-VwddBukDzu71offAQR975unBIGqfKZpM+8ZX6ySk8nYhVoo5CYaZyzt3YBvYtRtO+aoGlqxPg/B87NGVZ/fu6g==
 
 weboptimizer@*:
-  version "2.0.1246"
-  resolved "https://registry.yarnpkg.com/weboptimizer/-/weboptimizer-2.0.1246.tgz#010ed209d33d46022b7e6b547f943f7edd463a7c"
-  integrity sha512-hVDGwQ7h5UmZOzwsWyt9sxKJGUqGN1sDLZL/u8oIHZAynMh4kI2VMTiDcgv+TMOZujsb2eXeMKocnFNGj4BMZw==
+  version "2.0.1247"
+  resolved "https://registry.yarnpkg.com/weboptimizer/-/weboptimizer-2.0.1247.tgz#a6993b766fbc13655364abf9e016ba8b739d9971"
+  integrity sha512-0Yz03qwoORsUsusQsc4895rO74nAtBx94zWNkr3K+GC0t7YpymV4f3/l0rHZnVCRy1XfrY/pL8zuJM0ftY5tFQ==
   dependencies:
     "@babel/core" "*"
     "@babel/plugin-proposal-decorators" "*"
