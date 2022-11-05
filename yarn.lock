@@ -7029,9 +7029,9 @@ react-generic-dummy@*:
     "@types/webpack" "https://registry.yarnpkg.com/@favware/skip-dependency/-/skip-dependency-1.1.1.tgz"
 
 react-input-material@*:
-  version "0.0.483"
-  resolved "https://registry.yarnpkg.com/react-input-material/-/react-input-material-0.0.483.tgz#8952b46f44948b03aa45b8689dbc3fea6f275f3c"
-  integrity sha512-eUhFvFtIlR/eJkXoNz8d6mJQVj4diILilvUWZdImGju3mw+sQEDnkm9LiI4d5+gzAW+HSVKzrt+XyAIq2T+TAA==
+  version "0.0.484"
+  resolved "https://registry.yarnpkg.com/react-input-material/-/react-input-material-0.0.484.tgz#8ae3b27d7577cb3a51b82e49a6d138ae82b4f3fc"
+  integrity sha512-afiGF4ew2iUCeq6P00HRaSk6CeYf3uUjQbfhGtIwTZMuVN7qY6DMOnKdgZRsF4cC+zZw+plqy/4u8oyedmSuqQ==
   dependencies:
     "@types/webpack" "https://registry.yarnpkg.com/@favware/skip-dependency/-/skip-dependency-1.1.1.tgz"
 
