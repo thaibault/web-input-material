@@ -35,11 +35,11 @@
     "url": "https://github.com/thaibault/web-input-material"
   },
   "scripts": {
-    "build": "yarn build:types; yarn build:plain; yarn build:bundle:minimal-input; yarn build:bundle:plain",
-    "build:bundle": "yarn build:types; yarn build:bundle:plain",
-    "build:bundle:plain": "weboptimizer build '{__reference__: \"target:bundle\"}'",
-    "build:bundle:minimal-input": "weboptimizer build '{__reference__: [\"target:bundle\", \"target:minimal\", \"target:minimal:input\"]}'",
-    "build:bundle:minimal-input:stats": "weboptimizer build --json /tmp/stat.json '{__reference__: [\"target:bundle\", \"target:minimal\", \"target:minimal:input\"]}' && echo 'Results successfully written to \"/tmp/stat.json\".'",
+    "build": "yarn build:types; yarn build:plain; yarn build:bundle:plain",
+    "build:bundle": "yarn build:types; yarn build:bundle:input; yarn build:bundle:plain",
+    "build:bundle:plain": "weboptimizer build '{__reference__: [\"target:bundle\", \"target:minimal\"]}'",
+    "build:bundle:input": "weboptimizer build '{__reference__: [\"target:bundle\", \"target:minimal\", \"target:input\"]}'",
+    "build:bundle:input:stats": "weboptimizer build --json /tmp/stat.json '{__reference__: [\"target:bundle\", \"target:minimal\", \"target:input\"]}' && echo 'Results successfully written to \"/tmp/stat.json\".'",
     "build:bundle:stats": "weboptimizer build --json /tmp/stat.json '{__reference__: \"target:bundle\"}' && echo 'Results successfully written to \"/tmp/stat.json\".'",
     "build:plain": "weboptimizer build",
     "build:types": "weboptimizer build:types",
@@ -245,11 +245,11 @@
         }
       }
     },
-    "target:minimal:input": {
+    "target:input": {
       "files": {
         "compose": {
           "javaScript": {
-            "__evaluate__": "`${path.resolve(self.path.target.asset.javaScript, '[name].minimal.input-bundle')}.js`"
+            "__evaluate__": "`${path.resolve(self.path.target.asset.javaScript, '[name].input-bundle')}.js`"
           }
         }
       },
