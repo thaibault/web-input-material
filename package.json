@@ -65,7 +65,6 @@
   },
   "runkitExample": "require('@babel/runtime/package.json')\n\nglobalThis.window = globalThis\n\nconst {GenericInput} = require('web-input-material')\n\nGenericInput.component._name",
   "dependencies": {
-    "@types/webpack": "https://registry.yarnpkg.com/@favware/skip-dependency/-/skip-dependency-1.1.1.tgz",
     "prop-types": "*",
     "react": "*",
     "react-dom": "*",
@@ -135,7 +134,6 @@
     "npm": ">=8"
   },
   "resolutions": {
-    "@types/webpack": "https://registry.yarnpkg.com/@favware/skip-dependency/-/skip-dependency-1.1.1.tgz",
     "colors": "1.4.0"
   },
   "sideEffects": false,
