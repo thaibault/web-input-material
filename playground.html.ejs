@@ -240,6 +240,7 @@
                         blob: {type: 'image/png'},
                         url: 'https://via.placeholder.com/150'
                     }"
+                    encoding="latin1"
                     name="UnControlled"
                     -generate-file-name-input-properties="function(prototype, properties) {
                         var fileName = properties.value.name || ''
@@ -264,6 +265,10 @@
                         'margin-left: 10px' +
                          (options.value && options.value.blob ? '' : ' display: none')
                     ">
+                        <span>
+                            Expected encoding for text based files: latin1
+                        </span>
+
                         <span bind-attribute-style="
                             options.value && options.value.blob &&
                             options.value.blob.lastModified ?
