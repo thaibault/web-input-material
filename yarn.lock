@@ -7024,14 +7024,14 @@ react-dom@*:
     scheduler "^0.23.0"
 
 react-generic-dummy@*:
-  version "0.0.13"
-  resolved "https://registry.yarnpkg.com/react-generic-dummy/-/react-generic-dummy-0.0.13.tgz#72a4c3e78a5c90bc6426749d1653f60abcd1a61c"
-  integrity sha512-RABjGh1ulg24qhGJZ/4jdmx6hmBnXPhptq8XG3ojAYT5OeDsmZibfDDYRbtwuFDYpvNiIW7swnCg5auGJ48yRg==
+  version "0.0.14"
+  resolved "https://registry.yarnpkg.com/react-generic-dummy/-/react-generic-dummy-0.0.14.tgz#3e31b9959e354cf0fc487a43b451b3c470204beb"
+  integrity sha512-61tvsf6HfA571Uu+orOWZa/lmGYzRYFrRz/YX79krFQOhXX9Om5x1bQQaqJZ+UZvqVuTrbdhWQgbUxX9OYvRaQ==
 
 react-input-material@*:
-  version "0.0.502"
-  resolved "https://registry.yarnpkg.com/react-input-material/-/react-input-material-0.0.502.tgz#e5bb909b6d57df8089e0bdeb25f7e9237cf12794"
-  integrity sha512-ok+OLD4weOAFrPoLB0ipW4b9pFbyI8f93oM6BuwGxacajd3IVYMaL0j/w0IogS0QiS2mh/QpRXE8td3od8JtXw==
+  version "0.0.503"
+  resolved "https://registry.yarnpkg.com/react-input-material/-/react-input-material-0.0.503.tgz#01ac2728bd227cd8440d7dfa9d7304463bbfe68a"
+  integrity sha512-VbuDTYX+qYSTug1SVeGjJ+uzEoGnUl4ueR751sDU3VvUxNCG2n1bkUn+jCTRDMdXnhusM9VeBiFyelUIWEtnuA==
 
 react-is@^16.12.0, react-is@^16.13.1:
   version "16.13.1"
