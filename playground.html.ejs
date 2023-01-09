@@ -519,11 +519,30 @@
 
                 <hr/>
 
+                <GenericInput
+                    declaration="numberSelection"
+                    description="input11Description"
+                    selection="[1, 2, 3]"
+                    name="input11"
+                    required
+                />
+                <GenericInput
+                    model="{
+                        declaration: 'numberSelection',
+                        description: 'input11ModelDescription',
+                        name: 'input11Model',
+                        selection: [1, 2, 3],
+                        type: 'number'
+                    }"
+                />
+
+                <hr/>
+
                 <generic-input
                     declaration="selection"
-                    description="input11Description"
+                    description="input12Description"
                     initial-value="'b'"
-                    name="input11"
+                    name="input12"
                     selection="{a: 'A', b: 'B', c: 'C'}"
                     required
                 ></generic-input>
@@ -531,8 +550,8 @@
                     initial-value="'b'"
                     model="{
                         declaration: 'selection',
-                        description: 'input11ModelDescription',
-                        name: 'input11Model',
+                        description: 'input12ModelDescription',
+                        name: 'input12Model',
                         nullable: false,
                         selection: {a: 'A', b: 'B', c: 'C'}
                     }"
@@ -541,9 +560,9 @@
                 <hr/>
 
                 <generic-input
-                    description="input12Description"
-                    name="input12"
-                    placeholder="input12Placeholder"
+                    description="input13Description"
+                    name="input13"
+                    placeholder="input13Placeholder"
                     suggest-selection
                     selection="['hans hans', 'peter peter', 'klaus']"
                 ></generic-input>
@@ -551,11 +570,11 @@
                     initial-value="'peter'"
                     model="{
                         declaration: 'selection',
-                        description: 'input12ModelDescription',
-                        name: 'input12Model',
+                        description: 'input13ModelDescription',
+                        name: 'input13Model',
                         nullable: false
                     }"
-                    placeholder="input12ModelPlaceholder"
+                    placeholder="input13ModelPlaceholder"
                     search-selection
                     -suggestion-creator="Tools.debounce(function(search) {
                         if (!search.query || search.query.length < 3)
@@ -580,10 +599,10 @@
                 <hr/>
 
                 <generic-input
-                    description="input13Description"
+                    description="input14Description"
                     default="'a'"
-                    name="input13"
-                    placeholder="input13Placeholder"
+                    name="input14"
+                    placeholder="input14Placeholder"
                     search-selection
                     selection="{a: 'hans', b: 'hans', c: 'klaus'}"
                 ></generic-input>
@@ -591,11 +610,11 @@
                     initial-value="'peter'"
                     model="{
                         declaration: 'selection',
-                        description: 'input13ModelDescription',
-                        name: 'input13Model',
+                        description: 'input14ModelDescription',
+                        name: 'input14Model',
                         nullable: false
                     }"
-                    placeholder="input13ModelPlaceholder"
+                    placeholder="input14ModelPlaceholder"
                     suggestion-creator="new Promise(function(resolve) {
                         Tools.timeout(500, function() {
                             var selection = {
@@ -621,9 +640,9 @@
 
                 <generic-input
                     declaration="text"
-                    description="input14Description"
+                    description="input15Description"
                     initial-value="'a'"
-                    name="input14"
+                    name="input15"
                     required
                     rows="3"
                     theme-configuration="{primary: 'yellow', secondary: 'blue'}"
@@ -633,36 +652,11 @@
                     initial-value="'a'"
                     model="{
                         declaration: 'text',
-                        description: 'input14ModelDescription',
-                        name: 'input14Model',
-                        nullable: false
-                    }"
-                    rows="2"
-                ></generic-input>
-
-                <hr/>
-
-                <generic-input
-                    declaration="code"
-                    description="input15Description"
-                    disabled
-                    editor="code"
-                    initial-value="'const value = 2'"
-                    name="input15"
-                    rows="2"
-                    selectable-editor
-                ></generic-input>
-                <generic-input
-                    editor="code"
-                    initial-value="'const value = 2'"
-                    model="{
-                        declaration: 'code',
                         description: 'input15ModelDescription',
                         name: 'input15Model',
                         nullable: false
                     }"
-                    rows="6"
-                    selectable-editor
+                    rows="2"
                 ></generic-input>
 
                 <hr/>
@@ -670,15 +664,16 @@
                 <generic-input
                     declaration="code"
                     description="input16Description"
+                    disabled
                     editor="code"
-                    maximum-length="10"
+                    initial-value="'const value = 2'"
                     name="input16"
-                    required
                     rows="2"
                     selectable-editor
                 ></generic-input>
                 <generic-input
                     editor="code"
+                    initial-value="'const value = 2'"
                     model="{
                         declaration: 'code',
                         description: 'input16ModelDescription',
@@ -692,22 +687,20 @@
                 <hr/>
 
                 <generic-input
-                    declaration="richtext(raw)"
+                    declaration="code"
                     description="input17Description"
-                    editor="richtext(raw)"
-                    initial-value="'Hello Mr. Smith,<br><br>how are you?'"
+                    editor="code"
+                    maximum-length="10"
                     name="input17"
                     required
                     rows="2"
                     selectable-editor
                 ></generic-input>
                 <generic-input
-                    editor="richtext(simple)"
-                    initial-value="'Hello Mr. Smith,<br><br>how are you?'"
+                    editor="code"
                     model="{
-                        declaration: 'richtext(simple)',
+                        declaration: 'code',
                         description: 'input17ModelDescription',
-                        mutable: false,
                         name: 'input17Model',
                         nullable: false
                     }"
@@ -718,26 +711,27 @@
                 <hr/>
 
                 <generic-input
-                    declaration="Number"
+                    declaration="richtext(raw)"
                     description="input18Description"
-                    maximum="200000"
-                    minimum="10"
+                    editor="richtext(raw)"
+                    initial-value="'Hello Mr. Smith,<br><br>how are you?'"
                     name="input18"
-                    placeholder="100000"
                     required
-                    type="number"
+                    rows="2"
+                    selectable-editor
                 ></generic-input>
                 <generic-input
-                    initial-value="100000"
+                    editor="richtext(simple)"
+                    initial-value="'Hello Mr. Smith,<br><br>how are you?'"
                     model="{
-                        declaration: 'Number',
+                        declaration: 'richtext(simple)',
                         description: 'input18ModelDescription',
-                        maximum: 200000,
-                        minimum: 10,
                         mutable: false,
                         name: 'input18Model',
                         nullable: false
                     }"
+                    rows="6"
+                    selectable-editor
                 ></generic-input>
 
                 <hr/>
@@ -747,8 +741,33 @@
                     description="input19Description"
                     maximum="200000"
                     minimum="10"
-                    minimumText="Please at least ${formatValue(minimum)}."
                     name="input19"
+                    placeholder="100000"
+                    required
+                    type="number"
+                ></generic-input>
+                <generic-input
+                    initial-value="100000"
+                    model="{
+                        declaration: 'Number',
+                        description: 'input19ModelDescription',
+                        maximum: 200000,
+                        minimum: 10,
+                        mutable: false,
+                        name: 'input19Model',
+                        nullable: false
+                    }"
+                ></generic-input>
+
+                <hr/>
+
+                <generic-input
+                    declaration="Number"
+                    description="input20Description"
+                    maximum="200000"
+                    minimum="10"
+                    minimumText="Please at least ${formatValue(minimum)}."
+                    name="input20"
                     placeholder="100.000"
                     required
                     type="integer"
@@ -757,9 +776,9 @@
                     initial-value="100000.01"
                     model="{
                         declaration: 'Number',
-                        description: 'input19ModelDescription',
+                        description: 'input20ModelDescription',
                         maximum: 200000,
-                        name: 'input19Model',
+                        name: 'input20Model',
                         nullable: false,
                         type: 'float'
                     }"
@@ -773,10 +792,10 @@
 
                 <generic-input
                     declaration="Number"
-                    description="input20Description"
+                    description="input21Description"
                     maximum="200000"
                     minimum="10"
-                    name="input20"
+                    name="input21"
                     placeholder="100.000"
                     required
                     type="currency"
@@ -785,10 +804,10 @@
                     initial-value="100000.01"
                     model="{
                         declaration: 'Number',
-                        description: 'input20ModelDescription',
+                        description: 'input21ModelDescription',
                         maximum: 200000,
                         minimum: 10,
-                        name: 'input20Model',
+                        name: 'input21Model',
                         nullable: false,
                         type: 'currency'
                     }"
@@ -849,7 +868,7 @@
                     name="inputs4" value="['first item']"
                 ></generic-inputs>
             </div>
-            <!--endregion-->
+            <!--endregion--> 
             <!--region generic-interval-->
             <div class="playground__inputs__generic-interval playground__tab">
                 <generic-interval
