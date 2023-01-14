@@ -234,7 +234,9 @@
             <!--endregion-->
             <!--region file-input-->
             <div class="playground__inputs__file-input playground__tab">
-                <file-input></file-input>
+                <file-input
+                    trigger-initial-properties-consolidation
+                ></file-input>
                 <file-input
                     default="{
                         blob: {type: 'image/png'},
@@ -866,7 +868,9 @@
                     </generic-interval>
                 </generic-inputs>
                 <generic-inputs
-                    name="inputs4" value="['first item']"
+                    name="inputs4"
+                    trigger-initial-properties-consolidation
+                    value="['first item']"
                 ></generic-inputs>
             </div>
             <!--endregion--> 
@@ -877,6 +881,13 @@
                     required
                     start="{default: 120, maximum: 3600}"
                     step="60"
+                ></generic-interval>
+                <generic-interval
+                    end="{default: 240, minimum: 120}"
+                    required
+                    start="{default: 120, maximum: 3600}"
+                    step="60"
+                    trigger-initial-properties-consolidation
                 ></generic-interval>
             </div>
             <!--endregion-->
@@ -894,7 +905,9 @@
             <!--endregion-->
             <!--region requireable-checkbox-->
             <div class="playground__inputs__requireable-checkbox playground__tab">
-                <requireable-checkbox></requireable-checkbox>
+                <requireable-checkbox
+                    trigger-initial-properties-consolidation
+                ></requireable-checkbox>
 
                 <hr/>
 
