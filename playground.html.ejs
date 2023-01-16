@@ -120,7 +120,10 @@
                 const tabs = Tools.arrayMake(document.querySelectorAll(
                     '.playground__tab'
                 ))
+                const tabBar =
+                    document.querySelector('.playground__inputs__tab-bar')
                 const showTab = function(currentIndex) {
+                    tabBar.activeTabIndex = currentIndex
                     tabs.forEach(function(tab) {
                         if (tab === tabs[currentIndex]) {
                             if (tab.getAttribute('class').includes(' hide'))
@@ -137,13 +140,11 @@
                             )
                     })
                 }
-                const tabBar =
-                    document.querySelector('.playground__inputs__tab-bar')
                 tabBar.addEventListener(
                     'activate',
                     function(event) {
                         // NOTE: "event.detail" is sometimes set to "0" in IE11.
-                        if (event.detail)
+                        if (event.detail && event.detail.parameters[0].detail)
                             showTab(event.detail.parameters[0].detail.index)
                     }
                 )
@@ -178,7 +179,10 @@
                 tabBar.addEventListener(
                     'activate',
                     function(event) {
-                        // NOTE: "event.detail" is sometimes set to "0" in IE11.
+                        /*
+                            NOTE: "event.detail" is sometimes set to "0" in
+                            IE11.
+                        */
                         if (!event.detail)
                             return
 
@@ -188,15 +192,20 @@
                         }
 
                         if (
+                            event.detail.parameters[0].detail &&
                             tabs[event.detail.parameters[0].detail.index]
                                 .getAttribute('class')
-                                .includes('playground__inputs__generic-animate')
+                                .includes(
+                                    'playground__inputs__generic-animate'
+                                )
                         )
                             intervalID = setInterval(
                                 function() {
-                                    animationDomNodes.forEach(function(domNode) {
-                                        domNode.in = !domNode.in
-                                    })
+                                    animationDomNodes.forEach(
+                                        function(domNode) {
+                                            domNode.in = !domNode.in
+                                        }
+                                    )
                                 },
                                 2 * 1000
                             )
@@ -211,7 +220,7 @@
     <body class="no-javascript playground">
         <div class="playground__inputs">
             <!--region tabs-->
-            <tab-bar class="playground__inputs__tab-bar">
+            <tab-bar active-tab-index="2" class="playground__inputs__tab-bar">
 
                 <tab-item>circular-spinner</tab-item>
                 <tab-item>file-input</tab-item>
@@ -315,6 +324,7 @@
             <div class="playground__inputs__generic-input playground__tab">
                 <generic-input
                     bind-on-keydown="console.info('Typed key:', event.key)"
+                    input-properties="{outlined: true}"
                     trigger-initial-properties-consolidation
                 ></generic-input>
 
@@ -341,6 +351,7 @@
                 </generic-input>
                 <generic-input
                     initial-value="'1970-01-01T08:00:00.000Z'"
+                    input-properties="{outlined: true}"
                     model="{
                         name: 'input2Model',
                         type: 'time',
