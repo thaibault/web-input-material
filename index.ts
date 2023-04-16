@@ -18,7 +18,7 @@
 */
 // region imports
 import {Mapping} from 'clientnode/type'
-import ReactWeb from 'web-component-wrapper/React'
+import ReactWeb from 'web-component-wrapper/ReactWeb'
 import {WebComponentAPI} from 'web-component-wrapper/type'
 // endregion
 export {CircularSpinner} from './components/CircularSpinner'
