@@ -3989,9 +3989,9 @@ cli-table3@^0.5.0:
     colors "^1.1.2"
 
 clientnode@*:
-  version "3.0.1039"
-  resolved "https://registry.yarnpkg.com/clientnode/-/clientnode-3.0.1039.tgz#aee9b61a78b3b01ede61db40ca21e5de888d1a65"
-  integrity sha512-YevAA1ploQm5apuG9uD+rAvqyL4tnzPkCglIDpZtEpa4V34keVNFz4/W7f2OY48OjKIJNKc3QxAuc7taCsJ5RA==
+  version "3.0.1044"
+  resolved "https://registry.yarnpkg.com/clientnode/-/clientnode-3.0.1044.tgz#a039077e603333802319c05d487b1e907a94aef5"
+  integrity sha512-o9GapSIDmMfk4hs5dI8HvEZInAROpjYys707JaaFE26Y8J/SKmfSn3zMKe0/v8RRV5CK6SX/lW7l0IuGbtqOzA==
 
 cliui@^4.0.0:
   version "4.1.0"
@@ -4602,9 +4602,9 @@ eslint-config-google@*:
   integrity sha512-WsbX4WbjuMvTdeVL6+J3rK1RGhCTqjsFjX7UMSMgZiyxxaNLkoJENbrGExzERFeoTpGw3F3FypTiWAP9ZXzkEw==
 
 eslint-plugin-jsdoc@*:
-  version "43.0.1"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-jsdoc/-/eslint-plugin-jsdoc-43.0.1.tgz#74b185382b062339be135cb408124126de14949f"
-  integrity sha512-0Qs+njHnaVqAmxWDLiH+Zh4qsO5O/x3yfU2Yb9ymfq/d/784S9NCm3MUSSI54gAvrvg66QUI56zM3Nidi7ZRTQ==
+  version "43.0.3"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-jsdoc/-/eslint-plugin-jsdoc-43.0.3.tgz#df9ee9466241aa9a7713148f29aec1a484f13166"
+  integrity sha512-tHlpaUqB8ih2IhQw7Es/R3Z3anQZVfPUb33nUAVOgIcMugVYyD1ZE/KXjjN8HxykZsV1IXqrKZkKpUBrEi3G9Q==
   dependencies:
     "@es-joy/jsdoccomment" "~0.37.0"
     are-docs-informative "^0.0.2"
@@ -4612,7 +4612,7 @@ eslint-plugin-jsdoc@*:
     debug "^4.3.4"
     escape-string-regexp "^4.0.0"
     esquery "^1.5.0"
-    semver "^7.3.8"
+    semver "^7.5.0"
     spdx-expression-parse "^3.0.1"
 
 eslint-scope@5.1.1, eslint-scope@^5.1.1:
@@ -7149,14 +7149,14 @@ react-dom@*:
     scheduler "^0.23.0"
 
 react-generic-dummy@*:
-  version "0.0.31"
-  resolved "https://registry.yarnpkg.com/react-generic-dummy/-/react-generic-dummy-0.0.31.tgz#0f7062f0126e5d0bff98253ebb3c6a72d1f4a08b"
-  integrity sha512-+SEwla1EC8P/93D5NO2YZkp0gM2GzEKchaArdgQH7rNggOB+XKyWS5grJ+U1BjsjHioFlM3iGV/e3KtkpzVKEA==
+  version "0.0.33"
+  resolved "https://registry.yarnpkg.com/react-generic-dummy/-/react-generic-dummy-0.0.33.tgz#c7fec75b3e41388588ac2b190f92bb9f7e138037"
+  integrity sha512-VYthP2hXY75iUdnA9GG8TSR+jpSO4H3fpx+5w4H5mIa+diQritQApbN98QWXp2QfCyEqFOA2PL2BH6xxvHmw2g==
 
 react-input-material@*:
-  version "0.0.527"
-  resolved "https://registry.yarnpkg.com/react-input-material/-/react-input-material-0.0.527.tgz#95144c6ff3e957c6e200455df5c6b8bb7d2c7606"
-  integrity sha512-oNf1+wZrK280WBxKncWoIY1eL0I27q1Vdoe7G7flmp/4/64oGtQ/xnLoTieKxpEojtzXN3kBaDmYN7+37qTcFQ==
+  version "0.0.528"
+  resolved "https://registry.yarnpkg.com/react-input-material/-/react-input-material-0.0.528.tgz#de05c2b0b629a67ca36af111ac358ab475f52021"
+  integrity sha512-DWe+45VM8JgFjfhFrEKNQB+HvexL6zJLPont/DnOZHYAaFWLtFEs2Qop4t9qwuvd55CpmPQMevrbSgypZGZI2w==
 
 react-is@^16.12.0, react-is@^16.13.1:
   version "16.13.1"
@@ -7514,7 +7514,7 @@ semver@^6.0.0, semver@^6.1.1, semver@^6.1.2, semver@^6.3.0:
   resolved "https://registry.yarnpkg.com/semver/-/semver-6.3.0.tgz#ee0a64c8af5e8ceea67687b133761e1becbd1d3d"
   integrity sha512-b39TBaTSfV6yBrapU89p5fKekE2m/NwnDocOVruQFS1/veMgdzuPcnOM34M6CwxW8jH/lxEa5rBoDeUwu5HHTw==
 
-semver@^7.3.5, semver@^7.3.7, semver@^7.3.8:
+semver@^7.3.5, semver@^7.3.7, semver@^7.5.0:
   version "7.5.0"
   resolved "https://registry.yarnpkg.com/semver/-/semver-7.5.0.tgz#ed8c5dc8efb6c629c88b23d41dc9bf40c1d96cd0"
   integrity sha512-+XC0AD/R7Q2mPSRuy2Id0+CGTZ98+8f+KvwirxOKIEyid+XSx6HbC63p+O4IndTHuX5Z+JxQ0TghCkO5Cg/2HA==
@@ -8198,9 +8198,9 @@ wbuf@^1.1.0, wbuf@^1.7.3:
     minimalistic-assert "^1.0.0"
 
 web-component-wrapper@*:
-  version "0.0.446"
-  resolved "https://registry.yarnpkg.com/web-component-wrapper/-/web-component-wrapper-0.0.446.tgz#173d7322b53ec198899492ef432e1ad025b75290"
-  integrity sha512-DM02tKWFG2nwfyvxWdGbzz9YSt8MXjcHrCGAKSk1dzq91tCAQvOl3pfpQhFXZtnUT0yElJtJX0T7bTg/vqGgsw==
+  version "0.0.447"
+  resolved "https://registry.yarnpkg.com/web-component-wrapper/-/web-component-wrapper-0.0.447.tgz#17b563e8c9ee4b492d882f6c0d80c07760fd23cd"
+  integrity sha512-symIFex09eh2CMP0HisPrCKr06/zEOpnWDHvsQAiupe5ls/VSln9zPo1JpV8u7OxIBEDI2sOejKxpcJsJVGmhQ==
 
 webidl-conversions@^7.0.0:
   version "7.0.0"
@@ -8208,9 +8208,9 @@ webidl-conversions@^7.0.0:
   integrity sha512-VwddBukDzu71offAQR975unBIGqfKZpM+8ZX6ySk8nYhVoo5CYaZyzt3YBvYtRtO+aoGlqxPg/B87NGVZ/fu6g==
 
 weboptimizer@*:
-  version "2.0.1315"
-  resolved "https://registry.yarnpkg.com/weboptimizer/-/weboptimizer-2.0.1315.tgz#18f6a24b5ba63c0bf82d917d31a3c447ccd7455d"
-  integrity sha512-6I5Mvhj6vAlA7deN3sJ0D4l/y4ZX9UrZdCkBBtZXDskSWQItGySSuwfFBjoANOWTkTxzyDGUXUgIDoOqRghamQ==
+  version "2.0.1322"
+  resolved "https://registry.yarnpkg.com/weboptimizer/-/weboptimizer-2.0.1322.tgz#6764da637aad87c8ddc5687b90f4a1a98afba007"
+  integrity sha512-HRz0EQVmaEIlh4Bc2pTCvZCHCjmvSiM2VzdKlOOsMA/XBjIySm8e3g3A9XCCmMc3JSEHXe7VzJ38pto4FvC7aw==
   dependencies:
     "@babel/core" "*"
     "@babel/plugin-proposal-decorators" "*"
