@@ -4399,9 +4399,9 @@ dns-equal@^1.0.0:
   integrity sha512-z+paD6YUQsk+AbGCEM4PrOXSss5gd66QfcVBFTKR/HpFL9jCqikS94HYwKww6fQyO7IxrIIyUu+g0Ka9tUS2Cg==
 
 dns-packet@^5.2.2:
-  version "5.5.0"
-  resolved "https://registry.yarnpkg.com/dns-packet/-/dns-packet-5.5.0.tgz#f59cbf3396c130957c56a6ad5fd3959ccdc30065"
-  integrity sha512-USawdAUzRkV6xrqTjiAEp6M9YagZEzWcSUaZTcIFAiyQWW1SoI6KyId8y2+/71wbgHKQAKd+iupLv4YvEwYWvA==
+  version "5.6.0"
+  resolved "https://registry.yarnpkg.com/dns-packet/-/dns-packet-5.6.0.tgz#2202c947845c7a63c23ece58f2f70ff6ab4c2f7d"
+  integrity sha512-rza3UH1LwdHh9qyPXp8lkwpjSNk/AMD3dPytUoRoqnypDUhY0xvbdmVhWOfxO68frEfV9BU8V12Ez7ZsHGZpCQ==
   dependencies:
     "@leichtgewicht/ip-codec" "^2.0.1"
 
@@ -4602,9 +4602,9 @@ eslint-config-google@*:
   integrity sha512-WsbX4WbjuMvTdeVL6+J3rK1RGhCTqjsFjX7UMSMgZiyxxaNLkoJENbrGExzERFeoTpGw3F3FypTiWAP9ZXzkEw==
 
 eslint-plugin-jsdoc@*:
-  version "43.0.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-jsdoc/-/eslint-plugin-jsdoc-43.0.0.tgz#279f2d45d5ff0d32a852f8f56aac3804fe906246"
-  integrity sha512-Z1Ox1MAGcFV7ZNKe5eYIk4ALUtCjo1r4HBMoAYUs+bBKPcHro5A/YDDHOTsQ7zxcuUnm5R9rXCZTvGWcihwZpg==
+  version "43.0.1"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-jsdoc/-/eslint-plugin-jsdoc-43.0.1.tgz#74b185382b062339be135cb408124126de14949f"
+  integrity sha512-0Qs+njHnaVqAmxWDLiH+Zh4qsO5O/x3yfU2Yb9ymfq/d/784S9NCm3MUSSI54gAvrvg66QUI56zM3Nidi7ZRTQ==
   dependencies:
     "@es-joy/jsdoccomment" "~0.37.0"
     are-docs-informative "^0.0.2"
@@ -7154,9 +7154,9 @@ react-generic-dummy@*:
   integrity sha512-+SEwla1EC8P/93D5NO2YZkp0gM2GzEKchaArdgQH7rNggOB+XKyWS5grJ+U1BjsjHioFlM3iGV/e3KtkpzVKEA==
 
 react-input-material@*:
-  version "0.0.526"
-  resolved "https://registry.yarnpkg.com/react-input-material/-/react-input-material-0.0.526.tgz#2645b7aaa24cbb95a662aa69cf8085d52beca5fc"
-  integrity sha512-ICLnorEYFRWVXE/yW52zr/1eAMbQvqpwtKIqMDYdpK4w7brjNxoBmA4XAgIYGy3YcPTr9LsmKNHSMXtM8AYHQg==
+  version "0.0.527"
+  resolved "https://registry.yarnpkg.com/react-input-material/-/react-input-material-0.0.527.tgz#95144c6ff3e957c6e200455df5c6b8bb7d2c7606"
+  integrity sha512-oNf1+wZrK280WBxKncWoIY1eL0I27q1Vdoe7G7flmp/4/64oGtQ/xnLoTieKxpEojtzXN3kBaDmYN7+37qTcFQ==
 
 react-is@^16.12.0, react-is@^16.13.1:
   version "16.13.1"
@@ -7917,9 +7917,9 @@ terser-webpack-plugin@^5.3.7:
     terser "^5.16.5"
 
 terser@^5.10.0, terser@^5.15.1, terser@^5.16.5:
-  version "5.16.9"
-  resolved "https://registry.yarnpkg.com/terser/-/terser-5.16.9.tgz#7a28cb178e330c484369886f2afd623d9847495f"
-  integrity sha512-HPa/FdTB9XGI2H1/keLFZHxl6WNvAI4YalHGtDQTlMnJcoqSab1UwL4l1hGEhs6/GmLHBZIg/YgB++jcbzoOEg==
+  version "5.17.0"
+  resolved "https://registry.yarnpkg.com/terser/-/terser-5.17.0.tgz#2b1bc90b5917e09ecffbcd2ff911f6922a4f5743"
+  integrity sha512-3die3+pYW4mta4xF6K8Wtf7id8+oYyfqtAhjwzqY01+CfDSDMx/VA1Sp8sXWs5AVNIoAKoUfmp/gnPqRjBxuDA==
   dependencies:
     "@jridgewell/source-map" "^0.3.2"
     acorn "^8.5.0"
