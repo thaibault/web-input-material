@@ -29,7 +29,6 @@ export type {
     DefaultBaseProperties,
     DefaultProperties,
 
-    GenericEvent,
 
     Model,
     ModelState,
@@ -42,6 +41,7 @@ export type {
     StaticFunctionComponent,
     StaticWebComponent
 } from 'react-input-material/dist/type'
+export type {GenericEvent} from 'react-generic-tools/type'
 // region vim modline
 // vim: set tabstop=4 shiftwidth=4 expandtab:
 // vim: foldmethod=marker foldmarker=region,endregion:
