@@ -7180,10 +7180,20 @@ react-dom@*:
     loose-envify "^1.1.0"
     scheduler "^0.23.0"
 
+react-generic-animate@*:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/react-generic-animate/-/react-generic-animate-0.0.4.tgz#8a6cf35f4b96771e8a1fc3e4a074b32fceee0d1e"
+  integrity sha512-B1MlenxW0teT/dfycPI6JOXAu7BR6DhSH2sTx53AwrwyitoCAzDAaln98mMD9w8dSWS93fXNIVoSWOjCFxiP6A==
+
 react-generic-dummy@*:
   version "0.0.35"
   resolved "https://registry.yarnpkg.com/react-generic-dummy/-/react-generic-dummy-0.0.35.tgz#5f3ce391ba77defc5753d953b36f61ba9538b2ff"
   integrity sha512-z2WPSfR2evSqKb15OaJXUrbuvVZQLp86Nxa2QbXPDMjpx/svtW5TKsqf6zz2oBwdpshZsFOrtuC5a/LAUBpzAA==
+
+react-generic-tools@*:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/react-generic-tools/-/react-generic-tools-0.0.4.tgz#d94873233ef1dd0c9048741474d1080d442dc6a5"
+  integrity sha512-HbRX78ywaoZFKx4ACDAWNMIgRN5YXV5EqoAKzJm5itwCve6+ikRjl49SQnsyZELczDY08644yjrnUyy4bYg+JA==
 
 react-input-material@*:
   version "0.0.531"
