@@ -7279,9 +7279,9 @@ react-generic-tools@*:
   integrity sha512-0ykYYlIln+SlDzbcKE2+56CrOyx91Zt2lTHlQ6oUyk4CJBXGVar+NHfGR7mbClYZGIjKeYxsyorSvRDdMwS/xw==
 
 react-input-material@*:
-  version "0.0.550"
-  resolved "https://registry.yarnpkg.com/react-input-material/-/react-input-material-0.0.550.tgz#d7cdeaa9216341fc565b64a5f336521f6aa065a0"
-  integrity sha512-z/MpLZu6PTKCxmtfvGuR6ezHqbeUzsQw1DHiUzQpU/owyPLruW1R1GAD3Ofot9vCAm7pwu1x6+Apo241a2o84Q==
+  version "0.0.551"
+  resolved "https://registry.yarnpkg.com/react-input-material/-/react-input-material-0.0.551.tgz#e421cafe1730f100e73a90fd22d602e1867d2c53"
+  integrity sha512-p9iB4bG6v1yanL3iuLbeK//r7zpscB7Cwx6Bc8GBYh0WK3Jg0PdwQ5fJGW1gGgRs56LjiDhaUJdJpzXMPf81DQ==
 
 react-is@^16.12.0, react-is@^16.13.1:
   version "16.13.1"
