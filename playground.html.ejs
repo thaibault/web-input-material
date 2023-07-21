@@ -21,6 +21,7 @@
         <meta http-equiv="pragma" content="no-cache">
         <title>playground</title>
         <!--region style-->
+        <link rel="stylesheet" href="/react-generic-animate/index.compiled.css">
         <link rel="stylesheet" href="/react-input-material/dist/index.css">
         <link rel="stylesheet" href="/@material/slider/dist/mdc.slider.css">
         <link rel="stylesheet" href="/@rmwc/icon/icon.css">
@@ -32,9 +33,27 @@
         <link rel="stylesheet" href="/@material/ripple/dist/mdc.ripple.css">
         <!--endregion-->
         <style>
-            file-input, generic-input {
-                display: block;
-                margin-bottom: 20px;
+            .tab-bar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: 1;
+
+                width: 100%;
+
+                background-color: white;
+                box-shadow: 0 8px 11px -2px rgba(0, 0, 0, .2);
+            }
+
+            .mdc-tab-bar {
+                display: flex;
+            }
+
+            .playground {
+                display: flex;
+                flex-direction: row;
+                gap: 20px;
+                margin-top: 70px;
             }
 
             .playground__tab.hide {
@@ -42,8 +61,7 @@
             }
 
             .playground__inputs {
-                float: left;
-                width: 50%;
+                flex-grow: 1;
             }
 
             .playground__inputs__generic-animate .generic-animate-appear-active,
@@ -52,13 +70,20 @@
                 transition: opacity 2000ms ease-in !important;
             }
 
-            .playground__outputs {
-                height: -webkit-fill-available;
-                width: 50%;
+            .playground__outputs__bar {
+                visibility: hidden;
+            }
+
+            .playground__outputs__content {
                 overflow: auto;
                 position: fixed;
-                right: 0;
-                top: 0;
+                top: 70px;
+                z-index: 1;
+            }
+
+            file-input, generic-input {
+                display: block;
+                margin-bottom: 20px;
             }
 
             <%-
@@ -158,12 +183,15 @@
                                 function(event) {
                                     if (event.target === domNode)
                                         Tools.timeout(function() {
-                                            document.querySelector('pre')
-                                                .innerHTML = Tools.represent(
-                                                    event.detail.parameters[0]
-                                                        .model ||
-                                                    event.detail.parameters[0]
-                                                )
+                                            const content = Tools.represent(
+                                                event.detail.parameters[0]
+                                                    .model ||
+                                                event.detail.parameters[0]
+                                            )
+                                            for (const node of
+                                                document.querySelectorAll('pre')
+                                            )
+                                                node.innerHTML = content
                                         })
                                 }
                             )
@@ -216,8 +244,8 @@
         <!--endregion-->
     </head>
     <!--endregion-->
-    <body class="no-javascript playground">
-        <div class="playground__inputs">
+    <body class="no-javascript">
+        <div class="tab-bar">
             <!--region navigation-->
             <tab-bar active-tab-index="2" class="playground__inputs__tab-bar">
 
@@ -232,770 +260,780 @@
 
             </tab-bar>
             <!--endregion-->
-            <!--region circular-spinner-->
-            <div class="playground__inputs__circular-spinner playground__tab">
-                <circular-spinner></circular-spinner>
-                <circular-spinner size="'xlarge'" theme="error">
-                </circular-spinner>
-                <circular-spinner size="80"></circular-spinner>
-            </div>
-            <!--endregion-->
-            <!--region file-input-->
-            <div class="playground__inputs__file-input playground__tab">
-                <file-input
-                    trigger-initial-properties-consolidation
-                ></file-input>
-                <file-input
-                    default="{
-                        blob: {type: 'image/png'},
-                        url: 'https://via.placeholder.com/150'
-                    }"
-                    encoding="latin1"
-                    name="UnControlled"
-                    -generate-file-name-input-properties="function(prototype, properties) {
-                        var fileName = properties.value.name || ''
+        </div>
+        <div class="playground">
+            <div class="playground__inputs">
+                <!--region circular-spinner-->
+                <div class="playground__inputs__circular-spinner playground__tab">
+                    <circular-spinner></circular-spinner>
+                    <circular-spinner size="'xlarge'" theme="error">
+                    </circular-spinner>
+                    <circular-spinner size="80"></circular-spinner>
+                </div>
+                <!--endregion-->
+                <!--region file-input-->
+                <div class="playground__inputs__file-input playground__tab">
+                    <file-input
+                        trigger-initial-properties-consolidation
+                    ></file-input>
+                    <file-input
+                        default="{
+                            blob: {type: 'image/png'},
+                            url: 'https://via.placeholder.com/150'
+                        }"
+                        encoding="latin1"
+                        name="UnControlled"
+                        -generate-file-name-input-properties="function(prototype, properties) {
+                            var fileName = properties.value.name || ''
 
-                        return Tools.extend(
-                            prototype,
-                            {
-                                disabled: true,
-                                value:
-                                    properties.name +
-                                    (fileName.includes('.') ?
-                                        fileName.substring(
-                                            fileName.lastIndexOf('.')
-                                        ) :
-                                        ''
-                                    )
-                            }
-                        )
-                    }"
-                >
-                    <div bind-attribute-style="
-                        'margin-left: 10px' +
-                         (options.value && options.value.blob ? '' : ' display: none')
-                    ">
-                        <span>
-                            Expected encoding for text based files: latin1
-                        </span>
-
-                        <span bind-attribute-style="
-                            options.value && options.value.blob &&
-                            options.value.blob.lastModified ?
-                                '' :
-                                'display: none'
+                            return Tools.extend(
+                                prototype,
+                                {
+                                    disabled: true,
+                                    value:
+                                        properties.name +
+                                        (fileName.includes('.') ?
+                                            fileName.substring(
+                                                fileName.lastIndexOf('.')
+                                            ) :
+                                            ''
+                                        )
+                                }
+                            )
+                        }"
+                    >
+                        <div bind-attribute-style="
+                            'margin-left: 10px' +
+                             (options.value && options.value.blob ? '' : ' display: none')
                         ">
-                            <span bind-property-text-content="
+                            <span>
+                                Expected encoding for text based files: latin1
+                            </span>
+
+                            <span bind-attribute-style="
                                 options.value && options.value.blob &&
                                 options.value.blob.lastModified ?
-                                    (
-                                        'Last modified date time: ' +
-                                        Tools.dateTimeFormat(
-                                            '${mediumDay}.${mediumMonth}.${fullYear}',
-                                            new Date(options.value.blob.lastModified)
-                                        )
-                                    ) :
+                                    '' :
+                                    'display: none'
+                            ">
+                                <span bind-property-text-content="
+                                    options.value && options.value.blob &&
+                                    options.value.blob.lastModified ?
+                                        (
+                                            'Last modified date time: ' +
+                                            Tools.dateTimeFormat(
+                                                '${mediumDay}.${mediumMonth}.${fullYear}',
+                                                new Date(options.value.blob.lastModified)
+                                            )
+                                        ) :
+                                        ''
+                                "></span>
+                                <br />
+                            </span>
+
+                            <span bind-property-text-content="
+                                options.value &&
+                                options.value.blob && options.value.blob.type ?
+                                    ('Mime-Typ: ' + options.value.blob.type) :
                                     ''
                             "></span>
                             <br />
-                        </span>
 
-                        <span bind-property-text-content="
-                            options.value &&
-                            options.value.blob && options.value.blob.type ?
-                                ('Mime-Typ: ' + options.value.blob.type) :
-                                ''
-                        "></span>
-                        <br />
-
-                        <span bind-property-text-content="
-                            options.value &&
-                            options.value.blob && options.value.blob.size ?
-                                ('Size: ' + options.value.blob.size) :
-                                ''
-                        "></span>
-                        <br />
-                    </div>
-                </file-input>
-            </div>
-            <!--endregion-->
-            <!--region generic-input-->
-            <div class="playground__inputs__generic-input playground__tab">
-                <generic-input
-                    bind-on-keydown="console.info('Typed key:', event.key)"
-                    input-properties="{outlined: true}"
-                    trigger-initial-properties-consolidation
-                ></generic-input>
-
-                <hr/>
-
-                <generic-input
-                    declaration="This text can be seen initially."
-                    input-props="{
-                        ariaChecked: false,
-                        ariaDescription: 'test'
-                    }"
-                    name="input1"
-                    show-declaration
-                ></generic-input>
-                <generic-input model="{name: 'input1Model'}"></generic-input>
-
-                <hr/>
-
-                <generic-input
-                    default="new Date('2025-01-01T00:00:00.000Z').getTime() / 1000"
-                    name="input2"
-                    type="date"
-                >
-                </generic-input>
-                <generic-input
-                    initial-value="'1970-01-01T08:00:00.000Z'"
-                    input-properties="{outlined: true}"
-                    model="{
-                        name: 'input2Model',
-                        type: 'time',
-                    }"
-                    step="60"
-                ></generic-input>
-
-                <hr/>
-
-                <generic-input
-                    default="120" name="input3" type="datetime-local"
-                ></generic-input>
-                <generic-input
-                    model="{
-                        default: new Date(60 * 1000),
-                        maximum: 3600,
-                        minimum: 60,
-                        name: 'input3Model',
-                        type: 'time-local'
-                    }"
-                ></generic-input>
-
-                <hr/>
-
-                <generic-input
-                    declaration="Disabled"
-                    disabled
-                    initial-value="'value4'"
-                    name="input4"
-                ></generic-input>
-                <generic-input
-                    model="{
-                        declaration: 'Disabled',
-                        default: 'value4Model',
-                        mutable: false,
-                        name: 'input4Model'
-                    }"
-                ></generic-input>
-
-                <hr/>
-
-                <generic-input
-                    declaration="placeholder"
-                    name="input5"
-                    placeholder="input5"
-                    required
-                    show-validation-state="false"
-                    trailing-icon="'clear_preset'"
-                ></generic-input>
-                <generic-input
-                    default="'value5Model'"
-                    icon="'backup'"
-                    initial-value="'value5Model'"
-                    model="{
-                        declaration: 'placeholder',
-                        name: 'input5Model',
-                        nullable: false
-                    }"
-                    placholder="input5Model"
-                    trailing-icon="'clear_preset'"
-                ></generic-input>
-
-                <hr/>
-
-                <generic-input
-                    declaration="pattern"
-                    description="input6Description"
-                    icon="'search'"
-                    initial-value="'only a`s allowed'"
-                    name="input6"
-                    pattern="'^a+$'"
-                    placeholder="input6Placeholder"
-                ></generic-input>
-                <generic-input
-                    initial-value="'has a`s and b`s'"
-                    model="{
-                        declaration: 'pattern',
-                        description: 'input6ModelDescription',
-                        regularExpressionPattern: ['.*a+.*', /.*b+.*/]
-                    }"
-                    name="input6Model"
-                    placeholder="input6ModelPlaceholder"
-                    trailing-icon="'search'"
-                ></generic-input>
-
-                <hr/>
-
-                <generic-input
-                    declaration="password"
-                    description="input7Description"
-                    icon="'search'"
-                    initial-value="'hans'"
-                    name="passwordInput7"
-                    pattern="/a+/"
-                    placeholder="input7Placeholder"
-                    tooltip="'Please type in your password.'"
-                    trailing-icon="'password_preset'"
-                ></generic-input>
-                <generic-input
-                    initial-value="'hans'"
-                    model="{
-                        declaration: 'password',
-                        description: 'input7ModelDescription',
-                        regularExpressionPattern: 'a+'
-                    }"
-                    name="passwordInput7Model"
-                    placeholder="input7ModelPlaceholder"
-                    trailing-icon="'password_preset'"
-                ></generic-input>
-
-                <hr/>
-
-                <generic-input
-                    declaration="selection"
-                    description="input8Description"
-                    labels="[['C', 'LC'], ['D', 'LD'], ['A', 'LA'], ['B', 'LB']]"
-                    name="input8"
-                    required
-                    selection="['A', 'B', 'C']"
-                ></generic-input>
-                <generic-input
-                    initial-value="'A'"
-                    labels="['Label A', 'Label B', 'Label C']"
-                    model="{
-                        declaration: 'selection',
-                        description: 'input8ModelDescription',
-                        mutable: false,
-                        name: 'input8Model',
-                        nullable: false,
-                        selection: ['A', 'B', 'C']
-                    }"
-                ></generic-input>
-
-                <hr/>
-
-                <generic-input
-                    declaration="selection"
-                    description="input9Description"
-                    initial-value
-                    name="input9"
-                    placeholder="input9Placeholder"
-                    type="boolean"
-                    required
-                ></generic-input>
-                <generic-input
-                    initial-value="false"
-                    labels="{true: 'JA', false: 'NEIN'}"
-                    model="{
-                        declaration: 'selection',
-                        description: 'input9ModelDescription',
-                        name: 'input9Model',
-                        nullable: false,
-                        type: 'boolean'
-                    }"
-                    placeholder="input9ModelPlaceholder"
-                ></generic-input>
-
-                <hr/>
-
-                <generic-input
-                    declaration="selection"
-                    description="input10Description"
-                    initial-value
-                    labels="{true: 'JA', false: 'NEIN'}"
-                    name="input10"
-                    required
-                ></generic-input>
-                <generic-input
-                    initial-value="false"
-                    labels="{true: 'JA', false: 'NEIN'}"
-                    model="{
-                        declaration: 'selection',
-                        description: 'input10ModelDescription',
-                        name: 'input10Model',
-                        nullable: false,
-                        type: 'boolean'
-                    }"
-                ></generic-input>
-
-                <hr/>
-
-                <GenericInput
-                    declaration="numberSelection"
-                    description="input11Description"
-                    selection="[1, 2, 3]"
-                    name="input11"
-                    required
-                />
-                <GenericInput
-                    model="{
-                        declaration: 'numberSelection',
-                        description: 'input11ModelDescription',
-                        name: 'input11Model',
-                        selection: [1, 2, 3],
-                        type: 'number'
-                    }"
-                />
-
-                <hr/>
-
-                <generic-input
-                    declaration="selection"
-                    description="input12Description"
-                    initial-value="'b'"
-                    name="input12"
-                    selection="{a: 'A', b: 'B', c: 'C'}"
-                    required
-                ></generic-input>
-                <generic-input
-                    initial-value="'b'"
-                    model="{
-                        declaration: 'selection',
-                        description: 'input12ModelDescription',
-                        name: 'input12Model',
-                        nullable: false,
-                        selection: {a: 'A', b: 'B', c: 'C'}
-                    }"
-                ></generic-input>
-
-                <hr/>
-
-                <generic-input
-                    description="input13Description"
-                    name="input13"
-                    placeholder="input13Placeholder"
-                    suggest-selection
-                    selection="['hans hans', 'peter peter', 'klaus']"
-                ></generic-input>
-                <generic-input
-                    initial-value="'peter'"
-                    model="{
-                        declaration: 'selection',
-                        description: 'input13ModelDescription',
-                        name: 'input13Model',
-                        nullable: false
-                    }"
-                    placeholder="input13ModelPlaceholder"
-                    search-selection
-                    -suggestion-creator="Tools.debounce(function(search) {
-                        if (!search.query || search.query.length < 3)
-                            return []
-
-                        return Tools.timeout(2000).then(function() {
-                            return [
-                                'hans with veeeeeeeeeeeeeeeery ' +
-                                'loooooooooooooooong second name',
-                                'peter',
-                                'klaus'
-                            ].filter(function(name) {
-                                return (
-                                    !search.query ||
-                                    name.includes(search.query)
-                                )
-                            })
-                        })
-                    })"
-                ></generic-input>
-
-                <hr/>
-
-                <generic-input
-                    description="input14Description"
-                    default="'a'"
-                    name="input14"
-                    placeholder="input14Placeholder"
-                    search-selection
-                    selection="{a: 'hans', b: 'hans', c: 'klaus'}"
-                ></generic-input>
-                <generic-input
-                    initial-value="'peter'"
-                    model="{
-                        declaration: 'selection',
-                        description: 'input14ModelDescription',
-                        name: 'input14Model',
-                        nullable: false
-                    }"
-                    placeholder="input14ModelPlaceholder"
-                    suggestion-creator="new Promise(function(resolve) {
-                        Tools.timeout(500, function() {
-                            var selection = {
-                                a: 'hans with veeeeeeeeeeeeeeeery ' +
-                                   'loooooooooooooooong second name',
-                                b: 'peter',
-                                c: 'klaus'
-                            }
-
-                            var result = {}
-                            for (var key in selection)
-                                if (
-                                    !options.query ||
-                                    selection[key].includes(options.query)
-                                )
-                                    result[key] = selection[key]
-                            resolve(result)
-                        })
-                    })"
-                ></generic-input>
-
-                <hr/>
-
-                <generic-input
-                    declaration="text"
-                    description="input15Description"
-                    initial-value="'a'"
-                    name="input15"
-                    required
-                    rows="3"
-                    theme-configuration="{primary: 'yellow', secondary: 'blue'}"
-                ></generic-input>
-                <generic-input
-                    editor="text"
-                    initial-value="'a'"
-                    model="{
-                        declaration: 'text',
-                        description: 'input15ModelDescription',
-                        name: 'input15Model',
-                        nullable: false
-                    }"
-                    rows="2"
-                ></generic-input>
-
-                <hr/>
-
-                <generic-input
-                    declaration="code"
-                    description="input16Description"
-                    disabled
-                    editor="code"
-                    initial-value="'const value = 2'"
-                    name="input16"
-                    rows="2"
-                    selectable-editor
-                ></generic-input>
-                <generic-input
-                    editor="code"
-                    initial-value="'const value = 2'"
-                    model="{
-                        declaration: 'code',
-                        description: 'input16ModelDescription',
-                        name: 'input16Model',
-                        nullable: false
-                    }"
-                    rows="6"
-                    selectable-editor
-                ></generic-input>
-
-                <hr/>
-
-                <generic-input
-                    declaration="code"
-                    description="input17Description"
-                    editor="code"
-                    maximum-length="10"
-                    name="input17"
-                    required
-                    rows="2"
-                    selectable-editor
-                ></generic-input>
-                <generic-input
-                    editor="code"
-                    model="{
-                        declaration: 'code',
-                        description: 'input17ModelDescription',
-                        name: 'input17Model',
-                        nullable: false
-                    }"
-                    rows="6"
-                    selectable-editor
-                ></generic-input>
-
-                <hr/>
-
-                <generic-input
-                    declaration="richtext(raw)"
-                    description="input18Description"
-                    editor="richtext(raw)"
-                    initial-value="'Hello Mr. Smith,<br><br>how are you?'"
-                    name="input18"
-                    required
-                    rows="2"
-                    selectable-editor
-                ></generic-input>
-                <generic-input
-                    editor="richtext(simple)"
-                    initial-value="'Hello Mr. Smith,<br><br>how are you?'"
-                    model="{
-                        declaration: 'richtext(simple)',
-                        description: 'input18ModelDescription',
-                        mutable: false,
-                        name: 'input18Model',
-                        nullable: false
-                    }"
-                    rows="6"
-                    selectable-editor
-                ></generic-input>
-
-                <hr/>
-
-                <generic-input
-                    declaration="Number"
-                    description="input19Description"
-                    maximum="200000"
-                    minimum="10"
-                    name="input19"
-                    placeholder="100000"
-                    required
-                    type="number"
-                ></generic-input>
-                <generic-input
-                    initial-value="100000"
-                    model="{
-                        declaration: 'Number',
-                        description: 'input19ModelDescription',
-                        maximum: 200000,
-                        minimum: 10,
-                        mutable: false,
-                        name: 'input19Model',
-                        nullable: false
-                    }"
-                ></generic-input>
-
-                <hr/>
-
-                <generic-input
-                    declaration="Number"
-                    description="input20Description"
-                    maximum="200000"
-                    minimum="10"
-                    minimumText="Please at least ${formatValue(minimum)}."
-                    name="input20"
-                    placeholder="100.000"
-                    required
-                    type="integer"
-                ></generic-input>
-                <generic-input
-                    initial-value="100000.01"
-                    model="{
-                        declaration: 'Number',
-                        description: 'input20ModelDescription',
-                        maximum: 200000,
-                        name: 'input20Model',
-                        nullable: false,
-                        type: 'float'
-                    }"
-                    transformer="{format: {final: {options: {
-                        maximumFractionDigits: 20,
-                        minimumFractionDigits: 2
-                    }}}}"
-                ></generic-input>
-
-                <hr/>
-
-                <generic-input
-                    declaration="Number"
-                    description="input21Description"
-                    maximum="200000"
-                    minimum="10"
-                    name="input21"
-                    placeholder="100.000"
-                    required
-                    type="currency"
-                ></generic-input>
-                <generic-input
-                    initial-value="100000.01"
-                    model="{
-                        declaration: 'Number',
-                        description: 'input21ModelDescription',
-                        maximum: 200000,
-                        minimum: 10,
-                        name: 'input21Model',
-                        nullable: false,
-                        type: 'currency'
-                    }"
-                ></generic-input>
-            </div>
-            <!--endregion-->
-            <!--region generic-inputs-->
-            <div class="playground__inputs__generic-inputs playground__tab">
-                <generic-inputs
-                    create-prototype="Tools.extend(
-                        options.item,
-                        {name: options.properties.name + '-' + String(options.index + 1)}
-                    )"
-                    model="{default: [{name: 'inputs1-1'}], name: 'inputs1'}"
-                    show-initial-validation-state
-                >
-                    <file-input bind-properties="options.properties">
+                            <span bind-property-text-content="
+                                options.value &&
+                                options.value.blob && options.value.blob.size ?
+                                    ('Size: ' + options.value.blob.size) :
+                                    ''
+                            "></span>
+                            <br />
+                        </div>
                     </file-input>
-                </generic-inputs>
-                <generic-inputs
-                    create-prototype="Tools.extend(
-                        options.item,
-                        {name: options.properties.name + '-' + String(options.index + 1)}
-                    )"
-                    maximum-number="2"
-                    minimum-number="2"
-                    model="{
-                        default: [{
-                            name: 'inputs2-1',
-                            type: 'boolean',
-                            value: false
-                        }],
-                        name: 'inputs2'
-                    }"
-                    show-initial-validation-state
+                </div>
+                <!--endregion-->
+                <!--region generic-input-->
+                <div class="playground__inputs__generic-input playground__tab">
+                    <generic-input
+                        bind-on-keydown="console.info('Typed key:', event.key)"
+                        input-properties="{outlined: true}"
+                        trigger-initial-properties-consolidation
+                    ></generic-input>
+
+                    <hr/>
+
+                    <generic-input
+                        declaration="This text can be seen initially."
+                        input-props="{
+                            ariaChecked: false,
+                            ariaDescription: 'test'
+                        }"
+                        name="input1"
+                        show-declaration
+                    ></generic-input>
+                    <generic-input model="{name: 'input1Model'}"></generic-input>
+
+                    <hr/>
+
+                    <generic-input
+                        default="new Date('2025-01-01T00:00:00.000Z').getTime() / 1000"
+                        name="input2"
+                        type="date"
+                    >
+                    </generic-input>
+                    <generic-input
+                        initial-value="'1970-01-01T08:00:00.000Z'"
+                        input-properties="{outlined: true}"
+                        model="{
+                            name: 'input2Model',
+                            type: 'time',
+                        }"
+                        step="60"
+                    ></generic-input>
+
+                    <hr/>
+
+                    <generic-input
+                        default="120" name="input3" type="datetime-local"
+                    ></generic-input>
+                    <generic-input
+                        model="{
+                            default: new Date(60 * 1000),
+                            maximum: 3600,
+                            minimum: 60,
+                            name: 'input3Model',
+                            type: 'time-local'
+                        }"
+                    ></generic-input>
+
+                    <hr/>
+
+                    <generic-input
+                        declaration="Disabled"
+                        disabled
+                        initial-value="'value4'"
+                        name="input4"
+                    ></generic-input>
+                    <generic-input
+                        model="{
+                            declaration: 'Disabled',
+                            default: 'value4Model',
+                            mutable: false,
+                            name: 'input4Model'
+                        }"
+                    ></generic-input>
+
+                    <hr/>
+
+                    <generic-input
+                        declaration="placeholder"
+                        name="input5"
+                        placeholder="input5"
+                        required
+                        show-validation-state="false"
+                        trailing-icon="'clear_preset'"
+                    ></generic-input>
+                    <generic-input
+                        default="'value5Model'"
+                        icon="'backup'"
+                        initial-value="'value5Model'"
+                        model="{
+                            declaration: 'placeholder',
+                            name: 'input5Model',
+                            nullable: false
+                        }"
+                        placholder="input5Model"
+                        trailing-icon="'clear_preset'"
+                    ></generic-input>
+
+                    <hr/>
+
+                    <generic-input
+                        declaration="pattern"
+                        description="input6Description"
+                        icon="'search'"
+                        initial-value="'only a`s allowed'"
+                        name="input6"
+                        pattern="'^a+$'"
+                        placeholder="input6Placeholder"
+                    ></generic-input>
+                    <generic-input
+                        initial-value="'has a`s and b`s'"
+                        model="{
+                            declaration: 'pattern',
+                            description: 'input6ModelDescription',
+                            regularExpressionPattern: ['.*a+.*', /.*b+.*/]
+                        }"
+                        name="input6Model"
+                        placeholder="input6ModelPlaceholder"
+                        trailing-icon="'search'"
+                    ></generic-input>
+
+                    <hr/>
+
+                    <generic-input
+                        declaration="password"
+                        description="input7Description"
+                        icon="'search'"
+                        initial-value="'hans'"
+                        name="passwordInput7"
+                        pattern="/a+/"
+                        placeholder="input7Placeholder"
+                        tooltip="'Please type in your password.'"
+                        trailing-icon="'password_preset'"
+                    ></generic-input>
+                    <generic-input
+                        initial-value="'hans'"
+                        model="{
+                            declaration: 'password',
+                            description: 'input7ModelDescription',
+                            regularExpressionPattern: 'a+'
+                        }"
+                        name="passwordInput7Model"
+                        placeholder="input7ModelPlaceholder"
+                        trailing-icon="'password_preset'"
+                    ></generic-input>
+
+                    <hr/>
+
+                    <generic-input
+                        declaration="selection"
+                        description="input8Description"
+                        labels="[['C', 'LC'], ['D', 'LD'], ['A', 'LA'], ['B', 'LB']]"
+                        name="input8"
+                        required
+                        selection="['A', 'B', 'C']"
+                    ></generic-input>
+                    <generic-input
+                        initial-value="'A'"
+                        labels="['Label A', 'Label B', 'Label C']"
+                        model="{
+                            declaration: 'selection',
+                            description: 'input8ModelDescription',
+                            mutable: false,
+                            name: 'input8Model',
+                            nullable: false,
+                            selection: ['A', 'B', 'C']
+                        }"
+                    ></generic-input>
+
+                    <hr/>
+
+                    <generic-input
+                        declaration="selection"
+                        description="input9Description"
+                        initial-value
+                        name="input9"
+                        placeholder="input9Placeholder"
+                        type="boolean"
+                        required
+                    ></generic-input>
+                    <generic-input
+                        initial-value="false"
+                        labels="{true: 'JA', false: 'NEIN'}"
+                        model="{
+                            declaration: 'selection',
+                            description: 'input9ModelDescription',
+                            name: 'input9Model',
+                            nullable: false,
+                            type: 'boolean'
+                        }"
+                        placeholder="input9ModelPlaceholder"
+                    ></generic-input>
+
+                    <hr/>
+
+                    <generic-input
+                        declaration="selection"
+                        description="input10Description"
+                        initial-value
+                        labels="{true: 'JA', false: 'NEIN'}"
+                        name="input10"
+                        required
+                    ></generic-input>
+                    <generic-input
+                        initial-value="false"
+                        labels="{true: 'JA', false: 'NEIN'}"
+                        model="{
+                            declaration: 'selection',
+                            description: 'input10ModelDescription',
+                            name: 'input10Model',
+                            nullable: false,
+                            type: 'boolean'
+                        }"
+                    ></generic-input>
+
+                    <hr/>
+
+                    <GenericInput
+                        declaration="numberSelection"
+                        description="input11Description"
+                        selection="[1, 2, 3]"
+                        name="input11"
+                        required
+                    />
+                    <GenericInput
+                        model="{
+                            declaration: 'numberSelection',
+                            description: 'input11ModelDescription',
+                            name: 'input11Model',
+                            selection: [1, 2, 3],
+                            type: 'number'
+                        }"
+                    />
+
+                    <hr/>
+
+                    <generic-input
+                        declaration="selection"
+                        description="input12Description"
+                        initial-value="'b'"
+                        name="input12"
+                        selection="{a: 'A', b: 'B', c: 'C'}"
+                        required
+                    ></generic-input>
+                    <generic-input
+                        initial-value="'b'"
+                        model="{
+                            declaration: 'selection',
+                            description: 'input12ModelDescription',
+                            name: 'input12Model',
+                            nullable: false,
+                            selection: {a: 'A', b: 'B', c: 'C'}
+                        }"
+                    ></generic-input>
+
+                    <hr/>
+
+                    <generic-input
+                        description="input13Description"
+                        name="input13"
+                        placeholder="input13Placeholder"
+                        suggest-selection
+                        selection="['hans hans', 'peter peter', 'klaus']"
+                    ></generic-input>
+                    <generic-input
+                        initial-value="'peter'"
+                        model="{
+                            declaration: 'selection',
+                            description: 'input13ModelDescription',
+                            name: 'input13Model',
+                            nullable: false
+                        }"
+                        placeholder="input13ModelPlaceholder"
+                        search-selection
+                        -suggestion-creator="Tools.debounce(function(search) {
+                            if (!search.query || search.query.length < 3)
+                                return []
+
+                            return Tools.timeout(2000).then(function() {
+                                return [
+                                    'hans with veeeeeeeeeeeeeeeery ' +
+                                    'loooooooooooooooong second name',
+                                    'peter',
+                                    'klaus'
+                                ].filter(function(name) {
+                                    return (
+                                        !search.query ||
+                                        name.includes(search.query)
+                                    )
+                                })
+                            })
+                        })"
+                    ></generic-input>
+
+                    <hr/>
+
+                    <generic-input
+                        description="input14Description"
+                        default="'a'"
+                        name="input14"
+                        placeholder="input14Placeholder"
+                        search-selection
+                        selection="{a: 'hans', b: 'hans', c: 'klaus'}"
+                    ></generic-input>
+                    <generic-input
+                        initial-value="'peter'"
+                        model="{
+                            declaration: 'selection',
+                            description: 'input14ModelDescription',
+                            name: 'input14Model',
+                            nullable: false
+                        }"
+                        placeholder="input14ModelPlaceholder"
+                        suggestion-creator="new Promise(function(resolve) {
+                            Tools.timeout(500, function() {
+                                var selection = {
+                                    a: 'hans with veeeeeeeeeeeeeeeery ' +
+                                       'loooooooooooooooong second name',
+                                    b: 'peter',
+                                    c: 'klaus'
+                                }
+
+                                var result = {}
+                                for (var key in selection)
+                                    if (
+                                        !options.query ||
+                                        selection[key].includes(options.query)
+                                    )
+                                        result[key] = selection[key]
+                                resolve(result)
+                            })
+                        })"
+                    ></generic-input>
+
+                    <hr/>
+
+                    <generic-input
+                        declaration="text"
+                        description="input15Description"
+                        initial-value="'a'"
+                        name="input15"
+                        required
+                        rows="3"
+                        theme-configuration="{primary: 'yellow', secondary: 'blue'}"
+                    ></generic-input>
+                    <generic-input
+                        editor="text"
+                        initial-value="'a'"
+                        model="{
+                            declaration: 'text',
+                            description: 'input15ModelDescription',
+                            name: 'input15Model',
+                            nullable: false
+                        }"
+                        rows="2"
+                    ></generic-input>
+
+                    <hr/>
+
+                    <generic-input
+                        declaration="code"
+                        description="input16Description"
+                        disabled
+                        editor="code"
+                        initial-value="'const value = 2'"
+                        name="input16"
+                        rows="2"
+                        selectable-editor
+                    ></generic-input>
+                    <generic-input
+                        editor="code"
+                        initial-value="'const value = 2'"
+                        model="{
+                            declaration: 'code',
+                            description: 'input16ModelDescription',
+                            name: 'input16Model',
+                            nullable: false
+                        }"
+                        rows="6"
+                        selectable-editor
+                    ></generic-input>
+
+                    <hr/>
+
+                    <generic-input
+                        declaration="code"
+                        description="input17Description"
+                        editor="code"
+                        maximum-length="10"
+                        name="input17"
+                        required
+                        rows="2"
+                        selectable-editor
+                    ></generic-input>
+                    <generic-input
+                        editor="code"
+                        model="{
+                            declaration: 'code',
+                            description: 'input17ModelDescription',
+                            name: 'input17Model',
+                            nullable: false
+                        }"
+                        rows="6"
+                        selectable-editor
+                    ></generic-input>
+
+                    <hr/>
+
+                    <generic-input
+                        declaration="richtext(raw)"
+                        description="input18Description"
+                        editor="richtext(raw)"
+                        initial-value="'Hello Mr. Smith,<br><br>how are you?'"
+                        name="input18"
+                        required
+                        rows="2"
+                        selectable-editor
+                    ></generic-input>
+                    <generic-input
+                        editor="richtext(simple)"
+                        initial-value="'Hello Mr. Smith,<br><br>how are you?'"
+                        model="{
+                            declaration: 'richtext(simple)',
+                            description: 'input18ModelDescription',
+                            mutable: false,
+                            name: 'input18Model',
+                            nullable: false
+                        }"
+                        rows="6"
+                        selectable-editor
+                    ></generic-input>
+
+                    <hr/>
+
+                    <generic-input
+                        declaration="Number"
+                        description="input19Description"
+                        maximum="200000"
+                        minimum="10"
+                        name="input19"
+                        placeholder="100000"
+                        required
+                        type="number"
+                    ></generic-input>
+                    <generic-input
+                        initial-value="100000"
+                        model="{
+                            declaration: 'Number',
+                            description: 'input19ModelDescription',
+                            maximum: 200000,
+                            minimum: 10,
+                            mutable: false,
+                            name: 'input19Model',
+                            nullable: false
+                        }"
+                    ></generic-input>
+
+                    <hr/>
+
+                    <generic-input
+                        declaration="Number"
+                        description="input20Description"
+                        maximum="200000"
+                        minimum="10"
+                        minimumText="Please at least ${formatValue(minimum)}."
+                        name="input20"
+                        placeholder="100.000"
+                        required
+                        type="integer"
+                    ></generic-input>
+                    <generic-input
+                        initial-value="100000.01"
+                        model="{
+                            declaration: 'Number',
+                            description: 'input20ModelDescription',
+                            maximum: 200000,
+                            name: 'input20Model',
+                            nullable: false,
+                            type: 'float'
+                        }"
+                        transformer="{format: {final: {options: {
+                            maximumFractionDigits: 20,
+                            minimumFractionDigits: 2
+                        }}}}"
+                    ></generic-input>
+
+                    <hr/>
+
+                    <generic-input
+                        declaration="Number"
+                        description="input21Description"
+                        maximum="200000"
+                        minimum="10"
+                        name="input21"
+                        placeholder="100.000"
+                        required
+                        type="currency"
+                    ></generic-input>
+                    <generic-input
+                        initial-value="100000.01"
+                        model="{
+                            declaration: 'Number',
+                            description: 'input21ModelDescription',
+                            maximum: 200000,
+                            minimum: 10,
+                            name: 'input21Model',
+                            nullable: false,
+                            type: 'currency'
+                        }"
+                    ></generic-input>
+                </div>
+                <!--endregion-->
+                <!--region generic-inputs-->
+                <div class="playground__inputs__generic-inputs playground__tab">
+                    <generic-inputs
+                        create-prototype="Tools.extend(
+                            options.item,
+                            {name: options.properties.name + '-' + String(options.index + 1)}
+                        )"
+                        model="{default: [{name: 'inputs1-1'}], name: 'inputs1'}"
+                        show-initial-validation-state
+                    >
+                        <file-input bind-properties="options.properties">
+                        </file-input>
+                    </generic-inputs>
+                    <generic-inputs
+                        create-prototype="Tools.extend(
+                            options.item,
+                            {name: options.properties.name + '-' + String(options.index + 1)}
+                        )"
+                        maximum-number="2"
+                        minimum-number="2"
+                        model="{
+                            default: [{
+                                name: 'inputs2-1',
+                                type: 'boolean',
+                                value: false
+                            }],
+                            name: 'inputs2'
+                        }"
+                        show-initial-validation-state
+                    >
+                        <requireable-checkbox bind-properties="options.properties">
+                        </requireable-checkbox>
+                    </generic-inputs>
+                    <generic-inputs
+                        create-prototype="Tools.extend(
+                            options.item,
+                            {name: options.properties.name + '-' + String(options.index + 1)}
+                        )"
+                        model="{
+                            default: [{
+                                name: 'inputs3-1',
+                                type: 'date'
+                            }],
+                            name: 'inputs3'
+                        }"
+                        show-initial-validation-state
+                    >
+                        <generic-interval bind-properties="options.properties">
+                        </generic-interval>
+                    </generic-inputs>
+                    <generic-inputs
+                        name="inputs4"
+                        trigger-initial-properties-consolidation
+                        value="['first item']"
+                    ></generic-inputs>
+                </div>
+                <!--endregion-->
+                <!--region generic-interval-->
+                <div class="playground__inputs__generic-interval playground__tab">
+                    <generic-interval
+                        end="{default: 240, minimum: 120}"
+                        required
+                        start="{default: 120, maximum: 3600}"
+                        step="60"
+                    ></generic-interval>
+                    <generic-interval
+                        end="{default: 240, minimum: 120}"
+                        required
+                        start="{default: 120, maximum: 3600}"
+                        step="60"
+                        trigger-initial-properties-consolidation
+                    ></generic-interval>
+                </div>
+                <!--endregion-->
+                <!--region generic-animate-->
+                <div
+                    class="playground__inputs__generic-animate playground__tab"
+                    style="height: 50px"
                 >
-                    <requireable-checkbox bind-properties="options.properties">
-                    </requireable-checkbox>
-                </generic-inputs>
-                <generic-inputs
-                    create-prototype="Tools.extend(
-                        options.item,
-                        {name: options.properties.name + '-' + String(options.index + 1)}
-                    )"
-                    model="{
-                        default: [{
-                            name: 'inputs3-1',
-                            type: 'date'
-                        }],
-                        name: 'inputs3'
-                    }"
-                    show-initial-validation-state
-                >
-                    <generic-interval bind-properties="options.properties">
-                    </generic-interval>
-                </generic-inputs>
-                <generic-inputs
-                    name="inputs4"
-                    trigger-initial-properties-consolidation
-                    value="['first item']"
-                ></generic-inputs>
+                    <generic-animate in timeout="2000">Fade it!</generic-animate>
+                    <br/>
+                    <generic-animate
+                        in="false" timeout="2000"
+                    >Fade it!</generic-animate>
+                </div>
+                <!--endregion-->
+                <!--region requireable-checkbox-->
+                <div class="playground__inputs__requireable-checkbox playground__tab">
+                    <requireable-checkbox
+                        trigger-initial-properties-consolidation
+                    ></requireable-checkbox>
+
+                    <hr/>
+
+                    <requireable-checkbox name="checkbox1"></requireable-checkbox>
+                    <requireable-checkbox
+                        model="{name: 'checkbox1Model'}"
+                        theme-configuration="{primary: 'yellow', secondary: 'blue'}"
+                    ></requireable-checkbox>
+
+                    <hr/>
+
+                    <requireable-checkbox
+                        default disabled name="checkbox2" required
+                    ></requireable-checkbox>
+                    <requireable-checkbox
+                        model="{
+                            name: 'checkbox2Model',
+                            mutable: false,
+                            nullable: false
+                        }"
+                    ></requireable-checkbox>
+
+                    <hr/>
+
+                    <requireable-checkbox
+                        description="checkbox3Description"
+                        name="checkbox3"
+                        required
+                        show-initial-validation-state
+                    ></requireable-checkbox>
+                    <requireable-checkbox
+                        model="{
+                            default: true,
+                            description: 'checkbox3ModelDescription',
+                            name: 'checkbox3Model',
+                            nullable: false
+                        }"
+                        show-initial-validation-state
+                        tooltip="'Check this one!'"
+                    ></requireable-checkbox>
+                </div>
+                <!--endregion-->
+                <!--region slider-input-->
+                <div class="playground__inputs__slider-input playground__tab">
+                    <slider-input name="sliderInput1"></slider-input>
+                    <slider-input
+                        max="100"
+                        min="10"
+                        name="sliderInput2"
+                        step="2"
+                        name="test"
+                    ></slider-input>
+                    <slider-input
+                        discrete
+                        max="100"
+                        min="10"
+                        name="sliderInput3"
+                        step="2"
+                        theme-configuration="{secondary: 'red'}"
+                        value="66"
+                    ></slider-input>
+                    <slider-input
+                        discrete
+                        displayMarkers
+                        max="100"
+                        min="10"
+                        name="sliderInput4"
+                        step="2"
+                        value="33"
+                    ></slider-input>
+                    <slider-input disabled name="sliderInput5" value="33">
+                    </slider-input>
+                </div>
+                <!--endregion-->
             </div>
-            <!--endregion--> 
-            <!--region generic-interval-->
-            <div class="playground__inputs__generic-interval playground__tab">
-                <generic-interval
-                    end="{default: 240, minimum: 120}"
-                    required
-                    start="{default: 120, maximum: 3600}"
-                    step="60"
-                ></generic-interval>
-                <generic-interval
-                    end="{default: 240, minimum: 120}"
-                    required
-                    start="{default: 120, maximum: 3600}"
-                    step="60"
-                    trigger-initial-properties-consolidation
-                ></generic-interval>
+
+            <div class="playground__outputs">
+                <!--
+                    Add on version as a hidden spacer and one fixed version
+                    visible independently from current scroll position.
+                -->
+                <pre class="playground__outputs__bar"></pre>
+                <pre class="playground__outputs__content"></pre>
             </div>
-            <!--endregion-->
-            <!--region generic-animate-->
-            <div
-                class="playground__inputs__generic-animate playground__tab"
-                style="height: 50px"
-            >
-                <generic-animate in timeout="2000">Fade it!</generic-animate>
-                <br/>
-                <generic-animate
-                    in="false" timeout="2000"
-                >Fade it!</generic-animate>
-            </div>
-            <!--endregion-->
-            <!--region requireable-checkbox-->
-            <div class="playground__inputs__requireable-checkbox playground__tab">
-                <requireable-checkbox
-                    trigger-initial-properties-consolidation
-                ></requireable-checkbox>
-
-                <hr/>
-
-                <requireable-checkbox name="checkbox1"></requireable-checkbox>
-                <requireable-checkbox
-                    model="{name: 'checkbox1Model'}"
-                    theme-configuration="{primary: 'yellow', secondary: 'blue'}"
-                ></requireable-checkbox>
-
-                <hr/>
-
-                <requireable-checkbox
-                    default disabled name="checkbox2" required
-                ></requireable-checkbox>
-                <requireable-checkbox
-                    model="{
-                        name: 'checkbox2Model',
-                        mutable: false,
-                        nullable: false
-                    }"
-                ></requireable-checkbox>
-
-                <hr/>
-
-                <requireable-checkbox
-                    description="checkbox3Description"
-                    name="checkbox3"
-                    required
-                    show-initial-validation-state
-                ></requireable-checkbox>
-                <requireable-checkbox
-                    model="{
-                        default: true,
-                        description: 'checkbox3ModelDescription',
-                        name: 'checkbox3Model',
-                        nullable: false
-                    }"
-                    show-initial-validation-state
-                    tooltip="'Check this one!'"
-                ></requireable-checkbox>
-            </div>
-            <!--endregion-->
-            <!--region slider-input-->
-            <div class="playground__inputs__slider-input playground__tab">
-                <slider-input name="sliderInput1"></slider-input>
-                <slider-input
-                    max="100"
-                    min="10"
-                    name="sliderInput2"
-                    step="2"
-                    name="test"
-                ></slider-input>
-                <slider-input
-                    discrete
-                    max="100"
-                    min="10"
-                    name="sliderInput3"
-                    step="2"
-                    theme-configuration="{secondary: 'red'}"
-                    value="66"
-                ></slider-input>
-                <slider-input
-                    discrete
-                    displayMarkers
-                    max="100"
-                    min="10"
-                    name="sliderInput4"
-                    step="2"
-                    value="33"
-                ></slider-input>
-                <slider-input disabled name="sliderInput5" value="33">
-                </slider-input>
-            </div>
-            <!--endregion-->
         </div>
-
-        <pre class="playground__outputs"></pre>
-
     </body>
 <html>
 <%_ /*
