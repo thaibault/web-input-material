@@ -18,7 +18,6 @@
 export type {
     BaseModel,
     CommonBaseModel,
-    CommonModel,
 
     BaseProperties,
     BaseProps,
@@ -30,7 +29,6 @@ export type {
     DefaultProperties,
 
 
-    Model,
     ModelState,
 
     EditorState,
