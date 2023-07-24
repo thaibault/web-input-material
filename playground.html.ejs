@@ -215,29 +215,29 @@
                         if (!event.detail)
                             return
 
-                        if (intervalID !== null) {
-                            clearInterval(intervalID)
-                            intervalID = null
-                        }
 
                         if (
                             event.detail.parameters[0].detail &&
                             tabs[event.detail.parameters[0].detail.index]
                                 .getAttribute('class')
-                                .includes(
-                                    'playground__inputs__generic-animate'
-                                )
-                        )
+                                .includes('generic-animate')
+                        ) {
+                            if (intervalID !== null) {
+                                clearInterval(intervalID)
+                                intervalID = null
+                            }
+
                             intervalID = setInterval(
-                                function() {
+                                function () {
                                     animationDomNodes.forEach(
-                                        function(domNode) {
+                                        function (domNode) {
                                             domNode.in = !domNode.in
                                         }
                                     )
                                 },
                                 2 * 1000
                             )
+                        }
                     }
                 )
                 // endregion
@@ -920,17 +920,21 @@
                 <!--region generic-interval-->
                 <div class="playground__inputs__generic-interval playground__tab">
                     <generic-interval
-                        end="{default: 240, minimum: 120}"
                         required
-                        start="{default: 120, maximum: 3600}"
                         step="60"
+                        value="{
+                            start: {default: 120, maximum: 3600},
+                            end: {default: 240, minimum: 120}
+                        }"
                     ></generic-interval>
                     <generic-interval
-                        end="{default: 240, minimum: 120}"
                         required
-                        start="{default: 120, maximum: 3600}"
                         step="60"
                         trigger-initial-properties-consolidation
+                        value="{
+                            start: {default: 120, maximum: 3600},
+                            end: {default: 240, minimum: 120}
+                        }"
                     ></generic-interval>
                 </div>
                 <!--endregion-->
@@ -939,11 +943,13 @@
                     class="playground__inputs__generic-animate playground__tab"
                     style="height: 50px"
                 >
-                    <generic-animate in timeout="2000">Fade it!</generic-animate>
+                    <generic-animate in timeout="2000">
+                        Fade it!
+                    </generic-animate>
                     <br/>
-                    <generic-animate
-                        in="false" timeout="2000"
-                    >Fade it!</generic-animate>
+                    <generic-animate in="false" timeout="2000">
+                        Fade it!
+                    </generic-animate>
                 </div>
                 <!--endregion-->
                 <!--region requireable-checkbox-->
