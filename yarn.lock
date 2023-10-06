@@ -4065,9 +4065,9 @@ cli-table3@^0.5.0:
     colors "^1.1.2"
 
 clientnode@*:
-  version "3.0.1076"
-  resolved "https://registry.yarnpkg.com/clientnode/-/clientnode-3.0.1076.tgz#b53a59089c97dabc3a0b2b03c059270de2a8bc0f"
-  integrity sha512-cQE+UdRvH2pomfcAWDIEzuT/9U9oGV77RkVFHPE44gymc58NCNc4acwXGIJkFgBfNzGWFEGAUxtEA3HqyYy0OA==
+  version "3.0.1077"
+  resolved "https://registry.yarnpkg.com/clientnode/-/clientnode-3.0.1077.tgz#a13850ff9f4851592082a808fe41d5aa3fe8e104"
+  integrity sha512-L9Vm518L6YzSP2r+pQeasE3eVwLgV9WUA9m5sft+dx+fMvdTdGO8GPNnh3KkXkV43dduV8LpnNeHC3CYVfrZqA==
 
 cliui@^4.0.0:
   version "4.1.0"
@@ -7267,24 +7267,24 @@ react-dom@*:
     scheduler "^0.23.0"
 
 react-generic-animate@*:
-  version "0.0.17"
-  resolved "https://registry.yarnpkg.com/react-generic-animate/-/react-generic-animate-0.0.17.tgz#251f7074164522640c6b1f41bdf0b3202230ad60"
-  integrity sha512-7JXEMdJi/TOOgzfBt5ySWfqDpMZOnWMuq0hU5PDrbkjhQbNAIN0EwoTc+7/U+k2v64NJLvV2DWP1U4RdhTzGfA==
+  version "0.0.18"
+  resolved "https://registry.yarnpkg.com/react-generic-animate/-/react-generic-animate-0.0.18.tgz#439304fa60ed7a7ad3368775b16437cc05cf2c43"
+  integrity sha512-TfqU6ldSTnKOLUZvsgx7Ip1KVrW+H1r/rPKy0YBlL7whaIYdpDZ6LyXzq2UbjUU1OkHNhh5LE4AxckXUH7cv9g==
 
 react-generic-dummy@*:
-  version "0.0.49"
-  resolved "https://registry.yarnpkg.com/react-generic-dummy/-/react-generic-dummy-0.0.49.tgz#02ce19fdc362faabb7e90c2be0417e2e234ce953"
-  integrity sha512-NOPPDEPOfEDoIX4hV3WGGRpga1AaIXUVTg/HYcj9qoSyxw8Lni55GAdO78FhOHadhcm8vnl3pV5hWJezvG6bkA==
+  version "0.0.50"
+  resolved "https://registry.yarnpkg.com/react-generic-dummy/-/react-generic-dummy-0.0.50.tgz#08268fee9fe464445b9234f107e1370e248ee05f"
+  integrity sha512-tjm8iHmuJ2k3KWTCXr4qTANQ3gB7lLWl3uRco79OFgO5GDbjyZafYL7qan2pX+i+N14Il9ihdqOD/jXV2NtEGw==
 
 react-generic-tools@*:
-  version "0.0.20"
-  resolved "https://registry.yarnpkg.com/react-generic-tools/-/react-generic-tools-0.0.20.tgz#fd732718d9f2ab5ed84234f49791d08fba6a749b"
-  integrity sha512-9X3ps2S9S2vyNG6Mt27u3lZ+pLa48p2/F4OeT1dgZJsXLMIfry66bffqI/FLLdVUDRdW0RKQFUoYhXmuVjPHaw==
+  version "0.0.21"
+  resolved "https://registry.yarnpkg.com/react-generic-tools/-/react-generic-tools-0.0.21.tgz#20dbbf06715890a7731fd19326c208f7e9237f1a"
+  integrity sha512-flQghVbFqw2L6p6ZEeWuBW8qQxGDLVf60VgFKywLc2FQse1Dfh+wOS6jB7cJ8ePRB2ErFSi2hTlLHci+WVuYzA==
 
 react-input-material@*:
-  version "0.0.571"
-  resolved "https://registry.yarnpkg.com/react-input-material/-/react-input-material-0.0.571.tgz#0e59a7afa23cfb55dd3b2c3a0e06a1bdd2b69c54"
-  integrity sha512-n/rm/hFXbUM+I82SsYwrorS4/elOSm6MMXQb6N8+0z80JFo72dUNiFf4bmOc8sB9wJD1fy9xQLB0TIx8E7nbbQ==
+  version "0.0.572"
+  resolved "https://registry.yarnpkg.com/react-input-material/-/react-input-material-0.0.572.tgz#a53dadf820fc867c8a2ce361d74eaadd0daacd45"
+  integrity sha512-viipednVtjw0DLLYJFnkFP9ZgPcsso+4JEjgz+ThFxrrQbSCpdIFmyOY8VNhJXhVYP7B2Z0RR8hjstWNet3Kcw==
 
 react-is@^16.12.0, react-is@^16.13.1:
   version "16.13.1"
@@ -8333,9 +8333,9 @@ wbuf@^1.1.0, wbuf@^1.7.3:
     minimalistic-assert "^1.0.0"
 
 web-component-wrapper@*:
-  version "0.0.462"
-  resolved "https://registry.yarnpkg.com/web-component-wrapper/-/web-component-wrapper-0.0.462.tgz#83c55d7ae90339ca3a301a595a26443932c473c7"
-  integrity sha512-322ita9t2wwYt90FhC98CecCDZjcTeIhW79BEMfG7jEyBftWxgmohPX/mQeOrIrmxkkoD63iywOGpSmAOfnDDA==
+  version "0.0.463"
+  resolved "https://registry.yarnpkg.com/web-component-wrapper/-/web-component-wrapper-0.0.463.tgz#0b961b8bcda928e1faf168a990864117f7ff77fd"
+  integrity sha512-y2+Gxwxz92mPOKew4Wh3Flx8+xg8rVRNfKGRRp8zHJ7x1lPM+/a/67Hi2+F5eiYw9KRZmLYmQuUV+mhvkmJ7AQ==
 
 webidl-conversions@^7.0.0:
   version "7.0.0"
@@ -8343,9 +8343,9 @@ webidl-conversions@^7.0.0:
   integrity sha512-VwddBukDzu71offAQR975unBIGqfKZpM+8ZX6ySk8nYhVoo5CYaZyzt3YBvYtRtO+aoGlqxPg/B87NGVZ/fu6g==
 
 weboptimizer@*:
-  version "2.0.1374"
-  resolved "https://registry.yarnpkg.com/weboptimizer/-/weboptimizer-2.0.1374.tgz#5c51423d88d09ded01ef651c356cac3cce64bd3f"
-  integrity sha512-ZmTHmVovmKO7h55HYNxPesUy1XmdavmNlzamUhT9JEkydr41m6/0hDc+xZIYY/ydhM4zlYMs7wEEVX2MjJE19g==
+  version "2.0.1375"
+  resolved "https://registry.yarnpkg.com/weboptimizer/-/weboptimizer-2.0.1375.tgz#17f055e2c9577fd9c7185cff8c2ea4b55ce6365b"
+  integrity sha512-Hm2S+Z3y5ly0AFokJCmOdtK5rJRbG1h8ylAonPg9v2tQUQrwHPas6qFLHW1ZBJbev540f6m4TdTlxn+Lc77/Tw==
   dependencies:
     "@babel/core" "*"
     "@babel/plugin-proposal-class-properties" "*"
