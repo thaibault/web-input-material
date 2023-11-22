@@ -82,7 +82,7 @@
                 z-index: 1;
             }
 
-            file-input, generic-input {
+            file-input, text-input {
                 display: block;
                 margin-bottom: 20px;
                 max-width: 400px;
@@ -133,11 +133,11 @@
             window.onload = function() {
                 const Tools = webInputMaterial.clientnode.Tools
 
-                const GenericInput =
-                    webInputMaterial.index.components.GenericInput.component
+                const TextInput =
+                    webInputMaterial.index.components.TextInput.component
                         .content
-                GenericInput.locales.push('de-DE')
-                GenericInput.transformer.currency.format.final.options =
+                TextInput.locales.push('de-DE')
+                TextInput.transformer.currency.format.final.options =
                     {currency: 'EUR'}
 
                 webInputMaterial.index.register()
@@ -253,7 +253,7 @@
 
                 <tab-item>circular-spinner</tab-item>
                 <tab-item>file-input</tab-item>
-                <tab-item>generic-input (with <sup>markup</sup>)</tab-item>
+                <tab-item>text-input (with <sup>markup</sup>)</tab-item>
                 <tab-item>generic-inputs</tab-item>
                 <tab-item>generic-interval</tab-item>
                 <tab-item>generic-animate</tab-item>
@@ -352,17 +352,17 @@
                     </file-input>
                 </div>
                 <!--endregion-->
-                <!--region generic-input-->
-                <div class="playground__inputs__generic-input playground__tab">
-                    <generic-input
+                <!--region text-input-->
+                <div class="playground__inputs__text-input playground__tab">
+                    <text-input
                         bind-on-keydown="console.info('Typed key:', event.key)"
                         input-properties="{outlined: true}"
                         trigger-initial-properties-consolidation
-                    ></generic-input>
+                    ></text-input>
 
                     <hr/>
 
-                    <generic-input
+                    <text-input
                         declaration="This text can be seen initially."
                         input-props="{
                             ariaChecked: false,
@@ -370,18 +370,17 @@
                         }"
                         name="input1"
                         show-declaration
-                    ></generic-input>
-                    <generic-input model="{name: 'input1Model'}"></generic-input>
+                    ></text-input>
+                    <text-input model="{name: 'input1Model'}"></text-input>
 
                     <hr/>
 
-                    <generic-input
+                    <text-input
                         default="new Date('2025-01-01T00:00:00.000Z').getTime() / 1000"
                         name="input2"
                         type="date"
-                    >
-                    </generic-input>
-                    <generic-input
+                    ></text-input>
+                    <text-input
                         initial-value="'1970-01-01T08:00:00.000Z'"
                         input-properties="{outlined: true}"
                         model="{
@@ -389,14 +388,14 @@
                             type: 'time',
                         }"
                         step="60"
-                    ></generic-input>
+                    ></text-input>
 
                     <hr/>
 
-                    <generic-input
+                    <text-input
                         default="120" name="input3" type="datetime-local"
-                    ></generic-input>
-                    <generic-input
+                    ></text-input>
+                    <text-input
                         model="{
                             default: new Date(60 * 1000),
                             maximum: 3600,
@@ -404,36 +403,36 @@
                             name: 'input3Model',
                             type: 'time-local'
                         }"
-                    ></generic-input>
+                    ></text-input>
 
                     <hr/>
 
-                    <generic-input
+                    <text-input
                         declaration="Disabled"
                         disabled
                         initial-value="'value4'"
                         name="input4"
-                    ></generic-input>
-                    <generic-input
+                    ></text-input>
+                    <text-input
                         model="{
                             declaration: 'Disabled',
                             default: 'value4Model',
                             mutable: false,
                             name: 'input4Model'
                         }"
-                    ></generic-input>
+                    ></text-input>
 
                     <hr/>
 
-                    <generic-input
+                    <text-input
                         declaration="placeholder"
                         name="input5"
                         placeholder="input5"
                         required
                         show-validation-state="false"
                         trailing-icon="'clear_preset'"
-                    ></generic-input>
-                    <generic-input
+                    ></text-input>
+                    <text-input
                         default="'value5Model'"
                         icon="'backup'"
                         initial-value="'value5Model'"
@@ -444,11 +443,11 @@
                         }"
                         placholder="input5Model"
                         trailing-icon="'clear_preset'"
-                    ></generic-input>
+                    ></text-input>
 
                     <hr/>
 
-                    <generic-input
+                    <text-input
                         declaration="pattern"
                         description="input6Description"
                         icon="'search'"
@@ -456,8 +455,8 @@
                         name="input6"
                         pattern="'^a+$'"
                         placeholder="input6Placeholder"
-                    ></generic-input>
-                    <generic-input
+                    ></text-input>
+                    <text-input
                         initial-value="'has a`s and b`s'"
                         model="{
                             declaration: 'pattern',
@@ -467,11 +466,11 @@
                         name="input6Model"
                         placeholder="input6ModelPlaceholder"
                         trailing-icon="'search'"
-                    ></generic-input>
+                    ></text-input>
 
                     <hr/>
 
-                    <generic-input
+                    <text-input
                         declaration="password"
                         description="input7Description"
                         icon="'search'"
@@ -481,8 +480,8 @@
                         placeholder="input7Placeholder"
                         tooltip="'Please type in your password.'"
                         trailing-icon="'password_preset'"
-                    ></generic-input>
-                    <generic-input
+                    ></text-input>
+                    <text-input
                         initial-value="'hans'"
                         model="{
                             declaration: 'password',
@@ -492,19 +491,19 @@
                         name="passwordInput7Model"
                         placeholder="input7ModelPlaceholder"
                         trailing-icon="'password_preset'"
-                    ></generic-input>
+                    ></text-input>
 
                     <hr/>
 
-                    <generic-input
+                    <text-input
                         declaration="selection"
                         description="input8Description"
                         labels="[['C', 'LC'], ['D', 'LD'], ['A', 'LA'], ['B', 'LB']]"
                         name="input8"
                         required
                         selection="['A', 'B', 'C']"
-                    ></generic-input>
-                    <generic-input
+                    ></text-input>
+                    <text-input
                         initial-value="'A'"
                         labels="['Label A', 'Label B', 'Label C']"
                         model="{
@@ -515,11 +514,11 @@
                             nullable: false,
                             selection: ['A', 'B', 'C']
                         }"
-                    ></generic-input>
+                    ></text-input>
 
                     <hr/>
 
-                    <generic-input
+                    <text-input
                         declaration="selection"
                         description="input9Description"
                         initial-value
@@ -527,8 +526,8 @@
                         placeholder="input9Placeholder"
                         type="boolean"
                         required
-                    ></generic-input>
-                    <generic-input
+                    ></text-input>
+                    <text-input
                         initial-value="false"
                         labels="{true: 'JA', false: 'NEIN'}"
                         model="{
@@ -539,19 +538,19 @@
                             type: 'boolean'
                         }"
                         placeholder="input9ModelPlaceholder"
-                    ></generic-input>
+                    ></text-input>
 
                     <hr/>
 
-                    <generic-input
+                    <text-input
                         declaration="selection"
                         description="input10Description"
                         initial-value
                         labels="{true: 'JA', false: 'NEIN'}"
                         name="input10"
                         required
-                    ></generic-input>
-                    <generic-input
+                    ></text-input>
+                    <text-input
                         initial-value="false"
                         labels="{true: 'JA', false: 'NEIN'}"
                         model="{
@@ -561,18 +560,18 @@
                             nullable: false,
                             type: 'boolean'
                         }"
-                    ></generic-input>
+                    ></text-input>
 
                     <hr/>
 
-                    <GenericInput
+                    <text-input
                         declaration="numberSelection"
                         description="input11Description"
                         selection="[1, 2, 3]"
                         name="input11"
                         required
-                    />
-                    <GenericInput
+                    ></text-input>
+                    <text-nput
                         model="{
                             declaration: 'numberSelection',
                             description: 'input11ModelDescription',
@@ -580,19 +579,19 @@
                             selection: [1, 2, 3],
                             type: 'number'
                         }"
-                    />
+                    ></text-nput>
 
                     <hr/>
 
-                    <generic-input
+                    <text-input
                         declaration="selection"
                         description="input12Description"
                         initial-value="'b'"
                         name="input12"
                         selection="{a: 'A', b: 'B', c: 'C'}"
                         required
-                    ></generic-input>
-                    <generic-input
+                    ></text-input>
+                    <text-input
                         initial-value="'b'"
                         model="{
                             declaration: 'selection',
@@ -601,18 +600,18 @@
                             nullable: false,
                             selection: {a: 'A', b: 'B', c: 'C'}
                         }"
-                    ></generic-input>
+                    ></text-input>
 
                     <hr/>
 
-                    <generic-input
+                    <text-input
                         description="input13Description"
                         name="input13"
                         placeholder="input13Placeholder"
                         suggest-selection
                         selection="['hans hans', 'peter peter', 'klaus']"
-                    ></generic-input>
-                    <generic-input
+                    ></text-input>
+                    <text-input
                         initial-value="'peter'"
                         model="{
                             declaration: 'selection',
@@ -640,19 +639,19 @@
                                 })
                             })
                         })"
-                    ></generic-input>
+                    ></text-input>
 
                     <hr/>
 
-                    <generic-input
+                    <text-input
                         description="input14Description"
                         default="'a'"
                         name="input14"
                         placeholder="input14Placeholder"
                         search-selection
                         selection="{a: 'hans', b: 'hans', c: 'klaus'}"
-                    ></generic-input>
-                    <generic-input
+                    ></text-input>
+                    <text-input
                         initial-value="'peter'"
                         model="{
                             declaration: 'selection',
@@ -680,11 +679,11 @@
                                 resolve(result)
                             })
                         })"
-                    ></generic-input>
+                    ></text-input>
 
                     <hr/>
 
-                    <generic-input
+                    <text-input
                         declaration="text"
                         description="input15Description"
                         initial-value="'a'"
@@ -692,8 +691,8 @@
                         required
                         rows="3"
                         theme-configuration="{primary: 'yellow', secondary: 'blue'}"
-                    ></generic-input>
-                    <generic-input
+                    ></text-input>
+                    <text-input
                         editor="text"
                         initial-value="'a'"
                         model="{
@@ -703,11 +702,11 @@
                             nullable: false
                         }"
                         rows="2"
-                    ></generic-input>
+                    ></text-input>
 
                     <hr/>
 
-                    <generic-input
+                    <text-input
                         declaration="code"
                         description="input16Description"
                         disabled
@@ -716,8 +715,8 @@
                         name="input16"
                         rows="2"
                         selectable-editor
-                    ></generic-input>
-                    <generic-input
+                    ></text-input>
+                    <text-input
                         editor="code"
                         initial-value="'const value = 2'"
                         model="{
@@ -728,11 +727,11 @@
                         }"
                         rows="6"
                         selectable-editor
-                    ></generic-input>
+                    ></text-input>
 
                     <hr/>
 
-                    <generic-input
+                    <text-input
                         declaration="code"
                         description="input17Description"
                         editor="code"
@@ -741,8 +740,8 @@
                         required
                         rows="2"
                         selectable-editor
-                    ></generic-input>
-                    <generic-input
+                    ></text-input>
+                    <text-input
                         editor="code"
                         model="{
                             declaration: 'code',
@@ -752,11 +751,11 @@
                         }"
                         rows="6"
                         selectable-editor
-                    ></generic-input>
+                    ></text-input>
 
                     <hr/>
 
-                    <generic-input
+                    <text-input
                         declaration="richtext(raw)"
                         description="input18Description"
                         editor="richtext(raw)"
@@ -765,8 +764,8 @@
                         required
                         rows="2"
                         selectable-editor
-                    ></generic-input>
-                    <generic-input
+                    ></text-input>
+                    <text-input
                         editor="richtext(simple)"
                         initial-value="'Hello Mr. Smith,<br><br>how are you?'"
                         model="{
@@ -778,11 +777,11 @@
                         }"
                         rows="6"
                         selectable-editor
-                    ></generic-input>
+                    ></text-input>
 
                     <hr/>
 
-                    <generic-input
+                    <text-input
                         declaration="Number"
                         description="input19Description"
                         maximum="200000"
@@ -791,8 +790,8 @@
                         placeholder="100000"
                         required
                         type="number"
-                    ></generic-input>
-                    <generic-input
+                    ></text-input>
+                    <text-input
                         initial-value="100000"
                         model="{
                             declaration: 'Number',
@@ -803,11 +802,11 @@
                             name: 'input19Model',
                             nullable: false
                         }"
-                    ></generic-input>
+                    ></text-input>
 
                     <hr/>
 
-                    <generic-input
+                    <text-input
                         declaration="Number"
                         description="input20Description"
                         maximum="200000"
@@ -817,8 +816,8 @@
                         placeholder="100.000"
                         required
                         type="integer"
-                    ></generic-input>
-                    <generic-input
+                    ></text-input>
+                    <text-input
                         initial-value="100000.01"
                         model="{
                             declaration: 'Number',
@@ -832,11 +831,11 @@
                             maximumFractionDigits: 20,
                             minimumFractionDigits: 2
                         }}}}"
-                    ></generic-input>
+                    ></text-input>
 
                     <hr/>
 
-                    <generic-input
+                    <text-input
                         declaration="Number"
                         description="input21Description"
                         maximum="200000"
@@ -845,8 +844,8 @@
                         placeholder="100.000"
                         required
                         type="currency"
-                    ></generic-input>
-                    <generic-input
+                    ></text-input>
+                    <text-input
                         initial-value="100000.01"
                         model="{
                             declaration: 'Number',
@@ -857,7 +856,7 @@
                             nullable: false,
                             type: 'currency'
                         }"
-                    ></generic-input>
+                    ></text-input>
                 </div>
                 <!--endregion-->
                 <!--region generic-inputs-->

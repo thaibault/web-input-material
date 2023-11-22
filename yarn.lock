@@ -1865,6 +1865,17 @@
   resolved "https://registry.yarnpkg.com/@pkgjs/parseargs/-/parseargs-0.11.0.tgz#a77ea742fab25775145434eb1d2328cf5013ac33"
   integrity sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==
 
+"@rmwc/base@14.0.0":
+  version "14.0.0"
+  resolved "https://registry.yarnpkg.com/@rmwc/base/-/base-14.0.0.tgz#264c59347ca73fb6172b3a51e331397b2b7db03d"
+  integrity sha512-yXDj7a19yPYjPU40pDlaEF5oyPaBRtJC98GbkU7t1I4WG+W098AnYdrU4WmqlR8VDL2f4Ly2olqvOZgZ4ZXP6Q==
+  dependencies:
+    "@rmwc/types" "14.0.0"
+    classnames "^2.3.1"
+    hyperform "^0.11.0"
+    mutation-observer "^1.0.3"
+    tslib "^2.4.0"
+
 "@rmwc/base@^8.0.8":
   version "8.0.8"
   resolved "https://registry.yarnpkg.com/@rmwc/base/-/base-8.0.8.tgz#8111a9d02618376ae143ff802ff19f200ec1de4d"
@@ -2099,6 +2110,18 @@
     "@rmwc/base" "^8.0.8"
     "@rmwc/provider" "^8.0.8"
     rc-tooltip "3.7.3"
+
+"@rmwc/touch-target@*":
+  version "14.0.0"
+  resolved "https://registry.yarnpkg.com/@rmwc/touch-target/-/touch-target-14.0.0.tgz#83a55f014dbb51933361dd2bd141fcb3dc1429c2"
+  integrity sha512-7nzCvEsfJ0Qka/9ZLvMBIHg9GKkJyT2s23AA5sUDXBE+y3zTS3jg2zUbR0KVpR6njBy6oS//Ice7Kp3cTpdmzA==
+  dependencies:
+    "@rmwc/base" "14.0.0"
+
+"@rmwc/types@14.0.0":
+  version "14.0.0"
+  resolved "https://registry.yarnpkg.com/@rmwc/types/-/types-14.0.0.tgz#8086941bff49a8562a36739810af85f25140fbb7"
+  integrity sha512-h9mwUi95u0ivjraMQv5cBLEjPxlGXaFM9fjymtNhOeHqSihT1OeLeZ53HseT7DeIW7qLN4I84b9IQWCOOi5EtQ==
 
 "@rmwc/types@^8.0.8":
   version "8.0.8"
@@ -8205,7 +8228,7 @@ ts-api-utils@^1.0.1:
   resolved "https://registry.yarnpkg.com/ts-api-utils/-/ts-api-utils-1.0.3.tgz#f12c1c781d04427313dbac808f453f050e54a331"
   integrity sha512-wNMeqtMz5NtwpT/UZGY5alT+VoKdSsOOP/kqHFcUW1P/VRhH2wJ48+DN2WwUliNbQ976ETwDL0Ifd2VVvgonvg==
 
-tslib@*, tslib@^2.0.3, tslib@^2.3.0:
+tslib@*, tslib@^2.0.3, tslib@^2.3.0, tslib@^2.4.0:
   version "2.6.2"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.6.2.tgz#703ac29425e7b37cd6fd456e92404d46d1f3e4ae"
   integrity sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==

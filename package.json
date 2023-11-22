@@ -63,7 +63,7 @@
     "update:documentation": "documentation-website",
     "watch": "weboptimizer build --watch"
   },
-  "runkitExample": "require('@babel/runtime/package.json')\n\nglobalThis.window = globalThis\n\nconst {GenericInput} = require('web-input-material')\n\nGenericInput.component._name",
+  "runkitExample": "require('@babel/runtime/package.json')\n\nglobalThis.window = globalThis\n\nconst {TextInput} = require('web-input-material')\n\nTextInput.component._name",
   "dependencies": {
     "prop-types": "*",
     "react": "*",
@@ -88,6 +88,7 @@
     "@rmwc/textfield": "*",
     "@rmwc/theme": "*",
     "@rmwc/tooltip": "*",
+    "@rmwc/touch-target": "*",
     "@rmwc/typography": "*",
     "@tinymce/tinymce-react": "*",
     "@types/ejs": "*",
@@ -160,7 +161,7 @@
     },
     "injection": {
       "entry": {
-        "__evaluate__": "2 < self.givenCommandLineArguments.length && self.givenCommandLineArguments[2].startsWith('test') ? {testBundle: './test.ts'} : 2 < self.givenCommandLineArguments.length && self.givenCommandLineArguments[2] === 'serve' ? {clientnode: 'clientnode', index: './index'} : {'./components/CircularSpinner': './components/CircularSpinner', './components/FileInput': './components/FileInput', './components/GenericAnimate': './components/GenericAnimate', './components/GenericInput': './components/GenericInput', './components/GenericInputs': './components/GenericInputs', './components/Tabs': ['./components/TabItem', './components/TabBar'], './components/RequireableCheckbox': './components/RequireableCheckbox', './components/SliderInput': './components/SliderInput', index: './index'}"
+        "__evaluate__": "2 < self.givenCommandLineArguments.length && self.givenCommandLineArguments[2].startsWith('test') ? {testBundle: './test.ts'} : 2 < self.givenCommandLineArguments.length && self.givenCommandLineArguments[2] === 'serve' ? {clientnode: 'clientnode', index: './index'} : {'./components/CircularSpinner': './components/CircularSpinner', './components/FileInput': './components/FileInput', './components/GenericAnimate': './components/GenericAnimate', './components/TextInput': './components/TextInput', './components/GenericInputs': './components/GenericInputs', './components/Tabs': ['./components/TabItem', './components/TabBar'], './components/RequireableCheckbox': './components/RequireableCheckbox', './components/SliderInput': './components/SliderInput', index: './index'}"
       },
       "external": {
         "implicit": {
@@ -255,7 +256,7 @@
       },
       "injection": {
         "entry": {
-          "__evaluate__": "{'./components/GenericInput': './components/GenericInput'}"
+          "__evaluate__": "{'./components/TextInput': './components/TextInput'}"
         }
       }
     }

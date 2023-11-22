@@ -1,6 +1,6 @@
 // #!/usr/bin/env babel-node
 // -*- coding: utf-8 -*-
-/** @module GenericInput */
+/** @module TextInput */
 'use strict'
 /* !
     region header
@@ -18,15 +18,14 @@
 */
 // region imports
 import {boolean, string} from 'clientnode/property-types'
-import ReactGenericInput from
-    'react-input-material/dist/components/GenericInput'
+import ReactTextInput from 'react-input-material/dist/components/TextInput'
 import wrapAsWebComponent from 'web-component-wrapper'
 import {WebComponentAPI} from 'web-component-wrapper/type'
 // endregion
-export const GenericInput:WebComponentAPI<typeof ReactGenericInput> =
-    wrapAsWebComponent<typeof ReactGenericInput>(
-        ReactGenericInput,
-        'GenericInput',
+export const TextInput:WebComponentAPI<typeof ReactTextInput> =
+    wrapAsWebComponent<typeof ReactTextInput>(
+        ReactTextInput,
+        'TextInput',
         {
             eventToPropertyMapping: {onChange: true},
             internalProperties: {enforceUncontrolled: true},
@@ -50,7 +49,7 @@ export const GenericInput:WebComponentAPI<typeof ReactGenericInput> =
         }
     )
 
-export default GenericInput
+export default TextInput
 // region vim modline
 // vim: set tabstop=4 shiftwidth=4 expandtab:
 // vim: foldmethod=marker foldmarker=region,endregion:
