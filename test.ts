@@ -20,20 +20,21 @@ import '@webcomponents/webcomponentsjs/custom-elements-es5-adapter'
 import components from './index'
 // endregion
 describe('web-input-material', ():void => {
-    test('components', ():void => {
+    test('components', () => {
         expect(Object.keys(components).length).toBeGreaterThan(1)
     })
 
-    test('GenericInput', ():void => {
-        expect(components.GenericInput).toBeDefined()
-        expect(components.GenericInput.component).toBeDefined()
-        expect(components.GenericInput.register).toBeDefined()
+    test('TextInput', () => {
+        const {TextInput} = components
 
-        components.GenericInput.register()
-        const genericInput:HTMLElement =
-            document.createElement('generic-input')
+        expect(TextInput).toBeDefined()
+        expect(TextInput.component).toBeDefined()
+        expect(TextInput.register).toBeDefined()
 
-        expect(genericInput).toBeDefined()
+        TextInput.register()
+        const textInput:HTMLElement = document.createElement('text-input')
+
+        expect(textInput).toBeDefined()
     })
 })
 // region vim modline
