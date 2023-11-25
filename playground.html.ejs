@@ -252,12 +252,21 @@
             <tab-bar active-tab-index="2" class="playground__inputs__tab-bar">
 
                 <tab-item>circular-spinner</tab-item>
+
                 <tab-item>file-input</tab-item>
+
+                <tab-item>simple-input</tab-item>
+                <tab-item>time-input</tab-item>
                 <tab-item>text-input (with <sup>markup</sup>)</tab-item>
+                <tab-item>time-input</tab-item>
+                <tab-item>selection-input</tab-item>
+
+                <tab-item>generic-animate</tab-item>
                 <tab-item>generic-inputs</tab-item>
                 <tab-item>generic-interval</tab-item>
-                <tab-item>generic-animate</tab-item>
+
                 <tab-item>requireable-checkbox</tab-item>
+
                 <tab-item>slider-input</tab-item>
 
             </tab-bar>
@@ -352,8 +361,8 @@
                     </file-input>
                 </div>
                 <!--endregion-->
-                <!--region text-input-->
-                <div class="playground__inputs__text-input playground__tab">
+                <!--region simple-input-->
+                <div class="playground__inputs__simple-input playground__tab">
                     <text-input
                         bind-on-keydown="console.info('Typed key:', event.key)"
                         input-properties="{outlined: true}"
@@ -368,57 +377,26 @@
                             ariaChecked: false,
                             ariaDescription: 'test'
                         }"
-                        name="input1"
+                        name="simpleInput1"
                         show-declaration
                     ></text-input>
-                    <text-input model="{name: 'input1Model'}"></text-input>
-
-                    <hr/>
-
-                    <text-input
-                        default="new Date('2025-01-01T00:00:00.000Z').getTime() / 1000"
-                        name="input2"
-                        type="date"
-                    ></text-input>
-                    <text-input
-                        initial-value="'1970-01-01T08:00:00.000Z'"
-                        input-properties="{outlined: true}"
-                        model="{
-                            name: 'input2Model',
-                            type: 'time',
-                        }"
-                        step="60"
-                    ></text-input>
-
-                    <hr/>
-
-                    <text-input
-                        default="120" name="input3" type="datetime-local"
-                    ></text-input>
-                    <text-input
-                        model="{
-                            default: new Date(60 * 1000),
-                            maximum: 3600,
-                            minimum: 60,
-                            name: 'input3Model',
-                            type: 'time-local'
-                        }"
-                    ></text-input>
+                    <text-input model="{name: 'simpleInput1Model'}">
+                    </text-input>
 
                     <hr/>
 
                     <text-input
                         declaration="Disabled"
                         disabled
-                        initial-value="'value4'"
-                        name="input4"
+                        initial-value="'value2'"
+                        name="simpleInput2"
                     ></text-input>
                     <text-input
                         model="{
                             declaration: 'Disabled',
-                            default: 'value4Model',
+                            default: 'value2Model',
                             mutable: false,
-                            name: 'input4Model'
+                            name: 'simpleInput2Model'
                         }"
                     ></text-input>
 
@@ -426,22 +404,22 @@
 
                     <text-input
                         declaration="placeholder"
-                        name="input5"
+                        name="simpleInput3"
                         placeholder="input5"
                         required
                         show-validation-state="false"
                         trailing-icon="'clear_preset'"
                     ></text-input>
                     <text-input
-                        default="'value5Model'"
+                        default="'simpleValue3Model'"
                         icon="'backup'"
                         initial-value="'value5Model'"
                         model="{
                             declaration: 'placeholder',
-                            name: 'input5Model',
+                            name: 'simpleInput3Model',
                             nullable: false
                         }"
-                        placholder="input5Model"
+                        placholder="simpleInput3Model"
                         trailing-icon="'clear_preset'"
                     ></text-input>
 
@@ -449,22 +427,22 @@
 
                     <text-input
                         declaration="pattern"
-                        description="input6Description"
+                        description="simpleInput4Description"
                         icon="'search'"
                         initial-value="'only a`s allowed'"
-                        name="input6"
+                        name="input4"
                         pattern="'^a+$'"
-                        placeholder="input6Placeholder"
+                        placeholder="simpleInput4Placeholder"
                     ></text-input>
                     <text-input
                         initial-value="'has a`s and b`s'"
                         model="{
                             declaration: 'pattern',
-                            description: 'input6ModelDescription',
+                            description: 'simpleInput4ModelDescription',
                             regularExpressionPattern: ['.*a+.*', /.*b+.*/]
                         }"
-                        name="input6Model"
-                        placeholder="input6ModelPlaceholder"
+                        name="simpleInput4Model"
+                        placeholder="simpleInput4ModelPlaceholder"
                         trailing-icon="'search'"
                     ></text-input>
 
@@ -472,12 +450,12 @@
 
                     <text-input
                         declaration="password"
-                        description="input7Description"
+                        description="simpleInput5Description"
                         icon="'search'"
                         initial-value="'hans'"
-                        name="passwordInput7"
+                        name="simpleInput5"
                         pattern="/a+/"
-                        placeholder="input7Placeholder"
+                        placeholder="simpleInput5Placeholder"
                         tooltip="'Please type in your password.'"
                         trailing-icon="'password_preset'"
                     ></text-input>
@@ -485,21 +463,302 @@
                         initial-value="'hans'"
                         model="{
                             declaration: 'password',
-                            description: 'input7ModelDescription',
+                            description: 'simpleInput5ModelDescription',
                             regularExpressionPattern: 'a+'
                         }"
-                        name="passwordInput7Model"
-                        placeholder="input7ModelPlaceholder"
+                        name="simpleInput5Model"
+                        placeholder="simpleInput5ModelPlaceholder"
                         trailing-icon="'password_preset'"
+                    ></text-input>
+                </div>
+                <!--endregion-->
+                <!--region number-input-->
+                <div class="playground__inputs__number-input playground__tab">
+                    <text-input
+                        declaration="Number"
+                        description="numberInput1Description"
+                        maximum="200000"
+                        minimum="10"
+                        name="numberInput1"
+                        placeholder="100000"
+                        required
+                        type="number"
+                    ></text-input>
+                    <text-input
+                        initial-value="100000"
+                        model="{
+                            declaration: 'Number',
+                            description: 'numberInput1ModelDescription',
+                            maximum: 200000,
+                            minimum: 10,
+                            mutable: false,
+                            name: 'numberInput1Model',
+                            nullable: false
+                        }"
                     ></text-input>
 
                     <hr/>
 
                     <text-input
+                        declaration="Number"
+                        description="numberInput2Description"
+                        maximum="200000"
+                        minimum="10"
+                        minimumText="Please at least ${formatValue(minimum)}."
+                        name="numberInput2"
+                        placeholder="100.000"
+                        required
+                        type="integer"
+                    ></text-input>
+                    <text-input
+                        initial-value="100000.01"
+                        model="{
+                            declaration: 'Number',
+                            description: 'numberInput2ModelDescription',
+                            maximum: 200000,
+                            name: 'numberInput2Model',
+                            nullable: false,
+                            type: 'float'
+                        }"
+                        transformer="{format: {final: {options: {
+                            maximumFractionDigits: 20,
+                            minimumFractionDigits: 2
+                        }}}}"
+                    ></text-input>
+
+                    <hr/>
+
+                    <text-input
+                        declaration="Number"
+                        description="numberInput3Description"
+                        maximum="200000"
+                        minimum="10"
+                        name="numberInput3"
+                        placeholder="100.000"
+                        required
+                        type="currency"
+                    ></text-input>
+                    <text-input
+                        initial-value="100000.01"
+                        model="{
+                            declaration: 'Number',
+                            description: 'numberInput3ModelDescription',
+                            maximum: 200000,
+                            minimum: 10,
+                            name: 'numberInput3Model',
+                            nullable: false,
+                            type: 'currency'
+                        }"
+                    ></text-input>
+                </div>
+                <!--endregion-->
+                <!--region text-input-->
+                <div class="playground__inputs__text-input playground__tab">
+                    <text-input
+                        declaration="text"
+                        description="textInput1Description"
+                        initial-value="'a'"
+                        name="textInput1"
+                        required
+                        rows="3"
+                        theme-configuration="{primary: 'yellow', secondary: 'blue'}"
+                    ></text-input>
+                    <text-input
+                        editor="text"
+                        initial-value="'a'"
+                        model="{
+                            declaration: 'text',
+                            description: 'textInput1ModelDescription',
+                            name: 'textInput1Model',
+                            nullable: false
+                        }"
+                        rows="2"
+                    ></text-input>
+
+                    <hr/>
+
+                    <text-input
+                        declaration="code"
+                        description="textInput2Description"
+                        disabled
+                        editor="code"
+                        initial-value="'const value = 2'"
+                        name="textInput2"
+                        rows="2"
+                        selectable-editor
+                    ></text-input>
+                    <text-input
+                        editor="code"
+                        initial-value="'const value = 2'"
+                        model="{
+                            declaration: 'code',
+                            description: 'textInput2ModelDescription',
+                            name: 'textInput2Model',
+                            nullable: false
+                        }"
+                        rows="6"
+                        selectable-editor
+                    ></text-input>
+
+                    <hr/>
+
+                    <text-input
+                        declaration="code"
+                        description="textInput3Description"
+                        editor="code"
+                        maximum-length="10"
+                        name="textInput3"
+                        required
+                        rows="2"
+                        selectable-editor
+                    ></text-input>
+                    <text-input
+                        editor="code"
+                        model="{
+                            declaration: 'code',
+                            description: 'textInput3ModelDescription',
+                            name: 'textInput3Model',
+                            nullable: false
+                        }"
+                        rows="6"
+                        selectable-editor
+                    ></text-input>
+
+                    <hr/>
+
+                    <text-input
+                        declaration="richtext(raw)"
+                        description="textInput4Description"
+                        editor="richtext(raw)"
+                        initial-value="'Hello Mr. Smith,<br><br>how are you?'"
+                        name="textInput4"
+                        required
+                        rows="2"
+                        selectable-editor
+                    ></text-input>
+                    <text-input
+                        editor="richtext(simple)"
+                        initial-value="'Hello Mr. Smith,<br><br>how are you?'"
+                        model="{
+                            declaration: 'richtext(simple)',
+                            description: 'textInput4ModelDescription',
+                            mutable: false,
+                            name: 'textInput4Model',
+                            nullable: false
+                        }"
+                        rows="6"
+                        selectable-editor
+                    ></text-input>
+                </div>
+                <!--endregion-->
+                <!--region time-input-->
+                <div class="playground__inputs__time-input playground__tab">
+                    <text-input
+                        default="new Date('2025-01-01T00:00:00.000Z').getTime() / 1000"
+                        name="timeInput1"
+                        type="date"
+                    ></text-input>
+                    <text-input
+                        initial-value="'2025-01-01T00:00:00.000Z'"
+                        input-properties="{outlined: true}"
+                        model="{name: 'timeInput1Model', type: 'date'}"
+                    ></text-input>
+
+                    <hr/>
+
+                    <text-input
+                        default="new Date('2025-01-01T00:00:00.000Z').getTime() / 1000"
+                        name="timeInput2"
+                        type="date-local"
+                    ></text-input>
+                    <text-input
+                        initial-value="'2025-01-01T00:00:00.000Z'"
+                        input-properties="{outlined: true}"
+                        model="{name: 'timeInput2Model', type: 'date-local'}"
+                    ></text-input>
+
+                    <hr/>
+
+                    <text-input
+                        default="120" name="timeInput3" type="datetime"
+                    ></text-input>
+                    <text-input
+                        model="{
+                            default: new Date(120 * 1000),
+                            maximum: 3600,
+                            minimum: 60,
+                            name: 'timeInput3Model',
+                            type: 'datetime'
+                        }"
+                    ></text-input>
+
+                    <hr/>
+
+                    <text-input
+                        default="120" name="timeInput4" type="datetime-local"
+                    ></text-input>
+                    <text-input
+                        model="{
+                            default: new Date(120 * 1000),
+                            maximum: 3600,
+                            minimum: 60,
+                            name: 'timeInput4Model',
+                            type: 'datetime-local'
+                        }"
+                    ></text-input>
+
+                    <hr/>
+
+                    <text-input default="120" name="timeInput5" type="time">
+                    </text-input>
+                    <text-input
+                        model="{
+                            default: new Date(60 * 1000),
+                            maximum: 3600,
+                            minimum: 60,
+                            name: 'timeInput5Model',
+                            type: 'time'
+                        }"
+                    ></text-input>
+
+                    <hr/>
+
+                    <text-input
+                        default="120" name="timeInput6" type="time-local"
+                    ></text-input>
+                    <text-input
+                        model="{
+                            default: new Date(60 * 1000),
+                            maximum: 3600,
+                            minimum: 60,
+                            name: 'timeInput6Model',
+                            type: 'time-local'
+                        }"
+                    ></text-input>
+
+                    <hr/>
+
+                    <text-input
+                        default="'00:20:00'"
+                        name="timeInput7"
+                        type="time-local"
+                    ></text-input>
+                    <text-input
+                        initial-value="'1970-01-01T00:20:00.000Z'"
+                        input-properties="{outlined: true}"
+                        model="{name: 'timeInput7Model', type: 'time-local'}"
+                    ></text-input>
+                </div>
+                <!--endregion-->
+                <!--region selection-input-->
+                <div
+                    class="playground__inputs__selection-input playground__tab"
+                >
+                    <text-input
                         declaration="selection"
-                        description="input8Description"
+                        description="selectionInput1Description"
                         labels="[['C', 'LC'], ['D', 'LD'], ['A', 'LA'], ['B', 'LB']]"
-                        name="input8"
+                        name="selectionInput1"
                         required
                         selection="['A', 'B', 'C']"
                     ></text-input>
@@ -508,9 +767,9 @@
                         labels="['Label A', 'Label B', 'Label C']"
                         model="{
                             declaration: 'selection',
-                            description: 'input8ModelDescription',
+                            description: 'selectionInput1ModelDescription',
                             mutable: false,
-                            name: 'input8Model',
+                            name: 'selectionInput1Model',
                             nullable: false,
                             selection: ['A', 'B', 'C']
                         }"
@@ -520,10 +779,10 @@
 
                     <text-input
                         declaration="selection"
-                        description="input9Description"
+                        description="selectionInput2Description"
                         initial-value
-                        name="input9"
-                        placeholder="input9Placeholder"
+                        name="selectionInput2"
+                        placeholder="selectionInput2Placeholder"
                         type="boolean"
                         required
                     ></text-input>
@@ -532,22 +791,22 @@
                         labels="{true: 'JA', false: 'NEIN'}"
                         model="{
                             declaration: 'selection',
-                            description: 'input9ModelDescription',
-                            name: 'input9Model',
+                            description: 'selectionInput2ModelDescription',
+                            name: 'selectionInput2Model',
                             nullable: false,
                             type: 'boolean'
                         }"
-                        placeholder="input9ModelPlaceholder"
+                        placeholder="selectionInput2ModelPlaceholder"
                     ></text-input>
 
                     <hr/>
 
                     <text-input
                         declaration="selection"
-                        description="input10Description"
+                        description="selectionInput30Description"
                         initial-value
                         labels="{true: 'JA', false: 'NEIN'}"
-                        name="input10"
+                        name="selectionInput3"
                         required
                     ></text-input>
                     <text-input
@@ -555,8 +814,8 @@
                         labels="{true: 'JA', false: 'NEIN'}"
                         model="{
                             declaration: 'selection',
-                            description: 'input10ModelDescription',
-                            name: 'input10Model',
+                            description: 'selectionInput3ModelDescription',
+                            name: 'selectionInput3Model',
                             nullable: false,
                             type: 'boolean'
                         }"
@@ -566,16 +825,16 @@
 
                     <text-input
                         declaration="numberSelection"
-                        description="input11Description"
+                        description="selectionInput4Description"
                         selection="[1, 2, 3]"
-                        name="input11"
+                        name="selectionInput4"
                         required
                     ></text-input>
                     <text-nput
                         model="{
                             declaration: 'numberSelection',
-                            description: 'input11ModelDescription',
-                            name: 'input11Model',
+                            description: 'selectionInput4ModelDescription',
+                            name: 'selectionInput4Model',
                             selection: [1, 2, 3],
                             type: 'number'
                         }"
@@ -585,9 +844,9 @@
 
                     <text-input
                         declaration="selection"
-                        description="input12Description"
+                        description="selectionInput5Description"
                         initial-value="'b'"
-                        name="input12"
+                        name="selectionInput5"
                         selection="{a: 'A', b: 'B', c: 'C'}"
                         required
                     ></text-input>
@@ -595,8 +854,8 @@
                         initial-value="'b'"
                         model="{
                             declaration: 'selection',
-                            description: 'input12ModelDescription',
-                            name: 'input12Model',
+                            description: 'selectionInput5ModelDescription',
+                            name: 'selectionInput5Model',
                             nullable: false,
                             selection: {a: 'A', b: 'B', c: 'C'}
                         }"
@@ -605,9 +864,9 @@
                     <hr/>
 
                     <text-input
-                        description="input13Description"
-                        name="input13"
-                        placeholder="input13Placeholder"
+                        description="selectionInput6Description"
+                        name="selectionInput6"
+                        placeholder="selectionInput6Placeholder"
                         suggest-selection
                         selection="['hans hans', 'peter peter', 'klaus']"
                     ></text-input>
@@ -615,11 +874,11 @@
                         initial-value="'peter'"
                         model="{
                             declaration: 'selection',
-                            description: 'input13ModelDescription',
-                            name: 'input13Model',
+                            description: 'selectionInput6ModelDescription',
+                            name: 'selectionInput6Model',
                             nullable: false
                         }"
-                        placeholder="input13ModelPlaceholder"
+                        placeholder="selectionInput6ModelPlaceholder"
                         search-selection
                         -suggestion-creator="Tools.debounce(function(search) {
                             if (!search.query || search.query.length < 3)
@@ -644,10 +903,10 @@
                     <hr/>
 
                     <text-input
-                        description="input14Description"
+                        description="selectionInput7Description"
                         default="'a'"
-                        name="input14"
-                        placeholder="input14Placeholder"
+                        name="selectionInput7"
+                        placeholder="selectionInput7Placeholder"
                         search-selection
                         selection="{a: 'hans', b: 'hans', c: 'klaus'}"
                     ></text-input>
@@ -655,11 +914,11 @@
                         initial-value="'peter'"
                         model="{
                             declaration: 'selection',
-                            description: 'input14ModelDescription',
-                            name: 'input14Model',
+                            description: 'selectionInput7ModelDescription',
+                            name: 'selectionInput7Model',
                             nullable: false
                         }"
-                        placeholder="input14ModelPlaceholder"
+                        placeholder="selectionInput7ModelPlaceholder"
                         suggestion-creator="new Promise(function(resolve) {
                             Tools.timeout(500, function() {
                                 var selection = {
@@ -679,183 +938,6 @@
                                 resolve(result)
                             })
                         })"
-                    ></text-input>
-
-                    <hr/>
-
-                    <text-input
-                        declaration="text"
-                        description="input15Description"
-                        initial-value="'a'"
-                        name="input15"
-                        required
-                        rows="3"
-                        theme-configuration="{primary: 'yellow', secondary: 'blue'}"
-                    ></text-input>
-                    <text-input
-                        editor="text"
-                        initial-value="'a'"
-                        model="{
-                            declaration: 'text',
-                            description: 'input15ModelDescription',
-                            name: 'input15Model',
-                            nullable: false
-                        }"
-                        rows="2"
-                    ></text-input>
-
-                    <hr/>
-
-                    <text-input
-                        declaration="code"
-                        description="input16Description"
-                        disabled
-                        editor="code"
-                        initial-value="'const value = 2'"
-                        name="input16"
-                        rows="2"
-                        selectable-editor
-                    ></text-input>
-                    <text-input
-                        editor="code"
-                        initial-value="'const value = 2'"
-                        model="{
-                            declaration: 'code',
-                            description: 'input16ModelDescription',
-                            name: 'input16Model',
-                            nullable: false
-                        }"
-                        rows="6"
-                        selectable-editor
-                    ></text-input>
-
-                    <hr/>
-
-                    <text-input
-                        declaration="code"
-                        description="input17Description"
-                        editor="code"
-                        maximum-length="10"
-                        name="input17"
-                        required
-                        rows="2"
-                        selectable-editor
-                    ></text-input>
-                    <text-input
-                        editor="code"
-                        model="{
-                            declaration: 'code',
-                            description: 'input17ModelDescription',
-                            name: 'input17Model',
-                            nullable: false
-                        }"
-                        rows="6"
-                        selectable-editor
-                    ></text-input>
-
-                    <hr/>
-
-                    <text-input
-                        declaration="richtext(raw)"
-                        description="input18Description"
-                        editor="richtext(raw)"
-                        initial-value="'Hello Mr. Smith,<br><br>how are you?'"
-                        name="input18"
-                        required
-                        rows="2"
-                        selectable-editor
-                    ></text-input>
-                    <text-input
-                        editor="richtext(simple)"
-                        initial-value="'Hello Mr. Smith,<br><br>how are you?'"
-                        model="{
-                            declaration: 'richtext(simple)',
-                            description: 'input18ModelDescription',
-                            mutable: false,
-                            name: 'input18Model',
-                            nullable: false
-                        }"
-                        rows="6"
-                        selectable-editor
-                    ></text-input>
-
-                    <hr/>
-
-                    <text-input
-                        declaration="Number"
-                        description="input19Description"
-                        maximum="200000"
-                        minimum="10"
-                        name="input19"
-                        placeholder="100000"
-                        required
-                        type="number"
-                    ></text-input>
-                    <text-input
-                        initial-value="100000"
-                        model="{
-                            declaration: 'Number',
-                            description: 'input19ModelDescription',
-                            maximum: 200000,
-                            minimum: 10,
-                            mutable: false,
-                            name: 'input19Model',
-                            nullable: false
-                        }"
-                    ></text-input>
-
-                    <hr/>
-
-                    <text-input
-                        declaration="Number"
-                        description="input20Description"
-                        maximum="200000"
-                        minimum="10"
-                        minimumText="Please at least ${formatValue(minimum)}."
-                        name="input20"
-                        placeholder="100.000"
-                        required
-                        type="integer"
-                    ></text-input>
-                    <text-input
-                        initial-value="100000.01"
-                        model="{
-                            declaration: 'Number',
-                            description: 'input20ModelDescription',
-                            maximum: 200000,
-                            name: 'input20Model',
-                            nullable: false,
-                            type: 'float'
-                        }"
-                        transformer="{format: {final: {options: {
-                            maximumFractionDigits: 20,
-                            minimumFractionDigits: 2
-                        }}}}"
-                    ></text-input>
-
-                    <hr/>
-
-                    <text-input
-                        declaration="Number"
-                        description="input21Description"
-                        maximum="200000"
-                        minimum="10"
-                        name="input21"
-                        placeholder="100.000"
-                        required
-                        type="currency"
-                    ></text-input>
-                    <text-input
-                        initial-value="100000.01"
-                        model="{
-                            declaration: 'Number',
-                            description: 'input21ModelDescription',
-                            maximum: 200000,
-                            minimum: 10,
-                            name: 'input21Model',
-                            nullable: false,
-                            type: 'currency'
-                        }"
                     ></text-input>
                 </div>
                 <!--endregion-->
@@ -1002,29 +1084,35 @@
                 <div class="playground__inputs__slider-input playground__tab">
                     <slider-input name="sliderInput1"></slider-input>
                     <slider-input
-                        max="100"
-                        min="10"
                         name="sliderInput2"
-                        step="2"
-                        name="test"
-                    ></slider-input>
-                    <slider-input
-                        discrete
+
                         max="100"
                         min="10"
+                        step="2"
+                        value="12"
+                    ></slider-input>
+                    <slider-input
                         name="sliderInput3"
-                        step="2"
-                        theme-configuration="{secondary: 'red'}"
-                        value="66"
-                    ></slider-input>
-                    <slider-input
+
                         discrete
-                        displayMarkers
+
                         max="100"
                         min="10"
-                        name="sliderInput4"
                         step="2"
-                        value="33"
+                        value="66"
+
+                        theme-configuration="{secondary: 'red'}"
+                    ></slider-input>
+                    <slider-input
+                        name="sliderInput4"
+
+                        discrete
+                        display-markers
+
+                        max="100"
+                        min="10"
+                        step="2"
+                        value="32"
                     ></slider-input>
                     <slider-input disabled name="sliderInput5" value="33">
                     </slider-input>

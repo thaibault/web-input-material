@@ -112,6 +112,7 @@
     "identity-obj-proxy": "*",
     "jest": "*",
     "jsdoc": "*",
+    "material-components-web": "*",
     "material-icons": "*",
     "react-ace": "*",
     "react-generic-animate": "*",
