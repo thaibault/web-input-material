@@ -64,12 +64,6 @@
                 flex-grow: 1;
             }
 
-            .playground__inputs__generic-animate .generic-animate-appear-active,
-            .playground__inputs__generic-animate .generic-animate-enter-active,
-            .playground__inputs__generic-animate .generic-animate-exit-active {
-                transition: opacity 2000ms ease-in !important;
-            }
-
             .playground__outputs__bar {
                 visibility: hidden;
             }
@@ -82,10 +76,24 @@
                 z-index: 1;
             }
 
-            file-input, text-input {
+            .playground__inputs__generic-animate .generic-animate-appear-active,
+            .playground__inputs__generic-animate .generic-animate-enter-active,
+            .playground__inputs__generic-animate .generic-animate-exit-active {
+                transition: opacity 2000ms ease-in !important;
+            }
+
+            file-input,
+            text-input,
+            generic-inputs,
+            generic-interval,
+            slider-input {
                 display: block;
+                width: 400px;
+            }
+
+            file-input,
+            text-input {
                 margin-bottom: 20px;
-                max-width: 400px;
             }
 
             <%-
@@ -247,6 +255,15 @@
     </head>
     <!--endregion-->
     <body class="no-javascript">
+        <slider-input
+            name="sliderInput2"
+
+            max="100"
+            min="10"
+            step="2"
+            value="12"
+        ></slider-input>
+
         <div class="tab-bar">
             <!--region navigation-->
             <tab-bar active-tab-index="2" class="playground__inputs__tab-bar">
@@ -256,12 +273,13 @@
                 <tab-item>file-input</tab-item>
 
                 <tab-item>simple-input</tab-item>
-                <tab-item>time-input</tab-item>
+                <tab-item>number-input</tab-item>
                 <tab-item>text-input (with <sup>markup</sup>)</tab-item>
                 <tab-item>time-input</tab-item>
                 <tab-item>selection-input</tab-item>
 
                 <tab-item>generic-animate</tab-item>
+
                 <tab-item>generic-inputs</tab-item>
                 <tab-item>generic-interval</tab-item>
 
@@ -282,6 +300,7 @@
                     <circular-spinner size="80"></circular-spinner>
                 </div>
                 <!--endregion-->
+
                 <!--region file-input-->
                 <div class="playground__inputs__file-input playground__tab">
                     <file-input
@@ -361,6 +380,7 @@
                     </file-input>
                 </div>
                 <!--endregion-->
+
                 <!--region simple-input-->
                 <div class="playground__inputs__simple-input playground__tab">
                     <text-input
@@ -667,12 +687,12 @@
                     <hr/>
 
                     <text-input
-                        default="new Date('2025-01-01T00:00:00.000Z').getTime() / 1000"
+                        default="new Date('2025-01-01T23:00:00.000Z').getTime() / 1000"
                         name="timeInput2"
                         type="date-local"
                     ></text-input>
                     <text-input
-                        initial-value="'2025-01-01T00:00:00.000Z'"
+                        initial-value="'2025-01-01T23:00:00.000Z'"
                         input-properties="{outlined: true}"
                         model="{name: 'timeInput2Model', type: 'date-local'}"
                     ></text-input>
@@ -742,11 +762,13 @@
                         default="'00:20:00'"
                         name="timeInput7"
                         type="time-local"
+                        step="60"
                     ></text-input>
                     <text-input
                         initial-value="'1970-01-01T00:20:00.000Z'"
                         input-properties="{outlined: true}"
                         model="{name: 'timeInput7Model', type: 'time-local'}"
+                        step="60"
                     ></text-input>
                 </div>
                 <!--endregion-->
@@ -941,6 +963,22 @@
                     ></text-input>
                 </div>
                 <!--endregion-->
+
+                <!--region generic-animate-->
+                <div
+                        class="playground__inputs__generic-animate playground__tab"
+                        style="height: 50px"
+                >
+                    <generic-animate in timeout="2000">
+                        Fade it!
+                    </generic-animate>
+                    <br/>
+                    <generic-animate in="false" timeout="2000">
+                        Fade it!
+                    </generic-animate>
+                </div>
+                <!--endregion-->
+
                 <!--region generic-inputs-->
                 <div class="playground__inputs__generic-inputs playground__tab">
                     <generic-inputs
@@ -1019,20 +1057,7 @@
                     ></generic-interval>
                 </div>
                 <!--endregion-->
-                <!--region generic-animate-->
-                <div
-                    class="playground__inputs__generic-animate playground__tab"
-                    style="height: 50px"
-                >
-                    <generic-animate in timeout="2000">
-                        Fade it!
-                    </generic-animate>
-                    <br/>
-                    <generic-animate in="false" timeout="2000">
-                        Fade it!
-                    </generic-animate>
-                </div>
-                <!--endregion-->
+
                 <!--region requireable-checkbox-->
                 <div class="playground__inputs__requireable-checkbox playground__tab">
                     <requireable-checkbox
@@ -1080,9 +1105,10 @@
                     ></requireable-checkbox>
                 </div>
                 <!--endregion-->
+
                 <!--region slider-input-->
                 <div class="playground__inputs__slider-input playground__tab">
-                    <slider-input name="sliderInput1"></slider-input>
+                    <slider-input name="sliderInput1" value="0"></slider-input>
                     <slider-input
                         name="sliderInput2"
 
@@ -1100,8 +1126,6 @@
                         min="10"
                         step="2"
                         value="66"
-
-                        theme-configuration="{secondary: 'red'}"
                     ></slider-input>
                     <slider-input
                         name="sliderInput4"
