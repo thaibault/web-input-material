@@ -85,8 +85,7 @@
             file-input,
             text-input,
             generic-inputs,
-            generic-interval,
-            slider-input {
+            generic-interval {
                 display: block;
                 width: 400px;
             }
@@ -255,15 +254,6 @@
     </head>
     <!--endregion-->
     <body class="no-javascript">
-        <slider-input
-            name="sliderInput2"
-
-            max="100"
-            min="10"
-            step="2"
-            value="12"
-        ></slider-input>
-
         <div class="tab-bar">
             <!--region navigation-->
             <tab-bar active-tab-index="2" class="playground__inputs__tab-bar">
@@ -1108,7 +1098,9 @@
 
                 <!--region slider-input-->
                 <div class="playground__inputs__slider-input playground__tab">
-                    <slider-input name="sliderInput1" value="0"></slider-input>
+                    <!--TODO
+                    <slider-input name="sliderInput1"></slider-input>
+                    -->
                     <slider-input
                         name="sliderInput2"
 
@@ -1117,6 +1109,7 @@
                         step="2"
                         value="12"
                     ></slider-input>
+                    <!--TODO
                     <slider-input
                         name="sliderInput3"
 
@@ -1126,6 +1119,8 @@
                         min="10"
                         step="2"
                         value="66"
+
+                        theme-configuration="{secondary: 'red'}"
                     ></slider-input>
                     <slider-input
                         name="sliderInput4"
@@ -1140,6 +1135,7 @@
                     ></slider-input>
                     <slider-input disabled name="sliderInput5" value="33">
                     </slider-input>
+                    -->
                 </div>
                 <!--endregion-->
             </div>

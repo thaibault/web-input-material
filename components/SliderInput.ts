@@ -30,11 +30,14 @@ import {Slider} from '@rmwc/slider'
 // endregion
 export interface Properties extends Mapping<unknown> {
     disabled:boolean
+
     discrete:boolean
     displayMarkers:boolean
+
     max:number
     min:number
     step:number
+
     value:number
 }
 /*
@@ -65,15 +68,20 @@ export const SliderInput:WebComponentAPI<
         },
         propTypes: {
             disabled: boolean,
+
             discrete: boolean,
             displayMarkers: boolean,
+
             max: number,
             min: number,
             step: number,
+
             theme: string,
             themeConfiguration: object,
+
             onChange: func,
             onInput: func,
+
             value: number
         }
     }
