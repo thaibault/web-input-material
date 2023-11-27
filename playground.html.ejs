@@ -256,12 +256,13 @@
                 <tab-item>file-input</tab-item>
 
                 <tab-item>simple-input</tab-item>
-                <tab-item>time-input</tab-item>
+                <tab-item>number-input</tab-item>
                 <tab-item>text-input (with <sup>markup</sup>)</tab-item>
                 <tab-item>time-input</tab-item>
                 <tab-item>selection-input</tab-item>
 
                 <tab-item>generic-animate</tab-item>
+
                 <tab-item>generic-inputs</tab-item>
                 <tab-item>generic-interval</tab-item>
 
@@ -282,6 +283,7 @@
                     <circular-spinner size="80"></circular-spinner>
                 </div>
                 <!--endregion-->
+
                 <!--region file-input-->
                 <div class="playground__inputs__file-input playground__tab">
                     <file-input
@@ -361,6 +363,7 @@
                     </file-input>
                 </div>
                 <!--endregion-->
+
                 <!--region simple-input-->
                 <div class="playground__inputs__simple-input playground__tab">
                     <text-input
@@ -667,12 +670,12 @@
                     <hr/>
 
                     <text-input
-                        default="new Date('2025-01-01T00:00:00.000Z').getTime() / 1000"
+                        default="new Date('2025-01-01T23:00:00.000Z').getTime() / 1000"
                         name="timeInput2"
                         type="date-local"
                     ></text-input>
                     <text-input
-                        initial-value="'2025-01-01T00:00:00.000Z'"
+                        initial-value="'2025-01-01T23:00:00.000Z'"
                         input-properties="{outlined: true}"
                         model="{name: 'timeInput2Model', type: 'date-local'}"
                     ></text-input>
@@ -943,6 +946,22 @@
                     ></text-input>
                 </div>
                 <!--endregion-->
+
+                <!--region generic-animate-->
+                <div
+                        class="playground__inputs__generic-animate playground__tab"
+                        style="height: 50px"
+                >
+                    <generic-animate in timeout="2000">
+                        Fade it!
+                    </generic-animate>
+                    <br/>
+                    <generic-animate in="false" timeout="2000">
+                        Fade it!
+                    </generic-animate>
+                </div>
+                <!--endregion-->
+
                 <!--region generic-inputs-->
                 <div class="playground__inputs__generic-inputs playground__tab">
                     <generic-inputs
@@ -1021,20 +1040,7 @@
                     ></generic-interval>
                 </div>
                 <!--endregion-->
-                <!--region generic-animate-->
-                <div
-                    class="playground__inputs__generic-animate playground__tab"
-                    style="height: 50px"
-                >
-                    <generic-animate in timeout="2000">
-                        Fade it!
-                    </generic-animate>
-                    <br/>
-                    <generic-animate in="false" timeout="2000">
-                        Fade it!
-                    </generic-animate>
-                </div>
-                <!--endregion-->
+
                 <!--region requireable-checkbox-->
                 <div class="playground__inputs__requireable-checkbox playground__tab">
                     <requireable-checkbox
@@ -1082,7 +1088,9 @@
                     ></requireable-checkbox>
                 </div>
                 <!--endregion-->
+
                 <!--region slider-input-->
+                <!--TODO
                 <div class="playground__inputs__slider-input playground__tab">
                     <slider-input name="sliderInput1"></slider-input>
                     <slider-input
@@ -1118,6 +1126,7 @@
                     ></slider-input>
                     <slider-input disabled name="sliderInput5" value="33">
                     </slider-input>
+                    -->
                 </div>
                 <!--endregion-->
             </div>
