@@ -43,10 +43,10 @@
 
                 background-color: white;
                 box-shadow: 0 8px 11px -2px rgba(0, 0, 0, .2);
-            }
 
-            .mdc-tab-bar {
-                display: flex;
+                .mdc-tab-bar {
+                    display: flex;
+                }
             }
 
             .playground {
@@ -54,32 +54,32 @@
                 flex-direction: row;
                 gap: 20px;
                 margin-top: 70px;
-            }
 
-            .playground__tab.hide {
-                display: none;
-            }
+                .playground__tab.hide {
+                    display: none;
+                }
 
-            .playground__inputs {
-                flex-grow: 1;
-            }
+                .playground__inputs {
+                    flex-grow: 1;
+                }
 
-            .playground__outputs__bar {
-                visibility: hidden;
-            }
+                .playground__outputs__bar {
+                    visibility: hidden;
+                }
 
-            .playground__outputs__content {
-                overflow: auto;
-                position: fixed;
-                top: 70px;
-                height: calc(100vh - 70px);
-                z-index: 1;
-            }
+                .playground__outputs__content {
+                    overflow: auto;
+                    position: fixed;
+                    top: 70px;
+                    height: calc(100vh - 70px);
+                    z-index: 1;
+                }
 
-            .playground__inputs__generic-animate .generic-animate-appear-active,
-            .playground__inputs__generic-animate .generic-animate-enter-active,
-            .playground__inputs__generic-animate .generic-animate-exit-active {
-                transition: opacity 2000ms ease-in !important;
+                .playground__inputs__generic-animate .generic-animate-appear-active,
+                .playground__inputs__generic-animate .generic-animate-enter-active,
+                .playground__inputs__generic-animate .generic-animate-exit-active {
+                    transition: opacity 2000ms ease-in !important;
+                }
             }
 
             file-input,
@@ -1020,7 +1020,11 @@
                         model="{
                             default: [{
                                 name: 'inputs3-1',
-                                type: 'date'
+                                type: 'time',
+                                value: {
+                                    start: {default: 0},
+                                    end: {default: 0}
+                                }
                             }],
                             name: 'inputs3'
                         }"
