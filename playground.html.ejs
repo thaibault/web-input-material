@@ -96,6 +96,10 @@
                 margin-bottom: 20px;
             }
 
+            generic-inputs {
+                margin-bottom: 60px;
+            }
+
             <%-
                 require('material-icons/iconfont/material-icons.css')
                     .replace(
@@ -255,15 +259,6 @@
     </head>
     <!--endregion-->
     <body class="no-javascript">
-        <slider-input
-            name="sliderInput2"
-
-            max="100"
-            min="10"
-            step="2"
-            value="12"
-        ></slider-input>
-
         <div class="tab-bar">
             <!--region navigation-->
             <tab-bar active-tab-index="2" class="playground__inputs__tab-bar">
@@ -303,9 +298,8 @@
 
                 <!--region file-input-->
                 <div class="playground__inputs__file-input playground__tab">
-                    <file-input
-                        trigger-initial-properties-consolidation
-                    ></file-input>
+                    <file-input trigger-initial-properties-consolidation>
+                    </file-input>
                     <file-input
                         default="{
                             blob: {type: 'image/png'},
@@ -982,10 +976,11 @@
                 <!--region generic-inputs-->
                 <div class="playground__inputs__generic-inputs playground__tab">
                     <generic-inputs
-                        create-prototype="Tools.extend(
+                        create-item="Tools.extend(
                             options.item,
                             {name: options.properties.name + '-' + String(options.index + 1)}
                         )"
+                        maximum-number="10"
                         model="{default: [{name: 'inputs1-1'}], name: 'inputs1'}"
                         show-initial-validation-state
                     >
@@ -993,18 +988,14 @@
                         </file-input>
                     </generic-inputs>
                     <generic-inputs
-                        create-prototype="Tools.extend(
+                        create-item="Tools.extend(
                             options.item,
                             {name: options.properties.name + '-' + String(options.index + 1)}
                         )"
                         maximum-number="2"
                         minimum-number="2"
                         model="{
-                            default: [{
-                                name: 'inputs2-1',
-                                type: 'boolean',
-                                value: false
-                            }],
+                            default: [{type: 'boolean', value: false}],
                             name: 'inputs2'
                         }"
                         show-initial-validation-state
@@ -1013,25 +1004,65 @@
                         </requireable-checkbox>
                     </generic-inputs>
                     <generic-inputs
-                        create-prototype="Tools.extend(
-                            options.item,
-                            {name: options.properties.name + '-' + String(options.index + 1)}
-                        )"
-                        model="{
-                            default: [{
-                                name: 'inputs3-1',
-                                type: 'time',
-                                value: {
-                                    start: {default: 0},
-                                    end: {default: 0}
+                        -create-prototype="function({item, lastValue, properties}) {
+                            const sixHoursInSeconds =
+                                new Date(1970, 0, 1, 6).getTime() / 1000
+                            const length = properties?.value?.length
+                            const nextStart =
+                                lastValue?.end ??
+                                (
+                                    (
+                                        length &&
+                                        properties.value[length - 1].value
+                                    ) ?
+                                        properties.value[length - 1].value.end :
+                                        sixHoursInSeconds
+                                )
+                            const nextStartTime = nextStart.value ?? nextStart
+                            const nextStartTimeInSeconds =
+                                typeof nextStartTime === 'number' ?
+                                    nextStartTime :
+                                    new Date(nextStartTime).getTime() / 1000
+
+                            const value = {
+                                start: {value: nextStartTimeInSeconds},
+                                end: {
+                                    value: nextStartTimeInSeconds + 60 ** 2
                                 }
-                            }],
+                            }
+
+                            return Tools.extend(
+                                true,
+                                item,
+                                /*
+                                    NOTE: We need to use 'model' since it
+                                    would be overwritten by default values
+                                    otherwise.
+                                */
+                                {
+                                    model: {value},
+                                    value
+                                }
+                            )
+                        }"
+                        model="{
+                            default: [
+                                {value: {
+                                    end: Date.UTC(1970, 0, 1, 11, 30) / 1000,
+                                    start: Date.UTC(1970, 0, 1, 7) / 1000
+                                }},
+                                {value: {
+                                    end: Date.UTC(1970, 0, 1, 18) / 1000,
+                                    start: Date.UTC(1970, 0, 1, 12) / 1000
+                                }}
+                            ],
                             name: 'inputs3'
                         }"
                         show-initial-validation-state
                     >
-                        <generic-interval bind-properties="options.properties">
-                        </generic-interval>
+                        <generic-interval
+                            bind-properties="options.properties" step="60"
+                        ></generic-interval>
                     </generic-inputs>
                     <generic-inputs
                         name="inputs4"
