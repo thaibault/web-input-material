@@ -2506,9 +2506,9 @@
     "@types/estree" "*"
 
 "@types/eslint@*":
-  version "8.44.9"
-  resolved "https://registry.yarnpkg.com/@types/eslint/-/eslint-8.44.9.tgz#5799663009645637bd1c45b2e1a7c8f4caf89534"
-  integrity sha512-6yBxcvwnnYoYT1Uk2d+jvIfsuP4mb2EdIxFnrPABj5a/838qe5bGkNLFOiipX4ULQ7XVQvTxOh7jO+BTAiqsEw==
+  version "8.56.0"
+  resolved "https://registry.yarnpkg.com/@types/eslint/-/eslint-8.56.0.tgz#e28d045b8e530a33c9cbcfbf02332df0d1380a2c"
+  integrity sha512-FlsN0p4FhuYRjIxpbdXovvHQhtlG05O1GG/RNWvdAxTboR438IOTwmrY/vLA+Xfgg06BTkP045M3vpFwTMv1dg==
   dependencies:
     "@types/estree" "*"
     "@types/json-schema" "*"
@@ -7550,9 +7550,9 @@ react-generic-tools@*:
   integrity sha512-8cKeYulwC+nMZZIOuAOHNiHRC2Q9JED5lcGIZKlr04KX7BkEnr2gHu3EIFQ43UcOKFXHSof14Um0PV0lqpMQNA==
 
 react-input-material@*:
-  version "0.0.600"
-  resolved "https://registry.yarnpkg.com/react-input-material/-/react-input-material-0.0.600.tgz#3a3cf453967fd3dc93c4514b6fa445e890812fe4"
-  integrity sha512-46iU2xuyzncLFxBl9n50UAEAHWSOxgOWRASud3d7c1rpaMOhnrzeOHJ2O+Nza2U07uZSYpIylIraDPKndbizcg==
+  version "0.0.601"
+  resolved "https://registry.yarnpkg.com/react-input-material/-/react-input-material-0.0.601.tgz#086409b31e0af808d9283e188d91c1db4263f276"
+  integrity sha512-P0FhFBsvLoXD8WcjIb+WBDkAhAPp5dx0/it6mtW5AHHgbHeAhgXiHWLlM4aoBQa26hn2lwG7fo7epQIbx3LKoA==
 
 react-is@^16.13.1:
   version "16.13.1"
