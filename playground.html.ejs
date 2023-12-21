@@ -973,6 +973,7 @@
 
                 <!--region generic-inputs-->
                 <div class="playground__inputs__generic-inputs playground__tab">
+                    <!--region generic-inputs file-->
                     <generic-inputs
                         create-item="Tools.extend(
                             options.item,
@@ -985,6 +986,8 @@
                         <file-input bind-properties="options.properties">
                         </file-input>
                     </generic-inputs>
+                    <!--endregion-->
+                    <!--region generic-inputs checkbox-->
                     <generic-inputs
                         create-item="Tools.extend(
                             options.item,
@@ -998,9 +1001,12 @@
                         }"
                         show-initial-validation-state
                     >
-                        <requireable-checkbox bind-properties="options.properties">
-                        </requireable-checkbox>
+                        <requireable-checkbox
+                            bind-properties="options.properties"
+                        ></requireable-checkbox>
                     </generic-inputs>
+                    <!--endregion-->
+                    <!--region generic-inputs interval-->
                     <generic-inputs
                         -create-prototype="function({item, lastValue, properties}) {
                             const sixHoursInSeconds =
@@ -1037,21 +1043,18 @@
                                     would be overwritten by default values
                                     otherwise.
                                 */
-                                {
-                                    model: {value},
-                                    value
-                                }
+                                {model: {value}, value}
                             )
                         }"
                         model="{
                             default: [
                                 {value: {
-                                    end: Date.UTC(1970, 0, 1, 11, 30) / 1000,
-                                    start: Date.UTC(1970, 0, 1, 7) / 1000
+                                    start: Date.UTC(1970, 0, 1, 7) / 1000,
+                                    end: Date.UTC(1970, 0, 1, 11, 30) / 1000
                                 }},
                                 {value: {
-                                    end: Date.UTC(1970, 0, 1, 18) / 1000,
-                                    start: Date.UTC(1970, 0, 1, 12) / 1000
+                                    start: Date.UTC(1970, 0, 1, 12) / 1000,
+                                    end: Date.UTC(1970, 0, 1, 18) / 1000
                                 }}
                             ],
                             name: 'inputs3'
@@ -1062,6 +1065,7 @@
                             bind-properties="options.properties" step="60"
                         ></generic-interval>
                     </generic-inputs>
+                    <!--endregion-->
                     <generic-inputs
                         name="inputs4"
                         trigger-initial-properties-consolidation
