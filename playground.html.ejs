@@ -1035,16 +1035,11 @@
                                 }
                             }
 
-                            return Tools.extend(
-                                true,
-                                item,
-                                /*
-                                    NOTE: We need to use 'model' since it
-                                    would be overwritten by default values
-                                    otherwise.
-                                */
-                                {model: {value}, value}
-                            )
+                            /*
+                                NOTE: We need to use 'model' since it would be
+                                overwritten by default values otherwise.
+                            */
+                            return Tools.extend(true, item, {model: {value}})
                         }"
                         model="{
                             default: [
