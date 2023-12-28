@@ -1044,12 +1044,12 @@
                         model="{
                             default: [
                                 {value: {
-                                    start: Date.UTC(1970, 0, 1, 7) / 1000,
-                                    end: Date.UTC(1970, 0, 1, 11, 30) / 1000
+                                    start: '1970-01-01T07:00:00.000Z',
+                                    end: '1970-01-01T11:30:00.000Z'
                                 }},
                                 {value: {
-                                    start: Date.UTC(1970, 0, 1, 12) / 1000,
-                                    end: Date.UTC(1970, 0, 1, 18) / 1000
+                                    start: '1970-01-01T12:00:00.000Z',
+                                    end: '1970-01-01T18:00:00.000Z'
                                 }}
                             ],
                             name: 'inputs3'
@@ -1059,6 +1059,78 @@
                         <generic-interval
                             bind-properties="options.properties" step="60"
                         ></generic-interval>
+                    </generic-inputs>
+
+                    <generic-inputs
+                        -create-prototype="function({item, lastValue, properties}) {
+                            const sixHoursInSeconds =
+                                new Date(1970, 0, 1, 6).getTime() / 1000
+                            const length = properties?.value?.length
+                            const nextStart =
+                                lastValue?.end ??
+                                (
+                                    (
+                                        length &&
+                                        properties.value[length - 1].value
+                                    ) ?
+                                        properties.value[length - 1].value.end :
+                                        sixHoursInSeconds
+                                )
+                            const nextStartTime = nextStart.value ?? nextStart
+                            const nextStartTimeInSeconds =
+                                typeof nextStartTime === 'number' ?
+                                    nextStartTime :
+                                    new Date(nextStartTime).getTime() / 1000
+
+                            const value = {
+                                start: {value: nextStartTimeInSeconds},
+                                end: {
+                                    value: nextStartTimeInSeconds + 60 ** 2
+                                }
+                            }
+
+                            /*
+                                NOTE: We need to use 'model' since it would be
+                                overwritten by default values otherwise.
+                            */
+                            return Tools.extend(true, item, {model: {value}})
+                        }"
+                        model="{default: [
+                            {model: {value: {
+                                start: {
+                                    declaration: 'Start time',
+                                    value: '1970-01-01T07:00:00.000Z'
+                                },
+                                end: {
+                                    declaration: 'End time',
+                                    value: '1970-01-01T11:30:00.000Z'
+                                }
+                            }}},
+                            {model: {value: {
+                                start: {
+                                    declaration: 'Start time',
+                                    value: '1970-01-01T12:00:00.000Z'
+                                },
+                                end: {
+                                    declaration: 'End time',
+                                    value: '1970-01-01T18:00:00.000Z'
+                                }
+                            }
+                        ]}"
+                        name="inputs4"
+                        show-initial-validation-state
+                    >
+                        <generic-interval bind-properties="Tools.extend(
+                            true,
+                            options.properties,
+                            {
+                                value: {
+                                    start: {type: 'time-local'},
+                                    end: {type: 'time-local'}
+                                },
+                                step: 60
+                            }
+                        )"></generic-interval>
                     </generic-inputs>
                     <!--endregion-->
                     <generic-inputs
@@ -1078,6 +1150,23 @@
                             end: {default: 240, minimum: 120}
                         }"
                     ></generic-interval>
+                    <generic-interval
+                        required
+                        step="60"
+                        value="{
+                            start: {
+                                default: '1970-01-01T00:02:00.000Z',
+                                maximum: '1970-01-01T01:00:00.000Z',
+                                type: 'time-local'
+                            },
+                            end: {
+                                default: '1970-01-01T00:04:00.000Z',
+                                minimum: '1970-01-01T00:02:00.000Z',
+                                type: 'time-local'
+                            }
+                        }"
+                    ></generic-interval>
+
                     <generic-interval
                         required
                         step="60"
