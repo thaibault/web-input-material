@@ -182,6 +182,9 @@
                         // NOTE: "event.detail" is sometimes set to "0" in IE11.
                         if (event.detail && event.detail.parameters[0].detail)
                             showTab(event.detail.parameters[0].detail.index)
+
+                        for (const node of document.querySelectorAll('pre'))
+                            node.innerHTML = ''
                     }
                 )
                 // endregion
@@ -296,15 +299,17 @@
 
                 <!--region file-input-->
                 <div class="playground__inputs__file-input playground__tab">
-                    <file-input trigger-initial-properties-consolidation>
-                    </file-input>
+                    <file-input
+                        name="fileInput1"
+                        trigger-initial-properties-consolidation
+                    ></file-input>
                     <file-input
                         default="{
                             blob: {type: 'image/png'},
                             url: 'https://via.placeholder.com/150'
                         }"
                         encoding="latin1"
-                        name="UnControlled"
+                        name="fileInput2"
                         -generate-file-name-input-properties="function(prototype, properties) {
                             var fileName = properties.value.name || ''
 
@@ -376,6 +381,7 @@
                 <!--region simple-input-->
                 <div class="playground__inputs__simple-input playground__tab">
                     <text-input
+                        name="simpleInput1"
                         bind-on-keydown="console.info('Typed key:', event.key)"
                         input-properties="{outlined: true}"
                         trigger-initial-properties-consolidation
@@ -389,10 +395,10 @@
                             ariaChecked: false,
                             ariaDescription: 'test'
                         }"
-                        name="simpleInput1"
+                        name="simpleInput2"
                         show-declaration
                     ></text-input>
-                    <text-input model="{name: 'simpleInput1Model'}">
+                    <text-input model="{name: 'simpleInput2Model'}">
                     </text-input>
 
                     <hr/>
@@ -401,14 +407,14 @@
                         declaration="Disabled"
                         disabled
                         initial-value="'value2'"
-                        name="simpleInput2"
+                        name="simpleInput3"
                     ></text-input>
                     <text-input
                         model="{
                             declaration: 'Disabled',
-                            default: 'value2Model',
+                            default: 'value3Model',
                             mutable: false,
-                            name: 'simpleInput2Model'
+                            name: 'simpleInput3Model'
                         }"
                     ></text-input>
 
@@ -416,22 +422,22 @@
 
                     <text-input
                         declaration="placeholder"
-                        name="simpleInput3"
-                        placeholder="input5"
+                        name="simpleInput4"
+                        placeholder="simpleInput4"
                         required
                         show-validation-state="false"
                         trailing-icon="'clear_preset'"
                     ></text-input>
                     <text-input
-                        default="'simpleValue3Model'"
+                        default="'simpleInputValue4Model'"
                         icon="'backup'"
-                        initial-value="'value5Model'"
+                        initial-value="'simpleInputValue4Model'"
                         model="{
                             declaration: 'placeholder',
-                            name: 'simpleInput3Model',
+                            name: 'simpleInput4Model',
                             nullable: false
                         }"
-                        placholder="simpleInput3Model"
+                        placeholder="simpleInput4Model"
                         trailing-icon="'clear_preset'"
                     ></text-input>
 
@@ -439,22 +445,22 @@
 
                     <text-input
                         declaration="pattern"
-                        description="simpleInput4Description"
+                        description="simpleInput5Description"
                         icon="'search'"
                         initial-value="'only a`s allowed'"
-                        name="input4"
+                        name="simpleInput5"
                         pattern="'^a+$'"
-                        placeholder="simpleInput4Placeholder"
+                        placeholder="simpleInput5Placeholder"
                     ></text-input>
                     <text-input
                         initial-value="'has a`s and b`s'"
                         model="{
                             declaration: 'pattern',
-                            description: 'simpleInput4ModelDescription',
+                            description: 'simpleInput5ModelDescription',
                             regularExpressionPattern: ['.*a+.*', /.*b+.*/]
                         }"
-                        name="simpleInput4Model"
-                        placeholder="simpleInput4ModelPlaceholder"
+                        name="simpleInput5Model"
+                        placeholder="simpleInput5ModelPlaceholder"
                         trailing-icon="'search'"
                     ></text-input>
 
@@ -462,12 +468,12 @@
 
                     <text-input
                         declaration="password"
-                        description="simpleInput5Description"
+                        description="simpleInput6Description"
                         icon="'search'"
                         initial-value="'hans'"
-                        name="simpleInput5"
+                        name="simpleInput6"
                         pattern="/a+/"
-                        placeholder="simpleInput5Placeholder"
+                        placeholder="simpleInput6Placeholder"
                         tooltip="'Please type in your password.'"
                         trailing-icon="'password_preset'"
                     ></text-input>
@@ -475,11 +481,11 @@
                         initial-value="'hans'"
                         model="{
                             declaration: 'password',
-                            description: 'simpleInput5ModelDescription',
+                            description: 'simpleInput6ModelDescription',
                             regularExpressionPattern: 'a+'
                         }"
-                        name="simpleInput5Model"
-                        placeholder="simpleInput5ModelPlaceholder"
+                        name="simpleInput6Model"
+                        placeholder="simpleInput6ModelPlaceholder"
                         trailing-icon="'password_preset'"
                     ></text-input>
                 </div>
@@ -975,6 +981,7 @@
                 <div class="playground__inputs__generic-inputs playground__tab">
                     <!--region generic-inputs file-->
                     <generic-inputs
+                        name="fileInputs"
                         create-item="Tools.extend(
                             options.item,
                             {name: options.properties.name + '-' + String(options.index + 1)}
@@ -997,7 +1004,7 @@
                         minimum-number="2"
                         model="{
                             default: [{type: 'boolean', value: false}],
-                            name: 'inputs2'
+                            name: 'checkboxInputs'
                         }"
                         show-initial-validation-state
                     >
@@ -1043,16 +1050,16 @@
                         }"
                         model="{
                             default: [
-                                {model: {value: {
-                                    start: {value: '1970-01-01T07:00:00.000Z'},
-                                    end: {value: '1970-01-01T11:30:00.000Z'}
-                                }}},
-                                {model: {value: {
-                                    start: {value: '1970-01-01T12:00:00.000Z'},
-                                    end: {value: '1970-01-01T18:00:00.000Z'}
-                                }}}
+                                {value: {
+                                    start: '1970-01-01T07:00:00.000Z',
+                                    end: '1970-01-01T11:30:00.000Z'
+                                }},
+                                {value: {
+                                    start: '1970-01-01T12:00:00.000Z',
+                                    end: '1970-01-01T18:00:00.000Z'
+                                }}
                             ],
-                            name: 'inputs3'
+                            name: 'intervalInputs1'
                         }"
                         show-initial-validation-state
                     >
@@ -1117,7 +1124,7 @@
                                 }
                             }}}
                         ]}"
-                        name="inputs4"
+                        name="intervalInputs2"
                         show-initial-validation-state
                     >
                         <generic-interval bind-properties="Tools.extend(
@@ -1134,7 +1141,7 @@
                     </generic-inputs>
                     <!--endregion-->
                     <generic-inputs
-                        name="inputs4"
+                        name="textInputInputs"
                         trigger-initial-properties-consolidation
                         value="['first item']"
                     ></generic-inputs>
@@ -1143,6 +1150,7 @@
                 <!--region generic-interval-->
                 <div class="playground__inputs__generic-interval playground__tab">
                     <generic-interval
+                        name="intervalInput1"
                         required
                         step="60"
                         value="{
@@ -1151,6 +1159,7 @@
                         }"
                     ></generic-interval>
                     <generic-interval
+                        name="intervalInput2"
                         required
                         step="60"
                         value="{
@@ -1168,6 +1177,8 @@
                     ></generic-interval>
 
                     <generic-interval
+                        name="intervalInput3"
+                        default="120"
                         required
                         step="60"
                         trigger-initial-properties-consolidation
@@ -1176,31 +1187,40 @@
                             end: {default: 240, minimum: 120}
                         }"
                     ></generic-interval>
+                    <generic-interval
+                        name="intervalInput4"
+                        default="120"
+                        required
+                        step="60"
+                        trigger-initial-properties-consolidation
+                        value="{start: {default: 120}, end: {default: 240}}"
+                    ></generic-interval>
                 </div>
                 <!--endregion-->
 
                 <!--region requireable-checkbox-->
                 <div class="playground__inputs__requireable-checkbox playground__tab">
                     <requireable-checkbox
+                        name="checkbox1"
                         trigger-initial-properties-consolidation
                     ></requireable-checkbox>
 
                     <hr/>
 
-                    <requireable-checkbox name="checkbox1"></requireable-checkbox>
+                    <requireable-checkbox name="checkbox2"></requireable-checkbox>
                     <requireable-checkbox
-                        model="{name: 'checkbox1Model'}"
+                        model="{name: 'checkbox2Model'}"
                         theme-configuration="{primary: 'yellow', secondary: 'blue'}"
                     ></requireable-checkbox>
 
                     <hr/>
 
                     <requireable-checkbox
-                        default disabled name="checkbox2" required
+                        default disabled name="checkbox3" required
                     ></requireable-checkbox>
                     <requireable-checkbox
                         model="{
-                            name: 'checkbox2Model',
+                            name: 'checkbox3Model',
                             mutable: false,
                             nullable: false
                         }"
@@ -1209,16 +1229,16 @@
                     <hr/>
 
                     <requireable-checkbox
-                        description="checkbox3Description"
-                        name="checkbox3"
+                        description="checkbox4Description"
+                        name="checkbox4"
                         required
                         show-initial-validation-state
                     ></requireable-checkbox>
                     <requireable-checkbox
                         model="{
                             default: true,
-                            description: 'checkbox3ModelDescription',
-                            name: 'checkbox3Model',
+                            description: 'checkbox4ModelDescription',
+                            name: 'checkbox4Model',
                             nullable: false
                         }"
                         show-initial-validation-state
