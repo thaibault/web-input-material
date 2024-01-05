@@ -152,6 +152,13 @@
 
                 webInputMaterial.index.register()
 
+                const setOutputContent = function(content) {
+                    for (const node of document.querySelectorAll(
+                        '.playground__outputs pre'
+                    ))
+                        node.innerHTML = content
+                }
+
                 // region tabs
                 const tabs = Tools.arrayMake(document.querySelectorAll(
                     '.playground__tab'
@@ -183,8 +190,7 @@
                         if (event.detail && event.detail.parameters[0].detail)
                             showTab(event.detail.parameters[0].detail.index)
 
-                        for (const node of document.querySelectorAll('pre'))
-                            node.innerHTML = ''
+                        setOutputContent('')
                     }
                 )
                 // endregion
@@ -203,10 +209,7 @@
                                                     .model ||
                                                 event.detail.parameters[0]
                                             )
-                                            for (const node of
-                                                document.querySelectorAll('pre')
-                                            )
-                                                node.innerHTML = content
+                                            setOutputContent(content)
                                         })
                                 }
                             )
@@ -1158,6 +1161,7 @@
                             end: {default: 240, minimum: 120}
                         }"
                     ></generic-interval>
+                    <!--TODO type="time-local" does not get applied!-->
                     <generic-interval
                         name="intervalInput2"
                         required
