@@ -2680,9 +2680,9 @@
     "@types/node" "*"
 
 "@types/node@*":
-  version "20.10.6"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.10.6.tgz#a3ec84c22965802bf763da55b2394424f22bfbb5"
-  integrity sha512-Vac8H+NlRNNlAmDfGUP7b5h/KA+AtWIzuXy0E6OyP8f1tCLYAtPvKRRDJjAPqhpCb0t6U2j7/xqAuLEebW2kiw==
+  version "20.10.7"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.10.7.tgz#40fe8faf25418a75de9fe68a8775546732a3a901"
+  integrity sha512-fRbIKb8C/Y2lXxB5eVMj4IU7xpdox0Lh8bUPEdtLysaylsml1hOOx1+STloRs/B9nf7C6kPRmmg/V7aQW7usNg==
   dependencies:
     undici-types "~5.26.4"
 
@@ -7563,9 +7563,9 @@ react-generic-tools@*:
   integrity sha512-h0xkF0j155qxkhQw+QiVNYjya8AcMbB+q+pJgZOr+6qUo9GRjIisqQ3omext3mx6wp3POlv4x8iqhVMFbNT2iA==
 
 react-input-material@*:
-  version "0.0.611"
-  resolved "https://registry.yarnpkg.com/react-input-material/-/react-input-material-0.0.611.tgz#5c5f2d0f9a4e34b71e18bffb673c476ee731cc46"
-  integrity sha512-pHmbwV8a9E8Ui2zQABSfQl0y7kvjDTlTwePEcknLnKnH1uJqbdciP8FRfJOHGyv6InOATEQw6fRLA8o7qeUHuA==
+  version "0.0.612"
+  resolved "https://registry.yarnpkg.com/react-input-material/-/react-input-material-0.0.612.tgz#95dfb4e31fb99c92bc0b738d19f69a764371fd88"
+  integrity sha512-cB6Bx0RqjD2fRt+lL2NlUM995HITLKOUC78eJzYBpVVtAG32k8yFdUsFrNTbDwvD12u+AkSaC6OmRgK0/+DT8w==
 
 react-is@^16.13.1:
   version "16.13.1"
