@@ -4254,9 +4254,9 @@ camelcase@^6.2.0:
   integrity sha512-Gmy6FhYlCY7uOElZUSbxo2UCDH8owEk996gkbrpsgGtrJLM3J7jGxl9Ic7Qwwj4ivOE5AWZWRMecDdF7hqGjFA==
 
 caniuse-lite@^1.0.30000844, caniuse-lite@^1.0.30001565:
-  version "1.0.30001574"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001574.tgz#fb4f1359c77f6af942510493672e1ec7ec80230c"
-  integrity sha512-BtYEK4r/iHt/txm81KBudCUcTy7t+s9emrIaHqjYurQ10x71zJ5VQ9x1dYPcz/b+pKSp4y/v1xSI67A+LzpNyg==
+  version "1.0.30001576"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001576.tgz#893be772cf8ee6056d6c1e2d07df365b9ec0a5c4"
+  integrity sha512-ff5BdakGe2P3SQsMsiqmt1Lc8221NR1VzHj5jXN5vBny9A6fpze94HiVV/n7XRosOlsShJcvMv5mdnpjOGCEgg==
 
 catharsis@^0.9.0:
   version "0.9.0"
@@ -7563,9 +7563,9 @@ react-generic-tools@*:
   integrity sha512-h0xkF0j155qxkhQw+QiVNYjya8AcMbB+q+pJgZOr+6qUo9GRjIisqQ3omext3mx6wp3POlv4x8iqhVMFbNT2iA==
 
 react-input-material@*:
-  version "0.0.612"
-  resolved "https://registry.yarnpkg.com/react-input-material/-/react-input-material-0.0.612.tgz#95dfb4e31fb99c92bc0b738d19f69a764371fd88"
-  integrity sha512-cB6Bx0RqjD2fRt+lL2NlUM995HITLKOUC78eJzYBpVVtAG32k8yFdUsFrNTbDwvD12u+AkSaC6OmRgK0/+DT8w==
+  version "0.0.613"
+  resolved "https://registry.yarnpkg.com/react-input-material/-/react-input-material-0.0.613.tgz#1546609eb384db5289adc41673c61697e2f90b43"
+  integrity sha512-UPZHRfVGuVzBSmkucvivMcLdN/NBoGDJdS9boqAeC9hna1MqTokfqBPw7F3D7zk+Rp6GbFYy9YFYV5F3OWFhYg==
 
 react-is@^16.13.1:
   version "16.13.1"
