@@ -231,7 +231,6 @@
                         if (!event.detail)
                             return
 
-
                         if (
                             event.detail.parameters[0].detail &&
                             tabs[event.detail.parameters[0].detail.index]
@@ -265,122 +264,30 @@
     <body class="no-javascript">
         <div class="tab-bar">
             <!--region navigation-->
-            <tab-bar active-tab-index="2" class="playground__inputs__tab-bar">
-
-                <tab-item>circular-spinner</tab-item>
-
-                <tab-item>file-input</tab-item>
-
+            <tab-bar active-tab-index="0" class="playground__inputs__tab-bar">
                 <tab-item>simple-input</tab-item>
                 <tab-item>number-input</tab-item>
                 <tab-item>text-input (with <sup>markup</sup>)</tab-item>
                 <tab-item>time-input</tab-item>
                 <tab-item>selection-input</tab-item>
 
-                <tab-item>generic-animate</tab-item>
+                <tab-item>file-input</tab-item>
 
                 <tab-item>generic-inputs</tab-item>
                 <tab-item>generic-interval</tab-item>
 
                 <tab-item>requireable-checkbox</tab-item>
 
-                <tab-item>slider-input</tab-item>
+                <tab-item>generic-animate</tab-item>
 
+                <tab-item>circular-spinner</tab-item>
+
+                <tab-item>slider-input</tab-item>
             </tab-bar>
             <!--endregion-->
         </div>
         <div class="playground">
             <div class="playground__inputs">
-                <!--region circular-spinner-->
-                <div class="playground__inputs__circular-spinner playground__tab">
-                    <circular-spinner></circular-spinner>
-                    <circular-spinner size="'xlarge'" theme="error">
-                    </circular-spinner>
-                    <circular-spinner size="80"></circular-spinner>
-                </div>
-                <!--endregion-->
-
-                <!--region file-input-->
-                <div class="playground__inputs__file-input playground__tab">
-                    <file-input
-                        name="fileInput1"
-                        trigger-initial-properties-consolidation
-                    ></file-input>
-                    <file-input
-                        default="{
-                            blob: {type: 'image/png'},
-                            url: 'https://via.placeholder.com/150'
-                        }"
-                        encoding="latin1"
-                        name="fileInput2"
-                        -generate-file-name-input-properties="function(prototype, properties) {
-                            var fileName = properties.value.name || ''
-
-                            return Tools.extend(
-                                prototype,
-                                {
-                                    disabled: true,
-                                    value:
-                                        properties.name +
-                                        (fileName.includes('.') ?
-                                            fileName.substring(
-                                                fileName.lastIndexOf('.')
-                                            ) :
-                                            ''
-                                        )
-                                }
-                            )
-                        }"
-                    >
-                        <div bind-attribute-style="
-                            'margin-left: 10px' +
-                             (options.value && options.value.blob ? '' : ' display: none')
-                        ">
-                            <span>
-                                Expected encoding for text based files: latin1
-                            </span>
-
-                            <span bind-attribute-style="
-                                options.value && options.value.blob &&
-                                options.value.blob.lastModified ?
-                                    '' :
-                                    'display: none'
-                            ">
-                                <span bind-property-text-content="
-                                    options.value && options.value.blob &&
-                                    options.value.blob.lastModified ?
-                                        (
-                                            'Last modified date time: ' +
-                                            Tools.dateTimeFormat(
-                                                '${mediumDay}.${mediumMonth}.${fullYear}',
-                                                new Date(options.value.blob.lastModified)
-                                            )
-                                        ) :
-                                        ''
-                                "></span>
-                                <br />
-                            </span>
-
-                            <span bind-property-text-content="
-                                options.value &&
-                                options.value.blob && options.value.blob.type ?
-                                    ('Mime-Typ: ' + options.value.blob.type) :
-                                    ''
-                            "></span>
-                            <br />
-
-                            <span bind-property-text-content="
-                                options.value &&
-                                options.value.blob && options.value.blob.size ?
-                                    ('Size: ' + options.value.blob.size) :
-                                    ''
-                            "></span>
-                            <br />
-                        </div>
-                    </file-input>
-                </div>
-                <!--endregion-->
-
                 <!--region simple-input-->
                 <div class="playground__inputs__simple-input playground__tab">
                     <text-input
@@ -965,18 +872,84 @@
                 </div>
                 <!--endregion-->
 
-                <!--region generic-animate-->
-                <div
-                        class="playground__inputs__generic-animate playground__tab"
-                        style="height: 50px"
-                >
-                    <generic-animate in timeout="2000">
-                        Fade it!
-                    </generic-animate>
-                    <br/>
-                    <generic-animate in="false" timeout="2000">
-                        Fade it!
-                    </generic-animate>
+                <!--region file-input-->
+                <div class="playground__inputs__file-input playground__tab">
+                    <file-input
+                        name="fileInput1"
+                        trigger-initial-properties-consolidation
+                    ></file-input>
+                    <file-input
+                        default="{
+                            blob: {type: 'image/png'},
+                            url: 'https://via.placeholder.com/150'
+                        }"
+                            encoding="latin1"
+                            name="fileInput2"
+                            -generate-file-name-input-properties="function(prototype, properties) {
+                            var fileName = properties.value.name || ''
+
+                            return Tools.extend(
+                                prototype,
+                                {
+                                    disabled: true,
+                                    value:
+                                        properties.name +
+                                        (fileName.includes('.') ?
+                                            fileName.substring(
+                                                fileName.lastIndexOf('.')
+                                            ) :
+                                            ''
+                                        )
+                                }
+                            )
+                        }"
+                    >
+                        <div bind-attribute-style="
+                            'margin-left: 10px' +
+                             (options.value && options.value.blob ? '' : ' display: none')
+                        ">
+                            <span>
+                                Expected encoding for text based files: latin1
+                            </span>
+
+                            <span bind-attribute-style="
+                                options.value && options.value.blob &&
+                                options.value.blob.lastModified ?
+                                    '' :
+                                    'display: none'
+                            ">
+                                <span bind-property-text-content="
+                                    options.value && options.value.blob &&
+                                    options.value.blob.lastModified ?
+                                        (
+                                            'Last modified date time: ' +
+                                            Tools.dateTimeFormat(
+                                                '${mediumDay}.${mediumMonth}.${fullYear}',
+                                                new Date(options.value.blob.lastModified)
+                                            )
+                                        ) :
+                                        ''
+                                "></span>
+                                <br />
+                            </span>
+
+                            <span bind-property-text-content="
+                                options.value &&
+                                options.value.blob && options.value.blob.type ?
+                                    ('Mime-Typ: ' + options.value.blob.type) :
+                                    ''
+                            "></span>
+                            <br />
+
+                            <span bind-property-text-content="
+                                options.value &&
+                                options.value.blob && options.value.blob.size ?
+                                    ('Size: ' + options.value.blob.size) :
+                                    ''
+                            "></span>
+                            <br />
+                        </div>
+                    </file-input>
                 </div>
                 <!--endregion-->
 
@@ -1247,6 +1220,30 @@
                         show-initial-validation-state
                         tooltip="'Check this one!'"
                     ></requireable-checkbox>
+                </div>
+                <!--endregion-->
+
+                <!--region generic-animate-->
+                <div
+                        class="playground__inputs__generic-animate playground__tab"
+                        style="height: 50px"
+                >
+                    <generic-animate in timeout="2000">
+                        Fade it!
+                    </generic-animate>
+                    <br/>
+                    <generic-animate in="false" timeout="2000">
+                        Fade it!
+                    </generic-animate>
+                </div>
+                <!--endregion-->
+
+                <!--region circular-spinner-->
+                <div class="playground__inputs__circular-spinner playground__tab">
+                    <circular-spinner></circular-spinner>
+                    <circular-spinner size="'xlarge'" theme="error">
+                    </circular-spinner>
+                    <circular-spinner size="80"></circular-spinner>
                 </div>
                 <!--endregion-->
 
