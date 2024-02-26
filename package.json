@@ -119,6 +119,7 @@
     "react-generic-dummy": "*",
     "react-generic-tools": "*",
     "react-useanimations": "*",
+    "spark-md5": "*",
     "style-loader": "*",
     "tslib": "*",
     "weboptimizer": "*",
