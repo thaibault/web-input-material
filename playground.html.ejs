@@ -367,7 +367,7 @@
                         model="{
                             declaration: 'pattern',
                             description: 'simpleInput5ModelDescription',
-                            regularExpressionPattern: ['.*a+.*', /.*b+.*/]
+                            pattern: ['.*a+.*', /.*b+.*/]
                         }"
                         name="simpleInput5Model"
                         placeholder="simpleInput5ModelPlaceholder"
@@ -392,7 +392,7 @@
                         model="{
                             declaration: 'password',
                             description: 'simpleInput6ModelDescription',
-                            regularExpressionPattern: 'a+'
+                            pattern: 'a+'
                         }"
                         name="simpleInput6Model"
                         placeholder="simpleInput6ModelPlaceholder"
@@ -883,9 +883,17 @@
                             blob: {type: 'image/png'},
                             url: 'https://via.placeholder.com/150'
                         }"
-                            encoding="latin1"
-                            name="fileInput2"
-                            -generate-file-name-input-properties="function(prototype, properties) {
+
+                        content-type-pattern="(?:text/(?:plain|(?:x-)?csv|xml))"
+                        model="{{fileName: {
+                            pattern: '^[a-zA-Z0-9]\\.(?:csv|txt|xml)$'
+                        }}}"
+
+                        encoding="latin1"
+
+                        name="fileInput2"
+
+                        -generate-file-name-input-properties="function(prototype, properties) {
                             var fileName = properties.value.name || ''
 
                             return Tools.extend(
