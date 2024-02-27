@@ -32,18 +32,21 @@ export const FileInput:WebComponentAPI<typeof ReactFileInput> =
             propertiesToReflectAsAttributes: {
                 dirty: boolean,
                 focused: boolean,
-                invalid: boolean,
-                invalidMaximumSize: boolean,
-                invalidMinimumSize: boolean,
-                invalidMimeTypePattern: boolean,
-                invalidNamePattern: boolean,
-                invalidRequired: boolean,
-                name: string,
                 pristine: boolean,
                 touched: boolean,
                 untouched: boolean,
+                visited: boolean,
+
                 valid: boolean,
-                visited: boolean
+                invalid: boolean,
+                invalidMaximumSize: boolean,
+                invalidMinimumSize: boolean,
+                invalidContentTypePattern: boolean,
+                invalidInvertedContentTypePattern: boolean,
+                invalidName: boolean,
+                invalidRequired: boolean,
+
+                name: string
             }
         }
     )
