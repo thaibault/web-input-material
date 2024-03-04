@@ -68,7 +68,7 @@
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-input-material": "^0.0.643",
+    "react-input-material": "^0.0.646",
     "react-transition-group": "^4.4.5",
     "web-component-wrapper": "^0.0.484"
   },
@@ -83,7 +83,7 @@
     "@rmwc/formfield": "^14.0.11",
     "@rmwc/icon": "^14.0.11",
     "@rmwc/icon-button": "^14.0.11",
-    "@rmwc/select": "^14.0.11",
+    "@rmwc/select": "patch:@rmwc/select@npm%3A14.0.11#~/.yarn/patches/@rmwc-select-npm-14.0.11-9eb2618d5f.patch",
     "@rmwc/slider": "^14.0.11",
     "@rmwc/tabs": "^14.0.11",
     "@rmwc/textfield": "^14.0.11",
@@ -141,7 +141,9 @@
     "yarn": ">=4"
   },
   "resolutions": {
-    "colors": "1.4.0"
+    "colors": "1.4.0",
+    "@rmwc/ripple@npm:14.0.11": "patch:@rmwc/ripple@npm%3A14.0.11#~/.yarn/patches/@rmwc-ripple-npm-14.0.11-22d1530040.patch",
+    "webpack@npm:^5.90.3": "patch:webpack@npm%3A5.90.3#~/.yarn/patches/webpack-npm-5.90.3-2a12e60d26.patch"
   },
   "sideEffects": false,
   "documentationWebsite": {
