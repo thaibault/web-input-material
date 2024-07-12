@@ -17,8 +17,10 @@
     endregion
 */
 // region imports
-import {boolean, func, number, object, string} from 'clientnode/property-types'
-import {Mapping} from 'clientnode/type'
+import {
+    boolean, func, number, object, string
+} from 'clientnode/dist/property-types'
+import {Mapping} from 'clientnode'
 import {
     createWrapConfigurationsComponent
 } from 'react-input-material/dist/components/WrapConfigurations'
@@ -88,7 +90,3 @@ export const SliderInput:WebComponentAPI<
 )
 
 export default SliderInput
-// region vim modline
-// vim: set tabstop=4 shiftwidth=4 expandtab:
-// vim: foldmethod=marker foldmarker=region,endregion:
-// endregion

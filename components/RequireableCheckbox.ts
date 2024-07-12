@@ -17,7 +17,7 @@
     endregion
 */
 // region imports
-import {boolean, string} from 'clientnode/property-types'
+import {boolean, string} from 'clientnode/dist/property-types'
 import Checkbox from 'react-input-material/dist/components/RequireableCheckbox'
 import wrapAsWebComponent from 'web-component-wrapper'
 import {WebComponentAPI} from 'web-component-wrapper/type'
@@ -45,7 +45,3 @@ export const RequireableCheckbox:WebComponentAPI<typeof Checkbox> =
     )
 
 export default RequireableCheckbox
-// region vim modline
-// vim: set tabstop=4 shiftwidth=4 expandtab:
-// vim: foldmethod=marker foldmarker=region,endregion:
-// endregion

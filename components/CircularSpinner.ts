@@ -19,7 +19,7 @@
 // region imports
 import {
     number, object, oneOfType, oneOf, string
-} from 'clientnode/property-types'
+} from 'clientnode/dist/property-types'
 import {
     createWrapConfigurationsComponent
 } from 'react-input-material/dist/components/WrapConfigurations'
@@ -46,7 +46,3 @@ export const CircularSpinner:WebComponentAPI<typeof CircularProgress> =
     )
 
 export default CircularSpinner
-// region vim modline
-// vim: set tabstop=4 shiftwidth=4 expandtab:
-// vim: foldmethod=marker foldmarker=region,endregion:
-// endregion
