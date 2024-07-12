@@ -17,7 +17,7 @@
     endregion
 */
 // region imports
-import {Mapping} from 'clientnode/type'
+import {Mapping} from 'clientnode'
 import ReactWeb from 'web-component-wrapper/ReactWeb'
 import {WebComponentAPI} from 'web-component-wrapper/type'
 // endregion
@@ -56,7 +56,3 @@ export const register = () =>
     )
 
 export default components
-// region vim modline
-// vim: set tabstop=4 shiftwidth=4 expandtab:
-// vim: foldmethod=marker foldmarker=region,endregion:
-// endregion

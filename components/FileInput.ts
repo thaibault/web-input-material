@@ -17,7 +17,7 @@
     endregion
 */
 // region imports
-import {boolean, string} from 'clientnode/property-types'
+import {boolean, string} from 'clientnode/dist/property-types'
 import ReactFileInput from 'react-input-material/dist/components/FileInput'
 import wrapAsWebComponent from 'web-component-wrapper'
 import {WebComponentAPI} from 'web-component-wrapper/type'
@@ -52,7 +52,3 @@ export const FileInput:WebComponentAPI<typeof ReactFileInput> =
     )
 
 export default FileInput
-// region vim modline
-// vim: set tabstop=4 shiftwidth=4 expandtab:
-// vim: foldmethod=marker foldmarker=region,endregion:
-// endregion

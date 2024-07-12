@@ -141,7 +141,11 @@
         <!--region script-->
         <script>
             window.onload = function() {
-                const Tools = webInputMaterial.clientnode.Tools
+                const {
+                    makeArray,
+                    represent,
+                    timeout
+                } = webInputMaterial.clientnode
 
                 const TextInput =
                     webInputMaterial.index.components.TextInput.component
@@ -160,7 +164,7 @@
                 }
 
                 // region tabs
-                const tabs = Tools.arrayMake(document.querySelectorAll(
+                const tabs = makeArray(document.querySelectorAll(
                     '.playground__tab'
                 ))
                 const tabBar =
@@ -196,15 +200,15 @@
                 // endregion
                 // region inputs
                 // NOTE: Wait until all inputs have stabilized.
-                Tools.timeout(function() {
-                    Tools.arrayMake(document.querySelectorAll('[is-root][name]'))
+                timeout(function() {
+                    arrayMake(document.querySelectorAll('[is-root][name]'))
                         .forEach(function(domNode) {
                             domNode.addEventListener(
                                 'change',
                                 function(event) {
                                     if (event.target === domNode)
-                                        Tools.timeout(function() {
-                                            const content = Tools.represent(
+                                        timeout(function() {
+                                            const content = represent(
                                                 event.detail.parameters[0]
                                                     .model ||
                                                 event.detail.parameters[0]
@@ -217,7 +221,7 @@
                 })
                 // endregion
                 // region animation
-                const animationDomNodes = Tools.arrayMake(
+                const animationDomNodes = makeArray(
                     document.querySelectorAll('generic-animate')
                 )
                 let intervalID = null
@@ -810,11 +814,11 @@
                         }"
                         placeholder="selectionInput6ModelPlaceholder"
                         search-selection
-                        -suggestion-creator="Tools.debounce(function(search) {
+                        -suggestion-creator="utility.debounce(function(search) {
                             if (!search.query || search.query.length < 3)
                                 return []
 
-                            return Tools.timeout(2000).then(function() {
+                            return utility.timeout(2000).then(function() {
                                 return [
                                     'hans with veeeeeeeeeeeeeeeery ' +
                                     'loooooooooooooooong second name',
@@ -850,7 +854,7 @@
                         }"
                         placeholder="selectionInput7ModelPlaceholder"
                         suggestion-creator="new Promise(function(resolve) {
-                            Tools.timeout(500, function() {
+                            utility.timeout(500, function() {
                                 var selection = {
                                     a: 'hans with veeeeeeeeeeeeeeeery ' +
                                        'loooooooooooooooong second name',
@@ -896,7 +900,7 @@
                         -generate-file-name-input-properties="function(prototype, properties) {
                             var fileName = properties.value.name || ''
 
-                            return Tools.extend(
+                            return object.extend(
                                 prototype,
                                 {
                                     disabled: true,
@@ -931,7 +935,7 @@
                                     options.value.blob.lastModified ?
                                         (
                                             'Last modified date time: ' +
-                                            Tools.dateTimeFormat(
+                                            datetime.dateTimeFormat(
                                                 '${mediumDay}.${mediumMonth}.${fullYear}',
                                                 new Date(options.value.blob.lastModified)
                                             )
@@ -966,7 +970,7 @@
                     <!--region generic-inputs file-->
                     <generic-inputs
                         name="fileInputs"
-                        create-item="Tools.extend(
+                        create-item="object.extend(
                             options.item,
                             {name: options.properties.name + '-' + String(options.index + 1)}
                         )"
@@ -980,7 +984,7 @@
                     <!--endregion-->
                     <!--region generic-inputs checkbox-->
                     <generic-inputs
-                        create-item="Tools.extend(
+                        create-item="object.extend(
                             options.item,
                             {name: options.properties.name + '-' + String(options.index + 1)}
                         )"
@@ -1030,7 +1034,7 @@
                                 NOTE: We need to use 'model' since it would be
                                 overwritten by default values otherwise.
                             */
-                            return Tools.extend(true, item, {model: {value}})
+                            return object.extend(true, item, {model: {value}})
                         }"
                         model="{
                             default: [
@@ -1084,7 +1088,7 @@
                                 NOTE: We need to use 'model' since it would be
                                 overwritten by default values otherwise.
                             */
-                            return Tools.extend(true, item, {model: {value}})
+                            return object.extend(true, item, {model: {value}})
                         }"
                         model="{default: [
                             {model: {value: {
@@ -1111,7 +1115,7 @@
                         name="intervalInputs2"
                         show-initial-validation-state
                     >
-                        <generic-interval bind-properties="Tools.extend(
+                        <generic-interval bind-properties="object.extend(
                             true,
                             options.properties,
                             {
@@ -1295,8 +1299,8 @@
 
             <div class="playground__outputs">
                 <!--
-                    Add on version as a hidden spacer and one fixed version
-                    visible independently from current scroll position.
+                    Add one version as a hidden spacer and one fixed version
+                    visible apart from current scroll position.
                 -->
                 <pre class="playground__outputs__bar"></pre>
                 <pre class="playground__outputs__content"></pre>
@@ -1304,9 +1308,3 @@
         </div>
     </body>
 <html>
-<%_ /*
-    region vim modline
-    vim: set tabstop=4 shiftwidth=4 expandtab:
-    vim: foldmethod=marker foldmarker=region,endregion:
-    endregion
-*/ _%>

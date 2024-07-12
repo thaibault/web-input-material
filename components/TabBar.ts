@@ -17,8 +17,8 @@
     endregion
 */
 // region imports
-import Tools from 'clientnode'
-import {func, number, object, string} from 'clientnode/property-types'
+import {timeout} from 'clientnode'
+import {func, number, object, string} from 'clientnode/dist/property-types'
 import {
     createWrapConfigurationsComponent
 } from 'react-input-material/dist/components/WrapConfigurations'
@@ -34,7 +34,7 @@ export const TabBar:WebComponentAPI<typeof ReactTabBar> =
         {
             eventToPropertyMapping: {
                 onActivate: async ():Promise<null> => {
-                    await Tools.timeout()
+                    await timeout()
 
                     return null
                 }
@@ -49,7 +49,3 @@ export const TabBar:WebComponentAPI<typeof ReactTabBar> =
     )
 
 export default TabBar
-// region vim modline
-// vim: set tabstop=4 shiftwidth=4 expandtab:
-// vim: foldmethod=marker foldmarker=region,endregion:
-// endregion

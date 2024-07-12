@@ -17,7 +17,7 @@
     endregion
 */
 // region imports
-import {boolean, object, string} from 'clientnode/property-types'
+import {boolean, object, string} from 'clientnode/dist/property-types'
 import {
     createWrapConfigurationsComponent
 } from 'react-input-material/dist/components/WrapConfigurations'
@@ -35,7 +35,3 @@ export const TabItem:WebComponentAPI<typeof Tab> =
     )
 
 export default TabItem
-// region vim modline
-// vim: set tabstop=4 shiftwidth=4 expandtab:
-// vim: foldmethod=marker foldmarker=region,endregion:
-// endregion

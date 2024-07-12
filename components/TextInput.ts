@@ -17,7 +17,7 @@
     endregion
 */
 // region imports
-import {boolean, string} from 'clientnode/property-types'
+import {boolean, string} from 'clientnode/dist/property-types'
 import ReactTextInput from 'react-input-material/dist/components/TextInput'
 import wrapAsWebComponent from 'web-component-wrapper'
 import {WebComponentAPI} from 'web-component-wrapper/type'
@@ -50,7 +50,3 @@ export const TextInput:WebComponentAPI<typeof ReactTextInput> =
     )
 
 export default TextInput
-// region vim modline
-// vim: set tabstop=4 shiftwidth=4 expandtab:
-// vim: foldmethod=marker foldmarker=region,endregion:
-// endregion
