@@ -201,7 +201,7 @@
                 // region inputs
                 // NOTE: Wait until all inputs have stabilized.
                 timeout(function() {
-                    arrayMake(document.querySelectorAll('[is-root][name]'))
+                    makeArray(document.querySelectorAll('[is-root][name]'))
                         .forEach(function(domNode) {
                             domNode.addEventListener(
                                 'change',
