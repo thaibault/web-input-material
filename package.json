@@ -159,6 +159,18 @@
         ]
       }
     },
+    "development": {
+      "server": {
+        "proxy": [
+          {
+            "context": ["/placeholder"],
+            "pathRewrite": {"^/placeholder": ""},
+            "secure": false,
+            "target": "https://via.placeholder.com"
+          }
+        ]
+      }
+    },
     "generic": {
       "supportedBrowsers": [
         "IE >= 11",
