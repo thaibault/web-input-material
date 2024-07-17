@@ -4022,12 +4022,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^20.14.10":
-  version: 20.14.10
-  resolution: "@types/node@npm:20.14.10"
+"@types/node@npm:^20.14.11":
+  version: 20.14.11
+  resolution: "@types/node@npm:20.14.11"
   dependencies:
     undici-types: "npm:~5.26.4"
-  checksum: 10c0/0b06cff14365c2d0085dc16cc8cbea5c40ec09cfc1fea966be9eeecf35562760bfde8f88e86de6edfaf394501236e229d9c1084fad04fb4dec472ae245d8ae69
+  checksum: 10c0/5306becc0ff41d81b1e31524bd376e958d0741d1ce892dffd586b9ae0cb6553c62b0d62abd16da8bea6b9a2c17572d360450535d7c073794b0cef9cb4e39691e
   languageName: node
   linkType: hard
 
@@ -10996,9 +10996,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-generic-animate@npm:^0.0.49":
-  version: 0.0.49
-  resolution: "react-generic-animate@npm:0.0.49"
+"react-generic-animate@npm:^0.0.50":
+  version: 0.0.50
+  resolution: "react-generic-animate@npm:0.0.50"
   peerDependencies:
     "@babel/runtime": "*"
     "@types/react": "*"
@@ -11029,13 +11029,13 @@ __metadata:
       optional: true
     react-useanimations:
       optional: true
-  checksum: 10c0/a7b27ed5227f0ac0b0cead533db9f8b7460d68361068be98313bac5e72bee6d908b399e0a6f0b139a733a0b27c42cb264ee32dc4d54a1011f66020c7e6e8de3f
+  checksum: 10c0/43f1d68ae8aa84abe7a9144a3a848cc2ea3eafd9ac5bf63afdc1d3675c9e09af1808934eacbd956db3e833045a3f6fe13854dbd95e29deb06bfd69be9144025e
   languageName: node
   linkType: hard
 
-"react-generic-dummy@npm:^0.0.74":
-  version: 0.0.74
-  resolution: "react-generic-dummy@npm:0.0.74"
+"react-generic-dummy@npm:^0.0.75":
+  version: 0.0.75
+  resolution: "react-generic-dummy@npm:0.0.75"
   peerDependencies:
     "@babel/runtime": "*"
     "@types/react": "*"
@@ -11057,13 +11057,13 @@ __metadata:
       optional: true
     react-dom:
       optional: true
-  checksum: 10c0/d4d0730d2a007d2f31a16a940e65ff21fa29c0d59f7e9778cb3da07a1c94a591d95cd458a06165f582448748c915d48991bc67706e3a7461fec8fc2b672a6a9f
+  checksum: 10c0/36b3b038a783807228e2a69fbe0bba4d9054c705f7821388c782633c52fa460f0591a48b292224ba85b1184cc02b5d7e16a8afa04fc009a4f9f6777ed05b3899
   languageName: node
   linkType: hard
 
-"react-generic-tools@npm:^0.0.45":
-  version: 0.0.45
-  resolution: "react-generic-tools@npm:0.0.45"
+"react-generic-tools@npm:^0.0.46":
+  version: 0.0.46
+  resolution: "react-generic-tools@npm:0.0.46"
   peerDependencies:
     "@babel/runtime": "*"
     "@types/react": "*"
@@ -11085,13 +11085,13 @@ __metadata:
       optional: true
     react-dom:
       optional: true
-  checksum: 10c0/494283cbfcfa91a3f40f1b2b9453d5889c6882b670a60dac745f8d8ab303227f6b86d717a8b97d309c6987d251ee89be0072b2d3a0709c1bd09fb9b8b0a9ed86
+  checksum: 10c0/e47e226b986375d004bfc9d57df164ba2ff9b5a27898d8f910583dc2573eadfbfc31bd075bb2cca887eae0239141392295c5474ce68c5f1ae480aeb9bbdb3504
   languageName: node
   linkType: hard
 
-"react-input-material@npm:^0.0.652":
-  version: 0.0.652
-  resolution: "react-input-material@npm:0.0.652"
+"react-input-material@npm:^0.0.653":
+  version: 0.0.653
+  resolution: "react-input-material@npm:0.0.653"
   peerDependencies:
     "@babel/runtime": "*"
     "@rmwc/card": "*"
@@ -11175,7 +11175,7 @@ __metadata:
       optional: true
     tinymce:
       optional: true
-  checksum: 10c0/6236abade0b3a5414ef79eb13ea38b99694d911d019f84422633890e6e9be899b82b1ff3a8aae510757ec68bef7fc330977435ddf501559a0f7f5b518f649648
+  checksum: 10c0/9da0e4b725a39fd03057656595b4a61d8f1d7df71b5b998de33a06825d40b657a543a1d91c4a58a822859855ce6c317dd70a2f2e5091afd3111c2dcb212a24fc
   languageName: node
   linkType: hard
 
@@ -12779,9 +12779,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"web-component-wrapper@npm:^0.0.492":
-  version: 0.0.492
-  resolution: "web-component-wrapper@npm:0.0.492"
+"web-component-wrapper@npm:^0.0.493":
+  version: 0.0.493
+  resolution: "web-component-wrapper@npm:0.0.493"
   peerDependencies:
     "@babel/runtime": "*"
     "@types/react": "*"
@@ -12800,7 +12800,7 @@ __metadata:
       optional: true
     react-dom:
       optional: true
-  checksum: 10c0/ee61b57061a2615932380e047261d8211bf488b6855192e8fff23dc8dfe6b85f3afa29638f4333291ad4f9ec3c9d662848c25db12f993ff47af51a8e15f0300f
+  checksum: 10c0/305fe78fde241b6eff42b0a6b9b1db8cad7801e415675f631098c17ca9f2ed4a66fbe99ad565a625fffb6e9d84d35e2440fd294a72bbbdb1c4de17fef7396830
   languageName: node
   linkType: hard
 
@@ -12831,7 +12831,7 @@ __metadata:
     "@types/html-minifier": "npm:^4.0.5"
     "@types/jquery": "npm:^3.5.30"
     "@types/jsdom": "npm:^21.1.7"
-    "@types/node": "npm:^20.14.10"
+    "@types/node": "npm:^20.14.11"
     "@types/react": "npm:^18.3.3"
     "@types/react-dom": "npm:^18.3.0"
     "@types/react-transition-group": "npm:^4.4.10"
@@ -12854,17 +12854,17 @@ __metadata:
     react: "npm:^18.3.1"
     react-ace: "npm:^12.0.0"
     react-dom: "npm:^18.3.1"
-    react-generic-animate: "npm:^0.0.49"
-    react-generic-dummy: "npm:^0.0.74"
-    react-generic-tools: "npm:^0.0.45"
-    react-input-material: "npm:^0.0.652"
+    react-generic-animate: "npm:^0.0.50"
+    react-generic-dummy: "npm:^0.0.75"
+    react-generic-tools: "npm:^0.0.46"
+    react-input-material: "npm:^0.0.653"
     react-transition-group: "npm:^4.4.5"
     react-useanimations: "npm:^2.10.0"
     spark-md5: "npm:^3.0.2"
     style-loader: "npm:^4.0.0"
     tslib: "npm:^2.6.3"
     typescript-eslint: "npm:^7.16.1"
-    web-component-wrapper: "npm:^0.0.492"
+    web-component-wrapper: "npm:^0.0.493"
     weboptimizer: "npm:^2.0.1487"
     webpack-dev-server: "npm:^5.0.4"
   peerDependencies:
