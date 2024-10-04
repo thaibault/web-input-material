@@ -22,7 +22,7 @@ import Interval from 'react-input-material/dist/components/Interval'
 import wrapAsWebComponent from 'web-component-wrapper'
 import {WebComponentAPI} from 'web-component-wrapper/type'
 // endregion
-export const GenericInterval:WebComponentAPI<typeof Interval> =
+export const GenericInterval: WebComponentAPI<typeof Interval> =
     wrapAsWebComponent<typeof Interval>(
         Interval,
         'GenericInterval',

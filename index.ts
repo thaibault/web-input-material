@@ -32,18 +32,18 @@ export {SliderInput} from './components/SliderInput'
 export {TabBar} from './components/TabBar'
 export {TabItem} from './components/TabItem'
 
-export const components:Mapping<WebComponentAPI<typeof ReactWeb>> = {}
+export const components: Mapping<WebComponentAPI<typeof ReactWeb>> = {}
 /*
     Import all react components and extract a dynamically created web-component
     class wrapper with corresponding web component register method. A derived
     default web component name is provided.
 */
 const componentRetriever = require.context('./components', true, /^.+\.ts$/)
-componentRetriever.keys().map((name:string):void => {
+componentRetriever.keys().map((name: string) => {
     if (!name.endsWith('.d.ts')) {
-        const componentAPI:WebComponentAPI<typeof ReactWeb> = (
+        const componentAPI: WebComponentAPI<typeof ReactWeb> = (
             componentRetriever(name) as
-                {default:WebComponentAPI<typeof ReactWeb>}
+                {default: WebComponentAPI<typeof ReactWeb>}
         ).default
 
         components[componentAPI.component._name] = componentAPI
@@ -52,7 +52,9 @@ componentRetriever.keys().map((name:string):void => {
 
 export const register = () =>
     Object.values(components).map(
-        (component:WebComponentAPI<typeof ReactWeb>) => component.register()
+        (component: WebComponentAPI<typeof ReactWeb>) => {
+            component.register()
+        }
     )
 
 export default components

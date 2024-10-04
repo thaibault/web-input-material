@@ -19,7 +19,7 @@ import '@webcomponents/webcomponentsjs/custom-elements-es5-adapter'
 
 import components from './index'
 // endregion
-describe('web-input-material', ():void => {
+describe('web-input-material', (): void => {
     test('components', () => {
         expect(Object.keys(components).length).toBeGreaterThan(1)
     })
@@ -32,7 +32,7 @@ describe('web-input-material', ():void => {
         expect(TextInput.register).toBeDefined()
 
         TextInput.register()
-        const textInput:HTMLElement = document.createElement('text-input')
+        const textInput: HTMLElement = document.createElement('text-input')
 
         expect(textInput).toBeDefined()
     })

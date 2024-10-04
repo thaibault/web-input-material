@@ -22,7 +22,7 @@ import ReactFileInput from 'react-input-material/dist/components/FileInput'
 import wrapAsWebComponent from 'web-component-wrapper'
 import {WebComponentAPI} from 'web-component-wrapper/type'
 // endregion
-export const FileInput:WebComponentAPI<typeof ReactFileInput> =
+export const FileInput: WebComponentAPI<typeof ReactFileInput> =
     wrapAsWebComponent<typeof ReactFileInput>(
         ReactFileInput,
         'FileInput',

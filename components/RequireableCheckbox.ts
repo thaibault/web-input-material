@@ -22,7 +22,7 @@ import Checkbox from 'react-input-material/dist/components/RequireableCheckbox'
 import wrapAsWebComponent from 'web-component-wrapper'
 import {WebComponentAPI} from 'web-component-wrapper/type'
 // endregion
-export const RequireableCheckbox:WebComponentAPI<typeof Checkbox> =
+export const RequireableCheckbox: WebComponentAPI<typeof Checkbox> =
     wrapAsWebComponent<typeof Checkbox>(
         Checkbox,
         'RequireableCheckbox',

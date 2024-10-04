@@ -22,7 +22,7 @@ import ReactInputs from 'react-input-material/dist/components/Inputs'
 import wrapAsWebComponent from 'web-component-wrapper'
 import {WebComponentAPI} from 'web-component-wrapper/type'
 // endregion
-export const GenericInputs:WebComponentAPI<typeof ReactInputs> =
+export const GenericInputs: WebComponentAPI<typeof ReactInputs> =
     wrapAsWebComponent<typeof ReactInputs>(
         ReactInputs,
         'GenericInputs',
