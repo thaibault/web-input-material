@@ -6207,9 +6207,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"clientnode@npm:3.0.1192":
-  version: 3.0.1192
-  resolution: "clientnode@npm:3.0.1192"
+"clientnode@npm:3.0.1199":
+  version: 3.0.1199
+  resolution: "clientnode@npm:3.0.1199"
   peerDependencies:
     "@babel/runtime": "*"
     "@types/prop-types": "*"
@@ -6227,13 +6227,13 @@ __metadata:
       optional: true
     prop-types:
       optional: true
-  checksum: 10c0/1502c98d4bf8122eae84fe4526fd30586a23a12fa8384bce3cf38c49717844e6303a5ec8f97ad4de2326507da64a3b96bcb93881fda0cc506a1244d62afb7219
+  checksum: 10c0/9ef7f2a1ac3d7e8e75d697a1bc6e3534592c21698f671bafb4a572ee1fac96feaf549182d7ec356c62229c28619db1dd01bc5a777662632cdc8becd1d87bc46e
   languageName: node
   linkType: hard
 
-"clientnode@npm:^3.0.1194":
-  version: 3.0.1194
-  resolution: "clientnode@npm:3.0.1194"
+"clientnode@npm:^3.0.1201":
+  version: 3.0.1201
+  resolution: "clientnode@npm:3.0.1201"
   peerDependencies:
     "@babel/runtime": "*"
     "@types/prop-types": "*"
@@ -6251,7 +6251,7 @@ __metadata:
       optional: true
     prop-types:
       optional: true
-  checksum: 10c0/b700837ed9f92526b51c6518380f44a3f55d8859cc9280a045662ea344995891af9eaaca21054a56d1f70edd3d22430696db46893bdd0e00a92da71b3abdb2e9
+  checksum: 10c0/99388bd4ab34ce431a0648e7156a04725bd5c3423e1f7f379710c63d6ae1f623cb6648d31c2f6478010b554f2c92be692dcfcba94d3aefd1470262aaea1d53f1
   languageName: node
   linkType: hard
 
@@ -6797,12 +6797,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"documentation-website@npm:^1.0.334":
-  version: 1.0.334
-  resolution: "documentation-website@npm:1.0.334"
+"documentation-website@npm:^1.0.335":
+  version: 1.0.335
+  resolution: "documentation-website@npm:1.0.335"
   bin:
     documentation-website: build/deploy.js
-  checksum: 10c0/859c72a2568567000af62f9d715e876aae0b061df84d46732f58737fc19180dc26509e3b3eba64e779283a11262930cf50536fb4040305d97d88c63a202cdcd5
+  checksum: 10c0/64aaad4ce028a21f6181f56b0b8273f65df2f66a78ac1d9db28399a312ba55ee04680cfc8de1c93ae7f94b6ed9b8637fd46aee86bad4c8bd0c66ef18d2353289
   languageName: node
   linkType: hard
 
@@ -10892,9 +10892,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-generic-animate@npm:^0.0.53":
-  version: 0.0.53
-  resolution: "react-generic-animate@npm:0.0.53"
+"react-generic-animate@npm:^0.0.55":
+  version: 0.0.55
+  resolution: "react-generic-animate@npm:0.0.55"
   peerDependencies:
     "@babel/runtime": "*"
     "@types/react": "*"
@@ -10925,13 +10925,13 @@ __metadata:
       optional: true
     react-useanimations:
       optional: true
-  checksum: 10c0/bb459345777385d056a8308e6d84bc993a333d61908cfe74d0156a415f299b26f43a507da2cca2b935b46e62201370d2fa1dcfa9d73d0b65bc0bc6debadfb5cc
+  checksum: 10c0/22c083d52b40c657b4790dfbd0fbab1d189bca68008dfddcc44ee77b52a1984db5eeff09ac0d5957685a26734f82edd84cc932967624745ba70c8f84a88717b3
   languageName: node
   linkType: hard
 
-"react-generic-dummy@npm:^0.0.78":
-  version: 0.0.78
-  resolution: "react-generic-dummy@npm:0.0.78"
+"react-generic-dummy@npm:^0.0.79":
+  version: 0.0.79
+  resolution: "react-generic-dummy@npm:0.0.79"
   peerDependencies:
     "@babel/runtime": "*"
     "@types/react": "*"
@@ -10953,13 +10953,13 @@ __metadata:
       optional: true
     react-dom:
       optional: true
-  checksum: 10c0/5cd557d1a30222c5baf765bcfebcc0f3d85ae0a1fff51a91729dba0ace21c332c57028f9a24d0a300c3a5d02f9e6402704a57614dadee04d235c31ac97716a4b
+  checksum: 10c0/06a4011bb8a180b103348390e4a1fac7ca9eb98244279e09074e72cf2bf89c0c82af83ffcdedff5f5f50c08fb47ee93e442d34edccfe36eef98d9f227c0a28db
   languageName: node
   linkType: hard
 
-"react-generic-tools@npm:^0.0.48":
-  version: 0.0.48
-  resolution: "react-generic-tools@npm:0.0.48"
+"react-generic-tools@npm:^0.0.50":
+  version: 0.0.50
+  resolution: "react-generic-tools@npm:0.0.50"
   peerDependencies:
     "@babel/runtime": "*"
     "@types/react": "*"
@@ -10981,13 +10981,13 @@ __metadata:
       optional: true
     react-dom:
       optional: true
-  checksum: 10c0/f327981ef64d27e185a67859de3b91d6702ff857109be04d3c7e69df79ccf0010d44fe0cce4831a7fccd2c63a0979c1d5dbf86f1a30156eb38b26c588f8011bd
+  checksum: 10c0/989de206658aadbd3e34c47d9671d77ebd96cc668807a0d23da39c2e0b1f8d6bbdbd96973204e03d127e0bbf8185d26d706687294f7088cacb38231242a452b6
   languageName: node
   linkType: hard
 
-"react-input-material@npm:^0.0.656":
-  version: 0.0.656
-  resolution: "react-input-material@npm:0.0.656"
+"react-input-material@npm:^0.0.659":
+  version: 0.0.659
+  resolution: "react-input-material@npm:0.0.659"
   peerDependencies:
     "@babel/runtime": "*"
     "@rmwc/card": "*"
@@ -11071,7 +11071,7 @@ __metadata:
       optional: true
     tinymce:
       optional: true
-  checksum: 10c0/b7a9af7faab528b56fad312abfa81387fc24a3088d1b820c5436cf7f2da2746e06b874ba2f44b3893e56dfb728203a99e84bade21b2af795887217621b728ab0
+  checksum: 10c0/4d55efc1b105e49d44c5058a2a7a80e3459881a11ad593d4d10f2459056e24bf451250834acdb9a91e7b59aaaa27d1d7f110c9d2624ec3dbcdb451807381adf8
   languageName: node
   linkType: hard
 
@@ -12710,9 +12710,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"web-component-wrapper@npm:^0.0.496":
-  version: 0.0.496
-  resolution: "web-component-wrapper@npm:0.0.496"
+"web-component-wrapper@npm:^0.0.498":
+  version: 0.0.498
+  resolution: "web-component-wrapper@npm:0.0.498"
   peerDependencies:
     "@babel/runtime": "*"
     "@types/react": "*"
@@ -12731,7 +12731,7 @@ __metadata:
       optional: true
     react-dom:
       optional: true
-  checksum: 10c0/5a9daff58e345d3e417a5ce2bb5d517bd17dad0fed2f3eed7403efa3d4d19ca33ff0f232d7b76c0d4eef7de86c5ead41b8ef345caf6be48fc818d5ed1d8a2bb4
+  checksum: 10c0/cc183a81be763d8d1e0a5ae08779153cd449c0bd635db6d010bde938c7ca76de5d4d4c27aee27219a2436d78ea62efa80879d955b5aede4516f80359b7c4b991
   languageName: node
   linkType: hard
 
@@ -12771,8 +12771,8 @@ __metadata:
     "@typescript-eslint/parser": "npm:^8.8.0"
     "@webcomponents/webcomponentsjs": "npm:^2.8.0"
     blob-util: "npm:^2.0.2"
-    clientnode: "npm:^3.0.1194"
-    documentation-website: "npm:^1.0.334"
+    clientnode: "npm:^3.0.1201"
+    documentation-website: "npm:^1.0.335"
     eslint: "npm:^9.11.1"
     eslint-config-google: "npm:^0.14.0"
     eslint-plugin-jsdoc: "npm:^50.3.1"
@@ -12785,18 +12785,18 @@ __metadata:
     react: "npm:^18.3.1"
     react-ace: "npm:^12.0.0"
     react-dom: "npm:^18.3.1"
-    react-generic-animate: "npm:^0.0.53"
-    react-generic-dummy: "npm:^0.0.78"
-    react-generic-tools: "npm:^0.0.48"
-    react-input-material: "npm:^0.0.656"
+    react-generic-animate: "npm:^0.0.55"
+    react-generic-dummy: "npm:^0.0.79"
+    react-generic-tools: "npm:^0.0.50"
+    react-input-material: "npm:^0.0.659"
     react-transition-group: "npm:^4.4.5"
     react-useanimations: "npm:^2.10.0"
     spark-md5: "npm:^3.0.2"
     style-loader: "npm:^4.0.0"
     tslib: "npm:^2.7.0"
     typescript-eslint: "npm:^8.8.0"
-    web-component-wrapper: "npm:^0.0.496"
-    weboptimizer: "npm:^2.0.1518"
+    web-component-wrapper: "npm:^0.0.498"
+    weboptimizer: "npm:^2.0.1519"
     webpack-dev-server: "npm:^5.1.0"
   peerDependencies:
     "@babel/runtime": "*"
@@ -12814,9 +12814,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"weboptimizer@npm:^2.0.1518":
-  version: 2.0.1518
-  resolution: "weboptimizer@npm:2.0.1518"
+"weboptimizer@npm:^2.0.1519":
+  version: 2.0.1519
+  resolution: "weboptimizer@npm:2.0.1519"
   dependencies:
     "@babel/core": "npm:^7.25.7"
     "@babel/plugin-proposal-class-properties": "npm:^7.18.6"
@@ -12829,7 +12829,7 @@ __metadata:
     babel-loader: "npm:^9.2.1"
     babel-plugin-transform-modern-regexp: "npm:^0.0.6"
     babel-preset-minify: "npm:^0.5.2"
-    clientnode: "npm:3.0.1192"
+    clientnode: "npm:3.0.1199"
     ejs: "npm:^3.1.10"
     exports-loader: "npm:^5.0.0"
     extract-loader: "npm:^5.1.0"
@@ -12955,7 +12955,7 @@ __metadata:
       optional: true
   bin:
     weboptimizer: index.js
-  checksum: 10c0/0c4629614790955bda890d34fb5b6771616cdbc76e2fbfd6e1abceddef2dee7fa311f8333a488ca2e95bb812fe223f136804ed70708382a294aed142d5415d30
+  checksum: 10c0/e04081c8426fe2d85cd7f96da42992692aa14b6e99ab0955b7883edaa5b4c69006ceadec2cdc814f17c682e55dee8430b4e9c2223e6ed7efc61b5daea21f21aa
   languageName: node
   linkType: hard
 
