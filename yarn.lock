@@ -3443,7 +3443,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rmwc/select@npm:^14.3.4":
+"@rmwc/ripple@patch:@rmwc/ripple@npm%3A14.3.4#~/.yarn/patches/@rmwc-ripple-npm-14.3.4-27648eff11.patch":
+  version: 14.3.4
+  resolution: "@rmwc/ripple@patch:@rmwc/ripple@npm%3A14.3.4#~/.yarn/patches/@rmwc-ripple-npm-14.3.4-27648eff11.patch::version=14.3.4&hash=3b8d08"
+  dependencies:
+    "@material/ripple": "npm:^14.0.0"
+    "@rmwc/base": "npm:14.3.4"
+    "@rmwc/provider": "npm:14.3.4"
+    "@rmwc/types": "npm:14.3.4"
+  peerDependencies:
+    react: ">=16.8.x"
+    react-dom: ">=16.8.x"
+  checksum: 10c0/4f411012da79a05e1044058f33090e6a1ad1e087d23228f2a18b6f916964c88be915e3d37f5a56d1c1fdbf78ff49c97b25c9c10cd6afa0625e2706b633ed39d8
+  languageName: node
+  linkType: hard
+
+"@rmwc/select@npm:14.3.4":
   version: 14.3.4
   resolution: "@rmwc/select@npm:14.3.4"
   dependencies:
@@ -3464,7 +3479,28 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rmwc/slider@npm:^14.3.4":
+"@rmwc/select@patch:@rmwc/select@npm%3A14.3.4#~/.yarn/patches/@rmwc-select-npm-14.3.4-6d0aebe22c.patch":
+  version: 14.3.4
+  resolution: "@rmwc/select@patch:@rmwc/select@npm%3A14.3.4#~/.yarn/patches/@rmwc-select-npm-14.3.4-6d0aebe22c.patch::version=14.3.4&hash=f936c1"
+  dependencies:
+    "@material/select": "npm:^14.0.0"
+    "@rmwc/base": "npm:14.3.4"
+    "@rmwc/floating-label": "npm:14.3.4"
+    "@rmwc/icon": "npm:14.3.4"
+    "@rmwc/line-ripple": "npm:14.3.4"
+    "@rmwc/list": "npm:14.3.4"
+    "@rmwc/menu": "npm:14.3.4"
+    "@rmwc/notched-outline": "npm:14.3.4"
+    "@rmwc/ripple": "npm:14.3.4"
+    "@rmwc/types": "npm:14.3.4"
+  peerDependencies:
+    react: ">=16.8.x"
+    react-dom: ">=16.8.x"
+  checksum: 10c0/fa9f12c0f92335a8d0114628c8e88429fac014bb256be43294640ef0714c0a931291cf5d2aa2799ffccde9d1ff9efab204e5b563e01a65429e4275d62324bae7
+  languageName: node
+  linkType: hard
+
+"@rmwc/slider@npm:14.3.4":
   version: 14.3.4
   resolution: "@rmwc/slider@npm:14.3.4"
   dependencies:
@@ -3475,6 +3511,20 @@ __metadata:
     react: ">=16.8.x"
     react-dom: ">=16.8.x"
   checksum: 10c0/3dcd163c569c7a46c96566395b4b53548ee45729ce112dc8b39eafbd07057c6063e6e9df8a7c53ca46295e1dedc668b9755010d2f2dcc870a0c0024e6dd4d640
+  languageName: node
+  linkType: hard
+
+"@rmwc/slider@patch:@rmwc/slider@npm%3A14.3.4#~/.yarn/patches/@rmwc-slider-npm-14.3.4-c58d8ea166.patch":
+  version: 14.3.4
+  resolution: "@rmwc/slider@patch:@rmwc/slider@npm%3A14.3.4#~/.yarn/patches/@rmwc-slider-npm-14.3.4-c58d8ea166.patch::version=14.3.4&hash=963741"
+  dependencies:
+    "@material/slider": "npm:^14.0.0"
+    "@rmwc/base": "npm:14.3.4"
+    "@rmwc/types": "npm:14.3.4"
+  peerDependencies:
+    react: ">=16.8.x"
+    react-dom: ">=16.8.x"
+  checksum: 10c0/1db5517d3b3e04e4579c8a2b8e27a8409b00a52c09068afef719c023bc3d11512d42858cb1865a73ade69be005d927c747ab834165f8689f5082af855668971b
   languageName: node
   linkType: hard
 
@@ -12755,8 +12805,8 @@ __metadata:
     "@rmwc/formfield": "npm:^14.3.4"
     "@rmwc/icon": "npm:^14.3.4"
     "@rmwc/icon-button": "npm:^14.3.4"
-    "@rmwc/select": "npm:^14.3.4"
-    "@rmwc/slider": "npm:^14.3.4"
+    "@rmwc/select": "patch:@rmwc/select@npm%3A14.3.4#~/.yarn/patches/@rmwc-select-npm-14.3.4-6d0aebe22c.patch"
+    "@rmwc/slider": "patch:@rmwc/slider@npm%3A14.3.4#~/.yarn/patches/@rmwc-slider-npm-14.3.4-c58d8ea166.patch"
     "@rmwc/tabs": "npm:^14.3.4"
     "@rmwc/textfield": "npm:^14.3.4"
     "@rmwc/theme": "npm:^14.3.4"
