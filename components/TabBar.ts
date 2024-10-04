@@ -26,14 +26,14 @@ import wrapAsWebComponent from 'web-component-wrapper'
 import {WebComponentAPI} from 'web-component-wrapper/type'
 import {TabBar as ReactTabBar} from '@rmwc/tabs'
 // endregion
-export const TabBar:WebComponentAPI<typeof ReactTabBar> =
+export const TabBar: WebComponentAPI<typeof ReactTabBar> =
     wrapAsWebComponent<typeof ReactTabBar>(
         createWrapConfigurationsComponent<typeof ReactTabBar>(ReactTabBar) as
             typeof ReactTabBar,
         'TabBar',
         {
             eventToPropertyMapping: {
-                onActivate: async ():Promise<null> => {
+                onActivate: async (): Promise<null> => {
                     await timeout()
 
                     return null

@@ -31,22 +31,22 @@ import {WebComponentAPI} from 'web-component-wrapper/type'
 import {Slider} from '@rmwc/slider'
 // endregion
 export interface Properties extends Mapping<unknown> {
-    disabled:boolean
+    disabled: boolean
 
-    discrete:boolean
-    displayMarkers:boolean
+    discrete: boolean
+    displayMarkers: boolean
 
-    max:number
-    min:number
-    step:number
+    max: number
+    min: number
+    step: number
 
-    value:number
+    value: number
 }
 /*
     NOTE: Resulting component type is dynamically created from derived wrapped
     react component.
 */
-export const SliderInput:WebComponentAPI<
+export const SliderInput: WebComponentAPI<
     typeof Slider, Properties, Properties
 > = wrapAsWebComponent<
     typeof Slider,
@@ -58,14 +58,16 @@ export const SliderInput:WebComponentAPI<
     'SliderInput',
     {
         eventToPropertyMapping: {
-            onChange: (event:GenericEvent, self:ReactWeb):Properties => ({
+            onChange: (event: GenericEvent, self: ReactWeb): Properties => ({
                 ...self.externalProperties as Properties,
-                value: (event.detail as {value:number}).value
+                value: (event.detail as {value: number}).value
             }),
-            onInput: (event:GenericEvent):[{value:number}, {value:number}] =>
+            onInput: (
+                event: GenericEvent
+            ): [{value: number}, {value: number}] =>
                 [
-                    {value: (event.detail as {value:number}).value},
-                    {value: (event.detail as {value:number}).value}
+                    {value: (event.detail as {value: number}).value},
+                    {value: (event.detail as {value: number}).value}
                 ]
         },
         propTypes: {

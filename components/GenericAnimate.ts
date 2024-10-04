@@ -21,7 +21,7 @@ import ReactGenericAnimate from 'react-generic-animate'
 import wrapAsWebComponent from 'web-component-wrapper'
 import {WebComponentAPI} from 'web-component-wrapper/type'
 // endregion
-export const GenericAnimate:WebComponentAPI<typeof ReactGenericAnimate> =
+export const GenericAnimate: WebComponentAPI<typeof ReactGenericAnimate> =
     wrapAsWebComponent<typeof ReactGenericAnimate>(
         ReactGenericAnimate,
         'GenericAnimate',

@@ -88,6 +88,7 @@
     "@rmwc/tooltip": "^14.3.4",
     "@rmwc/touch-target": "^14.3.4",
     "@rmwc/typography": "^14.3.4",
+    "@stylistic/eslint-plugin-ts": "^2.8.0",
     "@tinymce/tinymce-react": "^5.1.1",
     "@types/ejs": "^3.1.5",
     "@types/html-minifier": "^4.0.5",
