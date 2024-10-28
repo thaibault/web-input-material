@@ -3406,7 +3406,7 @@ __metadata:
 
 "@rmwc/ripple@patch:@rmwc/ripple@npm%3A14.3.5#~/.yarn/patches/@rmwc-ripple-npm-14.3.5-9657693602.patch":
   version: 14.3.5
-  resolution: "@rmwc/ripple@patch:@rmwc/ripple@npm%3A14.3.5#~/.yarn/patches/@rmwc-ripple-npm-14.3.5-9657693602.patch::version=14.3.5&hash=d612fc"
+  resolution: "@rmwc/ripple@patch:@rmwc/ripple@npm%3A14.3.5#~/.yarn/patches/@rmwc-ripple-npm-14.3.5-9657693602.patch::version=14.3.5&hash=08c188"
   dependencies:
     "@material/ripple": "npm:^14.0.0"
     "@rmwc/base": "npm:14.3.5"
@@ -3415,7 +3415,7 @@ __metadata:
   peerDependencies:
     react: ">=16.8.x"
     react-dom: ">=16.8.x"
-  checksum: 10c0/5ecab2f41455df4c01c37e56924c428132d379604c581e4428ed19db451d641d935f40358bef65e16aae3aa52d6434554270153759245062636c864eafe3131f
+  checksum: 10c0/01dc25d3d5a04f271bda5814e7ec7dc110f341c7795e4fc891b1a0a657547b79920f8a16c2694b40311579827672ae2778af9813a8a092657d08c051004d277f
   languageName: node
   linkType: hard
 
@@ -11026,9 +11026,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-input-material@npm:^0.0.664":
-  version: 0.0.664
-  resolution: "react-input-material@npm:0.0.664"
+"react-input-material@npm:^0.0.665":
+  version: 0.0.665
+  resolution: "react-input-material@npm:0.0.665"
   peerDependencies:
     "@babel/runtime": "*"
     "@rmwc/card": "*"
@@ -11112,7 +11112,7 @@ __metadata:
       optional: true
     tinymce:
       optional: true
-  checksum: 10c0/e4ae0e1aaed7ab08e422d84d2cd80fe5c02119e3cd0773f9e3717030307998b3723238ec737ead1f8f847db2ec433bf259e6692d15c8b009aca036ea2d2f91cb
+  checksum: 10c0/a9478ef8b3373a87400e85bee64a4a2affb9d68f7c85fcf624707518f70718b74f2a08c8d573b2d5ef237e61138b5215ff19ea9ca76ada30875057c17e4ba1cf
   languageName: node
   linkType: hard
 
@@ -12830,7 +12830,7 @@ __metadata:
     react-generic-animate: "npm:^0.0.58"
     react-generic-dummy: "npm:^0.0.82"
     react-generic-tools: "npm:^0.0.54"
-    react-input-material: "npm:^0.0.664"
+    react-input-material: "npm:^0.0.665"
     react-transition-group: "npm:^4.4.5"
     react-useanimations: "npm:^2.10.0"
     spark-md5: "npm:^3.0.2"
