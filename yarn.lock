@@ -3404,6 +3404,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@rmwc/ripple@patch:@rmwc/ripple@npm%3A14.3.5#~/.yarn/patches/@rmwc-ripple-npm-14.3.5-9657693602.patch":
+  version: 14.3.5
+  resolution: "@rmwc/ripple@patch:@rmwc/ripple@npm%3A14.3.5#~/.yarn/patches/@rmwc-ripple-npm-14.3.5-9657693602.patch::version=14.3.5&hash=d612fc"
+  dependencies:
+    "@material/ripple": "npm:^14.0.0"
+    "@rmwc/base": "npm:14.3.5"
+    "@rmwc/provider": "npm:14.3.5"
+    "@rmwc/types": "npm:14.3.5"
+  peerDependencies:
+    react: ">=16.8.x"
+    react-dom: ">=16.8.x"
+  checksum: 10c0/5ecab2f41455df4c01c37e56924c428132d379604c581e4428ed19db451d641d935f40358bef65e16aae3aa52d6434554270153759245062636c864eafe3131f
+  languageName: node
+  linkType: hard
+
 "@rmwc/select@npm:^14.3.5":
   version: 14.3.5
   resolution: "@rmwc/select@npm:14.3.5"
@@ -11011,9 +11026,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-input-material@npm:^0.0.663":
-  version: 0.0.663
-  resolution: "react-input-material@npm:0.0.663"
+"react-input-material@npm:^0.0.664":
+  version: 0.0.664
+  resolution: "react-input-material@npm:0.0.664"
   peerDependencies:
     "@babel/runtime": "*"
     "@rmwc/card": "*"
@@ -11097,7 +11112,7 @@ __metadata:
       optional: true
     tinymce:
       optional: true
-  checksum: 10c0/fd38ef0d7a6dbf13a203c95812724925a474db319068378af5827620088e0ae8fd88e8ced205db70a5b9130b7391a0fc5a5606d00b7cf87d1e816664ee2b5dad
+  checksum: 10c0/e4ae0e1aaed7ab08e422d84d2cd80fe5c02119e3cd0773f9e3717030307998b3723238ec737ead1f8f847db2ec433bf259e6692d15c8b009aca036ea2d2f91cb
   languageName: node
   linkType: hard
 
@@ -12815,7 +12830,7 @@ __metadata:
     react-generic-animate: "npm:^0.0.58"
     react-generic-dummy: "npm:^0.0.82"
     react-generic-tools: "npm:^0.0.54"
-    react-input-material: "npm:^0.0.663"
+    react-input-material: "npm:^0.0.664"
     react-transition-group: "npm:^4.4.5"
     react-useanimations: "npm:^2.10.0"
     spark-md5: "npm:^3.0.2"
