@@ -3441,7 +3441,7 @@ __metadata:
 
 "@rmwc/slider@patch:@rmwc/slider@npm%3A14.3.5#~/.yarn/patches/@rmwc-slider-npm-14.3.5-c8fe4ac3a5.patch":
   version: 14.3.5
-  resolution: "@rmwc/slider@patch:@rmwc/slider@npm%3A14.3.5#~/.yarn/patches/@rmwc-slider-npm-14.3.5-c8fe4ac3a5.patch::version=14.3.5&hash=530fd0"
+  resolution: "@rmwc/slider@patch:@rmwc/slider@npm%3A14.3.5#~/.yarn/patches/@rmwc-slider-npm-14.3.5-c8fe4ac3a5.patch::version=14.3.5&hash=7fe974"
   dependencies:
     "@material/slider": "npm:^14.0.0"
     "@rmwc/base": "npm:14.3.5"
@@ -3449,7 +3449,7 @@ __metadata:
   peerDependencies:
     react: ">=16.8.x"
     react-dom: ">=16.8.x"
-  checksum: 10c0/4366655a2abff6e5ea44ffb9448375a95fc5cd32aedf9843bac7690fffdb7505cd3248a2e7f68e2200d92785ad307b248132f04c0387618dbecfdb0e3402ecb1
+  checksum: 10c0/02846b89e04da8e0153b2a9abe96eb4b9c4c17fde8edcaa2d392db7b02cb2dcd5c80d46c071607092dfced0a597e4da6bc49c13519e902195227e14623561490
   languageName: node
   linkType: hard
 
