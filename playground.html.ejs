@@ -537,7 +537,7 @@
                     <text-input
                         declaration="code"
                         description="textInput3Description"
-                        editor="code"
+                        editor="code(css)"
                         maximum-length="10"
                         name="textInput3"
                         required
@@ -547,7 +547,7 @@
                     <text-input
                         editor="code"
                         model="{
-                            declaration: 'code',
+                            declaration: 'code(css)',
                             description: 'textInput3ModelDescription',
                             name: 'textInput3Model',
                             nullable: false
@@ -563,6 +563,8 @@
                         description="textInput4Description"
                         editor="richtext(raw)"
                         initial-value="'Hello Mr. Smith,<br><br>how are you?'"
+                        minimumLength="10"
+                        maximumLength="100"
                         name="textInput4"
                         required
                         rows="2"
