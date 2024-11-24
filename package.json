@@ -89,7 +89,7 @@
     "@rmwc/icon": "^14.3.5",
     "@rmwc/icon-button": "^14.3.5",
     "@rmwc/select": "^14.3.5",
-    "@rmwc/slider": "^14.3.5",
+    "@rmwc/slider": "patch:@rmwc/slider@npm%3A14.3.5#~/.yarn/patches/@rmwc-slider-npm-14.3.5-c8fe4ac3a5.patch",
     "@rmwc/tabs": "^14.3.5",
     "@rmwc/textfield": "^14.3.5",
     "@rmwc/theme": "^14.3.5",

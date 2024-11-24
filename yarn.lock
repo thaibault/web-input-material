@@ -3710,7 +3710,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rmwc/slider@npm:^14.3.5":
+"@rmwc/slider@npm:14.3.5":
   version: 14.3.5
   resolution: "@rmwc/slider@npm:14.3.5"
   dependencies:
@@ -3721,6 +3721,20 @@ __metadata:
     react: ">=16.8.x"
     react-dom: ">=16.8.x"
   checksum: 10c0/962319a04c7b0f1b4a7652f6a17f844b77c041e153070841f8d4a86483f4c006592ec082346aeb72291cd70781b1e4cd213aa73d2c98df2dba729635ddb628d6
+  languageName: node
+  linkType: hard
+
+"@rmwc/slider@patch:@rmwc/slider@npm%3A14.3.5#~/.yarn/patches/@rmwc-slider-npm-14.3.5-c8fe4ac3a5.patch":
+  version: 14.3.5
+  resolution: "@rmwc/slider@patch:@rmwc/slider@npm%3A14.3.5#~/.yarn/patches/@rmwc-slider-npm-14.3.5-c8fe4ac3a5.patch::version=14.3.5&hash=b5988d"
+  dependencies:
+    "@material/slider": "npm:^14.0.0"
+    "@rmwc/base": "npm:14.3.5"
+    "@rmwc/types": "npm:14.3.5"
+  peerDependencies:
+    react: ">=16.8.x"
+    react-dom: ">=16.8.x"
+  checksum: 10c0/89f1d19513d35b040f60d47b5a4ffd4c1f8602fc757a9ca28222e41c4cec7c3f84ab1469b1bb1fb1429e8b30f065e37bd3c20b0d463bcba1a60d90ec10bae714
   languageName: node
   linkType: hard
 
@@ -13552,7 +13566,7 @@ __metadata:
     "@rmwc/icon": "npm:^14.3.5"
     "@rmwc/icon-button": "npm:^14.3.5"
     "@rmwc/select": "npm:^14.3.5"
-    "@rmwc/slider": "npm:^14.3.5"
+    "@rmwc/slider": "patch:@rmwc/slider@npm%3A14.3.5#~/.yarn/patches/@rmwc-slider-npm-14.3.5-c8fe4ac3a5.patch"
     "@rmwc/tabs": "npm:^14.3.5"
     "@rmwc/textfield": "npm:^14.3.5"
     "@rmwc/theme": "npm:^14.3.5"
