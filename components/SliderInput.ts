@@ -17,7 +17,8 @@
     endregion
 */
 // region imports
-import {boolean, func, Mapping, number, object, string} from 'clientnode'
+import {Mapping} from 'clientnode'
+import {boolean, func, number, object, string} from 'clientnode/property-types'
 import {
     createWrapConfigurationsComponent
 } from 'react-input-material/dist/components/WrapConfigurations'
