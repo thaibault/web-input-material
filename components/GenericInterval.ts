@@ -17,7 +17,7 @@
     endregion
 */
 // region imports
-import {boolean, string} from 'clientnode/dist/property-types'
+import {boolean, string} from 'clientnode'
 import Interval from 'react-input-material/dist/components/Interval'
 import wrapAsWebComponent from 'web-component-wrapper'
 import {WebComponentAPI} from 'web-component-wrapper/type'

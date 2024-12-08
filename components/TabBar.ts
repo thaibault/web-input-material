@@ -17,8 +17,7 @@
     endregion
 */
 // region imports
-import {timeout} from 'clientnode'
-import {func, number, object, string} from 'clientnode/dist/property-types'
+import {func, number, object, string, timeout} from 'clientnode'
 import {
     createWrapConfigurationsComponent
 } from 'react-input-material/dist/components/WrapConfigurations'
