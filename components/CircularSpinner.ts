@@ -19,7 +19,7 @@
 // region imports
 import {
     number, object, oneOfType, oneOf, string
-} from 'clientnode/dist/property-types'
+} from 'clientnode/property-types'
 import {
     createWrapConfigurationsComponent
 } from 'react-input-material/dist/components/WrapConfigurations'
