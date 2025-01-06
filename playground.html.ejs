@@ -911,10 +911,13 @@
                         name="fileInput1"
                         trigger-initial-properties-consolidation
                     ></file-input>
+
                     <file-input
                         default="{
-                            blob: {type: 'image/png'},
-                            url: '/placeholder/150'
+                            placeholder: {
+                                blob: {type: 'image/png'},
+                                url: '/placeholder/150'
+                            }
                         }"
 
                         content-type-pattern="'^text/(?:plain|(?:x-)?csv|xml)$'"
@@ -991,6 +994,16 @@
                             <br />
                         </div>
                     </file-input>
+
+                    <file-input
+                        default="{
+                            placeholder: {
+                                blob: {type: 'image/png'},
+                                url: '/placeholder/150'
+                            }
+                        }"
+                        name="fileInputUnControlled2"
+                    ></file-input>
                 </div>
                 <!--endregion-->
 
