@@ -1004,6 +1004,23 @@
                         }"
                         name="fileInputUnControlled2"
                     ></file-input>
+
+                    <button
+                        onclick="document.querySelector('file-input[name=fileInputUncontrolledHeadless]').internalProperties.ref.current?.references.fileInputReference.current?.click()"
+                    >Add medium</button>
+                    <file-input
+                        name="fileInputUncontrolledHeadless"
+
+                        delete-button="''"
+                        download-button="''"
+                        edit-button="''"
+                        new-button="''"
+
+                        value="undefined"
+                    ></file-input>
+                    <!--
+
+                        new-button="null"-->
                 </div>
                 <!--endregion-->
 
