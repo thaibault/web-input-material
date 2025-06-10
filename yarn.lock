@@ -7214,12 +7214,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"documentation-website@npm:^1.0.366":
-  version: 1.0.366
-  resolution: "documentation-website@npm:1.0.366"
+"documentation-website@npm:^1.0.367":
+  version: 1.0.367
+  resolution: "documentation-website@npm:1.0.367"
   bin:
     documentation-website: build/deploy.js
-  checksum: 10c0/db39444d23c9864ff7061e547f87da639e47ebe391a28ef236066d752d42cf0acb9e3d3dfe5a633be02967292260f5df4b15e4263b4fddab9875c782dfcac5b1
+  checksum: 10c0/46caa2ca5611c12eda5a9ab07a3eaf1c558ca88d50fff3481a24e44773a5e13f52be7a1194fa4d321d465ce9e961a1c70f7714a1cafbdf5135c1ba98183eaadc
   languageName: node
   linkType: hard
 
@@ -11476,9 +11476,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-input-material@npm:^0.0.707":
-  version: 0.0.707
-  resolution: "react-input-material@npm:0.0.707"
+"react-input-material@npm:^0.0.708":
+  version: 0.0.708
+  resolution: "react-input-material@npm:0.0.708"
   peerDependencies:
     "@babel/runtime": "*"
     "@codemirror/autocomplete": "*"
@@ -11590,7 +11590,7 @@ __metadata:
       optional: true
     spark-md5:
       optional: true
-  checksum: 10c0/87b66dc0419e2e15b25fdddc4767c1367b4034d40a1229f133cfe76e19b7c05c0d8bc9c0692e7f48c1ef6477b51899683691472f74d9a023624e9d00e69585d4
+  checksum: 10c0/66bb546a2831b45241e523ee2d60ee80aaf039023ec4b18bce916ae0bea2b4aa0fab5c52e3bee909141cdfc34f3bda7add8a7b8f37e7649ff3cdde662aade90d
   languageName: node
   linkType: hard
 
@@ -13282,7 +13282,7 @@ __metadata:
     "@webcomponents/webcomponentsjs": "npm:^2.8.0"
     blob-util: "npm:^2.0.2"
     clientnode: "npm:^3.0.1285"
-    documentation-website: "npm:^1.0.366"
+    documentation-website: "npm:^1.0.367"
     eslint: "npm:^9.28.0"
     eslint-config-google: "npm:^0.14.0"
     eslint-plugin-jsdoc: "npm:^50.7.1"
@@ -13297,7 +13297,7 @@ __metadata:
     react-generic-animate: "npm:^0.0.77"
     react-generic-dummy: "npm:^0.0.97"
     react-generic-tools: "npm:^0.0.70"
-    react-input-material: "npm:^0.0.707"
+    react-input-material: "npm:^0.0.708"
     react-transition-group: "npm:^4.4.5"
     react-useanimations: "npm:^2.10.0"
     spark-md5: "npm:^3.0.2"
