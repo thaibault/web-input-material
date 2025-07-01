@@ -24,7 +24,6 @@
   },
   "files": [
     "components",
-    "declarations.d.ts",
     "index.bundle.js",
     "index.d.ts",
     "index.js",
