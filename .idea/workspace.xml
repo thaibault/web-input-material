@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="193b8e1c-173b-491c-9e4c-df4983006519" name="Changes" comment="" />
+    <list default="true" id="193b8e1c-173b-491c-9e4c-df4983006519" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/api/web-input-material/0.0.471/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/api/web-input-material/0.0.471/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,19 +23,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/t.sickert/local/public/project/repository/web-input-material&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;web-ide.project.structure&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/t.sickert/local/public/project/repository/web-input-material/node_modules/typescript/lib&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "gh-pages",
+    "last_opened_file_path": "/Users/t.sickert/local/public/project/repository/web-input-material",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "yarn",
+    "settings.editor.selected.configurable": "web-ide.project.structure",
+    "ts.external.directory.path": "/Users/t.sickert/local/public/project/repository/web-input-material/node_modules/typescript/lib"
   }
-}</component>
+}]]></component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -64,6 +67,7 @@
       <workItem from="1751388606961" duration="193000" />
       <workItem from="1751388861941" duration="29000" />
       <workItem from="1751390680115" duration="58000" />
+      <workItem from="1751395196950" duration="20000" />
     </task>
     <servers />
   </component>
