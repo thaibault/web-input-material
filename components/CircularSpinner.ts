@@ -34,12 +34,9 @@ export const CircularSpinner: WebComponentAPI<typeof CircularProgress> =
         ) as typeof CircularProgress,
         'CircularSpinner',
         {propTypes: {
-            // eslint-disable-next-line @typescript-eslint/no-unsafe-call
             size: oneOfType(
                 [
-                    /* eslint-disable @typescript-eslint/no-unsafe-call */
                     oneOf(['xsmall', 'small', 'medium', 'large', 'xlarge']),
-                    /* eslint-enable @typescript-eslint/no-unsafe-call */
                     number
                 ]
             ),
