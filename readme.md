@@ -25,6 +25,7 @@ Project status
 
 [![code coverage](https://img.shields.io/coverallsCoverage/github/thaibault/web-input-material?label=code%20coverage&style=for-the-badge)](https://coveralls.io/github/thaibault/web-input-material)
 
+[![deploy documentation website](https://img.shields.io/github/actions/workflow/status/thaibault/web-input-material/deploy-documentation-website.yaml?label=deploy%20documentation%20website&style=for-the-badge)](https://github.com/thaibault/web-input-material/actions/workflows/deploy-documentation-website.yaml)
 [![documentation website](https://img.shields.io/website-up-down-green-red/https/torben.website/web-input-material.svg?label=documentation-website&style=for-the-badge)](https://torben.website/web-input-material)
 
 Use case
