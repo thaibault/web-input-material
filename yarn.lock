@@ -7388,12 +7388,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"documentation-website@npm:^1.0.391":
-  version: 1.0.391
-  resolution: "documentation-website@npm:1.0.391"
+"documentation-website@npm:^1.0.392":
+  version: 1.0.392
+  resolution: "documentation-website@npm:1.0.392"
   bin:
     documentation-website: build/deploy.js
-  checksum: 10c0/530911c66c5e43cc41534eb21861b256ef5c1ded9c9dd2822a2b19e3d13a7200d34d90d710af7d4ad366d796e4deee83031ae59384de691e67e4796614148323
+  checksum: 10c0/0bd975a0aa33733fd39333305ce3b0f1d7640315013c847251a8b0ba9f705196c67f3197347462591c735d8430ad0059743ebcf10e9d52ebb3feebbaf670e3d4
   languageName: node
   linkType: hard
 
@@ -13458,7 +13458,7 @@ __metadata:
     "@webcomponents/webcomponentsjs": "npm:^2.8.0"
     blob-util: "npm:^2.0.2"
     clientnode: "npm:^3.0.1299"
-    documentation-website: "npm:^1.0.391"
+    documentation-website: "npm:^1.0.392"
     eslint: "npm:^9.30.0"
     eslint-config-google: "npm:^0.14.0"
     eslint-plugin-jsdoc: "npm:^51.3.1"
