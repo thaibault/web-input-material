@@ -4657,6 +4657,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/prop-types@npm:*":
+  version: 15.7.15
+  resolution: "@types/prop-types@npm:15.7.15"
+  checksum: 10c0/b59aad1ad19bf1733cf524fd4e618196c6c7690f48ee70a327eb450a42aab8e8a063fbe59ca0a5701aebe2d92d582292c0fb845ea57474f6a15f6994b0e260b2
+  languageName: node
+  linkType: hard
+
 "@types/qs@npm:*":
   version: 6.9.18
   resolution: "@types/qs@npm:6.9.18"
@@ -4671,12 +4678,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:^19.1.6":
-  version: 19.1.6
-  resolution: "@types/react-dom@npm:19.1.6"
+"@types/react-dom@npm:^18.3.7":
+  version: 18.3.7
+  resolution: "@types/react-dom@npm:18.3.7"
   peerDependencies:
-    "@types/react": ^19.0.0
-  checksum: 10c0/7ba74eee2919e3f225e898b65fdaa16e54952aaf9e3472a080ddc82ca54585e46e60b3c52018d21d4b7053f09d27b8293e9f468b85f9932ff452cd290cc131e8
+    "@types/react": ^18.0.0
+  checksum: 10c0/8bd309e2c3d1604a28a736a24f96cbadf6c05d5288cfef8883b74f4054c961b6b3a5e997fd5686e492be903c8f3380dba5ec017eff3906b1256529cd2d39603e
   languageName: node
   linkType: hard
 
@@ -4689,12 +4696,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:^19.1.8":
-  version: 19.1.8
-  resolution: "@types/react@npm:19.1.8"
+"@types/react@npm:^18.3.23":
+  version: 18.3.23
+  resolution: "@types/react@npm:18.3.23"
   dependencies:
+    "@types/prop-types": "npm:*"
     csstype: "npm:^3.0.2"
-  checksum: 10c0/4908772be6dc941df276931efeb0e781777fa76e4d5d12ff9f75eb2dcc2db3065e0100efde16fde562c5bafa310cc8f50c1ee40a22640459e066e72cd342143e
+  checksum: 10c0/49331800b76572eb2992a5c44801dbf8c612a5f99c8f4e4200f06c7de6f3a6e9455c661784a6c5469df96fa45622cb4a9d0982c44e6a0d5719be5f2ef1f545ed
   languageName: node
   linkType: hard
 
@@ -11670,9 +11678,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-input-material@npm:^0.0.713":
-  version: 0.0.713
-  resolution: "react-input-material@npm:0.0.713"
+"react-input-material@npm:^0.0.714":
+  version: 0.0.714
+  resolution: "react-input-material@npm:0.0.714"
   peerDependencies:
     "@babel/runtime": "*"
     "@codemirror/autocomplete": "*"
@@ -11784,7 +11792,7 @@ __metadata:
       optional: true
     spark-md5:
       optional: true
-  checksum: 10c0/33ba4034e39165ad0a05c28b3e439ad74b54bb1ede8d253a6416e6f723998c3c031358085a46c8158d4b702a91393bc90d2c0f20118e1a661266c4a8ba4f78a5
+  checksum: 10c0/8d9e34bca38d4ea73789f1fde13730cbb759fc102c030a2f850352cbe17147b5c09000b87efe27784b8f94a3b00165cb0a619a9682c7e381462de1a93dbdd891
   languageName: node
   linkType: hard
 
@@ -13531,8 +13539,8 @@ __metadata:
     "@types/jquery": "npm:^3.5.32"
     "@types/jsdom": "npm:^21.1.7"
     "@types/node": "npm:^24.0.10"
-    "@types/react": "npm:^19.1.8"
-    "@types/react-dom": "npm:^19.1.6"
+    "@types/react": "npm:^18.3.23"
+    "@types/react-dom": "npm:^18.3.7"
     "@types/react-transition-group": "npm:^4.4.12"
     "@types/webpack-env": "npm:^1.18.8"
     "@typescript-eslint/eslint-plugin": "npm:^8.35.1"
@@ -13555,7 +13563,7 @@ __metadata:
     react-generic-animate: "npm:^0.0.79"
     react-generic-dummy: "npm:^0.0.98"
     react-generic-tools: "npm:^0.0.72"
-    react-input-material: "npm:^0.0.713"
+    react-input-material: "npm:^0.0.714"
     react-transition-group: "npm:^4.4.5"
     react-useanimations: "npm:^2.10.0"
     spark-md5: "npm:^3.0.2"
