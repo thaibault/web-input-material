@@ -1,6 +1,6 @@
 // #!/usr/bin/env babel-node
 // -*- coding: utf-8 -*-
-/** @module Checkbox */
+/** @module IntervalInput */
 'use strict'
 /* !
     region header
@@ -18,14 +18,14 @@
 */
 // region imports
 import {boolean, string} from 'clientnode/property-types'
-import Checkbox from 'react-input-material/dist/components/RequireableCheckbox'
+import Interval from 'react-input-material/dist/components/Interval'
 import wrapAsWebComponent from 'web-component-wrapper'
 import {WebComponentAPI} from 'web-component-wrapper/type'
 // endregion
-export const RequireableCheckbox: WebComponentAPI<typeof Checkbox> =
-    wrapAsWebComponent<typeof Checkbox>(
-        Checkbox,
-        'RequireableCheckbox',
+export const IntervalInput: WebComponentAPI<typeof Interval> =
+    wrapAsWebComponent<typeof Interval>(
+        Interval,
+        'IntervalInput',
         {
             eventToPropertyMapping: {onChange: true},
             internalProperties: {enforceUncontrolled: true},
@@ -44,4 +44,4 @@ export const RequireableCheckbox: WebComponentAPI<typeof Checkbox> =
         }
     )
 
-export default RequireableCheckbox
+export default IntervalInput

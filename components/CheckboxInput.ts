@@ -1,6 +1,6 @@
 // #!/usr/bin/env babel-node
 // -*- coding: utf-8 -*-
-/** @module GenericInterval */
+/** @module CheckboxInput */
 'use strict'
 /* !
     region header
@@ -18,14 +18,14 @@
 */
 // region imports
 import {boolean, string} from 'clientnode/property-types'
-import Interval from 'react-input-material/dist/components/Interval'
+import Checkbox from 'react-input-material/dist/components/Checkbox'
 import wrapAsWebComponent from 'web-component-wrapper'
 import {WebComponentAPI} from 'web-component-wrapper/type'
 // endregion
-export const GenericInterval: WebComponentAPI<typeof Interval> =
-    wrapAsWebComponent<typeof Interval>(
-        Interval,
-        'GenericInterval',
+export const CheckboxInput: WebComponentAPI<typeof Checkbox> =
+    wrapAsWebComponent<typeof Checkbox>(
+        Checkbox,
+        'CheckboxInput',
         {
             eventToPropertyMapping: {onChange: true},
             internalProperties: {enforceUncontrolled: true},
@@ -44,4 +44,4 @@ export const GenericInterval: WebComponentAPI<typeof Interval> =
         }
     )
 
-export default GenericInterval
+export default CheckboxInput
