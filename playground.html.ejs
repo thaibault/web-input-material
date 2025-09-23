@@ -298,7 +298,7 @@
                         name="simpleInput1"
 
                         bind-on-keydown="console.info('Typed key:', event.key)"
-                        input-properties="{outlined: true}"
+                        component-properties="{outlined: true}"
                         trigger-initial-properties-consolidation
                     ></text-input>
 
@@ -306,7 +306,7 @@
 
                     <text-input
                         declaration="This text can be seen initially."
-                        input-props="{
+                        attributes="{
                             ariaChecked: false,
                             ariaDescription: 'test'
                         }"
@@ -621,7 +621,7 @@
                     ></text-input>
                     <text-input
                         initial-value="'2025-01-01T00:00:00.000Z'"
-                        input-properties="{outlined: true}"
+                        attributes="{outlined: true}"
                         model="{name: 'timeInput1Model', type: 'date'}"
                     ></text-input>
 
@@ -634,7 +634,7 @@
                     ></text-input>
                     <text-input
                         initial-value="'2025-01-01T23:00:00.000Z'"
-                        input-properties="{outlined: true}"
+                        attributes="{outlined: true}"
                         model="{name: 'timeInput2Model', type: 'date-local'}"
                     ></text-input>
 
@@ -707,7 +707,7 @@
                     ></text-input>
                     <text-input
                         initial-value="'1970-01-01T00:20:00.000Z'"
-                        input-properties="{outlined: true}"
+                        attributes="{outlined: true}"
                         model="{name: 'timeInput7Model', type: 'time-local'}"
                         step="60"
                     ></text-input>
@@ -1006,7 +1006,7 @@
                     ></file-input>
 
                     <button
-                        onclick="document.querySelector('file-input[name=fileInputUncontrolledHeadless]').internalProperties.ref.current?.references.fileInputReference.current?.click()"
+                        onclick="document.querySelector('file-input[name=fileInputUncontrolledHeadless]').internalProperties.ref.current?.references.mediaCard.current?.fileInput.current?.click()"
                     >Add medium</button>
                     <file-input
                         name="fileInputUncontrolledHeadless"
