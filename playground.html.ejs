@@ -96,12 +96,12 @@
                 width: 450px;
             }
 
-            file-input,
-            text-input {
+            .file-input,
+            .text-input {
                 margin-bottom: 20px;
             }
 
-            generic-inputs {
+            .generic-inputs {
                 margin-bottom: 60px;
             }
         </style>
@@ -269,30 +269,30 @@
         <div class="tab-bar">
             <!--region navigation-->
             <tab-bar active-tab-index="0" class="playground__inputs__tab-bar">
-                <tab-item>simple-input</tab-item>
-                <tab-item>number-input</tab-item>
-                <tab-item>text-input (with <sup>markup</sup>)</tab-item>
-                <tab-item>time-input</tab-item>
-                <tab-item>selection-input</tab-item>
+                <tab-item>simple</tab-item>
+                <tab-item>number</tab-item>
+                <tab-item>text (with <sup>markup</sup>)</tab-item>
+                <tab-item>time</tab-item>
+                <tab-item>selection</tab-item>
 
-                <tab-item>file-input</tab-item>
+                <tab-item>file</tab-item>
 
-                <tab-item>generic-inputs</tab-item>
-                <tab-item>interval-input</tab-item>
+                <tab-item>inputs</tab-item>
+                <tab-item>interval</tab-item>
 
-                <tab-item>checkbox-input</tab-item>
+                <tab-item>checkbox</tab-item>
 
-                <tab-item>generic-animate</tab-item>
+                <tab-item>animate</tab-item>
 
                 <tab-item>circular-spinner</tab-item>
 
-                <tab-item>slider-input</tab-item>
+                <tab-item>slider</tab-item>
             </tab-bar>
             <!--endregion-->
         </div>
         <div class="playground">
             <div class="playground__inputs">
-                <!--region simple-input-->
+                <!--region simple-->
                 <div class="playground__inputs__simple-input playground__tab">
                     <text-input
                         name="simpleInput1"
@@ -323,12 +323,12 @@
                         name="simpleInput3"
 
                         disabled
-                        initial-value="'value2'"
+                        initial-value="'simpleInputValue3'"
                     ></text-input>
                     <text-input
                         model="{
                             declaration: 'Disabled',
-                            default: 'value3Model',
+                            default: 'simpleInputValue3Model',
                             mutable: false,
                             name: 'simpleInput3Model'
                         }"
@@ -346,7 +346,7 @@
                         required
                     ></text-input>
                     <text-input
-                        icon="'backup'"
+                        leading-icon="'backup'"
                         placeholder="simpleInput4Model"
                         trailing-icon="'clear_preset'"
 
@@ -364,7 +364,7 @@
                     <text-input
                         declaration="pattern"
                         description="simpleInput5Description"
-                        icon="'search'"
+                        leading-icon="'search'"
                         name="simpleInput5"
                         placeholder="simpleInput5Placeholder"
 
@@ -389,7 +389,7 @@
                     <text-input
                         declaration="password"
                         description="simpleInput6Description"
-                        icon="'search'"
+                        leading-icon="'search'"
                         name="simpleInput6"
                         placeholder="simpleInput6Placeholder"
                         tooltip="'Please type in your password.'"
@@ -412,7 +412,7 @@
                     ></text-input>
                 </div>
                 <!--endregion-->
-                <!--region number-input-->
+                <!--region number-->
                 <div class="playground__inputs__number-input playground__tab">
                     <text-input
                         declaration="Number"
@@ -495,7 +495,7 @@
                     ></text-input>
                 </div>
                 <!--endregion-->
-                <!--region text-input-->
+                <!--region text-->
                 <div class="playground__inputs__text-input playground__tab">
                     <text-input
                         declaration="text"
@@ -612,7 +612,7 @@
                     ></text-input>
                 </div>
                 <!--endregion-->
-                <!--region time-input-->
+                <!--region time-->
                 <div class="playground__inputs__time-input playground__tab">
                     <text-input
                         default="new Date('2025-01-01T00:00:00.000Z').getTime() / 1000"
@@ -621,7 +621,7 @@
                     ></text-input>
                     <text-input
                         initial-value="'2025-01-01T00:00:00.000Z'"
-                        attributes="{outlined: true}"
+                        component-properties="{outlined: true}"
                         model="{name: 'timeInput1Model', type: 'date'}"
                     ></text-input>
 
@@ -634,7 +634,7 @@
                     ></text-input>
                     <text-input
                         initial-value="'2025-01-01T23:00:00.000Z'"
-                        attributes="{outlined: true}"
+                        component-properties="{outlined: true}"
                         model="{name: 'timeInput2Model', type: 'date-local'}"
                     ></text-input>
 
@@ -707,13 +707,13 @@
                     ></text-input>
                     <text-input
                         initial-value="'1970-01-01T00:20:00.000Z'"
-                        attributes="{outlined: true}"
+                        component-properties="{outlined: true}"
                         model="{name: 'timeInput7Model', type: 'time-local'}"
                         step="60"
                     ></text-input>
                 </div>
                 <!--endregion-->
-                <!--region selection-input-->
+                <!--region selection-->
                 <div
                     class="playground__inputs__selection-input playground__tab"
                 >
@@ -750,6 +750,7 @@
                         required
                     ></text-input>
                     <text-input
+                        disabled
                         initial-value="false"
                         labels="{true: 'JA', false: 'NEIN'}"
                         model="{
@@ -789,11 +790,12 @@
                     <text-input
                         declaration="numberSelection"
                         description="selectionInput4Description"
+                        initial-value="2"
                         selection="[1, 2, 3]"
                         name="selectionInput4"
                         required
                     ></text-input>
-                    <text-nput
+                    <text-input
                         model="{
                             declaration: 'numberSelection',
                             description: 'selectionInput4ModelDescription',
@@ -801,7 +803,7 @@
                             selection: [1, 2, 3],
                             type: 'number'
                         }"
-                    ></text-nput>
+                    ></text-input>
 
                     <hr/>
 
@@ -905,7 +907,7 @@
                 </div>
                 <!--endregion-->
 
-                <!--region file-input-->
+                <!--region file-->
                 <div class="playground__inputs__file-input playground__tab">
                     <file-input
                         name="fileInput1"
@@ -1018,15 +1020,12 @@
 
                         value="undefined"
                     ></file-input>
-                    <!--
-
-                        new-button="null"-->
                 </div>
                 <!--endregion-->
 
-                <!--region generic-inputs-->
+                <!--region inputs-->
                 <div class="playground__inputs__generic-inputs playground__tab">
-                    <!--region generic-inputs file-->
+                    <!--region file-->
                     <generic-inputs
                         name="fileInputs"
                         create-item="object.extend(
@@ -1041,7 +1040,7 @@
                         </file-input>
                     </generic-inputs>
                     <!--endregion-->
-                    <!--region generic-inputs checkbox-->
+                    <!--region checkbox-->
                     <generic-inputs
                         create-item="object.extend(
                             options.item,
@@ -1058,7 +1057,7 @@
                         <checkbox-input bind-properties="options.properties"></checkbox-input>
                     </generic-inputs>
                     <!--endregion-->
-                    <!--region generic-inputs interval-->
+                    <!--region interval-->
                     <generic-inputs
                         -create-prototype="function({item, lastValue, properties}) {
                             const sixHoursInSeconds =
@@ -1192,7 +1191,7 @@
                     ></generic-inputs>
                 </div>
                 <!--endregion-->
-                <!--region interval-input-->
+                <!--region interval-->
                 <div class="playground__inputs__interval-input playground__tab">
                     <interval-input
                         name="intervalInput1"
@@ -1234,6 +1233,7 @@
                     ></interval-input>
                     <interval-input
                         name="intervalInput4"
+                        declaration="Very long declaration which should be dotted in the end since it should fit into the available space."
                         default="120"
                         required
                         step="60"
@@ -1243,7 +1243,7 @@
                 </div>
                 <!--endregion-->
 
-                <!--region checkbox-input-->
+                <!--region checkbox-->
                 <div class="playground__inputs__checkbox-input playground__tab">
                     <checkbox-input
                         name="checkbox1"
@@ -1292,7 +1292,7 @@
                 </div>
                 <!--endregion-->
 
-                <!--region generic-animate-->
+                <!--region animate-->
                 <div
                     class="playground__inputs__generic-animate playground__tab"
                     style="height: 50px"
@@ -1316,7 +1316,7 @@
                 </div>
                 <!--endregion-->
 
-                <!--region slider-input-->
+                <!--region slider-->
                 <div class="playground__inputs__slider-input playground__tab">
                     <slider-input name="sliderInput1" value="0"></slider-input>
                     <slider-input
