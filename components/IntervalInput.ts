@@ -32,14 +32,16 @@ export const IntervalInput: WebComponentAPI<typeof Interval> =
             propertiesToReflectAsAttributes: {
                 dirty: boolean,
                 focused: boolean,
-                invalid: boolean,
-                invalidRequired: boolean,
-                name: string,
                 pristine: boolean,
                 touched: boolean,
                 untouched: boolean,
+                visited: boolean,
+
+                invalid: boolean,
+                invalidRequired: boolean,
                 valid: boolean,
-                visited: boolean
+
+                name: string
             }
         }
     )
