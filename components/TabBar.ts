@@ -21,7 +21,7 @@ import {timeout} from 'clientnode'
 import {func, number, object, string} from 'clientnode/property-types'
 import {
     createWrapConfigurationsComponent
-} from 'react-input-material/dist/components/WrapConfigurations'
+} from 'react-input-material/dist/components/Wrapper/WrapConfigurations'
 import wrapAsWebComponent from 'web-component-wrapper'
 import {WebComponentAPI} from 'web-component-wrapper/type'
 import {TabBar as ReactTabBar} from '@rmwc/tabs'
