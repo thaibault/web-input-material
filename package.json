@@ -63,7 +63,7 @@
     "prop-types": "^15.8.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-input-material": "^0.0.730",
+    "react-input-material": "^0.0.731",
     "react-transition-group": "^4.4.5",
     "web-component-wrapper": "^0.0.527"
   },
@@ -115,7 +115,7 @@
     "documentation-website": "^1.0.394",
     "eslint": "^9.36.0",
     "eslint-config-google": "^0.14.0",
-    "eslint-plugin-jsdoc": "^60.4.0",
+    "eslint-plugin-jsdoc": "^60.4.1",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^30.1.3",
     "jsdoc": "^4.0.4",
