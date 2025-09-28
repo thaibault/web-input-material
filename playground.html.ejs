@@ -294,6 +294,20 @@
             <div class="playground__inputs">
                 <!--region simple-->
                 <div class="playground__inputs__simple-input playground__tab">
+                    <!--TODO-->
+                    <text-input
+                        description="How do you feel?"
+                        declaration="Do you feel good?"
+                        labels="{true: 'Yess!', false: 'Oh noo I am sad...'}"
+                        name="feelsGood"
+                        placeholder="Please select your feeling"
+                        model="{
+                            nullable: false,
+                            type: 'boolean'
+                        }"
+                        search-selection
+                    ></text-input>
+
                     <text-input
                         name="simpleInput1"
 
