@@ -1051,7 +1051,12 @@
                         maximum-number="2"
                         minimum-number="2"
                         model="{
-                            default: [{type: 'boolean', value: false}],
+                            default: [{
+                                type: 'boolean',
+                                value: false,
+                                required: true,
+                                showInitialValidationState: true
+                            }],
                             name: 'checkboxInputs'
                         }"
                         show-initial-validation-state
