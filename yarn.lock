@@ -3821,7 +3821,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rmwc/slider@npm:^14.3.5":
+"@rmwc/slider@npm:14.3.5":
   version: 14.3.5
   resolution: "@rmwc/slider@npm:14.3.5"
   dependencies:
@@ -3832,6 +3832,20 @@ __metadata:
     react: ">=16.8.x"
     react-dom: ">=16.8.x"
   checksum: 10c0/962319a04c7b0f1b4a7652f6a17f844b77c041e153070841f8d4a86483f4c006592ec082346aeb72291cd70781b1e4cd213aa73d2c98df2dba729635ddb628d6
+  languageName: node
+  linkType: hard
+
+"@rmwc/slider@patch:@rmwc/slider@npm%3A14.3.5#~/.yarn/patches/@rmwc-slider-npm-14.3.5-c8fe4ac3a5.patch":
+  version: 14.3.5
+  resolution: "@rmwc/slider@patch:@rmwc/slider@npm%3A14.3.5#~/.yarn/patches/@rmwc-slider-npm-14.3.5-c8fe4ac3a5.patch::version=14.3.5&hash=71b084"
+  dependencies:
+    "@material/slider": "npm:^14.0.0"
+    "@rmwc/base": "npm:14.3.5"
+    "@rmwc/types": "npm:14.3.5"
+  peerDependencies:
+    react: ">=16.8.x"
+    react-dom: ">=16.8.x"
+  checksum: 10c0/0afcf0908cdf1e67eab84590c26314c1950ddf07c0de0e8ee1358d20adddadc6e8c55cafc582fbbb3283b3f475a0d7d4194fe28b68a4f48ec8b83da3cd3aba1f
   languageName: node
   linkType: hard
 
@@ -11571,9 +11585,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-generic-animate@npm:^0.0.103":
-  version: 0.0.103
-  resolution: "react-generic-animate@npm:0.0.103"
+"react-generic-animate@npm:^0.0.104":
+  version: 0.0.104
+  resolution: "react-generic-animate@npm:0.0.104"
   peerDependencies:
     "@babel/runtime": "*"
     "@types/react": "*"
@@ -11604,7 +11618,7 @@ __metadata:
       optional: true
     react-useanimations:
       optional: true
-  checksum: 10c0/51b1c454506b12cfb807646b2d125da8a9bcf2628d7c90f118b76447fce6be1806b7752a1a28386a502affac23e24381aed80cdbd45b0259a0f9ff00d12e6a72
+  checksum: 10c0/038877f6acfecb4d01aa835cdff9efe0a5aa36e54ad140a67c16520cf5641bffe000d9d76f126a4640b7c8f59652bb9f0ef8d242acda546e311c6de1d5e48759
   languageName: node
   linkType: hard
 
@@ -11636,9 +11650,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-generic-tools@npm:^0.0.92":
-  version: 0.0.92
-  resolution: "react-generic-tools@npm:0.0.92"
+"react-generic-tools@npm:^0.0.93":
+  version: 0.0.93
+  resolution: "react-generic-tools@npm:0.0.93"
   peerDependencies:
     "@babel/runtime": "*"
     "@types/prop-types": "*"
@@ -11661,13 +11675,13 @@ __metadata:
       optional: true
     react-dom:
       optional: true
-  checksum: 10c0/e0991566481939e3b43a2cecaf19469cac24a293756cd19f7b44db3eee549cd266e51623ddbeab09d0f9837ed9c6da4acd362b76c040547f560dab17fc7f3227
+  checksum: 10c0/252a8c9e737fa6338ca26b787e9c65df145f7c92cdc00ce7f06ba736aaacd55fa9e8b4d58412a35d25637319bd5d5553bd4b647ffca95fb6d3082a67280955cb
   languageName: node
   linkType: hard
 
-"react-input-material@npm:^0.0.778":
-  version: 0.0.778
-  resolution: "react-input-material@npm:0.0.778"
+"react-input-material@npm:^0.0.779":
+  version: 0.0.779
+  resolution: "react-input-material@npm:0.0.779"
   peerDependencies:
     "@babel/runtime": "*"
     "@codemirror/autocomplete": "*"
@@ -11779,7 +11793,7 @@ __metadata:
       optional: true
     spark-md5:
       optional: true
-  checksum: 10c0/8d06d7039e12a6c3a84f3a3582c8fc009560d5ec04eeaaf8697fd2e94800863eafadb7e2fb3eecf40b52e7f8682a1cc54a5b161493d5a2799ed35000732152c8
+  checksum: 10c0/95811703471366e910e26c8a99789d50eea284b59af1b3c8a625ae3d61e033b99e0ee15817f81d888d38bb207b0bde1c8644f92d39e51296a4f80d59207f51d5
   languageName: node
   linkType: hard
 
@@ -13428,9 +13442,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"web-component-wrapper@npm:^0.0.541":
-  version: 0.0.541
-  resolution: "web-component-wrapper@npm:0.0.541"
+"web-component-wrapper@npm:^0.0.542":
+  version: 0.0.542
+  resolution: "web-component-wrapper@npm:0.0.542"
   peerDependencies:
     "@babel/runtime": "*"
     "@types/react": "*"
@@ -13449,7 +13463,7 @@ __metadata:
       optional: true
     react-dom:
       optional: true
-  checksum: 10c0/8c91b9033485b2d61f0d3f3e03c28cbdebd25b85b4d989227655f872af79711424462e440ee75b3af8a0718023df120e118ad6841f170a66b394621ff4fe11ff
+  checksum: 10c0/2b67bfd9056987601389bcba60af5cd9f27c3da7bd9ce838f6595f6b610ad95c5fbccdd4288729865849c9218b44f6a811041409ea13d80b7b37550639d6771a
   languageName: node
   linkType: hard
 
@@ -13476,7 +13490,7 @@ __metadata:
     "@rmwc/icon": "npm:^14.3.5"
     "@rmwc/icon-button": "npm:^14.3.5"
     "@rmwc/select": "npm:^14.3.5"
-    "@rmwc/slider": "npm:^14.3.5"
+    "@rmwc/slider": "patch:@rmwc/slider@npm%3A14.3.5#~/.yarn/patches/@rmwc-slider-npm-14.3.5-c8fe4ac3a5.patch"
     "@rmwc/tabs": "npm:^14.3.5"
     "@rmwc/textfield": "npm:^14.3.5"
     "@rmwc/theme": "npm:^14.3.5"
@@ -13513,17 +13527,17 @@ __metadata:
     prop-types: "npm:^15.8.1"
     react: "npm:^18.3.1"
     react-dom: "npm:^18.3.1"
-    react-generic-animate: "npm:^0.0.103"
+    react-generic-animate: "npm:^0.0.104"
     react-generic-dummy: "npm:^0.0.117"
-    react-generic-tools: "npm:^0.0.92"
-    react-input-material: "npm:^0.0.778"
+    react-generic-tools: "npm:^0.0.93"
+    react-input-material: "npm:^0.0.779"
     react-transition-group: "npm:^4.4.5"
     react-useanimations: "npm:^2.10.0"
     spark-md5: "npm:^3.0.2"
     style-loader: "npm:^4.0.0"
     tslib: "npm:^2.8.1"
     typescript-eslint: "npm:^8.54.0"
-    web-component-wrapper: "npm:^0.0.541"
+    web-component-wrapper: "npm:^0.0.542"
     weboptimizer: "npm:^2.0.1642"
     webpack-dev-server: "npm:^5.2.3"
   peerDependencies:
