@@ -29,9 +29,11 @@ export const TabItem: WebComponentAPI<typeof Tab> =
     wrapAsWebComponent<typeof Tab>(
         createWrapConfigurationsComponent<typeof Tab>(Tab) as typeof Tab,
         'TabItem',
-        {propTypes: {
-            stacked: boolean, theme: string, themeConfiguration: object
-        }}
+        {
+            propTypes: {
+                stacked: boolean, theme: string, themeConfiguration: object
+            }
+        }
     )
 
 export default TabItem
