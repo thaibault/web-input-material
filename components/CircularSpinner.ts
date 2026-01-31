@@ -33,16 +33,18 @@ export const CircularSpinner: WebComponentAPI<typeof CircularProgress> =
             CircularProgress, {withReference: false}
         ) as typeof CircularProgress,
         'CircularSpinner',
-        {propTypes: {
-            size: oneOfType(
-                [
-                    oneOf(['xsmall', 'small', 'medium', 'large', 'xlarge']),
-                    number
-                ]
-            ),
-            theme: string,
-            themeConfiguration: object
-        }}
+        {
+            propTypes: {
+                size: oneOfType(
+                    [
+                        oneOf(['xsmall', 'small', 'medium', 'large', 'xlarge']),
+                        number
+                    ]
+                ),
+                theme: string,
+                themeConfiguration: object
+            }
+        }
     )
 
 export default CircularSpinner

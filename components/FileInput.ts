@@ -47,7 +47,16 @@ export const FileInput: WebComponentAPI<typeof ReactFileInput> =
                 invalidRequired: boolean,
 
                 name: string
-            }
+            },
+            /*
+                NOTE: When this configuration is enabled the following error
+                occurs:
+                installHook.js:1 Warning: Attempted to synchronously unmount a
+                root while React was already rendering. React cannot finish
+                unmounting the root until the current render has completed,
+                which may lead to a race condition.
+            */
+            unmountOnDisconnect: false
         }
     )
 
