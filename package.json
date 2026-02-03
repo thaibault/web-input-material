@@ -63,7 +63,7 @@
     "prop-types": "^15.8.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-input-material": "^0.0.782",
+    "react-input-material": "^0.0.783",
     "react-transition-group": "^4.4.5",
     "web-component-wrapper": "^0.0.542"
   },
@@ -272,7 +272,8 @@
           "@codemirror/view": "react-generic-dummy",
           "@rmwc/tooltip": "react-generic-dummy",
           "@tiptap/core$": "react-generic-dummy",
-          "@tiptap/react": "react-generic-dummy",
+          "@tiptap/extensions$": "react-generic-dummy",
+          "@tiptap/react$": "react-generic-dummy",
           "@tiptap/starter-kit$": "react-generic-dummy",
           "react-useanimations$": "react-generic-dummy",
           "react-useanimations/lib/lock$": "react-generic-dummy",
