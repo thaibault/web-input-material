@@ -11688,9 +11688,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-input-material@npm:^0.0.782":
-  version: 0.0.782
-  resolution: "react-input-material@npm:0.0.782"
+"react-input-material@npm:^0.0.783":
+  version: 0.0.783
+  resolution: "react-input-material@npm:0.0.783"
   peerDependencies:
     "@babel/runtime": "*"
     "@codemirror/autocomplete": "*"
@@ -11714,6 +11714,7 @@ __metadata:
     "@rmwc/touch-target": "*"
     "@rmwc/typography": "*"
     "@tiptap/core": "*"
+    "@tiptap/extensions": "*"
     "@tiptap/react": "*"
     "@tiptap/starter-kit": "*"
     "@types/react": "*"
@@ -11772,6 +11773,8 @@ __metadata:
       optional: true
     "@tiptap/core":
       optional: true
+    "@tiptap/extensions":
+      optional: true
     "@tiptap/react":
       optional: true
     "@tiptap/starter-kit":
@@ -11802,7 +11805,7 @@ __metadata:
       optional: true
     spark-md5:
       optional: true
-  checksum: 10c0/2e833ea13ce80da4cd5fcdbc40e8a636405186dab54ba0a67a0ca7556ef1670737572f5af624c0ecd5707499eac6a1237e60567472b53002d63803d62828ac06
+  checksum: 10c0/b437b489a8720bf875b7d981cb4e33b4e7f0926dabd03f6bd70e539045284df3d101f829ebcd5e3b9d9353b4034a0bcf3061221297b69031c4114e27063392c3
   languageName: node
   linkType: hard
 
@@ -13539,7 +13542,7 @@ __metadata:
     react-generic-animate: "npm:^0.0.104"
     react-generic-dummy: "npm:^0.0.117"
     react-generic-tools: "npm:^0.0.93"
-    react-input-material: "npm:^0.0.782"
+    react-input-material: "npm:^0.0.783"
     react-transition-group: "npm:^4.4.5"
     react-useanimations: "npm:^2.10.0"
     spark-md5: "npm:^3.0.2"
