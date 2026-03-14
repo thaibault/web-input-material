@@ -31,7 +31,7 @@
         <!--endregion-->
         <style>
             <%-
-                require('material-icons/iconfont/material-icons.css')
+                _.require('material-icons/iconfont/material-icons.css')
                     .replace(
                         /(url\()"?(?:\.\/)?(material-icons\.[^.")]+)"?(\))/g,
                         '$1material-icons/iconfont/$2$3'
@@ -109,7 +109,7 @@
         <!--endregion-->
         <!--region polyfill-->
         <%-
-            include(
+            _.include(
                 'web-component-wrapper/polyfill.html',
                 {additionalFeatures: [
                     /*
