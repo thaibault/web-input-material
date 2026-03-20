@@ -911,18 +911,10 @@
 
                 <!--region file-->
                 <div class="playground__inputs__file-input playground__tab">
-                    <file-input
-                        name="fileInput1"
-                        trigger-initial-properties-consolidation
-                    ></file-input>
+                    <file-input name="fileInput1"></file-input>
 
                     <file-input
-                        default="{
-                            placeholder: {
-                                blob: {type: 'image/png'},
-                                url: '/placeholder/150'
-                            }
-                        }"
+                        default="{placeholder: {url: '/placeholder/150'}}"
 
                         content-type-pattern="'^text/(?:plain|(?:x-)?csv|xml)$'"
                         model="{fileName: {
@@ -1000,17 +992,12 @@
                     </file-input>
 
                     <file-input
-                        default="{
-                            placeholder: {
-                                blob: {type: 'image/png'},
-                                url: '/placeholder/150'
-                            }
-                        }"
+                        default="{placeholder: {url: '/placeholder/150'}}"
                         name="fileInputUnControlled2"
                     ></file-input>
 
                     <button
-                        onclick="document.querySelector('file-input[name=fileInputUncontrolledHeadless]').internalProperties.ref.current?.references.mediaCard.current?.fileInput.current?.click()"
+                        onclick="document.querySelector('file-input[name=fileInputUncontrolledHeadless]').internalProperties.ref.current?.references.fileInput?.click()"
                     >Add medium</button>
                     <file-input
                         name="fileInputUncontrolledHeadless"
