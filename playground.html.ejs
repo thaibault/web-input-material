@@ -992,17 +992,12 @@
                     </file-input>
 
                     <file-input
-                        default="{
-                            placeholder: {
-                                blob: {type: 'image/png'},
-                                url: '/placeholder/150'
-                            }
-                        }"
+                        default="{placeholder: {url: '/placeholder/150'}}"
                         name="fileInputUnControlled2"
                     ></file-input>
 
                     <button
-                        onclick="document.querySelector('file-input[name=fileInputUncontrolledHeadless]').internalProperties.ref.current?.references.mediaCard.current?.fileInput.current?.click()"
+                        onclick="document.querySelector('file-input[name=fileInputUncontrolledHeadless]').internalProperties.ref.current?.references.fileInput?.click()"
                     >Add medium</button>
                     <file-input
                         name="fileInputUncontrolledHeadless"
