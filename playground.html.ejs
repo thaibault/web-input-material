@@ -914,7 +914,12 @@
                     <file-input name="fileInput1"></file-input>
 
                     <file-input
-                        default="{placeholder: {url: '/placeholder/150'}}"
+                        default="{
+                            placeholder: {
+                                blob: {type: 'image/jpeg'},
+                                url: '/placeholder/150'
+                            }
+                        }"
 
                         content-type-pattern="'^text/(?:plain|(?:x-)?csv|xml)$'"
                         model="{fileName: {

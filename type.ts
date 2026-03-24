@@ -37,5 +37,5 @@ export type {
     StaticComponent,
     StaticFunctionComponent,
     StaticWebComponent
-} from 'react-input-material/dist/type'
+} from 'react-input-material/type'
 export type {GenericEvent} from 'react-generic-tools/type'

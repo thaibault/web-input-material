@@ -18,12 +18,12 @@
 */
 // region imports
 import {boolean, string} from 'clientnode/property-types'
-import Checkbox from 'react-input-material/dist/components/Checkbox'
+import Checkbox from 'react-input-material/components/Checkbox'
 import wrapAsWebComponent from 'web-component-wrapper'
 import {WebComponentAPI} from 'web-component-wrapper/type'
 // endregion
 export const CheckboxInput: WebComponentAPI<typeof Checkbox> =
-    wrapAsWebComponent<typeof Checkbox>(
+    wrapAsWebComponent(
         Checkbox,
         'CheckboxInput',
         {
