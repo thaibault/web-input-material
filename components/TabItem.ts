@@ -18,16 +18,15 @@
 */
 // region imports
 import {boolean, object, string} from 'clientnode/property-types'
-import {
-    createWrapConfigurationsComponent
-} from 'react-input-material/dist/components/Wrapper/WrapConfigurations'
+import {createWrapConfigurationsComponent} from
+    'react-input-material/components/WrapConfigurations'
 import wrapAsWebComponent from 'web-component-wrapper'
 import {WebComponentAPI} from 'web-component-wrapper/type'
 import {Tab} from '@rmwc/tabs'
 // endregion
 export const TabItem: WebComponentAPI<typeof Tab> =
-    wrapAsWebComponent<typeof Tab>(
-        createWrapConfigurationsComponent<typeof Tab>(Tab) as typeof Tab,
+    wrapAsWebComponent(
+        createWrapConfigurationsComponent(Tab) as typeof Tab,
         'TabItem',
         {
             propTypes: {

@@ -18,13 +18,13 @@
 */
 // region imports
 import {boolean, string} from 'clientnode/property-types'
-import ReactTextInput from 'react-input-material/dist/components/TextInput'
+import ReactTextInput from 'react-input-material/components/TextInput'
 import wrapAsWebComponent from 'web-component-wrapper'
 import {WebComponentAPI} from 'web-component-wrapper/type'
 // endregion
 
 export const TextInput: WebComponentAPI<typeof ReactTextInput> =
-    wrapAsWebComponent<typeof ReactTextInput>(
+    wrapAsWebComponent(
         ReactTextInput,
         'TextInput',
         {
