@@ -18,12 +18,13 @@
 */
 // region imports
 import {boolean, string} from 'clientnode/property-types'
-import ReactTextInput from 'react-input-material/dist/components/TextInput'
+import ReactTextInput from 'react-input-material/components/TextInput'
 import wrapAsWebComponent from 'web-component-wrapper'
 import {WebComponentAPI} from 'web-component-wrapper/type'
 // endregion
+
 export const TextInput: WebComponentAPI<typeof ReactTextInput> =
-    wrapAsWebComponent<typeof ReactTextInput>(
+    wrapAsWebComponent(
         ReactTextInput,
         'TextInput',
         {
@@ -32,6 +33,11 @@ export const TextInput: WebComponentAPI<typeof ReactTextInput> =
             propertiesToReflectAsAttributes: {
                 dirty: boolean,
                 focused: boolean,
+                pristine: boolean,
+                touched: boolean,
+                untouched: boolean,
+                visited: boolean,
+
                 invalid: boolean,
                 invalidMaximum: boolean,
                 invalidMaximumLength: boolean,
@@ -39,12 +45,9 @@ export const TextInput: WebComponentAPI<typeof ReactTextInput> =
                 invalidMinimumLength: boolean,
                 invalidPattern: boolean,
                 invalidRequired: boolean,
-                name: string,
-                pristine: boolean,
-                touched: boolean,
-                untouched: boolean,
                 valid: boolean,
-                visited: boolean
+
+                name: string
             }
         }
     )
