@@ -55,7 +55,7 @@
     "test:browser": "yarn clear && weboptimizer test:browser '{__reference__: \"target:minimal\"}'",
     "test:coverage": "weboptimizer test:coverage '{__reference__: \"target:minimal\"}'",
     "test:coverage:report": "weboptimizer test:coverage:report '{__reference__: \"target:minimal\"}'",
-    "update:documentation": "documentation-website",
+    "update:documentation": "web-documentation",
     "watch": "weboptimizer build --watch"
   },
   "runkitExample": "require('@babel/runtime/package.json')\n\nglobalThis.window = globalThis\n\nconst {TextInput} = require('web-input-material')\n\nTextInput.component._name",
@@ -112,7 +112,7 @@
     "@webcomponents/webcomponentsjs": "^2.8.0",
     "blob-util": "^2.0.2",
     "clientnode": "^4.0.1383",
-    "documentation-website": "^1.0.401",
+    "web-documentation": "^1.0.0",
     "eslint": "^10.2.0",
     "eslint-config-google": "^0.14.0",
     "eslint-plugin-jsdoc": "^62.9.0",
