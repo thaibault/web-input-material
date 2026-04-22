@@ -58,7 +58,6 @@
     "update:documentation": "web-documentation",
     "watch": "weboptimizer build --watch"
   },
-  "runkitExample": "require('@babel/runtime/package.json')\n\nglobalThis.window = globalThis\n\nconst {TextInput} = require('web-input-material')\n\nTextInput.component._name",
   "dependencies": {
     "prop-types": "^15.8.1",
     "react": "^18.3.1",
