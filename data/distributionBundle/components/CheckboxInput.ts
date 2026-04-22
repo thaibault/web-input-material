@@ -1,6 +1,6 @@
 // #!/usr/bin/env babel-node
 // -*- coding: utf-8 -*-
-/** @module Checkbox */
+/** @module CheckboxInput */
 'use strict'
 /* !
     region header
@@ -18,14 +18,14 @@
 */
 // region imports
 import {boolean, string} from 'clientnode/property-types'
-import Checkbox from 'react-input-material/dist/components/RequireableCheckbox'
+import Checkbox from 'react-input-material/components/Checkbox'
 import wrapAsWebComponent from 'web-component-wrapper'
 import {WebComponentAPI} from 'web-component-wrapper/type'
 // endregion
-export const RequireableCheckbox: WebComponentAPI<typeof Checkbox> =
-    wrapAsWebComponent<typeof Checkbox>(
+export const CheckboxInput: WebComponentAPI<typeof Checkbox> =
+    wrapAsWebComponent(
         Checkbox,
-        'RequireableCheckbox',
+        'CheckboxInput',
         {
             eventToPropertyMapping: {onChange: true},
             internalProperties: {enforceUncontrolled: true},
@@ -40,8 +40,17 @@ export const RequireableCheckbox: WebComponentAPI<typeof Checkbox> =
                 untouched: boolean,
                 valid: boolean,
                 visited: boolean
-            }
+            },
+            /*
+                NOTE: When this configuration is enabled the following error
+                occurs:
+                installHook.js:1 Warning: Attempted to synchronously unmount a
+                root while React was already rendering. React cannot finish
+                unmounting the root until the current render has completed,
+                which may lead to a race condition.
+            */
+            unmountOnDisconnect: false
         }
     )
 
-export default RequireableCheckbox
+export default CheckboxInput

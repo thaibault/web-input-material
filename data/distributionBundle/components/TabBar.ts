@@ -19,17 +19,15 @@
 // region imports
 import {timeout} from 'clientnode'
 import {func, number, object, string} from 'clientnode/property-types'
-import {
-    createWrapConfigurationsComponent
-} from 'react-input-material/dist/components/WrapConfigurations'
+import {createWrapConfigurationsComponent} from
+    'react-input-material/components/WrapConfigurations'
 import wrapAsWebComponent from 'web-component-wrapper'
 import {WebComponentAPI} from 'web-component-wrapper/type'
 import {TabBar as ReactTabBar} from '@rmwc/tabs'
 // endregion
 export const TabBar: WebComponentAPI<typeof ReactTabBar> =
-    wrapAsWebComponent<typeof ReactTabBar>(
-        createWrapConfigurationsComponent<typeof ReactTabBar>(ReactTabBar) as
-            typeof ReactTabBar,
+    wrapAsWebComponent(
+        createWrapConfigurationsComponent(ReactTabBar) as typeof ReactTabBar,
         'TabBar',
         {
             eventToPropertyMapping: {

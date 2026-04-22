@@ -1,6 +1,6 @@
 // #!/usr/bin/env babel-node
 // -*- coding: utf-8 -*-
-/** @module GenericInterval */
+/** @module IntervalInput */
 'use strict'
 /* !
     region header
@@ -18,30 +18,32 @@
 */
 // region imports
 import {boolean, string} from 'clientnode/property-types'
-import Interval from 'react-input-material/dist/components/Interval'
+import Interval from 'react-input-material/components/Interval'
 import wrapAsWebComponent from 'web-component-wrapper'
 import {WebComponentAPI} from 'web-component-wrapper/type'
 // endregion
-export const GenericInterval: WebComponentAPI<typeof Interval> =
-    wrapAsWebComponent<typeof Interval>(
+export const IntervalInput: WebComponentAPI<typeof Interval> =
+    wrapAsWebComponent(
         Interval,
-        'GenericInterval',
+        'IntervalInput',
         {
             eventToPropertyMapping: {onChange: true},
             internalProperties: {enforceUncontrolled: true},
             propertiesToReflectAsAttributes: {
                 dirty: boolean,
                 focused: boolean,
-                invalid: boolean,
-                invalidRequired: boolean,
-                name: string,
                 pristine: boolean,
                 touched: boolean,
                 untouched: boolean,
+                visited: boolean,
+
+                invalid: boolean,
+                invalidRequired: boolean,
                 valid: boolean,
-                visited: boolean
+
+                name: string
             }
         }
     )
 
-export default GenericInterval
+export default IntervalInput
