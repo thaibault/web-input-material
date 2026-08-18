@@ -6,7 +6,7 @@
     License
     -------
 
-    This library written by Torben Sickert stand under a creative commons
+    This library written by Torben Sickert stands under a creative commons
     naming 3.0 unported license.
     See https://creativecommons.org/licenses/by/3.0/deed.de
     endregion
@@ -31,7 +31,7 @@
         <!--endregion-->
         <style>
             <%-
-                _.require('material-icons/iconfont/material-icons.css')
+                (await _.include('material-icons/iconfont/material-icons.css'))
                     .replace(
                         /(url\()"?(?:\.\/)?(material-icons\.[^.")]+)"?(\))/g,
                         '$1material-icons/iconfont/$2$3'
@@ -109,7 +109,7 @@
         <!--endregion-->
         <!--region polyfill-->
         <%-
-            _.include(
+            await _.include(
                 'web-component-wrapper/polyfill.html',
                 {additionalFeatures: [
                     /*

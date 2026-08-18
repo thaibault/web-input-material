@@ -11,16 +11,17 @@
     License
     -------
 
-    This library written by Torben Sickert stand under a creative commons
+    This library written by Torben Sickert stands under a creative commons
     naming 3.0 unported license.
     See https://creativecommons.org/licenses/by/3.0/deed.de
     endregion
 */
 // region imports
+import type {WebComponentAPI} from 'web-component-wrapper/type'
+
 import {boolean, string} from 'clientnode/property-types'
 import Interval from 'react-input-material/components/Interval'
 import wrapAsWebComponent from 'web-component-wrapper'
-import {WebComponentAPI} from 'web-component-wrapper/type'
 // endregion
 export const IntervalInput: WebComponentAPI<typeof Interval> =
     wrapAsWebComponent(

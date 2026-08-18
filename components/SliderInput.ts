@@ -11,21 +11,22 @@
     License
     -------
 
-    This library written by Torben Sickert stand under a creative commons
+    This library written by Torben Sickert stands under a creative commons
     naming 3.0 unported license.
     See https://creativecommons.org/licenses/by/3.0/deed.de
     endregion
 */
 // region imports
-import {Mapping} from 'clientnode'
+import type {Mapping} from 'clientnode'
+import type {WebComponentAPI} from 'web-component-wrapper/type'
+import type {GenericEvent} from 'react-generic-tools/type'
+
 import {boolean, func, number, object, string} from 'clientnode/property-types'
 import {
     createWrapConfigurationsComponent
 } from 'react-input-material/components/WrapConfigurations'
-import {GenericEvent} from 'react-generic-tools/type'
 import wrapAsWebComponent from 'web-component-wrapper'
 import ReactWeb from 'web-component-wrapper/ReactWeb'
-import {WebComponentAPI} from 'web-component-wrapper/type'
 import {Slider} from '@rmwc/slider'
 // endregion
 export interface Properties extends Mapping<unknown> {
