@@ -14,26 +14,24 @@
     endregion
 */
 // region imports
-import {describe, expect, test} from '@jest/globals'
+import {expect, test} from '@jest/globals'
 import '@webcomponents/webcomponentsjs/custom-elements-es5-adapter'
 
 import components from './index'
 // endregion
-describe('web-input-material', (): void => {
-    test('components', () => {
-        expect(Object.keys(components).length).toBeGreaterThan(1)
-    })
+test('components', () => {
+    expect(Object.keys(components).length).toBeGreaterThan(1)
+})
 
-    test('TextInput', () => {
-        const {TextInput} = components
+test('TextInput', () => {
+    const {TextInput} = components
 
-        expect(TextInput).toBeDefined()
-        expect(TextInput.component).toBeDefined()
-        expect(TextInput.register).toBeDefined()
+    expect(TextInput).toBeDefined()
+    expect(TextInput.component).toBeDefined()
+    expect(TextInput.register).toBeDefined()
 
-        TextInput.register()
-        const textInput: HTMLElement = document.createElement('text-input')
+    TextInput.register()
+    const textInput: HTMLElement = document.createElement('text-input')
 
-        expect(textInput).toBeDefined()
-    })
+    expect(textInput).toBeDefined()
 })

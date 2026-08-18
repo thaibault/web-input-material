@@ -17,15 +17,16 @@
     endregion
 */
 // region imports
-import {Mapping} from 'clientnode'
+import type {Mapping} from 'clientnode'
+import type {WebComponentAPI} from 'web-component-wrapper/type'
+import type {GenericEvent} from 'react-generic-tools/type'
+
 import {boolean, func, number, object, string} from 'clientnode/property-types'
 import {
     createWrapConfigurationsComponent
 } from 'react-input-material/components/WrapConfigurations'
-import {GenericEvent} from 'react-generic-tools/type'
 import wrapAsWebComponent from 'web-component-wrapper'
 import ReactWeb from 'web-component-wrapper/ReactWeb'
-import {WebComponentAPI} from 'web-component-wrapper/type'
 import {Slider} from '@rmwc/slider'
 // endregion
 export interface Properties extends Mapping<unknown> {

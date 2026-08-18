@@ -129,8 +129,8 @@
     "style-loader": "^4.0.0",
     "tslib": "^2.8.1",
     "typescript-eslint": "^8.67.0",
-    "web-documentation": "^1.0.45",
-    "weboptimizer": "^4.0.53",
+    "web-documentation": "^1.0.48",
+    "weboptimizer": "^4.0.54",
     "webpack-dev-server": "^6.0.0"
   },
   "peerDependencies": {

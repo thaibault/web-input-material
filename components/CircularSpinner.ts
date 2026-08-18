@@ -17,6 +17,8 @@
     endregion
 */
 // region imports
+import type {WebComponentAPI} from 'web-component-wrapper/type'
+
 import {
     number, object, oneOfType, oneOf, string
 } from 'clientnode/property-types'
@@ -24,7 +26,6 @@ import {
     createWrapConfigurationsComponent
 } from 'react-input-material/components/WrapConfigurations'
 import wrapAsWebComponent from 'web-component-wrapper'
-import {WebComponentAPI} from 'web-component-wrapper/type'
 import {CircularProgress} from '@rmwc/circular-progress'
 // endregion
 export const CircularSpinner: WebComponentAPI<typeof CircularProgress> =

@@ -31,7 +31,7 @@
         <!--endregion-->
         <style>
             <%-
-                _.require('material-icons/iconfont/material-icons.css')
+                (await _.include('material-icons/iconfont/material-icons.css'))
                     .replace(
                         /(url\()"?(?:\.\/)?(material-icons\.[^.")]+)"?(\))/g,
                         '$1material-icons/iconfont/$2$3'

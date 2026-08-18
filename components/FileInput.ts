@@ -17,10 +17,11 @@
     endregion
 */
 // region imports
+import type {WebComponentAPI} from 'web-component-wrapper/type'
+
 import {boolean, string} from 'clientnode/property-types'
 import ReactFileInput from 'react-input-material/components/FileInput'
 import wrapAsWebComponent from 'web-component-wrapper'
-import {WebComponentAPI} from 'web-component-wrapper/type'
 // endregion
 export const FileInput: WebComponentAPI<typeof ReactFileInput> =
     wrapAsWebComponent(
