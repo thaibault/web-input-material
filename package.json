@@ -36,11 +36,10 @@
   ],
   "sideEffects": false,
   "scripts": {
-    "build": "yarn build:types; yarn build:plain; yarn build:minimal; yarn build:bundle; yarn build:bundle:minimal",
+    "build": "yarn build:types; yarn build:plain; yarn build:bundle; yarn build:bundle:minimal",
     "build:bundle": "weboptimizer build '{__reference__: \"target:bundle\"}'",
     "build:bundle:minimal": "weboptimizer build '{__reference__: [\"target:bundle\", \"target:minimal\", \"target:bundle:minimal\"]}'",
     "build:bundle:stats": "weboptimizer build --json /tmp/stat.json '{__reference__: \"target:bundle\"}' && echo 'Results successfully written to \"/tmp/stat.json\".'",
-    "build:minimal": "weboptimizer build '{__reference__: \"target:minimal\"}'",
     "build:plain": "weboptimizer build",
     "build:types": "weboptimizer build:types",
     "check": "yarn check:types; yarn lint",
@@ -63,7 +62,7 @@
     "prop-types": "^15.8.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-input-material": "^0.0.831",
+    "react-input-material": "^0.0.832",
     "react-transition-group": "^4.4.5",
     "web-component-wrapper": "^0.0.611"
   },
@@ -111,7 +110,7 @@
     "@webcomponents/webcomponentsjs": "^2.8.0",
     "blob-util": "^2.0.2",
     "clientnode": "^4.0.1484",
-    "eslint": "^10.8.1",
+    "eslint": "^10.9.0",
     "eslint-config-google": "^0.14.0",
     "eslint-plugin-jsdoc": "^64.2.1",
     "identity-obj-proxy": "^3.0.0",
@@ -202,6 +201,10 @@
       }
     },
     "module": {
+      "aliases": {
+        "#": "Not yet working since it is hidden by parents having overflow hidden.",
+        "@rmwc/tooltip": "react-input-material/shims/optionals"
+      },
       "enforceDeduplication": true,
       "html": {
         "options": {
@@ -251,18 +254,6 @@
       }
     },
     "target:bundle:minimal": {
-      "path": {
-        "target": {
-          "base": "dist/bundle/minimal/"
-        }
-      }
-    },
-    "target:minimal": {
-      "injection": {
-        "entry": {
-          "__evaluate__": "{'./components/TextInput': './components/TextInput'}"
-        }
-      },
       "module": {
         "aliases": {
           "#": "Remove unneeded optional dependencies.",
@@ -287,7 +278,14 @@
       },
       "path": {
         "target": {
-          "base": "dist/minimal/"
+          "base": "dist/bundle/minimal/"
+        }
+      }
+    },
+    "target:input": {
+      "injection": {
+        "entry": {
+          "__evaluate__": "{'./components/TextInput': './components/TextInput'}"
         }
       }
     },

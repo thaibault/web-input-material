@@ -7620,9 +7620,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:^10.8.1":
-  version: 10.8.1
-  resolution: "eslint@npm:10.8.1"
+"eslint@npm:^10.9.0":
+  version: 10.9.0
+  resolution: "eslint@npm:10.9.0"
   dependencies:
     "@eslint-community/eslint-utils": "npm:^4.8.0"
     "@eslint-community/regexpp": "npm:^4.12.2"
@@ -7661,7 +7661,7 @@ __metadata:
       optional: true
   bin:
     eslint: bin/eslint.js
-  checksum: 10c0/0c4720a43ef2052829db18e37aa79adb5f0a62137bdf4a4f8e9507bbbbf888ba0669fc03e4b7139d8f27b59b051bbbcd0a3988b068c30fa934a766d60a81f599
+  checksum: 10c0/bc6c9f4a5c0b97e37ab1aa1753ae30ad5b0cf43a25ca3dcfff937f2b47243654c3ca34e37f71006474a3c1b95d6d4e046149facc6d66af4af6e993a619c23509
   languageName: node
   linkType: hard
 
@@ -11091,9 +11091,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-input-material@npm:^0.0.831":
-  version: 0.0.831
-  resolution: "react-input-material@npm:0.0.831"
+"react-input-material@npm:^0.0.832":
+  version: 0.0.832
+  resolution: "react-input-material@npm:0.0.832"
   peerDependencies:
     "@babel/preset-react": "*"
     "@codemirror/autocomplete": "*"
@@ -11208,7 +11208,7 @@ __metadata:
       optional: true
     spark-md5:
       optional: true
-  checksum: 10c0/c44170148806bc05d8cb5a64105ecd0306af01f5fd25f7f4889fb9068a920b8d30538ee21dd772bc801d705a7c06c0ab2ea72600c5f99bc7b6ecad226bd8a794
+  checksum: 10c0/ae14543d7ffd4dd6727d7e1fcfdf2482c5ab30d502f778da5b94a72b5fe0b3a742d2b1d33cc18e18d3d06bf105f83fe14548f4d2a4bf26d23575c25e7b2895f9
   languageName: node
   linkType: hard
 
@@ -12750,7 +12750,7 @@ __metadata:
     "@webcomponents/webcomponentsjs": "npm:^2.8.0"
     blob-util: "npm:^2.0.2"
     clientnode: "npm:^4.0.1484"
-    eslint: "npm:^10.8.1"
+    eslint: "npm:^10.9.0"
     eslint-config-google: "npm:^0.14.0"
     eslint-plugin-jsdoc: "npm:^64.2.1"
     identity-obj-proxy: "npm:^3.0.0"
@@ -12764,7 +12764,7 @@ __metadata:
     react-generic-animate: "npm:^0.0.130"
     react-generic-dummy: "npm:^0.0.134"
     react-generic-tools: "npm:^0.0.124"
-    react-input-material: "npm:^0.0.831"
+    react-input-material: "npm:^0.0.832"
     react-transition-group: "npm:^4.4.5"
     react-useanimations: "npm:^2.10.0"
     spark-md5: "npm:^3.0.2"
