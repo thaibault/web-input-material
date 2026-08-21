@@ -27,13 +27,7 @@
     "url": "https://github.com/thaibault/web-input-material"
   },
   "type": "module",
-  "files": [
-    "components",
-    "index.bundle.js",
-    "index.d.ts",
-    "index.js",
-    "type.d.ts"
-  ],
+  "files": ["dist"],
   "sideEffects": false,
   "scripts": {
     "build": "yarn build:types; yarn build:plain; yarn build:bundle; yarn build:bundle:minimal",
@@ -210,7 +204,7 @@
         "options": {
           "sources": {
             "urlFilter": {
-              "#": "TODO why?",
+              "#": "TODO why (also in other packages)?",
               "__evaluate__": "() => false"
             }
           }
