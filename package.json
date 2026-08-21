@@ -62,7 +62,7 @@
     "prop-types": "^15.8.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-input-material": "^0.0.832",
+    "react-input-material": "^0.0.833",
     "react-transition-group": "^4.4.5",
     "web-component-wrapper": "^0.0.611"
   },
@@ -277,7 +277,7 @@
           "@tiptap/core$": "react-input-material/shims/optionals",
           "@tiptap/extensions$": "react-input-material/shims/optionals",
           "@tiptap/react$": "react-input-material/shims/optionals",
-          "@tiptap/starter-kit$": "react-input-material/shims/optionals",
+          "@tiptap/starter-kit$": "react-generic-dummy",
           "react-useanimations$": "react-generic-dummy",
           "react-useanimations/lib/lock$": "react-generic-dummy",
           "react-useanimations/lib/plusToX$": "react-generic-dummy"
