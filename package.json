@@ -36,12 +36,11 @@
   ],
   "sideEffects": false,
   "scripts": {
-    "build": "yarn build:types; yarn build:plain; yarn build:bundle:plain",
-    "build:bundle": "yarn build; yarn build:bundle:input",
-    "build:bundle:input": "weboptimizer build '{__reference__: [\"target:bundle\", \"target:minimal\", \"target:input\"]}'",
-    "build:bundle:input:stats": "weboptimizer build --json /tmp/stat.json '{__reference__: [\"target:bundle\", \"target:minimal\", \"target:input\"]}' && echo 'Results successfully written to \"/tmp/stat.json\".'",
-    "build:bundle:plain": "weboptimizer build '{__reference__: [\"target:bundle\", \"target:minimal\"]}'",
+    "build": "yarn build:types; yarn build:plain; yarn build:minimal; yarn build:bundle; yarn build:bundle:minimal",
+    "build:bundle": "weboptimizer build '{__reference__: \"target:bundle\"}'",
+    "build:bundle:minimal": "weboptimizer build '{__reference__: [\"target:bundle\", \"target:minimal\", \"target:bundle:minimal\"]}'",
     "build:bundle:stats": "weboptimizer build --json /tmp/stat.json '{__reference__: \"target:bundle\"}' && echo 'Results successfully written to \"/tmp/stat.json\".'",
+    "build:minimal": "weboptimizer build '{__reference__: \"target:minimal\"}'",
     "build:plain": "weboptimizer build",
     "build:types": "weboptimizer build:types",
     "check": "yarn check:types; yarn lint",
@@ -64,7 +63,7 @@
     "prop-types": "^15.8.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-input-material": "^0.0.830",
+    "react-input-material": "^0.0.831",
     "react-transition-group": "^4.4.5",
     "web-component-wrapper": "^0.0.611"
   },
@@ -183,7 +182,10 @@
         "./components/GenericAnimate": "./components/GenericAnimate",
         "./components/TextInput": "./components/TextInput",
         "./components/GenericInputs": "./components/GenericInputs",
-        "./components/Tabs": ["./components/TabItem", "./components/TabBar"],
+        "./components/Tabs": [
+          "./components/TabItem",
+          "./components/TabBar"
+        ],
         "./components/CheckboxInput": "./components/CheckboxInput",
         "./components/SliderInput": "./components/SliderInput",
         "index": "./index"
@@ -196,7 +198,7 @@
     },
     "injection": {
       "entry": {
-        "__evaluate__": "2 < self.givenCommandLineArguments.length && self.givenCommandLineArguments[2] === 'serve' ? {clientnode: 'clientnode', index: './index'} : 2 < self.givenCommandLineArguments.length && self.givenCommandLineArguments[2].startsWith('test') ? {testBundle: './test.ts'} : self.generic.entry}"
+        "__evaluate__": "2 < self.givenCommandLineArguments.length && self.givenCommandLineArguments[2] === 'serve' ? {clientnode: 'clientnode', index: './index'} : 2 < self.givenCommandLineArguments.length && self.givenCommandLineArguments[2].startsWith('test') ? {testBundle: './test.ts'} : self.generic.entry"
       }
     },
     "module": {
@@ -205,6 +207,7 @@
         "options": {
           "sources": {
             "urlFilter": {
+              "#": "TODO why?",
               "__evaluate__": "() => false"
             }
           }
@@ -226,39 +229,40 @@
         }
       }
     },
-    "target:bundle": {
-      "files": {
-        "compose": {
-          "javaScript": {
-            "__evaluate__": "`${path.resolve(self.path.target.asset.javaScript, '[name].bundle')}.js`"
-          }
-        }
+    "path": {
+      "source": {
+        "base": "src/"
       },
+      "target": {
+        "base": "dist/"
+      }
+    },
+    "target:bundle": {
       "inPlace": {
         "externalLibrary": {
           "dynamic": true,
           "normal": true
         }
       },
-      "libraryName": {
-        "__evaluate__": "string.delimitedToCamelCase(self.name)"
+      "path": {
+        "target": {
+          "base": "dist/bundle/"
+        }
       }
     },
-    "target:input": {
-      "files": {
-        "compose": {
-          "javaScript": {
-            "__evaluate__": "`${path.resolve(self.path.target.asset.javaScript, '[name].input-bundle')}.js`"
-          }
-        }
-      },
-      "injection": {
-        "entry": {
-          "__evaluate__": "{'./components/TextInput': './components/TextInput'}"
+    "target:bundle:minimal": {
+      "path": {
+        "target": {
+          "base": "dist/bundle/minimal/"
         }
       }
     },
     "target:minimal": {
+      "injection": {
+        "entry": {
+          "__evaluate__": "{'./components/TextInput': './components/TextInput'}"
+        }
+      },
       "module": {
         "aliases": {
           "#": "Remove unneeded optional dependencies.",
@@ -279,6 +283,11 @@
           "react-useanimations$": "react-generic-dummy",
           "react-useanimations/lib/lock$": "react-generic-dummy",
           "react-useanimations/lib/plusToX$": "react-generic-dummy"
+        }
+      },
+      "path": {
+        "target": {
+          "base": "dist/minimal/"
         }
       }
     },
