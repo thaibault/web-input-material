@@ -206,7 +206,7 @@
         "options": {
           "sources": {
             "urlFilter": {
-              "#": "TODO why (also in other packages)?",
+              "#": "Do not process any referenced resource in HTML.",
               "__evaluate__": "() => false"
             }
           }
