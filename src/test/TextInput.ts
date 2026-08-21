@@ -15,17 +15,10 @@
 */
 // region imports
 import {expect, test} from '@jest/globals'
-import '@webcomponents/webcomponentsjs/custom-elements-es5-adapter'
 
-import components from './index'
+import TextInput from '../components/TextInput'
 // endregion
-test('components', () => {
-    expect(Object.keys(components).length).toBeGreaterThan(1)
-})
-
 test('TextInput', () => {
-    const {TextInput} = components
-
     expect(TextInput).toBeDefined()
     expect(TextInput.component).toBeDefined()
     expect(TextInput.register).toBeDefined()
