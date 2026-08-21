@@ -22,7 +22,7 @@ import components from './index'
 test('components', () => {
     expect(Object.keys(components).length).toBeGreaterThan(1)
 })
-
+// endregion
 test('TextInput', () => {
     const {TextInput} = components
 
