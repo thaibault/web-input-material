@@ -15,9 +15,9 @@
 */
 // region imports
 import {expect, test} from '@jest/globals'
-// TODO import '@webcomponents/webcomponentsjs/custom-elements-es5-adapter'
+import '@webcomponents/webcomponentsjs/custom-elements-es5-adapter'
 
-import components from './index'
+import components from '../index'
 // endregion
 test('components', () => {
     expect(Object.keys(components).length).toBeGreaterThan(1)
