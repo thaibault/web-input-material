@@ -30,20 +30,20 @@
   "exports": {
     ".": "./dist/index.js",
     "./components/CheckboxInput": "./dist/components/CheckboxInput.js",
-    "./components/CircularInput": "./dist/components/CircularInput.js",
     "./components/CircularSpinner": "./dist/components/CircularSpinner.js",
     "./components/FileInput": "./dist/components/FileInput.js",
     "./components/GenericAnimate": "./dist/components/GenericAnimate.js",
     "./components/GenericInputs": "./dist/components/GenericInputs.js",
     "./components/SliderInput": "./dist/components/SliderInput.js",
     "./components/Tabs": "./dist/components/Tabs.js",
-    "./components/TextInput": "./dist/components/TextInput.js"
+    "./components/TextInput": "./dist/components/TextInput.js",
+    "./type": "./dist/type.d.ts"
   },
   "main": "dist/index.js",
   "typesVersions": {
     "*": {
-      "components": [
-        "./dist/components"
+      "*": [
+        "./dist/*"
       ]
     }
   },
@@ -78,7 +78,7 @@
     "prop-types": "^15.8.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-input-material": "^0.0.833",
+    "react-input-material": "^0.0.834",
     "react-transition-group": "^4.4.5",
     "web-component-wrapper": "^0.0.611"
   },
