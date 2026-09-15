@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: Tabs.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: Tabs.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>if(typeof window==='undefined'||window===null)var window=(typeof globalThis==='undefined'||globalThis===null)?{}:globalThis;/******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
+/******/ 	var __webpack_modules__ = ({
+
+/***/ 1
+(module) {
+
+module.exports = window["clientnodePropertyTypes"];
+
+/***/ },
+
+/***/ 2
+(module) {
+
+module.exports = window["reactInputMaterialComponentsWrapConfigurations"];
+
+/***/ },
+
+/***/ 12
+(module) {
+
+module.exports = window["rmwcTabs"];
+
+/***/ },
+
+/***/ 0
+(module) {
+
+module.exports = window["webComponentWrapper"];
+
+/***/ }
+
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	const __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		const cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		const module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = (module) => {
+/******/ 		const getter = module &amp;&amp; module.__esModule ?
+/******/ 			() => (module['default']) :
+/******/ 			() => (module);
+/******/ 		__webpack_require__.d(getter, { a: getter });
+/******/ 		return getter;
+/******/ 	};
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	// define getter/value functions for harmony exports
+/******/ 	__webpack_require__.d = (exports, definition) => {
+/******/ 		for(var key in definition) {
+/******/ 			if(__webpack_require__.o(definition, key) &amp;&amp; !__webpack_require__.o(exports, key)) {
+/******/ 				Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 			}
+/******/ 		}
+/******/ 	};
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop));
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = (exports) => {
+/******/ 		Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/ 	
+/************************************************************************/
+let __webpack_exports__ = {};
+/* unused harmony export TabItem */
+/* harmony import */ var clientnode_property_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+/* harmony import */ var clientnode_property_types__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(clientnode_property_types__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_input_material_components_WrapConfigurations__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
+/* harmony import */ var react_input_material_components_WrapConfigurations__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_input_material_components_WrapConfigurations__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var web_component_wrapper__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(0);
+/* harmony import */ var web_component_wrapper__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(web_component_wrapper__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _rmwc_tabs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(12);
+/* harmony import */ var _rmwc_tabs__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_rmwc_tabs__WEBPACK_IMPORTED_MODULE_3__);
+// #!/usr/bin/env babel-node
+// -*- coding: utf-8 -*-
+/** @module TabItem *//* !
+    region header
+    [Project page](https://torben.website/react-material-input)
+
+    Copyright Torben Sickert (info["~at~"]torben.website) 16.12.2012
+
+    License
+    -------
+
+    This library written by Torben Sickert stands under a creative commons
+    naming 3.0 unported license.
+    See https://creativecommons.org/licenses/by/3.0/deed.de
+    endregion
+*/// region imports
+// endregion
+const TabItem=web_component_wrapper__WEBPACK_IMPORTED_MODULE_2___default()((0,react_input_material_components_WrapConfigurations__WEBPACK_IMPORTED_MODULE_1__.createWrapConfigurationsComponent)(_rmwc_tabs__WEBPACK_IMPORTED_MODULE_3__.Tab),"TabItem",{propTypes:{stacked:clientnode_property_types__WEBPACK_IMPORTED_MODULE_0__.boolean,theme:clientnode_property_types__WEBPACK_IMPORTED_MODULE_0__.string,themeConfiguration:clientnode_property_types__WEBPACK_IMPORTED_MODULE_0__.object}});/* unused harmony default export */ var components_TabItem = ((/* unused pure expression or super */ null &amp;&amp; (TabItem)));
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  TabBar: () => (/* binding */ TabBar),
+  "default": () => (/* binding */ components_TabBar)
+});
+
+;// external "clientnode"
+const external_clientnode_namespaceObject = window["clientnode"];
+// EXTERNAL MODULE: external "clientnodePropertyTypes"
+var external_clientnodePropertyTypes_ = __webpack_require__(1);
+// EXTERNAL MODULE: external "reactInputMaterialComponentsWrapConfigurations"
+var external_reactInputMaterialComponentsWrapConfigurations_ = __webpack_require__(2);
+// EXTERNAL MODULE: external "webComponentWrapper"
+var external_webComponentWrapper_ = __webpack_require__(0);
+var external_webComponentWrapper_default = /*#__PURE__*/__webpack_require__.n(external_webComponentWrapper_);
+// EXTERNAL MODULE: external "rmwcTabs"
+var external_rmwcTabs_ = __webpack_require__(12);
+;// ./src/components/TabBar.ts
+// #!/usr/bin/env babel-node
+// -*- coding: utf-8 -*-
+/** @module TabBar *//* !
+    region header
+    [Project page](https://torben.website/react-material-input)
+
+    Copyright Torben Sickert (info["~at~"]torben.website) 16.12.2012
+
+    License
+    -------
+
+    This library written by Torben Sickert stands under a creative commons
+    naming 3.0 unported license.
+    See https://creativecommons.org/licenses/by/3.0/deed.de
+    endregion
+*/// region imports
+// endregion
+const TabBar=external_webComponentWrapper_default()((0,external_reactInputMaterialComponentsWrapConfigurations_.createWrapConfigurationsComponent)(external_rmwcTabs_.TabBar),"TabBar",{eventToPropertyMapping:{onActivate:async()=>{await (0,external_clientnode_namespaceObject.timeout)();return null}},propTypes:{activeTabIndex:external_clientnodePropertyTypes_.number,onActivate:external_clientnodePropertyTypes_.func,theme:external_clientnodePropertyTypes_.string,themeConfiguration:external_clientnodePropertyTypes_.object}});/* harmony default export */ const components_TabBar = (TabBar);
+((((((((window.componentsCircularSpinner = window.componentsCircularSpinner || {}).componentsFileInput = window.componentsCircularSpinner.componentsFileInput || {}).componentsGenericAnimate = window.componentsCircularSpinner.componentsFileInput.componentsGenericAnimate || {}).componentsTextInput = window.componentsCircularSpinner.componentsFileInput.componentsGenericAnimate.componentsTextInput || {}).componentsGenericInputs = window.componentsCircularSpinner.componentsFileInput.componentsGenericAnimate.componentsTextInput.componentsGenericInputs || {}).componentsTabs = window.componentsCircularSpinner.componentsFileInput.componentsGenericAnimate.componentsTextInput.componentsGenericInputs.componentsTabs || {}).componentsCheckboxInput = window.componentsCircularSpinner.componentsFileInput.componentsGenericAnimate.componentsTextInput.componentsGenericInputs.componentsTabs.componentsCheckboxInput || {}).componentsSliderInput = window.componentsCircularSpinner.componentsFileInput.componentsGenericAnimate.componentsTextInput.componentsGenericInputs.componentsTabs.componentsCheckboxInput.componentsSliderInput || {}).index = __webpack_exports__;
+/******/ })()
+;</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-CheckboxInput.html">CheckboxInput</a></li><li><a href="module-CircularSpinner.html">CircularSpinner</a></li><li><a href="module-FileInput.html">FileInput</a></li><li><a href="module-GenericAnimate.html">GenericAnimate</a></li><li><a href="module-GenericInputs.html">GenericInputs</a></li><li><a href="module-Slider.html">Slider</a></li><li><a href="module-TabBar.html">TabBar</a></li><li><a href="module-TabItem.html">TabItem</a></li><li><a href="module-TextInput.html">TextInput</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.5</a> on Tue Sep 15 2026 22:29:09 GMT+0200 (Mitteleuropäische Sommerzeit)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

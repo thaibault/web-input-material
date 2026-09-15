@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BackgroundAgentGlobalSettings">
+    <option name="selectedModelId" value="auto" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="26a34c96-11ce-474b-b271-d0de10da1680" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CopilotChats">
+    <option name="panelChat">
+      <chat>
+        <option name="activeSessionId" value="06906334-7cc0-422c-8810-727179b82075" />
+        <option name="sessions">
+          <session>
+            <option name="chatType" value="PANEL" />
+            <option name="id" value="06906334-7cc0-422c-8810-727179b82075" />
+            <option name="modeId" value="Ask" />
+            <option name="modelType" value="builtin_family" />
+            <option name="modelValue" value="auto" />
+            <option name="targetType" value="LOCAL" />
+          </session>
+        </option>
+        <option name="type" value="PANEL" />
+      </chat>
+    </option>
+  </component>
+  <component name="CopilotPersistence">
+    <persistenceIdMap>
+      <entry key="_/Users/torben.sickert/local/public/project/repository/web-input-material" value="3DLFpAb60u1vZb7geV7U9YgoFQ4" />
+    </persistenceIdMap>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3DLFpAb60u1vZb7geV7U9YgoFQ4" />
+  <component name="ProjectSessionTemplates">
+    <option name="panelTemplate">
+      <template>
+        <option name="modeId" value="Agent" />
+        <option name="model">
+          <model>
+            <option name="modelType" value="builtin_id" />
+            <option name="modelValue" value="auto" />
+          </model>
+        </option>
+        <option name="targetType" value="BACKGROUND" />
+        <option name="worktreeMode" value="WORKSPACE" />
+      </template>
+    </option>
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;copilot.chat.legacySessionMetadata.migrated&quot;: &quot;true&quot;,
+    &quot;copilot.sensitive.folder.allow.file_read./private/var/folders/qh/f1bt61v52lg2626gybz1529h0000gn/T/github-copilot-ldSk80&quot;: &quot;true&quot;,
+    &quot;copilot.sensitive.folder.allow.file_read./private/var/folders/qh/f1bt61v52lg2626gybz1529h0000gn/T/github-copilot-x7p0mZ&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/torben.sickert/local/public/project/repository/web-input-material/src/test&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.jshint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.jshint&quot;: &quot;&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Applications/WebStorm.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test" />
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-WS-262.10315.144" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="26a34c96-11ce-474b-b271-d0de10da1680" name="Changes" comment="" />
+      <created>1778053624021</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1778053624021</updated>
+      <workItem from="1778053625143" duration="17000" />
+      <workItem from="1778053850699" duration="49000" />
+      <workItem from="1779286114341" duration="66000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/components/GenericAnimate.js" />
+        <option value="$PROJECT_DIR$/components/GenericInputs.d.ts" />
+        <option value="$PROJECT_DIR$/components/SliderInput.d.ts" />
+        <option value="$PROJECT_DIR$/components/GenericInputs.js" />
+        <option value="$PROJECT_DIR$/components/TabItem.d.ts" />
+        <option value="$PROJECT_DIR$/components/CheckboxInput.d.ts" />
+        <option value="$PROJECT_DIR$/components/IntervalInput.d.ts" />
+        <option value="$PROJECT_DIR$/components/CheckboxInput.js" />
+        <option value="$PROJECT_DIR$/components/SliderInput.js" />
+        <option value="$PROJECT_DIR$/components/CircularSpinner.js" />
+        <option value="$PROJECT_DIR$/components/CircularSpinner.d.ts" />
+        <option value="$PROJECT_DIR$/components/GenericAnimate.d.ts" />
+        <option value="$PROJECT_DIR$/components/FileInput.js" />
+        <option value="$PROJECT_DIR$/components/FileInput.d.ts" />
+        <option value="$PROJECT_DIR$/components/TabBar.d.ts" />
+        <option value="$PROJECT_DIR$/components/TextInput.d.ts" />
+        <option value="$PROJECT_DIR$/components/TextInput.js" />
+        <option value="$PROJECT_DIR$/components/CircularSpinner.d.ts" />
+        <option value="$PROJECT_DIR$/components/GenericAnimate.d.ts" />
+        <option value="$PROJECT_DIR$/components/GenericInputs.d.ts" />
+        <option value="$PROJECT_DIR$/components/SliderInput.d.ts" />
+        <option value="$PROJECT_DIR$/components/TabItem.d.ts" />
+        <option value="$PROJECT_DIR$/components/CheckboxInput.d.ts" />
+        <option value="$PROJECT_DIR$/components/IntervalInput.d.ts" />
+        <option value="$PROJECT_DIR$/components/FileInput.d.ts" />
+        <option value="$PROJECT_DIR$/components/TabBar.d.ts" />
+        <option value="$PROJECT_DIR$/components/TextInput.d.ts" />
+        <option value="$PROJECT_DIR$/components/GenericAnimate.js" />
+        <option value="$PROJECT_DIR$/components/GenericInputs.js" />
+        <option value="$PROJECT_DIR$/components/CheckboxInput.js" />
+        <option value="$PROJECT_DIR$/components/SliderInput.js" />
+        <option value="$PROJECT_DIR$/components/CircularSpinner.js" />
+        <option value="$PROJECT_DIR$/components/FileInput.js" />
+        <option value="$PROJECT_DIR$/components/TextInput.js" />
+      </list>
+    </option>
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
+  </component>
+</project>
