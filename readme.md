@@ -28,8 +28,66 @@ Project status
 [![deploy web documentation](https://img.shields.io/github/actions/workflow/status/thaibault/web-input-material/deploy-web-documentation.yaml?label=deploy%20web%20documentation&style=for-the-badge)](https://github.com/thaibault/web-input-material/actions/workflows/deploy-web-documentation.yaml)
 [![web documentation](https://img.shields.io/website-up-down-green-red/https/torben.website/web-input-material.svg?label=web-documentation&style=for-the-badge)](https://torben.website/web-input-material)
 
+
+<!--|deDE:Einsatzmöglichkeiten-->
+<!--|frFR:Utilisier-->
 Use case
 --------
 
 Reusable material design based input field with support for (richt-)text, code,
 selections, numbers, dates and so on.
+<!--deDE:
+    Ein Eingabefeld im Material Design-Stil, das wiederverwendbar ist und
+    (Recht-)Text, Code, Auswahlen, Zahlen, Datumsangaben usw. unterstützt.
+-->
+<!--frFR:
+    Champ de saisie réutilisable, basé sur le design Material, prenant en
+    charge le texte (avec mise en forme), le code, les sélections, les nombres,
+    les dates, etc.
+-->
+
+<div class="wd-table-of-contents">
+    <h2 id="content">Content<!--deDE:Inhalt--></h2>
+    <!--wd-table-of-contents-->
+</div>
+
+Installation
+------------
+
+You can install via package manager, simply download the compiled version as
+zip file here and inject or request via CDN in HTML:
+<!--deDE:
+    Sie können das Paket über den Paketmanager installieren oder einfach die
+    kompilierte Version als ZIP-Datei hier herunterladen und in HTML einbinden
+    oder über ein CDN abrufen:
+-->
+<!--frFR:
+    Vous pouvez installer le paquet via le gestionnaire de paquets ou
+    simplement télécharger ici la version compilée sous forme de fichier ZIP,
+    puis l'intégrer dans une page HTML ou la récupérer via un CDN:
+-->
+
+```bash
+npm install web-input-material
+```
+
+<!--|deDE:Verwendung-->
+<!--|frFR:Demande-->
+Usage
+-----
+
+Here you can see a complete initialization example.
+<!--deDE:
+    Hier können Sie ein Komplettbeispiel der Initialisierung sehen.
+-->
+<!--frFR:
+    Ici vous pouvez voir un exemple complet d'initialisation.
+-->
+
+```JavaScript
+import {
+    api
+} from 'https://unpkg.com/web-input-material@latest/dist/bundle/index.js'
+
+api.register()
+```
