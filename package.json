@@ -1,6 +1,6 @@
 {
   "name": "web-input-material",
-  "version": "0.0.515",
+  "version": "0.0.516",
   "description": "Reusable material design based input field with support for (richt-)text, code, selections, numbers, dates and so on.",
   "keywords": [
     "form-field",
@@ -78,9 +78,9 @@
     "prop-types": "^15.8.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-input-material": "^0.0.834",
+    "react-input-material": "^0.0.844",
     "react-transition-group": "^4.4.5",
-    "web-component-wrapper": "^0.0.611"
+    "web-component-wrapper": "^0.0.614"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^8.0.1",
