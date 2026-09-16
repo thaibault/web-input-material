@@ -10,7 +10,8 @@ This library written by Torben Sickert stands under a creative commons naming
 3.0 unported license. See https://creativecommons.org/licenses/by/3.0/deed.de
 endregion -->
 
-Project status
+<!--|deDE:Projektstatus-->
+Project Status
 --------------
 
 [![npm](https://img.shields.io/npm/v/web-input-material?color=%23d55e5d&label=npm%20package%20version&logoColor=%23d55e5d&style=for-the-badge)](https://www.npmjs.com/package/web-input-material)
@@ -70,10 +71,10 @@ zip file here and inject or request via CDN in HTML:
 npm install web-input-material
 ```
 
-<!--|deDE:Verwendung-->
-<!--|frFR:Demande-->
-Usage
------
+<!--|deDE:Beispiel-->
+<!--|frFR:Exemple-->
+Example
+-------
 
 Here you can see a complete initialization example.
 <!--deDE:
