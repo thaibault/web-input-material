@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: CheckboxInput.js</title>
+    <title>JSDoc: Source: CircularSpinner.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: CheckboxInput.js</h1>
+    <h1 class="page-title">Source: CircularSpinner.js</h1>
 
     
 
@@ -39,6 +39,12 @@ module.exports = window["webComponentWrapper"];
 /***/ ((module) => {
 
 module.exports = window["clientnodePropertyTypes"];
+
+/***/ }),
+/* 2 */
+/***/ ((module) => {
+
+module.exports = window["reactInputMaterialComponentsWrapConfigurations"];
 
 /***/ })
 /******/ 	]);
@@ -105,22 +111,23 @@ __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  CheckboxInput: () => (/* binding */ CheckboxInput),
-  "default": () => (/* binding */ components_CheckboxInput)
+  CircularSpinner: () => (/* binding */ CircularSpinner),
+  "default": () => (/* binding */ components_CircularSpinner)
 });
 
 // EXTERNAL MODULE: external "clientnodePropertyTypes"
 var external_clientnodePropertyTypes_ = __webpack_require__(1);
-;// external "reactInputMaterialComponentsCheckbox"
-const external_reactInputMaterialComponentsCheckbox_namespaceObject = window["reactInputMaterialComponentsCheckbox"];
-var external_reactInputMaterialComponentsCheckbox_default = /*#__PURE__*/__webpack_require__.n(external_reactInputMaterialComponentsCheckbox_namespaceObject);
+// EXTERNAL MODULE: external "reactInputMaterialComponentsWrapConfigurations"
+var external_reactInputMaterialComponentsWrapConfigurations_ = __webpack_require__(2);
 // EXTERNAL MODULE: external "webComponentWrapper"
 var external_webComponentWrapper_ = __webpack_require__(0);
 var external_webComponentWrapper_default = /*#__PURE__*/__webpack_require__.n(external_webComponentWrapper_);
-;// ./src/components/CheckboxInput.ts
+;// external "rmwcCircularProgress"
+const external_rmwcCircularProgress_namespaceObject = window["rmwcCircularProgress"];
+;// ./src/components/CircularSpinner.ts
 // #!/usr/bin/env babel-node
 // -*- coding: utf-8 -*-
-/** @module CheckboxInput *//* !
+/** @module CircularSpinner *//* !
     region header
     [Project page](https://torben.website/react-material-input)
 
@@ -135,14 +142,7 @@ var external_webComponentWrapper_default = /*#__PURE__*/__webpack_require__.n(ex
     endregion
 */// region imports
 // endregion
-const CheckboxInput=external_webComponentWrapper_default()((external_reactInputMaterialComponentsCheckbox_default()),"CheckboxInput",{eventToPropertyMapping:{onChange:true},internalProperties:{enforceUncontrolled:true},propertiesToReflectAsAttributes:{dirty:external_clientnodePropertyTypes_.boolean,focused:external_clientnodePropertyTypes_.boolean,invalid:external_clientnodePropertyTypes_.boolean,invalidRequired:external_clientnodePropertyTypes_.boolean,name:external_clientnodePropertyTypes_.string,pristine:external_clientnodePropertyTypes_.boolean,touched:external_clientnodePropertyTypes_.boolean,untouched:external_clientnodePropertyTypes_.boolean,valid:external_clientnodePropertyTypes_.boolean,visited:external_clientnodePropertyTypes_.boolean},/*
-                NOTE: When this configuration is enabled the following error
-                occurs:
-                installHook.js:1 Warning: Attempted to synchronously unmount a
-                root while React was already rendering. React cannot finish
-                unmounting the root until the current render has completed,
-                which may lead to a race condition.
-            */unmountOnDisconnect:false});/* harmony default export */ const components_CheckboxInput = (CheckboxInput);
+const CircularSpinner=external_webComponentWrapper_default()((0,external_reactInputMaterialComponentsWrapConfigurations_.createWrapConfigurationsComponent)(external_rmwcCircularProgress_namespaceObject.CircularProgress,{withReference:false}),"CircularSpinner",{propTypes:{size:(0,external_clientnodePropertyTypes_.oneOfType)([(0,external_clientnodePropertyTypes_.oneOf)(["xsmall","small","medium","large","xlarge"]),external_clientnodePropertyTypes_.number]),theme:external_clientnodePropertyTypes_.string,themeConfiguration:external_clientnodePropertyTypes_.object}});/* harmony default export */ const components_CircularSpinner = (CircularSpinner);
 ((((((((window.componentsCircularSpinner = window.componentsCircularSpinner || {}).componentsFileInput = window.componentsCircularSpinner.componentsFileInput || {}).componentsGenericAnimate = window.componentsCircularSpinner.componentsFileInput.componentsGenericAnimate || {}).componentsTextInput = window.componentsCircularSpinner.componentsFileInput.componentsGenericAnimate.componentsTextInput || {}).componentsGenericInputs = window.componentsCircularSpinner.componentsFileInput.componentsGenericAnimate.componentsTextInput.componentsGenericInputs || {}).componentsTabs = window.componentsCircularSpinner.componentsFileInput.componentsGenericAnimate.componentsTextInput.componentsGenericInputs.componentsTabs || {}).componentsCheckboxInput = window.componentsCircularSpinner.componentsFileInput.componentsGenericAnimate.componentsTextInput.componentsGenericInputs.componentsTabs.componentsCheckboxInput || {}).componentsSliderInput = window.componentsCircularSpinner.componentsFileInput.componentsGenericAnimate.componentsTextInput.componentsGenericInputs.componentsTabs.componentsCheckboxInput.componentsSliderInput || {}).index = __webpack_exports__;
 /******/ })()
 ;</code></pre>
@@ -161,7 +161,7 @@ const CheckboxInput=external_webComponentWrapper_default()((external_reactInputM
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.5</a> on Tue Sep 15 2026 22:41:35 GMT+0200 (Mitteleuropäische Sommerzeit)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.5</a> on Wed Sep 16 2026 19:08:25 GMT+0200 (Mitteleuropäische Sommerzeit)
 </footer>
 
 <script> prettyPrint(); </script>

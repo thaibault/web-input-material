@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: Tabs.js</title>
+    <title>JSDoc: Source: CheckboxInput.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: Tabs.js</h1>
+    <h1 class="page-title">Source: CheckboxInput.js</h1>
 
     
 
@@ -28,37 +28,20 @@
         <article>
             <pre class="prettyprint source linenums"><code>if(typeof window==='undefined'||window===null)var window=(typeof globalThis==='undefined'||globalThis===null)?{}:globalThis;/******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
-/******/ 	var __webpack_modules__ = ({
-
-/***/ 1
-(module) {
-
-module.exports = window["clientnodePropertyTypes"];
-
-/***/ },
-
-/***/ 2
-(module) {
-
-module.exports = window["reactInputMaterialComponentsWrapConfigurations"];
-
-/***/ },
-
-/***/ 12
-(module) {
-
-module.exports = window["rmwcTabs"];
-
-/***/ },
-
-/***/ 0
-(module) {
+/******/ 	var __webpack_modules__ = ([
+/* 0 */
+/***/ ((module) => {
 
 module.exports = window["webComponentWrapper"];
 
-/***/ }
+/***/ }),
+/* 1 */
+/***/ ((module) => {
 
-/******/ 	});
+module.exports = window["clientnodePropertyTypes"];
+
+/***/ })
+/******/ 	]);
 /************************************************************************/
 /******/ 	// The module cache
 /******/ 	const __webpack_module_cache__ = {};
@@ -117,57 +100,27 @@ module.exports = window["webComponentWrapper"];
 /******/ 	
 /************************************************************************/
 let __webpack_exports__ = {};
-/* unused harmony export TabItem */
-/* harmony import */ var clientnode_property_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
-/* harmony import */ var clientnode_property_types__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(clientnode_property_types__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_input_material_components_WrapConfigurations__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
-/* harmony import */ var react_input_material_components_WrapConfigurations__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_input_material_components_WrapConfigurations__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var web_component_wrapper__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(0);
-/* harmony import */ var web_component_wrapper__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(web_component_wrapper__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _rmwc_tabs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(12);
-/* harmony import */ var _rmwc_tabs__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_rmwc_tabs__WEBPACK_IMPORTED_MODULE_3__);
-// #!/usr/bin/env babel-node
-// -*- coding: utf-8 -*-
-/** @module TabItem *//* !
-    region header
-    [Project page](https://torben.website/react-material-input)
-
-    Copyright Torben Sickert (info["~at~"]torben.website) 16.12.2012
-
-    License
-    -------
-
-    This library written by Torben Sickert stands under a creative commons
-    naming 3.0 unported license.
-    See https://creativecommons.org/licenses/by/3.0/deed.de
-    endregion
-*/// region imports
-// endregion
-const TabItem=web_component_wrapper__WEBPACK_IMPORTED_MODULE_2___default()((0,react_input_material_components_WrapConfigurations__WEBPACK_IMPORTED_MODULE_1__.createWrapConfigurationsComponent)(_rmwc_tabs__WEBPACK_IMPORTED_MODULE_3__.Tab),"TabItem",{propTypes:{stacked:clientnode_property_types__WEBPACK_IMPORTED_MODULE_0__.boolean,theme:clientnode_property_types__WEBPACK_IMPORTED_MODULE_0__.string,themeConfiguration:clientnode_property_types__WEBPACK_IMPORTED_MODULE_0__.object}});/* unused harmony default export */ var components_TabItem = ((/* unused pure expression or super */ null &amp;&amp; (TabItem)));
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  TabBar: () => (/* binding */ TabBar),
-  "default": () => (/* binding */ components_TabBar)
+  CheckboxInput: () => (/* binding */ CheckboxInput),
+  "default": () => (/* binding */ components_CheckboxInput)
 });
 
-;// external "clientnode"
-const external_clientnode_namespaceObject = window["clientnode"];
 // EXTERNAL MODULE: external "clientnodePropertyTypes"
 var external_clientnodePropertyTypes_ = __webpack_require__(1);
-// EXTERNAL MODULE: external "reactInputMaterialComponentsWrapConfigurations"
-var external_reactInputMaterialComponentsWrapConfigurations_ = __webpack_require__(2);
+;// external "reactInputMaterialComponentsCheckbox"
+const external_reactInputMaterialComponentsCheckbox_namespaceObject = window["reactInputMaterialComponentsCheckbox"];
+var external_reactInputMaterialComponentsCheckbox_default = /*#__PURE__*/__webpack_require__.n(external_reactInputMaterialComponentsCheckbox_namespaceObject);
 // EXTERNAL MODULE: external "webComponentWrapper"
 var external_webComponentWrapper_ = __webpack_require__(0);
 var external_webComponentWrapper_default = /*#__PURE__*/__webpack_require__.n(external_webComponentWrapper_);
-// EXTERNAL MODULE: external "rmwcTabs"
-var external_rmwcTabs_ = __webpack_require__(12);
-;// ./src/components/TabBar.ts
+;// ./src/components/CheckboxInput.ts
 // #!/usr/bin/env babel-node
 // -*- coding: utf-8 -*-
-/** @module TabBar *//* !
+/** @module CheckboxInput *//* !
     region header
     [Project page](https://torben.website/react-material-input)
 
@@ -182,7 +135,14 @@ var external_rmwcTabs_ = __webpack_require__(12);
     endregion
 */// region imports
 // endregion
-const TabBar=external_webComponentWrapper_default()((0,external_reactInputMaterialComponentsWrapConfigurations_.createWrapConfigurationsComponent)(external_rmwcTabs_.TabBar),"TabBar",{eventToPropertyMapping:{onActivate:async()=>{await (0,external_clientnode_namespaceObject.timeout)();return null}},propTypes:{activeTabIndex:external_clientnodePropertyTypes_.number,onActivate:external_clientnodePropertyTypes_.func,theme:external_clientnodePropertyTypes_.string,themeConfiguration:external_clientnodePropertyTypes_.object}});/* harmony default export */ const components_TabBar = (TabBar);
+const CheckboxInput=external_webComponentWrapper_default()((external_reactInputMaterialComponentsCheckbox_default()),"CheckboxInput",{eventToPropertyMapping:{onChange:true},internalProperties:{enforceUncontrolled:true},propertiesToReflectAsAttributes:{dirty:external_clientnodePropertyTypes_.boolean,focused:external_clientnodePropertyTypes_.boolean,invalid:external_clientnodePropertyTypes_.boolean,invalidRequired:external_clientnodePropertyTypes_.boolean,name:external_clientnodePropertyTypes_.string,pristine:external_clientnodePropertyTypes_.boolean,touched:external_clientnodePropertyTypes_.boolean,untouched:external_clientnodePropertyTypes_.boolean,valid:external_clientnodePropertyTypes_.boolean,visited:external_clientnodePropertyTypes_.boolean},/*
+                NOTE: When this configuration is enabled the following error
+                occurs:
+                installHook.js:1 Warning: Attempted to synchronously unmount a
+                root while React was already rendering. React cannot finish
+                unmounting the root until the current render has completed,
+                which may lead to a race condition.
+            */unmountOnDisconnect:false});/* harmony default export */ const components_CheckboxInput = (CheckboxInput);
 ((((((((window.componentsCircularSpinner = window.componentsCircularSpinner || {}).componentsFileInput = window.componentsCircularSpinner.componentsFileInput || {}).componentsGenericAnimate = window.componentsCircularSpinner.componentsFileInput.componentsGenericAnimate || {}).componentsTextInput = window.componentsCircularSpinner.componentsFileInput.componentsGenericAnimate.componentsTextInput || {}).componentsGenericInputs = window.componentsCircularSpinner.componentsFileInput.componentsGenericAnimate.componentsTextInput.componentsGenericInputs || {}).componentsTabs = window.componentsCircularSpinner.componentsFileInput.componentsGenericAnimate.componentsTextInput.componentsGenericInputs.componentsTabs || {}).componentsCheckboxInput = window.componentsCircularSpinner.componentsFileInput.componentsGenericAnimate.componentsTextInput.componentsGenericInputs.componentsTabs.componentsCheckboxInput || {}).componentsSliderInput = window.componentsCircularSpinner.componentsFileInput.componentsGenericAnimate.componentsTextInput.componentsGenericInputs.componentsTabs.componentsCheckboxInput.componentsSliderInput || {}).index = __webpack_exports__;
 /******/ })()
 ;</code></pre>
@@ -201,7 +161,7 @@ const TabBar=external_webComponentWrapper_default()((0,external_reactInputMateri
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.5</a> on Tue Sep 15 2026 22:41:35 GMT+0200 (Mitteleuropäische Sommerzeit)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.5</a> on Wed Sep 16 2026 19:08:25 GMT+0200 (Mitteleuropäische Sommerzeit)
 </footer>
 
 <script> prettyPrint(); </script>

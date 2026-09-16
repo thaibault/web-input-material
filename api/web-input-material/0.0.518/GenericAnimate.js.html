@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: SliderInput.js</title>
+    <title>JSDoc: Source: GenericAnimate.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: SliderInput.js</h1>
+    <h1 class="page-title">Source: GenericAnimate.js</h1>
 
     
 
@@ -28,37 +28,14 @@
         <article>
             <pre class="prettyprint source linenums"><code>if(typeof window==='undefined'||window===null)var window=(typeof globalThis==='undefined'||globalThis===null)?{}:globalThis;/******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
-/******/ 	var __webpack_modules__ = ({
-
-/***/ 1
-(module) {
-
-module.exports = window["clientnodePropertyTypes"];
-
-/***/ },
-
-/***/ 2
-(module) {
-
-module.exports = window["reactInputMaterialComponentsWrapConfigurations"];
-
-/***/ },
-
-/***/ 0
-(module) {
+/******/ 	var __webpack_modules__ = ([
+/* 0 */
+/***/ ((module) => {
 
 module.exports = window["webComponentWrapper"];
 
-/***/ },
-
-/***/ 13
-(module) {
-
-module.exports = window["webComponentWrapperReactWeb"];
-
-/***/ }
-
-/******/ 	});
+/***/ })
+/******/ 	]);
 /************************************************************************/
 /******/ 	// The module cache
 /******/ 	const __webpack_module_cache__ = {};
@@ -122,25 +99,20 @@ __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  SliderInput: () => (/* binding */ SliderInput),
-  "default": () => (/* binding */ components_SliderInput)
+  GenericAnimate: () => (/* binding */ GenericAnimate),
+  "default": () => (/* binding */ components_GenericAnimate)
 });
 
-// EXTERNAL MODULE: external "clientnodePropertyTypes"
-var external_clientnodePropertyTypes_ = __webpack_require__(1);
-// EXTERNAL MODULE: external "reactInputMaterialComponentsWrapConfigurations"
-var external_reactInputMaterialComponentsWrapConfigurations_ = __webpack_require__(2);
+;// external "reactGenericAnimate"
+const external_reactGenericAnimate_namespaceObject = window["reactGenericAnimate"];
+var external_reactGenericAnimate_default = /*#__PURE__*/__webpack_require__.n(external_reactGenericAnimate_namespaceObject);
 // EXTERNAL MODULE: external "webComponentWrapper"
 var external_webComponentWrapper_ = __webpack_require__(0);
 var external_webComponentWrapper_default = /*#__PURE__*/__webpack_require__.n(external_webComponentWrapper_);
-// EXTERNAL MODULE: external "webComponentWrapperReactWeb"
-var external_webComponentWrapperReactWeb_ = __webpack_require__(13);
-;// external "rmwcSlider"
-const external_rmwcSlider_namespaceObject = window["rmwcSlider"];
-;// ./src/components/SliderInput.ts
+;// ./src/components/GenericAnimate.ts
 // #!/usr/bin/env babel-node
 // -*- coding: utf-8 -*-
-/** @module Slider *//* !
+/** @module GenericAnimate *//* !
     region header
     [Project page](https://torben.website/react-material-input)
 
@@ -155,10 +127,7 @@ const external_rmwcSlider_namespaceObject = window["rmwcSlider"];
     endregion
 */// region imports
 // endregion
-/*
-    NOTE: Resulting component type is dynamically created from derived wrapped
-    react component.
-*/const SliderInput=external_webComponentWrapper_default()((0,external_reactInputMaterialComponentsWrapConfigurations_.createWrapConfigurationsComponent)(external_rmwcSlider_namespaceObject.Slider),"SliderInput",{eventToPropertyMapping:{onChange:(event,self)=>({...self.externalProperties,value:event.detail.value}),onInput:event=>[{value:event.detail.value},{value:event.detail.value}]},propTypes:{disabled:external_clientnodePropertyTypes_.boolean,discrete:external_clientnodePropertyTypes_.boolean,displayMarkers:external_clientnodePropertyTypes_.boolean,max:external_clientnodePropertyTypes_.number,min:external_clientnodePropertyTypes_.number,step:external_clientnodePropertyTypes_.number,theme:external_clientnodePropertyTypes_.string,themeConfiguration:external_clientnodePropertyTypes_.object,onChange:external_clientnodePropertyTypes_.func,onInput:external_clientnodePropertyTypes_.func,value:external_clientnodePropertyTypes_.number}});/* harmony default export */ const components_SliderInput = (SliderInput);
+const GenericAnimate=external_webComponentWrapper_default()((external_reactGenericAnimate_default()),"GenericAnimate",{propertiesToReflectAsAttributes:"in"});/* harmony default export */ const components_GenericAnimate = (GenericAnimate);
 ((((((((window.componentsCircularSpinner = window.componentsCircularSpinner || {}).componentsFileInput = window.componentsCircularSpinner.componentsFileInput || {}).componentsGenericAnimate = window.componentsCircularSpinner.componentsFileInput.componentsGenericAnimate || {}).componentsTextInput = window.componentsCircularSpinner.componentsFileInput.componentsGenericAnimate.componentsTextInput || {}).componentsGenericInputs = window.componentsCircularSpinner.componentsFileInput.componentsGenericAnimate.componentsTextInput.componentsGenericInputs || {}).componentsTabs = window.componentsCircularSpinner.componentsFileInput.componentsGenericAnimate.componentsTextInput.componentsGenericInputs.componentsTabs || {}).componentsCheckboxInput = window.componentsCircularSpinner.componentsFileInput.componentsGenericAnimate.componentsTextInput.componentsGenericInputs.componentsTabs.componentsCheckboxInput || {}).componentsSliderInput = window.componentsCircularSpinner.componentsFileInput.componentsGenericAnimate.componentsTextInput.componentsGenericInputs.componentsTabs.componentsCheckboxInput.componentsSliderInput || {}).index = __webpack_exports__;
 /******/ })()
 ;</code></pre>
@@ -177,7 +146,7 @@ const external_rmwcSlider_namespaceObject = window["rmwcSlider"];
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.5</a> on Tue Sep 15 2026 22:41:35 GMT+0200 (Mitteleuropäische Sommerzeit)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.5</a> on Wed Sep 16 2026 19:08:25 GMT+0200 (Mitteleuropäische Sommerzeit)
 </footer>
 
 <script> prettyPrint(); </script>
