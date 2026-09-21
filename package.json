@@ -11,16 +11,16 @@
     "webcomponent",
     "component"
   ],
-  "homepage": "https://torben.website/web-input-material",
+  "homepage": "https://tsickert.com/web-input-material",
   "bugs": {
-    "email": "info@torben.website",
+    "email": "info@tsickert.com",
     "url": "https://github.com/thaibault/web-input-material/issues"
   },
   "license": "CC-BY-3.0",
   "author": {
-    "email": "info@torben.website",
+    "email": "info@tsickert.com",
     "name": "Torben Sickert",
-    "url": "https://torben.website"
+    "url": "https://tsickert.com"
   },
   "repository": {
     "type": "git",
@@ -125,7 +125,7 @@
     "@typescript-eslint/parser": "^8.70.0",
     "@webcomponents/webcomponentsjs": "^2.8.0",
     "blob-util": "^2.0.2",
-    "clientnode": "^4.0.1518",
+    "clientnode": "^4.0.1521",
     "eslint": "^10.10.0",
     "eslint-config-google": "^0.14.0",
     "eslint-plugin-jsdoc": "^64.5.0",
