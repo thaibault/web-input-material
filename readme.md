@@ -1,7 +1,7 @@
 <!-- !/usr/bin/env markdown
 -*- coding: utf-8 -*-
 region header
-Copyright Torben Sickert (info["~at~"]torben.website) 16.12.2012
+Copyright Torben Sickert (info["~at~"]tsickert.com) 16.12.2012
 
 License
 -------
@@ -10,7 +10,8 @@ This library written by Torben Sickert stands under a creative commons naming
 3.0 unported license. See https://creativecommons.org/licenses/by/3.0/deed.de
 endregion -->
 
-Project status
+<!--|deDE:Projektstatus-->
+Project Status
 --------------
 
 [![npm](https://img.shields.io/npm/v/web-input-material?color=%23d55e5d&label=npm%20package%20version&logoColor=%23d55e5d&style=for-the-badge)](https://www.npmjs.com/package/web-input-material)
@@ -26,7 +27,7 @@ Project status
 [![code coverage](https://img.shields.io/coverallsCoverage/github/thaibault/web-input-material?label=code%20coverage&style=for-the-badge)](https://coveralls.io/github/thaibault/web-input-material)
 
 [![deploy web documentation](https://img.shields.io/github/actions/workflow/status/thaibault/web-input-material/deploy-web-documentation.yaml?label=deploy%20web%20documentation&style=for-the-badge)](https://github.com/thaibault/web-input-material/actions/workflows/deploy-web-documentation.yaml)
-[![web documentation](https://img.shields.io/website-up-down-green-red/https/torben.website/web-input-material.svg?label=web-documentation&style=for-the-badge)](https://torben.website/web-input-material)
+[![web documentation](https://img.shields.io/website-up-down-green-red/https/tsickert.com/web-input-material.svg?label=web-documentation&style=for-the-badge)](https://tsickert.com/web-input-material)
 
 <!--|deDE:Einsatzmöglichkeiten-->
 <!--|frFR:Utilisier-->
@@ -70,10 +71,10 @@ zip file here and inject or request via CDN in HTML:
 npm install web-input-material
 ```
 
-<!--|deDE:Verwendung-->
-<!--|frFR:Demande-->
-Usage
------
+<!--|deDE:Beispiel-->
+<!--|frFR:Exemple-->
+Example
+-------
 
 Here you can see a complete initialization example.
 <!--deDE:
