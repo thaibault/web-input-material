@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: CircularSpinner.js</title>
+    <title>JSDoc: Source: SliderInput.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: CircularSpinner.js</h1>
+    <h1 class="page-title">Source: SliderInput.js</h1>
 
     
 
@@ -28,26 +28,37 @@
         <article>
             <pre class="prettyprint source linenums"><code>if(typeof window==='undefined'||window===null)var window=(typeof globalThis==='undefined'||globalThis===null)?{}:globalThis;/******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
-/******/ 	var __webpack_modules__ = ([
-/* 0 */
-/***/ ((module) => {
+/******/ 	var __webpack_modules__ = ({
 
-module.exports = window["webComponentWrapper"];
-
-/***/ }),
-/* 1 */
-/***/ ((module) => {
+/***/ 1
+(module) {
 
 module.exports = window["clientnodePropertyTypes"];
 
-/***/ }),
-/* 2 */
-/***/ ((module) => {
+/***/ },
+
+/***/ 2
+(module) {
 
 module.exports = window["reactInputMaterialComponentsWrapConfigurations"];
 
-/***/ })
-/******/ 	]);
+/***/ },
+
+/***/ 0
+(module) {
+
+module.exports = window["webComponentWrapper"];
+
+/***/ },
+
+/***/ 13
+(module) {
+
+module.exports = window["webComponentWrapperReactWeb"];
+
+/***/ }
+
+/******/ 	});
 /************************************************************************/
 /******/ 	// The module cache
 /******/ 	const __webpack_module_cache__ = {};
@@ -111,8 +122,8 @@ __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  CircularSpinner: () => (/* binding */ CircularSpinner),
-  "default": () => (/* binding */ components_CircularSpinner)
+  SliderInput: () => (/* binding */ SliderInput),
+  "default": () => (/* binding */ components_SliderInput)
 });
 
 // EXTERNAL MODULE: external "clientnodePropertyTypes"
@@ -122,12 +133,14 @@ var external_reactInputMaterialComponentsWrapConfigurations_ = __webpack_require
 // EXTERNAL MODULE: external "webComponentWrapper"
 var external_webComponentWrapper_ = __webpack_require__(0);
 var external_webComponentWrapper_default = /*#__PURE__*/__webpack_require__.n(external_webComponentWrapper_);
-;// external "rmwcCircularProgress"
-const external_rmwcCircularProgress_namespaceObject = window["rmwcCircularProgress"];
-;// ./src/components/CircularSpinner.ts
+// EXTERNAL MODULE: external "webComponentWrapperReactWeb"
+var external_webComponentWrapperReactWeb_ = __webpack_require__(13);
+;// external "rmwcSlider"
+const external_rmwcSlider_namespaceObject = window["rmwcSlider"];
+;// ./src/components/SliderInput.ts
 // #!/usr/bin/env babel-node
 // -*- coding: utf-8 -*-
-/** @module CircularSpinner *//* !
+/** @module Slider *//* !
     region header
     [Project page](https://tsickert.com/react-material-input)
 
@@ -142,7 +155,10 @@ const external_rmwcCircularProgress_namespaceObject = window["rmwcCircularProgre
     endregion
 */// region imports
 // endregion
-const CircularSpinner=external_webComponentWrapper_default()((0,external_reactInputMaterialComponentsWrapConfigurations_.createWrapConfigurationsComponent)(external_rmwcCircularProgress_namespaceObject.CircularProgress,{withReference:false}),"CircularSpinner",{propTypes:{size:(0,external_clientnodePropertyTypes_.oneOfType)([(0,external_clientnodePropertyTypes_.oneOf)(["xsmall","small","medium","large","xlarge"]),external_clientnodePropertyTypes_.number]),theme:external_clientnodePropertyTypes_.string,themeConfiguration:external_clientnodePropertyTypes_.object}});/* harmony default export */ const components_CircularSpinner = (CircularSpinner);
+/*
+    NOTE: Resulting component type is dynamically created from derived wrapped
+    react component.
+*/const SliderInput=external_webComponentWrapper_default()((0,external_reactInputMaterialComponentsWrapConfigurations_.createWrapConfigurationsComponent)(external_rmwcSlider_namespaceObject.Slider),"SliderInput",{eventToPropertyMapping:{onChange:(event,self)=>({...self.externalProperties,value:event.detail.value}),onInput:event=>[{value:event.detail.value},{value:event.detail.value}]},propTypes:{disabled:external_clientnodePropertyTypes_.boolean,discrete:external_clientnodePropertyTypes_.boolean,displayMarkers:external_clientnodePropertyTypes_.boolean,max:external_clientnodePropertyTypes_.number,min:external_clientnodePropertyTypes_.number,step:external_clientnodePropertyTypes_.number,theme:external_clientnodePropertyTypes_.string,themeConfiguration:external_clientnodePropertyTypes_.object,onChange:external_clientnodePropertyTypes_.func,onInput:external_clientnodePropertyTypes_.func,value:external_clientnodePropertyTypes_.number}});/* harmony default export */ const components_SliderInput = (SliderInput);
 ((((((((window.componentsCircularSpinner = window.componentsCircularSpinner || {}).componentsFileInput = window.componentsCircularSpinner.componentsFileInput || {}).componentsGenericAnimate = window.componentsCircularSpinner.componentsFileInput.componentsGenericAnimate || {}).componentsTextInput = window.componentsCircularSpinner.componentsFileInput.componentsGenericAnimate.componentsTextInput || {}).componentsGenericInputs = window.componentsCircularSpinner.componentsFileInput.componentsGenericAnimate.componentsTextInput.componentsGenericInputs || {}).componentsTabs = window.componentsCircularSpinner.componentsFileInput.componentsGenericAnimate.componentsTextInput.componentsGenericInputs.componentsTabs || {}).componentsCheckboxInput = window.componentsCircularSpinner.componentsFileInput.componentsGenericAnimate.componentsTextInput.componentsGenericInputs.componentsTabs.componentsCheckboxInput || {}).componentsSliderInput = window.componentsCircularSpinner.componentsFileInput.componentsGenericAnimate.componentsTextInput.componentsGenericInputs.componentsTabs.componentsCheckboxInput.componentsSliderInput || {}).index = __webpack_exports__;
 /******/ })()
 ;</code></pre>
@@ -161,7 +177,7 @@ const CircularSpinner=external_webComponentWrapper_default()((0,external_reactIn
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.5</a> on Mon Sep 21 2026 17:21:01 GMT+0200 (Mitteleuropäische Sommerzeit)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.5</a> on Mon Oct 26 2026 15:35:49 GMT+0100 (Mitteleuropäische Normalzeit)
 </footer>
 
 <script> prettyPrint(); </script>
