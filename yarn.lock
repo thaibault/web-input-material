@@ -11600,9 +11600,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-input-material@npm:^0.0.853":
-  version: 0.0.853
-  resolution: "react-input-material@npm:0.0.853"
+"react-input-material@npm:^0.0.854":
+  version: 0.0.854
+  resolution: "react-input-material@npm:0.0.854"
   peerDependencies:
     "@babel/preset-react": "*"
     "@codemirror/autocomplete": "*"
@@ -11717,7 +11717,7 @@ __metadata:
       optional: true
     spark-md5:
       optional: true
-  checksum: 10c0/ce58c6cd0e96672899f7e66c9073c410fad1d0d4e8ddf0faa65d263f06911266b78035cc988957f1bf42876b6e935dcc9923343e3d18f4c6dbaf7baf131bc458
+  checksum: 10c0/4a269fcf620f402536108a0cc2412042923959fb54fa46542f9cfd885aa6ba15b505bda091173fe35b3bec78aacb90ee874497b47a087f1197fd1ba7c55bf326
   languageName: node
   linkType: hard
 
@@ -13195,7 +13195,7 @@ __metadata:
     react-generic-animate: "npm:^0.0.141"
     react-generic-dummy: "npm:^0.0.141"
     react-generic-tools: "npm:^0.0.138"
-    react-input-material: "npm:^0.0.853"
+    react-input-material: "npm:^0.0.854"
     react-transition-group: "npm:^4.4.5"
     react-useanimations: "npm:^3.1.1"
     spark-md5: "npm:^3.0.2"
