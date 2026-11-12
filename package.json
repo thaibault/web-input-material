@@ -1,7 +1,7 @@
 {
   "name": "web-input-material",
   "version": "0.0.521",
-  "description": "Reusable material design based input field with support for (richt-)text, code, selections, numbers, dates and so on.",
+  "description": "Reusable material design based input field with support for (rich-)text, code, selections, numbers, dates and so on.",
   "keywords": [
     "form-field",
     "input",
@@ -149,14 +149,6 @@
     "update:documentation": "web-documentation",
     "watch": "weboptimizer build --watch"
   },
-  "dependencies": {
-    "prop-types": "^15.8.1",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-input-material": "^0.0.854",
-    "react-transition-group": "^4.4.5",
-    "web-component-wrapper": "^0.0.620"
-  },
   "devDependencies": {
     "@babel/eslint-parser": "^8.0.7",
     "@babel/plugin-transform-proto-to-assign": "^8.0.1",
@@ -169,13 +161,16 @@
     "@codemirror/lint": "^6.9.7",
     "@codemirror/search": "^6.7.2",
     "@codemirror/state": "^6.7.6",
+    "@codemirror/view": "^6.43.15",
     "@eslint/js": "^10.0.1",
+    "@material/textfield": "^14.0.0",
     "@rmwc/card": "^14.3.5",
     "@rmwc/checkbox": "^14.3.5",
     "@rmwc/circular-progress": "^14.3.5",
     "@rmwc/formfield": "^14.3.5",
     "@rmwc/icon": "^14.3.5",
     "@rmwc/icon-button": "^14.3.5",
+    "@rmwc/menu": "^14.3.5",
     "@rmwc/select": "^14.3.5",
     "@rmwc/slider": "patch:@rmwc/slider@npm%3A14.3.5#~/.yarn/patches/@rmwc-slider-npm-14.3.5-c8fe4ac3a5.patch",
     "@rmwc/tabs": "^14.3.5",
@@ -186,6 +181,7 @@
     "@rmwc/typography": "^14.3.5",
     "@stylistic/eslint-plugin": "^5.10.0",
     "@tiptap/core": "^3.32.2",
+    "@tiptap/extensions": "^3.33.1",
     "@tiptap/react": "^3.32.2",
     "@tiptap/starter-kit": "^3.32.2",
     "@types/ejs": "^3.1.5",
@@ -195,6 +191,7 @@
     "@types/react": "^18.3.31",
     "@types/react-dom": "^18.3.7",
     "@types/react-transition-group": "^4.4.12",
+    "@types/spark-md5": "^3.0.5",
     "@types/webpack-env": "^1.18.8",
     "@typescript-eslint/eslint-plugin": "^8.72.1",
     "@typescript-eslint/parser": "^8.72.1",
@@ -210,21 +207,225 @@
     "jsdoc": "^4.0.5",
     "material-components-web": "^14.0.0",
     "material-icons": "^1.13.14",
+    "prop-types": "^15.8.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "react-generic-animate": "^0.0.141",
     "react-generic-dummy": "^0.0.141",
     "react-generic-tools": "^0.0.138",
+    "react-input-material": "^0.0.854",
+    "react-transition-group": "^4.4.5",
     "react-useanimations": "^3.1.1",
     "spark-md5": "^3.0.2",
     "style-loader": "^4.0.0",
     "tslib": "^2.9.1",
     "typescript-eslint": "^8.72.1",
+    "web-component-wrapper": "^0.0.620",
     "web-documentation": "^1.0.72",
     "weboptimizer": "^4.0.109",
     "webpack-dev-server": "^6.1.0"
   },
   "peerDependencies": {
+    "@babel/preset-react": "*",
+    "@codemirror/autocomplete": "*",
+    "@codemirror/commands": "*",
+    "@codemirror/lang-css": "*",
+    "@codemirror/lang-javascript": "*",
+    "@codemirror/language": "*",
+    "@codemirror/lint": "*",
+    "@codemirror/search": "*",
+    "@codemirror/state": "*",
+    "@codemirror/view": "*",
+    "@material/textfield": "*",
+    "@rmwc/card": "*",
+    "@rmwc/checkbox": "*",
+    "@rmwc/circular-progress": "*",
+    "@rmwc/formfield": "*",
+    "@rmwc/icon": "*",
+    "@rmwc/icon-button": "*",
+    "@rmwc/menu": "*",
+    "@rmwc/select": "*",
+    "@rmwc/slider": "*",
+    "@rmwc/tabs": "*",
+    "@rmwc/textfield": "*",
+    "@rmwc/theme": "*",
+    "@rmwc/tooltip": "*",
+    "@rmwc/touch-target": "*",
+    "@rmwc/typography": "*",
+    "@tiptap/core": "*",
+    "@tiptap/extensions": "*",
+    "@tiptap/react": "*",
+    "@tiptap/starter-kit": "*",
+    "@types/react": "*",
+    "@types/react-dom": "*",
+    "@types/react-transition-group": "*",
+    "@types/spark-md5": "*",
+    "blob-util": "*",
     "clientnode": "*",
-    "core-js": "*"
+    "core-js": "*",
+    "material-components-web": "*",
+    "material-icons": "*",
+    "prop-types": "*",
+    "react": "*",
+    "react-dom": "*",
+    "react-generic-animate": "*",
+    "react-generic-dummy": "*",
+    "react-generic-tools": "*",
+    "react-input-material": "*",
+    "react-transition-group": "*",
+    "react-useanimations": "*",
+    "spark-md5": "*",
+    "tslib": "*",
+    "web-component-wrapper": "*"
+  },
+  "peerDependenciesMeta": {
+    "@babel/preset-react": {
+      "optional": true
+    },
+    "@codemirror/autocomplete": {
+      "optional": true
+    },
+    "@codemirror/commands": {
+      "optional": true
+    },
+    "@codemirror/lang-css": {
+      "optional": true
+    },
+    "@codemirror/lang-javascript": {
+      "optional": true
+    },
+    "@codemirror/language": {
+      "optional": true
+    },
+    "@codemirror/lint": {
+      "optional": true
+    },
+    "@codemirror/search": {
+      "optional": true
+    },
+    "@codemirror/state": {
+      "optional": true
+    },
+    "@codemirror/view": {
+      "optional": true
+    },
+    "@material/textfield": {
+      "optional": true
+    },
+    "@rmwc/card": {
+      "optional": true
+    },
+    "@rmwc/checkbox": {
+      "optional": true
+    },
+    "@rmwc/circular-progress": {
+      "optional": true
+    },
+    "@rmwc/formfield": {
+      "optional": true
+    },
+    "@rmwc/icon": {
+      "optional": true
+    },
+    "@rmwc/icon-button": {
+      "optional": true
+    },
+    "@rmwc/menu": {
+      "optional": true
+    },
+    "@rmwc/select": {
+      "optional": true
+    },
+    "@rmwc/slider": {
+      "optional": true
+    },
+    "@rmwc/tabs": {
+      "optional": true
+    },
+    "@rmwc/textfield": {
+      "optional": true
+    },
+    "@rmwc/theme": {
+      "optional": true
+    },
+    "@rmwc/tooltip": {
+      "optional": true
+    },
+    "@rmwc/touch-target": {
+      "optional": true
+    },
+    "@rmwc/typography": {
+      "optional": true
+    },
+    "@tiptap/core": {
+      "optional": true
+    },
+    "@tiptap/extensions": {
+      "optional": true
+    },
+    "@tiptap/react": {
+      "optional": true
+    },
+    "@tiptap/starter-kit": {
+      "optional": true
+    },
+    "@types/react": {
+      "optional": true
+    },
+    "@types/react-dom": {
+      "optional": true
+    },
+    "@types/react-transition-group": {
+      "optional": true
+    },
+    "@types/spark-md5": {
+      "optional": true
+    },
+    "blob-util": {
+      "optional": true
+    },
+    "clientnode": {
+      "optional": true
+    },
+    "material-components-web": {
+      "optional": true
+    },
+    "material-icons": {
+      "optional": true
+    },
+    "prop-types": {
+      "optional": true
+    },
+    "react": {
+      "optional": true
+    },
+    "react-dom": {
+      "optional": true
+    },
+    "react-generic-animate": {
+      "optional": true
+    },
+    "react-generic-dummy": {
+      "optional": true
+    },
+    "react-generic-tools": {
+      "optional": true
+    },
+    "react-input-material": {
+      "optional": true
+    },
+    "react-transition-group": {
+      "optional": true
+    },
+    "react-useanimations": {
+      "optional": true
+    },
+    "spark-md5": {
+      "optional": true
+    },
+    "web-component-wrapper": {
+      "optional": true
+    }
   },
   "resolutions": {
     "@rmwc/ripple@npm:14.3.5": "patch:@rmwc/ripple@npm%3A14.3.5#~/.yarn/patches/@rmwc-ripple-npm-14.3.5-9657693602.patch",
