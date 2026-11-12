@@ -12,6 +12,7 @@ See https://creativecommons.org/licenses/by/4.0/deed.de
 endregion -->
 
 <!--|deDE:Projektstatus-->
+<!--|frFR:Statut du projet-->
 Project Status
 --------------
 
@@ -31,64 +32,251 @@ Project Status
 [![web documentation](https://img.shields.io/website-up-down-green-red/https/tsickert.com/web-input-material.svg?label=web-documentation&style=for-the-badge)](https://tsickert.com/web-input-material)
 
 <!--|deDE:Einsatzmöglichkeiten-->
-<!--|frFR:Utilisier-->
+<!--|frFR:Cas d'utilisation-->
 Use case
 --------
 
-Reusable material design based input field with support for (richt-)text, code,
-selections, numbers, dates and so on.
+The form inputs of
+[react-input-material](https://tsickert.com/react-input-material) as web
+components. Use them in plain HTML or with any framework, no React knowledge
+needed: text, numbers, dates, selections, code and rich text, checkboxes,
+files, time intervals, lists of inputs, sliders and tabs in Material Design,
+including validation.
 <!--deDE:
-    Ein Eingabefeld im Material Design-Stil, das wiederverwendbar ist und
-    (Recht-)Text, Code, Auswahlen, Zahlen, Datumsangaben usw. unterstützt.
+    Die Formulareingaben von
+    [react-input-material](https://tsickert.com/react-input-material) als Web
+    Components. Verwenden Sie sie in reinem HTML oder mit jedem Framework,
+    ganz ohne React-Kenntnisse: Text, Zahlen, Datumsangaben, Auswahlen, Code
+    und Rich Text, Checkboxen, Dateien, Zeitintervalle, Listen von Eingaben,
+    Schieberegler und Tabs im Material Design, inklusive Validierung.
 -->
 <!--frFR:
-    Champ de saisie réutilisable, basé sur le design Material, prenant en
-    charge le texte (avec mise en forme), le code, les sélections, les nombres,
-    les dates, etc.
+    Les champs de formulaire de
+    [react-input-material](https://tsickert.com/react-input-material) sous
+    forme de web components. Utilisez-les en HTML pur ou avec n'importe quel
+    framework, sans connaître React: texte, nombres, dates, sélections, code
+    et texte enrichi, cases à cocher, fichiers, intervalles de temps, listes
+    de champs, curseurs et onglets en Material Design, validation comprise.
 -->
+
+Components included:
+<!--deDE:Enthaltene Komponenten:-->
+<!--frFR:Composants inclus:-->
+
+- "text-input": Text, numbers, dates, selections, code and rich text.<!--deDE:"text-input": Text, Zahlen, Datumsangaben, Auswahlen, Code und Rich Text.--><!--frFR:"text-input": Texte, nombres, dates, sélections, code et texte enrichi.-->
+- "checkbox-input", "file-input", "interval-input" and "slider-input".<!--deDE:"checkbox-input", "file-input", "interval-input" und "slider-input".--><!--frFR:"checkbox-input", "file-input", "interval-input" et "slider-input".-->
+- "generic-inputs": Dynamic lists of any of the inputs above.<!--deDE:"generic-inputs": Dynamische Listen beliebiger der obigen Eingaben.--><!--frFR:"generic-inputs": Listes dynamiques de n'importe lequel des champs ci-dessus.-->
+- "tab-bar" with "tab-item", "circular-spinner" and "generic-animate".<!--deDE:"tab-bar" mit "tab-item", "circular-spinner" und "generic-animate".--><!--frFR:"tab-bar" avec "tab-item", "circular-spinner" et "generic-animate".-->
 
 <div class="wd-table-of-contents">
     <h2 id="content">Content<!--deDE:Inhalt--><!--frFR:Contenu--></h2>
     <!--wd-table-of-contents-->
 </div>
 
-Installation
-------------
+<!--|deDE:Schnellstart-->
+<!--|frFR:Démarrage rapide-->
+Quick start
+-----------
 
-You can install via package manager, simply download the compiled version as
-zip file here and inject or request via CDN in HTML:
+Load the styles and the bundle, which contains all dependencies including
+React, and register the components:
 <!--deDE:
-    Sie können das Paket über den Paketmanager installieren oder einfach die
-    kompilierte Version als ZIP-Datei hier herunterladen und in HTML einbinden
-    oder über ein CDN abrufen:
+    Laden Sie die Styles und das Bundle, das alle Abhängigkeiten
+    einschließlich React enthält, und registrieren Sie die Komponenten:
 -->
 <!--frFR:
-    Vous pouvez installer le paquet via le gestionnaire de paquets ou
-    simplement télécharger ici la version compilée sous forme de fichier ZIP,
-    puis l'intégrer dans une page HTML ou la récupérer via un CDN:
+    Chargez les styles et le bundle, qui contient toutes les dépendances y
+    compris React, puis enregistrez les composants:
 -->
+
+```HTML
+<link
+    href="https://unpkg.com/material-icons@1/iconfont/material-icons.css"
+    rel="stylesheet"
+/>
+<link
+    href="https://unpkg.com/react-input-material@latest/dist/index.css"
+    rel="stylesheet"
+/>
+<script type="module">
+    import {
+        register
+    } from 'https://unpkg.com/web-input-material@latest/dist/bundle/index.js'
+
+    register()
+</script>
+
+<text-input
+    declaration="Amount"
+    maximum="200000"
+    minimum="10"
+    name="amount"
+    required
+    type="number"
+></text-input>
+<checkbox-input description="I agree" name="accepted" required>
+</checkbox-input>
+```
+
+"dist/bundle/minimal/index.js" is a much smaller variant without code and
+rich text editor, tooltips and animated icons.
+<!--deDE:
+    "dist/bundle/minimal/index.js" ist eine deutlich kleinere Variante ohne
+    Code- und Rich-Text-Editor, Tooltips und animierte Icons.
+-->
+<!--frFR:
+    "dist/bundle/minimal/index.js" est une variante nettement plus légère,
+    sans éditeur de code ni de texte enrichi, sans infobulles ni icônes
+    animées.
+-->
+
+<!--|deDE:Mit einem Paketmanager-->
+<!--|frFR:Avec un gestionnaire de paquets-->
+### With a package manager
 
 ```bash
 npm install web-input-material
 ```
 
-<!--|deDE:Beispiel-->
-<!--|frFR:Exemple-->
-Example
--------
-
-Here you can see a complete initialization example.
+The default entry point expects React and react-input-material with its
+dependencies to be installed as well, see
+[react-input-material](https://tsickert.com/react-input-material). Register
+all components or only the ones you need:
 <!--deDE:
-    Hier können Sie ein Komplettbeispiel der Initialisierung sehen.
+    Der Standardeinstiegspunkt setzt voraus, dass auch React und
+    react-input-material samt Abhängigkeiten installiert sind, siehe
+    [react-input-material](https://tsickert.com/react-input-material).
+    Registrieren Sie alle Komponenten oder nur die benötigten:
 -->
 <!--frFR:
-    Ici vous pouvez voir un exemple complet d'initialisation.
+    Le point d'entrée par défaut suppose que React et react-input-material
+    avec ses dépendances sont également installés, voir
+    [react-input-material](https://tsickert.com/react-input-material).
+    Enregistrez tous les composants ou seulement ceux dont vous avez besoin:
 -->
 
 ```JavaScript
-import {
-    api
-} from 'https://unpkg.com/web-input-material@latest/dist/bundle/index.js'
+import {register, TextInput} from 'web-input-material'
 
-api.register()
+// All components:
+register()
+// Or only one:
+TextInput.register()
 ```
+
+<!--|deDE:Verwendung-->
+<!--|frFR:Utilisation-->
+Usage
+-----
+
+<!--|deDE:Attribute-->
+<!--|frFR:Attributs-->
+### Attributes
+
+Each component accepts the properties of its React counterpart as attributes
+in kebab case, e.g. "initialValue" becomes "initial-value". Text properties
+take the attribute value as it is. All other attribute values are evaluated
+as JavaScript expressions, so strings inside them need quotes. Boolean
+properties are set by the presence of the attribute:
+<!--deDE:
+    Jede Komponente akzeptiert die Eigenschaften ihres React-Gegenstücks als
+    Attribute in Kebab-Schreibweise, z. B. wird "initialValue" zu
+    "initial-value". Texteigenschaften übernehmen den Attributwert
+    unverändert. Alle anderen Attributwerte werden als JavaScript-Ausdrücke
+    ausgewertet, Zeichenketten darin benötigen also Anführungszeichen.
+    Boolesche Eigenschaften werden durch das Vorhandensein des Attributs
+    gesetzt:
+-->
+<!--frFR:
+    Chaque composant accepte les propriétés de son équivalent React sous
+    forme d'attributs en kebab case, par exemple "initialValue" devient
+    "initial-value". Les propriétés textuelles reprennent la valeur de
+    l'attribut telle quelle. Toutes les autres valeurs d'attribut sont
+    évaluées comme des expressions JavaScript, les chaînes qu'elles
+    contiennent nécessitent donc des guillemets. Les propriétés booléennes
+    sont activées par la seule présence de l'attribut:
+-->
+
+```HTML
+<text-input
+    declaration="Choice"
+    initial-value="'B'"
+    name="choice"
+    required
+    selection="['A', 'B', 'C']"
+></text-input>
+
+<text-input
+    editor="richtext"
+    name="message"
+    rows="6"
+    theme-configuration="{primary: '#d55e5d'}"
+></text-input>
+```
+
+All options are described in
+[react-input-material](https://tsickert.com/react-input-material).
+<!--deDE:
+    Alle Optionen sind bei
+    [react-input-material](https://tsickert.com/react-input-material)
+    beschrieben.
+-->
+<!--frFR:
+    Toutes les options sont décrites dans
+    [react-input-material](https://tsickert.com/react-input-material).
+-->
+
+<!--|deDE:Werte und Ereignisse-->
+<!--|frFR:Valeurs et événements-->
+### Values and events
+
+Read and write the current state via DOM properties like "value",
+"invalid" or "dirty". Validation states are also reflected as attributes, so
+you can style them with CSS, e.g. "text-input[invalid]". Changes are
+announced via a "change" event:
+<!--deDE:
+    Lesen und schreiben Sie den aktuellen Zustand über DOM-Eigenschaften wie
+    "value", "invalid" oder "dirty". Validierungszustände werden zusätzlich
+    als Attribute gespiegelt, sodass Sie sie per CSS gestalten können, z. B.
+    "text-input[invalid]". Änderungen werden über ein "change"-Ereignis
+    gemeldet:
+-->
+<!--frFR:
+    Lisez et modifiez l'état courant via des propriétés DOM comme "value",
+    "invalid" ou "dirty". Les états de validation sont également reflétés
+    sous forme d'attributs, ce qui permet de les styliser en CSS, par exemple
+    "text-input[invalid]". Les modifications sont signalées par un événement
+    "change":
+-->
+
+```JavaScript
+const input = document.querySelector('text-input[name="amount"]')
+
+input.addEventListener('change', (event) => {
+    if (event.target === input)
+        console.log('New value', input.value, 'invalid', input.invalid)
+})
+
+input.value = 100
+```
+
+<!--|deDE:Entwicklung-->
+<!--|frFR:Développement-->
+Development
+-----------
+
+```bash
+yarn install
+yarn start
+yarn test
+```
+
+"yarn start" serves a playground with examples of all components.
+<!--deDE:
+    "yarn start" stellt eine Spielwiese mit Beispielen aller Komponenten
+    bereit.
+-->
+<!--frFR:
+    "yarn start" sert un terrain de jeu avec des exemples de tous les
+    composants.
+-->
