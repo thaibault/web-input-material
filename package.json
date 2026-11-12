@@ -126,6 +126,7 @@
     "@webcomponents/webcomponentsjs": "^2.8.0",
     "blob-util": "^2.0.2",
     "clientnode": "^4.0.1530",
+    "core-js": "^3.51.0",
     "eslint": "^10.14.0",
     "eslint-config-google": "^0.14.0",
     "eslint-plugin-jsdoc": "^65.4.2",
@@ -147,7 +148,8 @@
     "webpack-dev-server": "^6.1.0"
   },
   "peerDependencies": {
-    "clientnode": "*"
+    "clientnode": "*",
+    "core-js": "*"
   },
   "resolutions": {
     "@rmwc/ripple@npm:14.3.5": "patch:@rmwc/ripple@npm%3A14.3.5#~/.yarn/patches/@rmwc-ripple-npm-14.3.5-9657693602.patch",
