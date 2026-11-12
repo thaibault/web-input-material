@@ -138,20 +138,37 @@ rich text editor, tooltips and animated icons.
 npm install web-input-material
 ```
 
-The default entry point expects React and react-input-material with its
-dependencies to be installed as well, see
-[react-input-material](https://tsickert.com/react-input-material). Register
-all components or only the ones you need:
+All libraries web-input-material builds on are optional peer dependencies,
+since the bundle variants below already contain them. The default entry point
+expects them to be installed, including react-input-material's own
+dependencies, see
+[react-input-material](https://tsickert.com/react-input-material):
 <!--deDE:
-    Der Standardeinstiegspunkt setzt voraus, dass auch React und
-    react-input-material samt Abhängigkeiten installiert sind, siehe
-    [react-input-material](https://tsickert.com/react-input-material).
-    Registrieren Sie alle Komponenten oder nur die benötigten:
+    Alle Bibliotheken, auf denen web-input-material aufbaut, sind optionale
+    Peer-Abhängigkeiten, da die unten beschriebenen Bundle-Varianten sie
+    bereits enthalten. Der Standardeinstiegspunkt setzt voraus, dass sie
+    installiert sind, einschließlich der Abhängigkeiten von
+    react-input-material, siehe
+    [react-input-material](https://tsickert.com/react-input-material):
 -->
 <!--frFR:
-    Le point d'entrée par défaut suppose que React et react-input-material
-    avec ses dépendances sont également installés, voir
-    [react-input-material](https://tsickert.com/react-input-material).
+    Toutes les bibliothèques sur lesquelles repose web-input-material sont
+    des dépendances « peer » optionnelles, car les variantes bundle décrites
+    ci-dessous les contiennent déjà. Le point d'entrée par défaut suppose
+    qu'elles sont installées, y compris les dépendances de
+    react-input-material, voir
+    [react-input-material](https://tsickert.com/react-input-material):
+-->
+
+```bash
+npm install \
+    @rmwc/slider @rmwc/tabs clientnode core-js prop-types react react-dom \
+    react-input-material react-transition-group web-component-wrapper
+```
+
+Register all components or only the ones you need:
+<!--deDE:Registrieren Sie alle Komponenten oder nur die benötigten:-->
+<!--frFR:
     Enregistrez tous les composants ou seulement ceux dont vous avez besoin:
 -->
 

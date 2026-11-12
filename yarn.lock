@@ -1978,6 +1978,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@codemirror/view@npm:^6.43.15":
+  version: 6.43.15
+  resolution: "@codemirror/view@npm:6.43.15"
+  dependencies:
+    "@codemirror/state": "npm:^6.7.0"
+    crelt: "npm:^1.0.6"
+    style-mod: "npm:^4.1.0"
+    w3c-keyname: "npm:^2.2.4"
+  checksum: 10c0/314cb8a46634b522c706757fbb0b673d468eecf5ab5fe9d5c7e586a2a20c6deb2a2f61c0813cf9153dc3cc4ff7607a399c22fef6162d9656e674f5f18a127065
+  languageName: node
+  linkType: hard
+
 "@csstools/color-helpers@npm:^5.1.0":
   version: 5.1.0
   resolution: "@csstools/color-helpers@npm:5.1.0"
@@ -4277,7 +4289,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rmwc/menu@npm:14.3.5":
+"@rmwc/menu@npm:14.3.5, @rmwc/menu@npm:^14.3.5":
   version: 14.3.5
   resolution: "@rmwc/menu@npm:14.3.5"
   dependencies:
@@ -4801,6 +4813,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@tiptap/extensions@npm:^3.33.1":
+  version: 3.33.1
+  resolution: "@tiptap/extensions@npm:3.33.1"
+  peerDependencies:
+    "@tiptap/core": 3.33.1
+    "@tiptap/pm": 3.33.1
+  checksum: 10c0/6d6084ef2b00c20c14ca899daaa608f75325b3f215a1587603626550ec22a2f9e10596789beb71ca2847b875d1311b1f114f6ca0251d65535bb19ee2c3081bb2
+  languageName: node
+  linkType: hard
+
 "@tiptap/pm@npm:3.32.2":
   version: 3.32.2
   resolution: "@tiptap/pm@npm:3.32.2"
@@ -5254,6 +5276,13 @@ __metadata:
     "@types/http-errors": "npm:*"
     "@types/node": "npm:*"
   checksum: 10c0/a3c6126bdbf9685e6c7dc03ad34639666eff32754e912adeed9643bf3dd3aa0ff043002a7f69039306e310d233eb8e160c59308f95b0a619f32366bbc48ee094
+  languageName: node
+  linkType: hard
+
+"@types/spark-md5@npm:^3.0.5":
+  version: 3.0.5
+  resolution: "@types/spark-md5@npm:3.0.5"
+  checksum: 10c0/501b6aa80fc6d8504fb0ad961c28b2f99d7fc3d7769059f113b4060334623b6c8da7f21dac984211d7d819ac7170ee3ce47dba682453b6baff79052fe382d810
   languageName: node
   linkType: hard
 
@@ -13377,13 +13406,16 @@ __metadata:
     "@codemirror/lint": "npm:^6.9.7"
     "@codemirror/search": "npm:^6.7.2"
     "@codemirror/state": "npm:^6.7.6"
+    "@codemirror/view": "npm:^6.43.15"
     "@eslint/js": "npm:^10.0.1"
+    "@material/textfield": "npm:^14.0.0"
     "@rmwc/card": "npm:^14.3.5"
     "@rmwc/checkbox": "npm:^14.3.5"
     "@rmwc/circular-progress": "npm:^14.3.5"
     "@rmwc/formfield": "npm:^14.3.5"
     "@rmwc/icon": "npm:^14.3.5"
     "@rmwc/icon-button": "npm:^14.3.5"
+    "@rmwc/menu": "npm:^14.3.5"
     "@rmwc/select": "npm:^14.3.5"
     "@rmwc/slider": "patch:@rmwc/slider@npm%3A14.3.5#~/.yarn/patches/@rmwc-slider-npm-14.3.5-c8fe4ac3a5.patch"
     "@rmwc/tabs": "npm:^14.3.5"
@@ -13394,6 +13426,7 @@ __metadata:
     "@rmwc/typography": "npm:^14.3.5"
     "@stylistic/eslint-plugin": "npm:^5.10.0"
     "@tiptap/core": "npm:^3.32.2"
+    "@tiptap/extensions": "npm:^3.33.1"
     "@tiptap/react": "npm:^3.32.2"
     "@tiptap/starter-kit": "npm:^3.32.2"
     "@types/ejs": "npm:^3.1.5"
@@ -13403,6 +13436,7 @@ __metadata:
     "@types/react": "npm:^18.3.31"
     "@types/react-dom": "npm:^18.3.7"
     "@types/react-transition-group": "npm:^4.4.12"
+    "@types/spark-md5": "npm:^3.0.5"
     "@types/webpack-env": "npm:^1.18.8"
     "@typescript-eslint/eslint-plugin": "npm:^8.72.1"
     "@typescript-eslint/parser": "npm:^8.72.1"
@@ -13436,8 +13470,156 @@ __metadata:
     weboptimizer: "npm:^4.0.109"
     webpack-dev-server: "npm:^6.1.0"
   peerDependencies:
+    "@babel/preset-react": "*"
+    "@codemirror/autocomplete": "*"
+    "@codemirror/commands": "*"
+    "@codemirror/lang-css": "*"
+    "@codemirror/lang-javascript": "*"
+    "@codemirror/language": "*"
+    "@codemirror/lint": "*"
+    "@codemirror/search": "*"
+    "@codemirror/state": "*"
+    "@codemirror/view": "*"
+    "@material/textfield": "*"
+    "@rmwc/card": "*"
+    "@rmwc/checkbox": "*"
+    "@rmwc/circular-progress": "*"
+    "@rmwc/formfield": "*"
+    "@rmwc/icon": "*"
+    "@rmwc/icon-button": "*"
+    "@rmwc/menu": "*"
+    "@rmwc/select": "*"
+    "@rmwc/slider": "*"
+    "@rmwc/tabs": "*"
+    "@rmwc/textfield": "*"
+    "@rmwc/theme": "*"
+    "@rmwc/tooltip": "*"
+    "@rmwc/touch-target": "*"
+    "@rmwc/typography": "*"
+    "@tiptap/core": "*"
+    "@tiptap/extensions": "*"
+    "@tiptap/react": "*"
+    "@tiptap/starter-kit": "*"
+    "@types/react": "*"
+    "@types/react-dom": "*"
+    "@types/react-transition-group": "*"
+    "@types/spark-md5": "*"
+    blob-util: "*"
     clientnode: "*"
     core-js: "*"
+    material-components-web: "*"
+    material-icons: "*"
+    prop-types: "*"
+    react: "*"
+    react-dom: "*"
+    react-generic-animate: "*"
+    react-generic-dummy: "*"
+    react-generic-tools: "*"
+    react-input-material: "*"
+    react-transition-group: "*"
+    react-useanimations: "*"
+    spark-md5: "*"
+    tslib: "*"
+    web-component-wrapper: "*"
+  peerDependenciesMeta:
+    "@babel/preset-react":
+      optional: true
+    "@codemirror/autocomplete":
+      optional: true
+    "@codemirror/commands":
+      optional: true
+    "@codemirror/lang-css":
+      optional: true
+    "@codemirror/lang-javascript":
+      optional: true
+    "@codemirror/language":
+      optional: true
+    "@codemirror/lint":
+      optional: true
+    "@codemirror/search":
+      optional: true
+    "@codemirror/state":
+      optional: true
+    "@codemirror/view":
+      optional: true
+    "@material/textfield":
+      optional: true
+    "@rmwc/card":
+      optional: true
+    "@rmwc/checkbox":
+      optional: true
+    "@rmwc/circular-progress":
+      optional: true
+    "@rmwc/formfield":
+      optional: true
+    "@rmwc/icon":
+      optional: true
+    "@rmwc/icon-button":
+      optional: true
+    "@rmwc/menu":
+      optional: true
+    "@rmwc/select":
+      optional: true
+    "@rmwc/slider":
+      optional: true
+    "@rmwc/tabs":
+      optional: true
+    "@rmwc/textfield":
+      optional: true
+    "@rmwc/theme":
+      optional: true
+    "@rmwc/tooltip":
+      optional: true
+    "@rmwc/touch-target":
+      optional: true
+    "@rmwc/typography":
+      optional: true
+    "@tiptap/core":
+      optional: true
+    "@tiptap/extensions":
+      optional: true
+    "@tiptap/react":
+      optional: true
+    "@tiptap/starter-kit":
+      optional: true
+    "@types/react":
+      optional: true
+    "@types/react-dom":
+      optional: true
+    "@types/react-transition-group":
+      optional: true
+    "@types/spark-md5":
+      optional: true
+    blob-util:
+      optional: true
+    clientnode:
+      optional: true
+    material-components-web:
+      optional: true
+    material-icons:
+      optional: true
+    prop-types:
+      optional: true
+    react:
+      optional: true
+    react-dom:
+      optional: true
+    react-generic-animate:
+      optional: true
+    react-generic-dummy:
+      optional: true
+    react-generic-tools:
+      optional: true
+    react-input-material:
+      optional: true
+    react-transition-group:
+      optional: true
+    react-useanimations:
+      optional: true
+    spark-md5:
+      optional: true
+    web-component-wrapper:
+      optional: true
   languageName: unknown
   linkType: soft
 
