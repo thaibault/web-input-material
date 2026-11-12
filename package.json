@@ -1,6 +1,6 @@
 {
   "name": "web-input-material",
-  "version": "0.0.521",
+  "version": "0.0.522",
   "description": "Reusable material design based input field with support for (rich-)text, code, selections, numbers, dates and so on.",
   "keywords": [
     "form-field",
