@@ -34,10 +34,85 @@
     "./components/FileInput": "./dist/components/FileInput.js",
     "./components/GenericAnimate": "./dist/components/GenericAnimate.js",
     "./components/GenericInputs": "./dist/components/GenericInputs.js",
+    "./components/IntervalInput": "./dist/components/IntervalInput.js",
     "./components/SliderInput": "./dist/components/SliderInput.js",
     "./components/Tabs": "./dist/components/Tabs.js",
     "./components/TextInput": "./dist/components/TextInput.js",
-    "./type": "./dist/type.d.ts"
+    "./type": "./dist/type.d.ts",
+    "./bundle": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/bundle/index.js"
+    },
+    "./bundle/components/CheckboxInput": {
+      "types": "./dist/components/CheckboxInput.d.ts",
+      "default": "./dist/bundle/components/CheckboxInput.js"
+    },
+    "./bundle/components/CircularSpinner": {
+      "types": "./dist/components/CircularSpinner.d.ts",
+      "default": "./dist/bundle/components/CircularSpinner.js"
+    },
+    "./bundle/components/FileInput": {
+      "types": "./dist/components/FileInput.d.ts",
+      "default": "./dist/bundle/components/FileInput.js"
+    },
+    "./bundle/components/GenericAnimate": {
+      "types": "./dist/components/GenericAnimate.d.ts",
+      "default": "./dist/bundle/components/GenericAnimate.js"
+    },
+    "./bundle/components/GenericInputs": {
+      "types": "./dist/components/GenericInputs.d.ts",
+      "default": "./dist/bundle/components/GenericInputs.js"
+    },
+    "./bundle/components/IntervalInput": {
+      "types": "./dist/components/IntervalInput.d.ts",
+      "default": "./dist/bundle/components/IntervalInput.js"
+    },
+    "./bundle/components/SliderInput": {
+      "types": "./dist/components/SliderInput.d.ts",
+      "default": "./dist/bundle/components/SliderInput.js"
+    },
+    "./bundle/components/Tabs": "./dist/bundle/components/Tabs.js",
+    "./bundle/components/TextInput": {
+      "types": "./dist/components/TextInput.d.ts",
+      "default": "./dist/bundle/components/TextInput.js"
+    },
+    "./bundle/minimal": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/bundle/minimal/index.js"
+    },
+    "./bundle/minimal/components/CheckboxInput": {
+      "types": "./dist/components/CheckboxInput.d.ts",
+      "default": "./dist/bundle/minimal/components/CheckboxInput.js"
+    },
+    "./bundle/minimal/components/CircularSpinner": {
+      "types": "./dist/components/CircularSpinner.d.ts",
+      "default": "./dist/bundle/minimal/components/CircularSpinner.js"
+    },
+    "./bundle/minimal/components/FileInput": {
+      "types": "./dist/components/FileInput.d.ts",
+      "default": "./dist/bundle/minimal/components/FileInput.js"
+    },
+    "./bundle/minimal/components/GenericAnimate": {
+      "types": "./dist/components/GenericAnimate.d.ts",
+      "default": "./dist/bundle/minimal/components/GenericAnimate.js"
+    },
+    "./bundle/minimal/components/GenericInputs": {
+      "types": "./dist/components/GenericInputs.d.ts",
+      "default": "./dist/bundle/minimal/components/GenericInputs.js"
+    },
+    "./bundle/minimal/components/IntervalInput": {
+      "types": "./dist/components/IntervalInput.d.ts",
+      "default": "./dist/bundle/minimal/components/IntervalInput.js"
+    },
+    "./bundle/minimal/components/SliderInput": {
+      "types": "./dist/components/SliderInput.d.ts",
+      "default": "./dist/bundle/minimal/components/SliderInput.js"
+    },
+    "./bundle/minimal/components/Tabs": "./dist/bundle/minimal/components/Tabs.js",
+    "./bundle/minimal/components/TextInput": {
+      "types": "./dist/components/TextInput.d.ts",
+      "default": "./dist/bundle/minimal/components/TextInput.js"
+    }
   },
   "main": "dist/index.js",
   "typesVersions": {
@@ -203,6 +278,7 @@
         "./components/GenericAnimate": "./components/GenericAnimate",
         "./components/TextInput": "./components/TextInput",
         "./components/GenericInputs": "./components/GenericInputs",
+        "./components/IntervalInput": "./components/IntervalInput",
         "./components/Tabs": [
           "./components/TabItem",
           "./components/TabBar"

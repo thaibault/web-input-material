@@ -164,6 +164,26 @@ register()
 TextInput.register()
 ```
 
+To avoid installing anything else, import "web-input-material/bundle" or
+the smaller "web-input-material/bundle/minimal" instead, they contain all
+dependencies including React. Single components are available the same way,
+e.g. "web-input-material/bundle/components/IntervalInput".
+<!--deDE:
+    Um nichts weiter installieren zu müssen, importieren Sie stattdessen
+    "web-input-material/bundle" oder das kleinere
+    "web-input-material/bundle/minimal", sie enthalten alle Abhängigkeiten
+    einschließlich React. Einzelne Komponenten gibt es genauso, z. B.
+    "web-input-material/bundle/components/IntervalInput".
+-->
+<!--frFR:
+    Pour ne rien installer d'autre, importez plutôt
+    "web-input-material/bundle" ou la variante plus légère
+    "web-input-material/bundle/minimal", elles contiennent toutes les
+    dépendances y compris React. Les composants individuels sont disponibles
+    de la même manière, par exemple
+    "web-input-material/bundle/components/IntervalInput".
+-->
+
 <!--|deDE:Verwendung-->
 <!--|frFR:Utilisation-->
 Usage
