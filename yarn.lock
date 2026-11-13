@@ -122,9 +122,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/eslint-parser@npm:^8.0.7":
-  version: 8.0.7
-  resolution: "@babel/eslint-parser@npm:8.0.7"
+"@babel/eslint-parser@npm:^8.1.2":
+  version: 8.1.2
+  resolution: "@babel/eslint-parser@npm:8.1.2"
   dependencies:
     eslint-scope: "npm:^9.1.0"
     eslint-visitor-keys: "npm:^5.0.0"
@@ -132,7 +132,7 @@ __metadata:
   peerDependencies:
     "@babel/core": ^8.0.0
     eslint: ^9.0.0 || ^10.0.0
-  checksum: 10c0/32bbbe68c6df9e4f1b02314709a12d27e20b3cdd9fffcb7775b897d93480f9809761aa2a36803eeec09e245ebe23b129b65104acc0780ffba9b629b085ab272a
+  checksum: 10c0/877806a78819021a6d957a17b2fce04f571e504f881f320d0c648b138dfdc4c7ad1b83e506aaae4f0c0d06e251f2e39634ce3ee0dfea7dd03a4ad43dea4bd12c
   languageName: node
   linkType: hard
 
@@ -11712,15 +11712,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-generic-tools@npm:^0.0.139":
-  version: 0.0.139
-  resolution: "react-generic-tools@npm:0.0.139"
+"react-generic-tools@npm:^0.0.140":
+  version: 0.0.140
+  resolution: "react-generic-tools@npm:0.0.140"
   peerDependencies:
     "@babel/preset-react": "*"
-    "@types/prop-types": "*"
     "@types/react": "*"
     "@types/react-dom": "*"
     clientnode: "*"
+    core-js: "*"
     react: "*"
     react-dom: "*"
     tslib: "*"
@@ -11737,7 +11737,7 @@ __metadata:
       optional: true
     react-dom:
       optional: true
-  checksum: 10c0/33bfc58d62808f8a2a2b9591b5c59b108ebddcfa3fd4aa43b33dd83cbd393e8b413468f707b0dd9a65bdf35d90d7337b265906b5c8b1e044eda177a31d1bcb7e
+  checksum: 10c0/031b9de95788324302c487a9aa6b1bd4d588b72617e552befd0330e3cc4c6368c31220309b0a463aa47d386e5b27a60c3517516ce3c44530336a253ff6f9f1d6
   languageName: node
   linkType: hard
 
@@ -13290,9 +13290,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"web-component-wrapper@npm:^0.0.622":
-  version: 0.0.622
-  resolution: "web-component-wrapper@npm:0.0.622"
+"web-component-wrapper@npm:^0.0.623":
+  version: 0.0.623
+  resolution: "web-component-wrapper@npm:0.0.623"
   peerDependencies:
     "@types/react": "*"
     "@types/react-dom": "*"
@@ -13309,7 +13309,7 @@ __metadata:
       optional: true
     react-dom:
       optional: true
-  checksum: 10c0/9351a6f033808966f5842bb6d89a3fb71e87f5a669382ec6c5615f6481935fe5738e95469d136c911144ca4f7f3b63e2cf970c90dcbc5340453b4a5630711777
+  checksum: 10c0/00d0dc9a53023bba1d5f2df1e2c89fa418469308bd1ccef011b9567345256c8b4e442b33de30b1ed122fe80bcab66b3258ba3552892e36969c24dcbdbb2df330
   languageName: node
   linkType: hard
 
@@ -13326,7 +13326,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "web-input-material@workspace:."
   dependencies:
-    "@babel/eslint-parser": "npm:^8.0.7"
+    "@babel/eslint-parser": "npm:^8.1.2"
     "@babel/plugin-transform-proto-to-assign": "npm:^8.0.1"
     "@babel/preset-react": "npm:^8.0.1"
     "@codemirror/autocomplete": "npm:^6.20.4"
@@ -13388,7 +13388,7 @@ __metadata:
     react-dom: "npm:^18.3.1"
     react-generic-animate: "npm:^0.0.142"
     react-generic-dummy: "npm:^0.0.142"
-    react-generic-tools: "npm:^0.0.139"
+    react-generic-tools: "npm:^0.0.140"
     react-input-material: "npm:^0.0.858"
     react-transition-group: "npm:^4.4.5"
     react-useanimations: "npm:^3.1.1"
@@ -13396,7 +13396,7 @@ __metadata:
     style-loader: "npm:^4.0.0"
     tslib: "npm:^2.9.1"
     typescript-eslint: "npm:^8.72.2"
-    web-component-wrapper: "npm:^0.0.622"
+    web-component-wrapper: "npm:^0.0.623"
     web-documentation: "npm:^1.0.74"
     weboptimizer: "npm:^4.0.114"
     webpack-dev-server: "npm:^6.1.0"
