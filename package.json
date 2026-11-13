@@ -123,7 +123,8 @@
     }
   },
   "files": [
-    "dist"
+    "dist",
+    "!dist/test"
   ],
   "sideEffects": false,
   "scripts": {
