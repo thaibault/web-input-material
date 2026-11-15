@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Home</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Home</h1>
+
+    
+
+
+
+    
+
+
+    <h3>web-input-material 0.0.524</h3>
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+    <section>
+        <article><!-- !/usr/bin/env markdown
+-*- coding: utf-8 -*-
+region header
+Copyright Torben Sickert (info["~at~"]tsickert.com) 16.12.2012
+
+License
+-------
+
+This library written by Torben Sickert stands under a creative commons naming
+4.0 international license.
+See https://creativecommons.org/licenses/by/4.0/deed.de
+endregion -->
+<!--|deDE:Projektstatus-->
+<!--|frFR:Statut du projet-->
+<h2>Project Status</h2>
+<p><a href="https://www.npmjs.com/package/web-input-material"><img src="https://img.shields.io/npm/v/web-input-material?color=%23d55e5d&amp;label=npm%20package%20version&amp;logoColor=%23d55e5d&amp;style=for-the-badge" alt="npm"></a>
+<a href="https://www.npmjs.com/package/web-input-material"><img src="https://img.shields.io/npm/dy/web-input-material.svg?style=for-the-badge" alt="npm downloads"></a></p>
+<p><a href="https://github.com/thaibault/web-input-material/actions/workflows/build.yaml"><img src="https://img.shields.io/github/actions/workflow/status/thaibault/web-input-material/build.yaml?style=for-the-badge" alt="build"></a>
+<a href="https://github.com/thaibault/web-input-material/actions/workflows/build-package-and-push.yaml"><img src="https://img.shields.io/github/actions/workflow/status/thaibault/web-input-material/build-package-and-push.yaml?label=build%20push%20package&amp;style=for-the-badge" alt="build push package"></a></p>
+<p><a href="https://github.com/thaibault/web-input-material/actions/workflows/check-types.yaml"><img src="https://img.shields.io/github/actions/workflow/status/thaibault/web-input-material/check-types.yaml?label=check%20types&amp;style=for-the-badge" alt="check types"></a>
+<a href="https://github.com/thaibault/web-input-material/actions/workflows/lint.yaml"><img src="https://img.shields.io/github/actions/workflow/status/thaibault/web-input-material/lint.yaml?label=lint&amp;style=for-the-badge" alt="lint"></a>
+<a href="https://github.com/thaibault/web-input-material/actions/workflows/test-coverage-report.yaml"><img src="https://img.shields.io/github/actions/workflow/status/thaibault/web-input-material/test-coverage-report.yaml?label=test&amp;style=for-the-badge" alt="test"></a></p>
+<p><a href="https://coveralls.io/github/thaibault/web-input-material"><img src="https://img.shields.io/coverallsCoverage/github/thaibault/web-input-material?label=code%20coverage&amp;style=for-the-badge" alt="code coverage"></a></p>
+<p><a href="https://github.com/thaibault/web-input-material/actions/workflows/deploy-web-documentation.yaml"><img src="https://img.shields.io/github/actions/workflow/status/thaibault/web-input-material/deploy-web-documentation.yaml?label=deploy%20web%20documentation&amp;style=for-the-badge" alt="deploy web documentation"></a>
+<a href="https://tsickert.com/web-input-material"><img src="https://img.shields.io/website-up-down-green-red/https/tsickert.com/web-input-material.svg?label=web-documentation&amp;style=for-the-badge" alt="web documentation"></a></p>
+<!--|deDE:Einsatzmöglichkeiten-->
+<!--|frFR:Cas d'utilisation-->
+<h2>Use case</h2>
+<p>The form inputs of
+<a href="https://tsickert.com/react-input-material">react-input-material</a> as web
+components. Use them in plain HTML or with any framework, no React knowledge
+needed: text, numbers, dates, selections, code and rich text, checkboxes,
+files, time intervals, lists of inputs, sliders and tabs in Material Design,
+including validation.</p>
+<!--deDE:
+    Die Formulareingaben von
+    [react-input-material](https://tsickert.com/react-input-material) als Web
+    Components. Verwenden Sie sie in reinem HTML oder mit jedem Framework,
+    ganz ohne React-Kenntnisse: Text, Zahlen, Datumsangaben, Auswahlen, Code
+    und Rich Text, Checkboxen, Dateien, Zeitintervalle, Listen von Eingaben,
+    Schieberegler und Tabs im Material Design, inklusive Validierung.
+-->
+<!--frFR:
+    Les champs de formulaire de
+    [react-input-material](https://tsickert.com/react-input-material) sous
+    forme de web components. Utilisez-les en HTML pur ou avec n'importe quel
+    framework, sans connaître React: texte, nombres, dates, sélections, code
+    et texte enrichi, cases à cocher, fichiers, intervalles de temps, listes
+    de champs, curseurs et onglets en Material Design, validation comprise.
+-->
+<p>Components included:</p>
+<!--deDE:Enthaltene Komponenten:-->
+<!--frFR:Composants inclus:-->
+<ul>
+<li>&quot;text-input&quot;: Text, numbers, dates, selections, code and rich text.<!--deDE:"text-input": Text, Zahlen, Datumsangaben, Auswahlen, Code und Rich Text.--><!--frFR:"text-input": Texte, nombres, dates, sélections, code et texte enrichi.--></li>
+<li>&quot;checkbox-input&quot;, &quot;file-input&quot;, &quot;interval-input&quot; and &quot;slider-input&quot;.<!--deDE:"checkbox-input", "file-input", "interval-input" und "slider-input".--><!--frFR:"checkbox-input", "file-input", "interval-input" et "slider-input".--></li>
+<li>&quot;generic-inputs&quot;: Dynamic lists of any of the inputs above.<!--deDE:"generic-inputs": Dynamische Listen beliebiger der obigen Eingaben.--><!--frFR:"generic-inputs": Listes dynamiques de n'importe lequel des champs ci-dessus.--></li>
+<li>&quot;tab-bar&quot; with &quot;tab-item&quot;, &quot;circular-spinner&quot; and &quot;generic-animate&quot;.<!--deDE:"tab-bar" mit "tab-item", "circular-spinner" und "generic-animate".--><!--frFR:"tab-bar" avec "tab-item", "circular-spinner" et "generic-animate".--></li>
+</ul>
+<div class="wd-table-of-contents">
+    <h2 id="content">Content<!--deDE:Inhalt--><!--frFR:Contenu--></h2>
+    <!--wd-table-of-contents-->
+</div>
+<!--|deDE:Schnellstart-->
+<!--|frFR:Démarrage rapide-->
+<h2>Quick start</h2>
+<p>Load the styles and the bundle, which contains all dependencies including
+React, and register the components:</p>
+<!--deDE:
+    Laden Sie die Styles und das Bundle, das alle Abhängigkeiten
+    einschließlich React enthält, und registrieren Sie die Komponenten:
+-->
+<!--frFR:
+    Chargez les styles et le bundle, qui contient toutes les dépendances y
+    compris React, puis enregistrez les composants:
+-->
+<pre class="prettyprint source lang-HTML"><code>&lt;link
+    href=&quot;https://unpkg.com/material-icons@1/iconfont/material-icons.css&quot;
+    rel=&quot;stylesheet&quot;
+/>
+&lt;link
+    href=&quot;https://unpkg.com/react-input-material@latest/dist/index.css&quot;
+    rel=&quot;stylesheet&quot;
+/>
+&lt;script type=&quot;module&quot;>
+    import {
+        register
+    } from 'https://unpkg.com/web-input-material@latest/dist/bundle/index.js'
+
+    register()
+&lt;/script>
+
+&lt;text-input
+    declaration=&quot;Amount&quot;
+    maximum=&quot;200000&quot;
+    minimum=&quot;10&quot;
+    name=&quot;amount&quot;
+    required
+    type=&quot;number&quot;
+>&lt;/text-input>
+&lt;checkbox-input description=&quot;I agree&quot; name=&quot;accepted&quot; required>
+&lt;/checkbox-input>
+</code></pre>
+<p>&quot;dist/bundle/minimal/index.js&quot; is a much smaller variant without code and
+rich text editor, tooltips and animated icons.</p>
+<!--deDE:
+    "dist/bundle/minimal/index.js" ist eine deutlich kleinere Variante ohne
+    Code- und Rich-Text-Editor, Tooltips und animierte Icons.
+-->
+<!--frFR:
+    "dist/bundle/minimal/index.js" est une variante nettement plus légère,
+    sans éditeur de code ni de texte enrichi, sans infobulles ni icônes
+    animées.
+-->
+<!--|deDE:Mit einem Paketmanager-->
+<!--|frFR:Avec un gestionnaire de paquets-->
+<h3>With a package manager</h3>
+<pre class="prettyprint source lang-bash"><code>npm install web-input-material
+</code></pre>
+<p>All libraries web-input-material builds on are optional peer dependencies,
+since the bundle variants below already contain them. The default entry point
+expects them to be installed, including react-input-material's own
+dependencies, see
+<a href="https://tsickert.com/react-input-material">react-input-material</a>:</p>
+<!--deDE:
+    Alle Bibliotheken, auf denen web-input-material aufbaut, sind optionale
+    Peer-Abhängigkeiten, da die unten beschriebenen Bundle-Varianten sie
+    bereits enthalten. Der Standardeinstiegspunkt setzt voraus, dass sie
+    installiert sind, einschließlich der Abhängigkeiten von
+    react-input-material, siehe
+    [react-input-material](https://tsickert.com/react-input-material):
+-->
+<!--frFR:
+    Toutes les bibliothèques sur lesquelles repose web-input-material sont
+    des dépendances « peer » optionnelles, car les variantes bundle décrites
+    ci-dessous les contiennent déjà. Le point d'entrée par défaut suppose
+    qu'elles sont installées, y compris les dépendances de
+    react-input-material, voir
+    [react-input-material](https://tsickert.com/react-input-material):
+-->
+<pre class="prettyprint source lang-bash"><code>npm install \
+    @rmwc/slider @rmwc/tabs clientnode core-js prop-types react react-dom \
+    react-input-material react-transition-group web-component-wrapper
+</code></pre>
+<p>Register all components or only the ones you need:</p>
+<!--deDE:Registrieren Sie alle Komponenten oder nur die benötigten:-->
+<!--frFR:
+    Enregistrez tous les composants ou seulement ceux dont vous avez besoin:
+-->
+<pre class="prettyprint source lang-JavaScript"><code>import {register, TextInput} from 'web-input-material'
+
+// All components:
+register()
+// Or only one:
+TextInput.register()
+</code></pre>
+<p>To avoid installing anything else, import &quot;web-input-material/bundle&quot; or
+the smaller &quot;web-input-material/bundle/minimal&quot; instead, they contain all
+dependencies including React. Single components are available the same way,
+e.g. &quot;web-input-material/bundle/components/IntervalInput&quot;.</p>
+<!--deDE:
+    Um nichts weiter installieren zu müssen, importieren Sie stattdessen
+    "web-input-material/bundle" oder das kleinere
+    "web-input-material/bundle/minimal", sie enthalten alle Abhängigkeiten
+    einschließlich React. Einzelne Komponenten gibt es genauso, z. B.
+    "web-input-material/bundle/components/IntervalInput".
+-->
+<!--frFR:
+    Pour ne rien installer d'autre, importez plutôt
+    "web-input-material/bundle" ou la variante plus légère
+    "web-input-material/bundle/minimal", elles contiennent toutes les
+    dépendances y compris React. Les composants individuels sont disponibles
+    de la même manière, par exemple
+    "web-input-material/bundle/components/IntervalInput".
+-->
+<!--|deDE:Verwendung-->
+<!--|frFR:Utilisation-->
+<h2>Usage</h2>
+<!--|deDE:Attribute-->
+<!--|frFR:Attributs-->
+<h3>Attributes</h3>
+<p>Each component accepts the properties of its React counterpart as attributes
+in kebab case, e.g. &quot;initialValue&quot; becomes &quot;initial-value&quot;. Text properties
+take the attribute value as it is. All other attribute values are evaluated
+as JavaScript expressions, so strings inside them need quotes. Boolean
+properties are set by the presence of the attribute:</p>
+<!--deDE:
+    Jede Komponente akzeptiert die Eigenschaften ihres React-Gegenstücks als
+    Attribute in Kebab-Schreibweise, z. B. wird "initialValue" zu
+    "initial-value". Texteigenschaften übernehmen den Attributwert
+    unverändert. Alle anderen Attributwerte werden als JavaScript-Ausdrücke
+    ausgewertet, Zeichenketten darin benötigen also Anführungszeichen.
+    Boolesche Eigenschaften werden durch das Vorhandensein des Attributs
+    gesetzt:
+-->
+<!--frFR:
+    Chaque composant accepte les propriétés de son équivalent React sous
+    forme d'attributs en kebab case, par exemple "initialValue" devient
+    "initial-value". Les propriétés textuelles reprennent la valeur de
+    l'attribut telle quelle. Toutes les autres valeurs d'attribut sont
+    évaluées comme des expressions JavaScript, les chaînes qu'elles
+    contiennent nécessitent donc des guillemets. Les propriétés booléennes
+    sont activées par la seule présence de l'attribut:
+-->
+<pre class="prettyprint source lang-HTML"><code>&lt;text-input
+    declaration=&quot;Choice&quot;
+    initial-value=&quot;'B'&quot;
+    name=&quot;choice&quot;
+    required
+    selection=&quot;['A', 'B', 'C']&quot;
+>&lt;/text-input>
+
+&lt;text-input
+    editor=&quot;richtext&quot;
+    name=&quot;message&quot;
+    rows=&quot;6&quot;
+    theme-configuration=&quot;{primary: '#d55e5d'}&quot;
+>&lt;/text-input>
+</code></pre>
+<p>All options are described in
+<a href="https://tsickert.com/react-input-material">react-input-material</a>.</p>
+<!--deDE:
+    Alle Optionen sind bei
+    [react-input-material](https://tsickert.com/react-input-material)
+    beschrieben.
+-->
+<!--frFR:
+    Toutes les options sont décrites dans
+    [react-input-material](https://tsickert.com/react-input-material).
+-->
+<!--|deDE:Werte und Ereignisse-->
+<!--|frFR:Valeurs et événements-->
+<h3>Values and events</h3>
+<p>Read and write the current state via DOM properties like &quot;value&quot;,
+&quot;invalid&quot; or &quot;dirty&quot;. Validation states are also reflected as attributes, so
+you can style them with CSS, e.g. &quot;text-input[invalid]&quot;. Changes are
+announced via a &quot;change&quot; event:</p>
+<!--deDE:
+    Lesen und schreiben Sie den aktuellen Zustand über DOM-Eigenschaften wie
+    "value", "invalid" oder "dirty". Validierungszustände werden zusätzlich
+    als Attribute gespiegelt, sodass Sie sie per CSS gestalten können, z. B.
+    "text-input[invalid]". Änderungen werden über ein "change"-Ereignis
+    gemeldet:
+-->
+<!--frFR:
+    Lisez et modifiez l'état courant via des propriétés DOM comme "value",
+    "invalid" ou "dirty". Les états de validation sont également reflétés
+    sous forme d'attributs, ce qui permet de les styliser en CSS, par exemple
+    "text-input[invalid]". Les modifications sont signalées par un événement
+    "change":
+-->
+<pre class="prettyprint source lang-JavaScript"><code>const input = document.querySelector('text-input[name=&quot;amount&quot;]')
+
+input.addEventListener('change', (event) => {
+    if (event.target === input)
+        console.log('New value', input.value, 'invalid', input.invalid)
+})
+
+input.value = 100
+</code></pre>
+<!--|deDE:Entwicklung-->
+<!--|frFR:Développement-->
+<h2>Development</h2>
+<pre class="prettyprint source lang-bash"><code>yarn install
+yarn start
+yarn test
+</code></pre>
+<p>&quot;yarn start&quot; serves a playground with examples of all components.</p>
+<!--deDE:
+    "yarn start" stellt eine Spielwiese mit Beispielen aller Komponenten
+    bereit.
+-->
+<!--frFR:
+    "yarn start" sert un terrain de jeu avec des exemples de tous les
+    composants.
+--></article>
+    </section>
+
+
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-CheckboxInput.html">CheckboxInput</a></li><li><a href="module-CircularSpinner.html">CircularSpinner</a></li><li><a href="module-FileInput.html">FileInput</a></li><li><a href="module-GenericAnimate.html">GenericAnimate</a></li><li><a href="module-GenericInputs.html">GenericInputs</a></li><li><a href="module-IntervalInput.html">IntervalInput</a></li><li><a href="module-Slider.html">Slider</a></li><li><a href="module-TabBar.html">TabBar</a></li><li><a href="module-TabItem.html">TabItem</a></li><li><a href="module-TextInput.html">TextInput</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.5</a> on Sun Nov 15 2026 14:30:56 GMT+0100 (Mitteleuropäische Normalzeit)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

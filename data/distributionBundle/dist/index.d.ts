@@ -1,0 +1,16 @@
+import type { Mapping } from 'clientnode';
+import type { WebComponentAPI } from 'web-component-wrapper/type';
+import ReactWeb from 'web-component-wrapper/ReactWeb';
+export { CircularSpinner } from './components/CircularSpinner';
+export { FileInput } from './components/FileInput';
+export { GenericAnimate } from './components/GenericAnimate';
+export { TextInput } from './components/TextInput';
+export { GenericInputs } from './components/GenericInputs';
+export { IntervalInput } from './components/IntervalInput';
+export { CheckboxInput } from './components/CheckboxInput';
+export { SliderInput } from './components/SliderInput';
+export { TabBar } from './components/TabBar';
+export { TabItem } from './components/TabItem';
+export declare const components: Mapping<WebComponentAPI<typeof ReactWeb>>;
+export declare const register: () => void[];
+export default components;
